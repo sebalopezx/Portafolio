@@ -1,0 +1,657 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portafolio</title>
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/estilos.css">
+    <link rel="stylesheet" href="css/estilo_fondo.css">
+    <!-- ICONOS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <!-- MENU -->
+    <div class="contenedor-header" id="contenedor-header">
+        <header>
+            <div class="logo">
+                <a href="#">Seba</a>
+            </div>
+            <nav id="nav" class="">
+                <ul>
+                    <!-- <li><a href="#inicio" style="--nav:1"  onclick="seleccionar()" id="click-inicio">Inicio</a></li>
+                    <li><a href="#acercade" style="--nav:2"  onclick="seleccionar()" id="click-acercade">Acerca De</a></li>
+                    <li><a href="#skills" style="--nav:3"  onclick="seleccionar()" id="click-skills">Skills</a></li>
+                    <li><a href="#curriculum" style="--nav:4"  onclick="seleccionar()" id="click-curriculum">CV</a></li>
+                    <li><a href="#proyectos" style="--nav:5"  onclick="seleccionar()" id="click-proyectos">Proyectos</a></li>
+                    <li><a href="#contacto" style="--nav:6"  onclick="seleccionar()" id="click-contacto">Contacto</a></li> -->
+                    <li data-nav="1"><a href="#inicio"  onclick="seleccionar()" id="click-inicio">Inicio</a></li>
+                    <li data-nav="2"><a href="#acercade"  onclick="seleccionar()" id="click-acercade">Acerca De</a></li>
+                    <li data-nav="3"><a href="#skills"  onclick="seleccionar()" id="click-skills">Skills</a></li>
+                    <li data-nav="4"><a href="#curriculum"  onclick="seleccionar()" id="click-curriculum">CV</a></li>
+                    <li data-nav="5"><a href="#proyectos"  onclick="seleccionar()" id="click-proyectos">Proyectos</a></li>
+                    <li data-nav="6"><a href="#contacto"  onclick="seleccionar()" id="click-contacto">Contacto</a></li>
+                </ul>
+            </nav>
+           
+            <div class="menu-responsive" onclick="menuMostrarOcultar(),cambiarClase()" id="click-responsive">
+                <!-- <div id="crear-responsive"></div> -->
+                <i class="fa-solid fa-bars" id="icono-menu"></i>
+            </div>
+        </header>
+    </div>
+
+    <!-- INICIO -->
+    <section id="inicio" class="inicio">
+        
+        <!-- <div class="fondo">
+            <div class="column col-1"><span>&#10342;</span><span>&#10428;</span><span>&#10320;</span><span>&#10396;</span><span>&#10466;</span><span>&#10331;</span><span>&#10338;</span><span>&#10252;</span><span>&#10449;</span><span>&#10421;</span><span>&#10250;</span><span>&#10454;</span><span>&#10390;</span><span>&#10423;</span><span>&#10338;</span><span>&#10452;</span><span>&#10268;</span><span>&#10368;</span><span>&#10395;</span><span>&#10296;</span><span>&#10271;</span><span>&#10268;</span><span>&#10361;</span><span>&#10451;</span><span>&#10258;</span><span>&#10382;</span><span>&#10390;</span><span>&#10405;</span><span>&#10426;</span><span>&#10358;</span><span>&#10411;</span><span>&#10435;</span><span>&#10412;</span><span>&#10476;</span><span>&#10362;</span><span>&#10394;</span><span>&#10380;</span><span>&#10366;</span><span>&#10242;</span><span>&#10490;</span><span>&#10452;</span><span>&#10485;</span><span>&#10465;</span><span>&#10419;</span><span>&#10426;</span><span>&#10425;</span><span>&#10407;</span><span>&#10451;</span><span>&#10269;</span><span>&#10286;</span>
+            </div>
+            <div class="column col-2"><span>&#10262;</span><span>&#10462;</span><span>&#10486;</span><span>&#10300;</span><span>&#10460;</span><span>&#10283;</span><span>&#10456;</span><span>&#10317;</span><span>&#10456;</span><span>&#10345;</span><span>&#10468;</span><span>&#10377;</span><span>&#10270;</span><span>&#10411;</span><span>&#10434;</span><span>&#10339;</span><span>&#10411;</span><span>&#10453;</span><span>&#10438;</span><span>&#10325;</span><span>&#10254;</span><span>&#10320;</span><span>&#10295;</span><span>&#10259;</span><span>&#10241;</span><span>&#10476;</span><span>&#10396;</span><span>&#10465;</span><span>&#10369;</span><span>&#10375;</span><span>&#10494;</span><span>&#10346;</span><span>&#10262;</span><span>&#10452;</span><span>&#10400;</span><span>&#10491;</span><span>&#10288;</span><span>&#10305;</span><span>&#10493;</span><span>&#10474;</span><span>&#10329;</span><span>&#10344;</span><span>&#10488;</span><span>&#10386;</span><span>&#10459;</span><span>&#10438;</span><span>&#10345;</span><span>&#10356;</span><span>&#10303;</span><span>&#10491;</span>
+            </div>
+            <div class="column col-3"><span>&#10337;</span><span>&#10362;</span><span>&#10483;</span><span>&#10343;</span><span>&#10369;</span><span>&#10426;</span><span>&#10333;</span><span>&#10261;</span><span>&#10434;</span><span>&#10341;</span><span>&#10315;</span><span>&#10435;</span><span>&#10242;</span><span>&#10428;</span><span>&#10247;</span><span>&#10245;</span><span>&#10249;</span><span>&#10350;</span><span>&#10396;</span><span>&#10255;</span><span>&#10451;</span><span>&#10414;</span><span>&#10273;</span><span>&#10481;</span><span>&#10420;</span><span>&#10390;</span><span>&#10301;</span><span>&#10328;</span><span>&#10346;</span><span>&#10474;</span><span>&#10328;</span><span>&#10289;</span><span>&#10248;</span><span>&#10388;</span><span>&#10331;</span><span>&#10314;</span><span>&#10282;</span><span>&#10467;</span><span>&#10470;</span><span>&#10268;</span><span>&#10391;</span><span>&#10290;</span><span>&#10390;</span><span>&#10416;</span><span>&#10251;</span><span>&#10385;</span><span>&#10309;</span><span>&#10451;</span><span>&#10294;</span><span>&#10385;</span>
+            </div>
+            <div class="column col-4"><span>&#10376;</span><span>&#10351;</span><span>&#10292;</span><span>&#10489;</span><span>&#10406;</span><span>&#10409;</span><span>&#10310;</span><span>&#10403;</span><span>&#10395;</span><span>&#10313;</span><span>&#10340;</span><span>&#10272;</span><span>&#10414;</span><span>&#10324;</span><span>&#10403;</span><span>&#10417;</span><span>&#10466;</span><span>&#10467;</span><span>&#10462;</span><span>&#10316;</span><span>&#10320;</span><span>&#10371;</span><span>&#10491;</span><span>&#10458;</span><span>&#10414;</span><span>&#10326;</span><span>&#10312;</span><span>&#10439;</span><span>&#10368;</span><span>&#10346;</span><span>&#10451;</span><span>&#10490;</span><span>&#10252;</span><span>&#10489;</span><span>&#10249;</span><span>&#10451;</span><span>&#10278;</span><span>&#10253;</span><span>&#10399;</span><span>&#10242;</span><span>&#10476;</span><span>&#10409;</span><span>&#10397;</span><span>&#10289;</span><span>&#10308;</span><span>&#10302;</span><span>&#10418;</span><span>&#10443;</span><span>&#10364;</span><span>&#10404;</span>
+            </div>
+            <div class="column col-5"><span>&#10322;</span><span>&#10461;</span><span>&#10474;</span><span>&#10478;</span><span>&#10331;</span><span>&#10341;</span><span>&#10352;</span><span>&#10435;</span><span>&#10386;</span><span>&#10383;</span><span>&#10240;</span><span>&#10262;</span><span>&#10441;</span><span>&#10485;</span><span>&#10482;</span><span>&#10385;</span><span>&#10304;</span><span>&#10313;</span><span>&#10365;</span><span>&#10359;</span><span>&#10328;</span><span>&#10337;</span><span>&#10255;</span><span>&#10410;</span><span>&#10423;</span><span>&#10434;</span><span>&#10342;</span><span>&#10256;</span><span>&#10346;</span><span>&#10479;</span><span>&#10407;</span><span>&#10406;</span><span>&#10319;</span><span>&#10370;</span><span>&#10327;</span><span>&#10433;</span><span>&#10280;</span><span>&#10277;</span><span>&#10264;</span><span>&#10301;</span><span>&#10375;</span><span>&#10325;</span><span>&#10293;</span><span>&#10258;</span><span>&#10313;</span><span>&#10243;</span><span>&#10409;</span><span>&#10491;</span><span>&#10489;</span><span>&#10401;</span>
+            </div>
+            <div class="column col-6"><span>&#10375;</span><span>&#10379;</span><span>&#10383;</span><span>&#10387;</span><span>&#10299;</span><span>&#10319;</span><span>&#10273;</span><span>&#10258;</span><span>&#10396;</span><span>&#10380;</span><span>&#10257;</span><span>&#10472;</span><span>&#10350;</span><span>&#10441;</span><span>&#10400;</span><span>&#10372;</span><span>&#10323;</span><span>&#10492;</span><span>&#10300;</span><span>&#10369;</span><span>&#10477;</span><span>&#10257;</span><span>&#10262;</span><span>&#10441;</span><span>&#10344;</span><span>&#10363;</span><span>&#10413;</span><span>&#10478;</span><span>&#10360;</span><span>&#10451;</span><span>&#10356;</span><span>&#10407;</span><span>&#10280;</span><span>&#10378;</span><span>&#10359;</span><span>&#10343;</span><span>&#10380;</span><span>&#10400;</span><span>&#10283;</span><span>&#10274;</span><span>&#10443;</span><span>&#10436;</span><span>&#10410;</span><span>&#10430;</span><span>&#10349;</span><span>&#10440;</span><span>&#10369;</span><span>&#10355;</span><span>&#10429;</span><span>&#10408;</span>
+            </div>
+            <div class="column col-7"><span>&#10481;</span><span>&#10335;</span><span>&#10283;</span><span>&#10408;</span><span>&#10341;</span><span>&#10299;</span><span>&#10259;</span><span>&#10277;</span><span>&#10408;</span><span>&#10245;</span><span>&#10453;</span><span>&#10279;</span><span>&#10341;</span><span>&#10301;</span><span>&#10488;</span><span>&#10386;</span><span>&#10381;</span><span>&#10388;</span><span>&#10458;</span><span>&#10241;</span><span>&#10378;</span><span>&#10318;</span><span>&#10316;</span><span>&#10321;</span><span>&#10273;</span><span>&#10319;</span><span>&#10360;</span><span>&#10446;</span><span>&#10411;</span><span>&#10389;</span><span>&#10403;</span><span>&#10340;</span><span>&#10426;</span><span>&#10494;</span><span>&#10308;</span><span>&#10323;</span><span>&#10388;</span><span>&#10241;</span><span>&#10461;</span><span>&#10290;</span><span>&#10367;</span><span>&#10270;</span><span>&#10394;</span><span>&#10291;</span><span>&#10289;</span><span>&#10463;</span><span>&#10255;</span><span>&#10375;</span><span>&#10403;</span><span>&#10441;</span>
+            </div>
+            <div class="column col-8"><span>&#10483;</span><span>&#10286;</span><span>&#10447;</span><span>&#10454;</span><span>&#10416;</span><span>&#10307;</span><span>&#10423;</span><span>&#10417;</span><span>&#10344;</span><span>&#10303;</span><span>&#10279;</span><span>&#10492;</span><span>&#10335;</span><span>&#10362;</span><span>&#10332;</span><span>&#10429;</span><span>&#10429;</span><span>&#10339;</span><span>&#10462;</span><span>&#10360;</span><span>&#10454;</span><span>&#10284;</span><span>&#10419;</span><span>&#10285;</span><span>&#10322;</span><span>&#10480;</span><span>&#10353;</span><span>&#10384;</span><span>&#10377;</span><span>&#10379;</span><span>&#10418;</span><span>&#10457;</span><span>&#10417;</span><span>&#10363;</span><span>&#10456;</span><span>&#10326;</span><span>&#10444;</span><span>&#10375;</span><span>&#10256;</span><span>&#10410;</span><span>&#10458;</span><span>&#10361;</span><span>&#10289;</span><span>&#10293;</span><span>&#10351;</span><span>&#10382;</span><span>&#10345;</span><span>&#10330;</span><span>&#10473;</span><span>&#10326;</span>
+            </div>
+            <div class="column col-9"><span>&#10315;</span><span>&#10297;</span><span>&#10379;</span><span>&#10340;</span><span>&#10335;</span><span>&#10266;</span><span>&#10373;</span><span>&#10262;</span><span>&#10327;</span><span>&#10346;</span><span>&#10310;</span><span>&#10452;</span><span>&#10262;</span><span>&#10443;</span><span>&#10296;</span><span>&#10244;</span><span>&#10431;</span><span>&#10293;</span><span>&#10298;</span><span>&#10392;</span><span>&#10373;</span><span>&#10310;</span><span>&#10404;</span><span>&#10482;</span><span>&#10357;</span><span>&#10308;</span><span>&#10293;</span><span>&#10323;</span><span>&#10330;</span><span>&#10438;</span><span>&#10416;</span><span>&#10321;</span><span>&#10488;</span><span>&#10362;</span><span>&#10262;</span><span>&#10385;</span><span>&#10290;</span><span>&#10259;</span><span>&#10244;</span><span>&#10343;</span><span>&#10366;</span><span>&#10286;</span><span>&#10277;</span><span>&#10381;</span><span>&#10361;</span><span>&#10377;</span><span>&#10484;</span><span>&#10474;</span><span>&#10392;</span><span>&#10344;</span>
+            </div>
+            <div class="column col-10"><span>&#10273;</span><span>&#10433;</span><span>&#10332;</span><span>&#10294;</span><span>&#10455;</span><span>&#10366;</span><span>&#10251;</span><span>&#10387;</span><span>&#10453;</span><span>&#10424;</span><span>&#10471;</span><span>&#10481;</span><span>&#10272;</span><span>&#10241;</span><span>&#10337;</span><span>&#10419;</span><span>&#10416;</span><span>&#10304;</span><span>&#10312;</span><span>&#10395;</span><span>&#10347;</span><span>&#10491;</span><span>&#10323;</span><span>&#10480;</span><span>&#10371;</span><span>&#10284;</span><span>&#10287;</span><span>&#10261;</span><span>&#10341;</span><span>&#10344;</span><span>&#10341;</span><span>&#10353;</span><span>&#10483;</span><span>&#10326;</span><span>&#10314;</span><span>&#10317;</span><span>&#10274;</span><span>&#10355;</span><span>&#10423;</span><span>&#10428;</span><span>&#10361;</span><span>&#10389;</span><span>&#10457;</span><span>&#10404;</span><span>&#10301;</span><span>&#10347;</span><span>&#10328;</span><span>&#10339;</span><span>&#10354;</span><span>&#10300;</span>
+            </div>
+            <div class="column col-11"><span>&#10376;</span><span>&#10369;</span><span>&#10380;</span><span>&#10361;</span><span>&#10353;</span><span>&#10318;</span><span>&#10299;</span><span>&#10460;</span><span>&#10298;</span><span>&#10295;</span><span>&#10247;</span><span>&#10348;</span><span>&#10343;</span><span>&#10244;</span><span>&#10339;</span><span>&#10287;</span><span>&#10480;</span><span>&#10249;</span><span>&#10382;</span><span>&#10439;</span><span>&#10360;</span><span>&#10287;</span><span>&#10457;</span><span>&#10397;</span><span>&#10310;</span><span>&#10463;</span><span>&#10477;</span><span>&#10255;</span><span>&#10490;</span><span>&#10255;</span><span>&#10268;</span><span>&#10271;</span><span>&#10423;</span><span>&#10305;</span><span>&#10372;</span><span>&#10372;</span><span>&#10326;</span><span>&#10378;</span><span>&#10333;</span><span>&#10332;</span><span>&#10390;</span><span>&#10454;</span><span>&#10288;</span><span>&#10274;</span><span>&#10362;</span><span>&#10392;</span><span>&#10298;</span><span>&#10299;</span><span>&#10366;</span><span>&#10398;</span>
+            </div>
+            <div class="column col-12"><span>&#10372;</span><span>&#10494;</span><span>&#10253;</span><span>&#10262;</span><span>&#10404;</span><span>&#10269;</span><span>&#10323;</span><span>&#10408;</span><span>&#10460;</span><span>&#10395;</span><span>&#10453;</span><span>&#10317;</span><span>&#10319;</span><span>&#10473;</span><span>&#10387;</span><span>&#10313;</span><span>&#10244;</span><span>&#10463;</span><span>&#10263;</span><span>&#10338;</span><span>&#10314;</span><span>&#10297;</span><span>&#10289;</span><span>&#10352;</span><span>&#10313;</span><span>&#10267;</span><span>&#10295;</span><span>&#10436;</span><span>&#10333;</span><span>&#10432;</span><span>&#10308;</span><span>&#10467;</span><span>&#10402;</span><span>&#10338;</span><span>&#10370;</span><span>&#10494;</span><span>&#10462;</span><span>&#10369;</span><span>&#10467;</span><span>&#10472;</span><span>&#10384;</span><span>&#10274;</span><span>&#10357;</span><span>&#10403;</span><span>&#10269;</span><span>&#10445;</span><span>&#10436;</span><span>&#10368;</span><span>&#10431;</span><span>&#10290;</span>
+            </div>
+            <div class="column col-13"><span>&#10314;</span><span>&#10455;</span><span>&#10258;</span><span>&#10402;</span><span>&#10432;</span><span>&#10478;</span><span>&#10429;</span><span>&#10414;</span><span>&#10356;</span><span>&#10322;</span><span>&#10448;</span><span>&#10455;</span><span>&#10246;</span><span>&#10440;</span><span>&#10435;</span><span>&#10284;</span><span>&#10412;</span><span>&#10255;</span><span>&#10344;</span><span>&#10377;</span><span>&#10348;</span><span>&#10380;</span><span>&#10247;</span><span>&#10268;</span><span>&#10307;</span><span>&#10309;</span><span>&#10364;</span><span>&#10264;</span><span>&#10362;</span><span>&#10451;</span><span>&#10472;</span><span>&#10479;</span><span>&#10352;</span><span>&#10322;</span><span>&#10345;</span><span>&#10240;</span><span>&#10286;</span><span>&#10318;</span><span>&#10325;</span><span>&#10359;</span><span>&#10439;</span><span>&#10326;</span><span>&#10457;</span><span>&#10344;</span><span>&#10292;</span><span>&#10412;</span><span>&#10491;</span><span>&#10485;</span><span>&#10273;</span><span>&#10365;</span>
+            </div>
+            <div class="column col-14"><span>&#10366;</span><span>&#10490;</span><span>&#10475;</span><span>&#10457;</span><span>&#10314;</span><span>&#10283;</span><span>&#10360;</span><span>&#10434;</span><span>&#10240;</span><span>&#10267;</span><span>&#10331;</span><span>&#10355;</span><span>&#10493;</span><span>&#10284;</span><span>&#10246;</span><span>&#10322;</span><span>&#10482;</span><span>&#10319;</span><span>&#10249;</span><span>&#10432;</span><span>&#10377;</span><span>&#10380;</span><span>&#10463;</span><span>&#10293;</span><span>&#10419;</span><span>&#10378;</span><span>&#10464;</span><span>&#10354;</span><span>&#10369;</span><span>&#10262;</span><span>&#10313;</span><span>&#10428;</span><span>&#10324;</span><span>&#10269;</span><span>&#10377;</span><span>&#10434;</span><span>&#10484;</span><span>&#10269;</span><span>&#10316;</span><span>&#10470;</span><span>&#10488;</span><span>&#10311;</span><span>&#10417;</span><span>&#10293;</span><span>&#10371;</span><span>&#10253;</span><span>&#10317;</span><span>&#10274;</span><span>&#10490;</span><span>&#10383;</span>
+            </div>
+            <div class="column col-15"><span>&#10418;</span><span>&#10382;</span><span>&#10360;</span><span>&#10436;</span><span>&#10272;</span><span>&#10251;</span><span>&#10381;</span><span>&#10284;</span><span>&#10310;</span><span>&#10304;</span><span>&#10243;</span><span>&#10331;</span><span>&#10322;</span><span>&#10323;</span><span>&#10267;</span><span>&#10309;</span><span>&#10280;</span><span>&#10468;</span><span>&#10493;</span><span>&#10435;</span><span>&#10464;</span><span>&#10280;</span><span>&#10352;</span><span>&#10245;</span><span>&#10315;</span><span>&#10324;</span><span>&#10385;</span><span>&#10313;</span><span>&#10360;</span><span>&#10309;</span><span>&#10299;</span><span>&#10361;</span><span>&#10383;</span><span>&#10317;</span><span>&#10334;</span><span>&#10339;</span><span>&#10381;</span><span>&#10440;</span><span>&#10462;</span><span>&#10299;</span><span>&#10256;</span><span>&#10324;</span><span>&#10246;</span><span>&#10292;</span><span>&#10379;</span><span>&#10428;</span><span>&#10257;</span><span>&#10291;</span><span>&#10408;</span><span>&#10342;</span>
+            </div>
+            <div class="column col-16"><span>&#10304;</span><span>&#10355;</span><span>&#10302;</span><span>&#10343;</span><span>&#10277;</span><span>&#10377;</span><span>&#10439;</span><span>&#10452;</span><span>&#10490;</span><span>&#10365;</span><span>&#10404;</span><span>&#10491;</span><span>&#10482;</span><span>&#10340;</span><span>&#10360;</span><span>&#10447;</span><span>&#10312;</span><span>&#10361;</span><span>&#10492;</span><span>&#10281;</span><span>&#10407;</span><span>&#10269;</span><span>&#10451;</span><span>&#10424;</span><span>&#10442;</span><span>&#10344;</span><span>&#10263;</span><span>&#10401;</span><span>&#10359;</span><span>&#10445;</span><span>&#10342;</span><span>&#10484;</span><span>&#10387;</span><span>&#10304;</span><span>&#10471;</span><span>&#10391;</span><span>&#10306;</span><span>&#10425;</span><span>&#10492;</span><span>&#10347;</span><span>&#10401;</span><span>&#10395;</span><span>&#10414;</span><span>&#10456;</span><span>&#10417;</span><span>&#10395;</span><span>&#10295;</span><span>&#10351;</span><span>&#10337;</span><span>&#10248;</span>
+            </div>
+            <div class="column col-17"><span>&#10246;</span><span>&#10458;</span><span>&#10400;</span><span>&#10462;</span><span>&#10303;</span><span>&#10370;</span><span>&#10261;</span><span>&#10403;</span><span>&#10455;</span><span>&#10299;</span><span>&#10364;</span><span>&#10478;</span><span>&#10354;</span><span>&#10273;</span><span>&#10396;</span><span>&#10457;</span><span>&#10411;</span><span>&#10388;</span><span>&#10258;</span><span>&#10482;</span><span>&#10331;</span><span>&#10388;</span><span>&#10254;</span><span>&#10481;</span><span>&#10258;</span><span>&#10485;</span><span>&#10401;</span><span>&#10423;</span><span>&#10303;</span><span>&#10435;</span><span>&#10423;</span><span>&#10416;</span><span>&#10293;</span><span>&#10325;</span><span>&#10480;</span><span>&#10422;</span><span>&#10292;</span><span>&#10414;</span><span>&#10248;</span><span>&#10477;</span><span>&#10401;</span><span>&#10288;</span><span>&#10381;</span><span>&#10329;</span><span>&#10330;</span><span>&#10316;</span><span>&#10294;</span><span>&#10440;</span><span>&#10428;</span><span>&#10257;</span>
+            </div>
+            <div class="column col-18"><span>&#10363;</span><span>&#10295;</span><span>&#10373;</span><span>&#10420;</span><span>&#10257;</span><span>&#10453;</span><span>&#10472;</span><span>&#10410;</span><span>&#10242;</span><span>&#10256;</span><span>&#10309;</span><span>&#10439;</span><span>&#10475;</span><span>&#10358;</span><span>&#10453;</span><span>&#10471;</span><span>&#10245;</span><span>&#10277;</span><span>&#10428;</span><span>&#10423;</span><span>&#10310;</span><span>&#10464;</span><span>&#10274;</span><span>&#10391;</span><span>&#10431;</span><span>&#10369;</span><span>&#10458;</span><span>&#10387;</span><span>&#10416;</span><span>&#10401;</span><span>&#10425;</span><span>&#10260;</span><span>&#10375;</span><span>&#10445;</span><span>&#10261;</span><span>&#10444;</span><span>&#10348;</span><span>&#10458;</span><span>&#10350;</span><span>&#10341;</span><span>&#10263;</span><span>&#10314;</span><span>&#10279;</span><span>&#10311;</span><span>&#10263;</span><span>&#10249;</span><span>&#10414;</span><span>&#10242;</span><span>&#10460;</span><span>&#10240;</span>
+            </div>
+            <div class="column col-19"><span>&#10396;</span><span>&#10274;</span><span>&#10341;</span><span>&#10247;</span><span>&#10283;</span><span>&#10411;</span><span>&#10255;</span><span>&#10354;</span><span>&#10404;</span><span>&#10251;</span><span>&#10273;</span><span>&#10485;</span><span>&#10437;</span><span>&#10397;</span><span>&#10266;</span><span>&#10324;</span><span>&#10422;</span><span>&#10308;</span><span>&#10329;</span><span>&#10400;</span><span>&#10370;</span><span>&#10482;</span><span>&#10327;</span><span>&#10254;</span><span>&#10271;</span><span>&#10268;</span><span>&#10379;</span><span>&#10335;</span><span>&#10418;</span><span>&#10252;</span><span>&#10315;</span><span>&#10432;</span><span>&#10414;</span><span>&#10355;</span><span>&#10482;</span><span>&#10346;</span><span>&#10490;</span><span>&#10241;</span><span>&#10477;</span><span>&#10481;</span><span>&#10362;</span><span>&#10375;</span><span>&#10357;</span><span>&#10311;</span><span>&#10473;</span><span>&#10429;</span><span>&#10414;</span><span>&#10248;</span><span>&#10303;</span><span>&#10370;</span>
+            </div>
+            <div class="column col-20"><span>&#10249;</span><span>&#10422;</span><span>&#10407;</span><span>&#10340;</span><span>&#10415;</span><span>&#10372;</span><span>&#10390;</span><span>&#10358;</span><span>&#10431;</span><span>&#10404;</span><span>&#10301;</span><span>&#10482;</span><span>&#10270;</span><span>&#10330;</span><span>&#10317;</span><span>&#10295;</span><span>&#10286;</span><span>&#10450;</span><span>&#10273;</span><span>&#10337;</span><span>&#10352;</span><span>&#10308;</span><span>&#10412;</span><span>&#10265;</span><span>&#10308;</span><span>&#10379;</span><span>&#10489;</span><span>&#10426;</span><span>&#10348;</span><span>&#10250;</span><span>&#10350;</span><span>&#10389;</span><span>&#10348;</span><span>&#10340;</span><span>&#10265;</span><span>&#10338;</span><span>&#10257;</span><span>&#10422;</span><span>&#10301;</span><span>&#10284;</span><span>&#10251;</span><span>&#10422;</span><span>&#10302;</span><span>&#10333;</span><span>&#10385;</span><span>&#10377;</span><span>&#10364;</span><span>&#10447;</span><span>&#10327;</span><span>&#10300;</span>
+            </div>
+            <div class="column col-21"><span>&#10376;</span><span>&#10351;</span><span>&#10412;</span><span>&#10280;</span><span>&#10443;</span><span>&#10478;</span><span>&#10317;</span><span>&#10340;</span><span>&#10448;</span><span>&#10433;</span><span>&#10262;</span><span>&#10437;</span><span>&#10344;</span><span>&#10388;</span><span>&#10437;</span><span>&#10286;</span><span>&#10374;</span><span>&#10456;</span><span>&#10309;</span><span>&#10366;</span><span>&#10349;</span><span>&#10419;</span><span>&#10314;</span><span>&#10307;</span><span>&#10491;</span><span>&#10279;</span><span>&#10383;</span><span>&#10335;</span><span>&#10430;</span><span>&#10332;</span><span>&#10360;</span><span>&#10356;</span><span>&#10269;</span><span>&#10424;</span><span>&#10262;</span><span>&#10370;</span><span>&#10423;</span><span>&#10292;</span><span>&#10372;</span><span>&#10449;</span><span>&#10242;</span><span>&#10349;</span><span>&#10465;</span><span>&#10425;</span><span>&#10388;</span><span>&#10327;</span><span>&#10339;</span><span>&#10339;</span><span>&#10291;</span><span>&#10389;</span>
+            </div>
+            <div class="column col-22"><span>&#10249;</span><span>&#10483;</span><span>&#10458;</span><span>&#10422;</span><span>&#10494;</span><span>&#10241;</span><span>&#10313;</span><span>&#10338;</span><span>&#10475;</span><span>&#10420;</span><span>&#10446;</span><span>&#10397;</span><span>&#10349;</span><span>&#10267;</span><span>&#10355;</span><span>&#10403;</span><span>&#10460;</span><span>&#10326;</span><span>&#10347;</span><span>&#10252;</span><span>&#10450;</span><span>&#10447;</span><span>&#10385;</span><span>&#10268;</span><span>&#10389;</span><span>&#10410;</span><span>&#10302;</span><span>&#10348;</span><span>&#10451;</span><span>&#10330;</span><span>&#10420;</span><span>&#10377;</span><span>&#10260;</span><span>&#10348;</span><span>&#10381;</span><span>&#10339;</span><span>&#10338;</span><span>&#10250;</span><span>&#10406;</span><span>&#10241;</span><span>&#10347;</span><span>&#10311;</span><span>&#10494;</span><span>&#10361;</span><span>&#10478;</span><span>&#10349;</span><span>&#10373;</span><span>&#10286;</span><span>&#10308;</span><span>&#10431;</span>
+            </div>
+            <div class="column col-23"><span>&#10394;</span><span>&#10443;</span><span>&#10340;</span><span>&#10258;</span><span>&#10382;</span><span>&#10311;</span><span>&#10412;</span><span>&#10330;</span><span>&#10493;</span><span>&#10303;</span><span>&#10292;</span><span>&#10298;</span><span>&#10257;</span><span>&#10283;</span><span>&#10419;</span><span>&#10283;</span><span>&#10374;</span><span>&#10369;</span><span>&#10454;</span><span>&#10449;</span><span>&#10481;</span><span>&#10357;</span><span>&#10489;</span><span>&#10494;</span><span>&#10414;</span><span>&#10320;</span><span>&#10254;</span><span>&#10470;</span><span>&#10474;</span><span>&#10287;</span><span>&#10475;</span><span>&#10255;</span><span>&#10421;</span><span>&#10277;</span><span>&#10399;</span><span>&#10449;</span><span>&#10378;</span><span>&#10335;</span><span>&#10330;</span><span>&#10290;</span><span>&#10418;</span><span>&#10252;</span><span>&#10493;</span><span>&#10333;</span><span>&#10320;</span><span>&#10270;</span><span>&#10347;</span><span>&#10261;</span><span>&#10418;</span><span>&#10454;</span>
+            </div>
+            <div class="column col-24"><span>&#10414;</span><span>&#10269;</span><span>&#10458;</span><span>&#10477;</span><span>&#10297;</span><span>&#10278;</span><span>&#10267;</span><span>&#10398;</span><span>&#10244;</span><span>&#10342;</span><span>&#10392;</span><span>&#10396;</span><span>&#10290;</span><span>&#10368;</span><span>&#10354;</span><span>&#10428;</span><span>&#10438;</span><span>&#10347;</span><span>&#10484;</span><span>&#10365;</span><span>&#10448;</span><span>&#10420;</span><span>&#10352;</span><span>&#10277;</span><span>&#10404;</span><span>&#10308;</span><span>&#10421;</span><span>&#10349;</span><span>&#10261;</span><span>&#10374;</span><span>&#10409;</span><span>&#10390;</span><span>&#10418;</span><span>&#10411;</span><span>&#10365;</span><span>&#10327;</span><span>&#10428;</span><span>&#10420;</span><span>&#10308;</span><span>&#10249;</span><span>&#10274;</span><span>&#10364;</span><span>&#10459;</span><span>&#10337;</span><span>&#10433;</span><span>&#10367;</span><span>&#10401;</span><span>&#10333;</span><span>&#10443;</span><span>&#10462;</span>
+            </div>
+            <div class="column col-25"><span>&#10428;</span><span>&#10354;</span><span>&#10278;</span><span>&#10422;</span><span>&#10279;</span><span>&#10400;</span><span>&#10341;</span><span>&#10357;</span><span>&#10317;</span><span>&#10360;</span><span>&#10293;</span><span>&#10361;</span><span>&#10272;</span><span>&#10451;</span><span>&#10343;</span><span>&#10359;</span><span>&#10303;</span><span>&#10409;</span><span>&#10454;</span><span>&#10400;</span><span>&#10407;</span><span>&#10305;</span><span>&#10401;</span><span>&#10411;</span><span>&#10485;</span><span>&#10474;</span><span>&#10254;</span><span>&#10268;</span><span>&#10378;</span><span>&#10331;</span><span>&#10455;</span><span>&#10422;</span><span>&#10359;</span><span>&#10465;</span><span>&#10453;</span><span>&#10303;</span><span>&#10340;</span><span>&#10482;</span><span>&#10478;</span><span>&#10279;</span><span>&#10256;</span><span>&#10241;</span><span>&#10482;</span><span>&#10440;</span><span>&#10384;</span><span>&#10396;</span><span>&#10465;</span><span>&#10422;</span><span>&#10351;</span><span>&#10367;</span>
+            </div>
+            <div class="column col-26"><span>&#10448;</span><span>&#10284;</span><span>&#10272;</span><span>&#10292;</span><span>&#10479;</span><span>&#10329;</span><span>&#10305;</span><span>&#10452;</span><span>&#10467;</span><span>&#10434;</span><span>&#10355;</span><span>&#10273;</span><span>&#10467;</span><span>&#10486;</span><span>&#10258;</span><span>&#10331;</span><span>&#10310;</span><span>&#10270;</span><span>&#10476;</span><span>&#10388;</span><span>&#10467;</span><span>&#10443;</span><span>&#10413;</span><span>&#10245;</span><span>&#10487;</span><span>&#10316;</span><span>&#10436;</span><span>&#10441;</span><span>&#10352;</span><span>&#10375;</span><span>&#10257;</span><span>&#10467;</span><span>&#10329;</span><span>&#10447;</span><span>&#10469;</span><span>&#10342;</span><span>&#10326;</span><span>&#10315;</span><span>&#10464;</span><span>&#10460;</span><span>&#10394;</span><span>&#10414;</span><span>&#10377;</span><span>&#10464;</span><span>&#10414;</span><span>&#10447;</span><span>&#10380;</span><span>&#10375;</span><span>&#10354;</span><span>&#10403;</span>
+            </div>
+            <div class="column col-27"><span>&#10371;</span><span>&#10343;</span><span>&#10479;</span><span>&#10310;</span><span>&#10255;</span><span>&#10348;</span><span>&#10362;</span><span>&#10459;</span><span>&#10477;</span><span>&#10395;</span><span>&#10356;</span><span>&#10390;</span><span>&#10300;</span><span>&#10274;</span><span>&#10387;</span><span>&#10323;</span><span>&#10287;</span><span>&#10482;</span><span>&#10387;</span><span>&#10475;</span><span>&#10444;</span><span>&#10260;</span><span>&#10334;</span><span>&#10286;</span><span>&#10422;</span><span>&#10447;</span><span>&#10349;</span><span>&#10394;</span><span>&#10319;</span><span>&#10244;</span><span>&#10453;</span><span>&#10362;</span><span>&#10481;</span><span>&#10265;</span><span>&#10492;</span><span>&#10285;</span><span>&#10448;</span><span>&#10331;</span><span>&#10252;</span><span>&#10383;</span><span>&#10491;</span><span>&#10383;</span><span>&#10343;</span><span>&#10378;</span><span>&#10315;</span><span>&#10266;</span><span>&#10478;</span><span>&#10463;</span><span>&#10312;</span><span>&#10399;</span>
+            </div>
+            <div class="column col-28"><span>&#10363;</span><span>&#10375;</span><span>&#10269;</span><span>&#10323;</span><span>&#10242;</span><span>&#10283;</span><span>&#10274;</span><span>&#10366;</span><span>&#10436;</span><span>&#10345;</span><span>&#10280;</span><span>&#10347;</span><span>&#10314;</span><span>&#10241;</span><span>&#10249;</span><span>&#10476;</span><span>&#10429;</span><span>&#10325;</span><span>&#10399;</span><span>&#10361;</span><span>&#10400;</span><span>&#10251;</span><span>&#10476;</span><span>&#10316;</span><span>&#10329;</span><span>&#10258;</span><span>&#10290;</span><span>&#10489;</span><span>&#10383;</span><span>&#10338;</span><span>&#10298;</span><span>&#10264;</span><span>&#10460;</span><span>&#10484;</span><span>&#10433;</span><span>&#10297;</span><span>&#10266;</span><span>&#10346;</span><span>&#10259;</span><span>&#10478;</span><span>&#10240;</span><span>&#10296;</span><span>&#10392;</span><span>&#10304;</span><span>&#10457;</span><span>&#10424;</span><span>&#10313;</span><span>&#10477;</span><span>&#10387;</span><span>&#10301;</span>
+            </div>
+            <div class="column col-29"><span>&#10335;</span><span>&#10296;</span><span>&#10266;</span><span>&#10400;</span><span>&#10244;</span><span>&#10436;</span><span>&#10407;</span><span>&#10377;</span><span>&#10317;</span><span>&#10282;</span><span>&#10343;</span><span>&#10411;</span><span>&#10344;</span><span>&#10435;</span><span>&#10428;</span><span>&#10424;</span><span>&#10355;</span><span>&#10431;</span><span>&#10457;</span><span>&#10363;</span><span>&#10240;</span><span>&#10404;</span><span>&#10463;</span><span>&#10423;</span><span>&#10356;</span><span>&#10412;</span><span>&#10240;</span><span>&#10359;</span><span>&#10263;</span><span>&#10440;</span><span>&#10264;</span><span>&#10426;</span><span>&#10277;</span><span>&#10265;</span><span>&#10486;</span><span>&#10341;</span><span>&#10465;</span><span>&#10258;</span><span>&#10484;</span><span>&#10315;</span><span>&#10272;</span><span>&#10392;</span><span>&#10406;</span><span>&#10345;</span><span>&#10324;</span><span>&#10376;</span><span>&#10312;</span><span>&#10386;</span><span>&#10296;</span><span>&#10405;</span>
+            </div>
+            <div class="column col-30"><span>&#10357;</span><span>&#10256;</span><span>&#10250;</span><span>&#10273;</span><span>&#10319;</span><span>&#10335;</span><span>&#10481;</span><span>&#10246;</span><span>&#10468;</span><span>&#10454;</span><span>&#10417;</span><span>&#10409;</span><span>&#10411;</span><span>&#10340;</span><span>&#10425;</span><span>&#10395;</span><span>&#10443;</span><span>&#10433;</span><span>&#10444;</span><span>&#10340;</span><span>&#10313;</span><span>&#10483;</span><span>&#10338;</span><span>&#10300;</span><span>&#10301;</span><span>&#10364;</span><span>&#10269;</span><span>&#10469;</span><span>&#10335;</span><span>&#10374;</span><span>&#10274;</span><span>&#10393;</span><span>&#10478;</span><span>&#10298;</span><span>&#10380;</span><span>&#10269;</span><span>&#10366;</span><span>&#10456;</span><span>&#10297;</span><span>&#10346;</span><span>&#10302;</span><span>&#10477;</span><span>&#10298;</span><span>&#10477;</span><span>&#10270;</span><span>&#10365;</span><span>&#10258;</span><span>&#10389;</span><span>&#10317;</span><span>&#10267;</span>
+            </div>
+            <div class="column col-31"><span>&#10364;</span><span>&#10475;</span><span>&#10359;</span><span>&#10265;</span><span>&#10389;</span><span>&#10443;</span><span>&#10308;</span><span>&#10475;</span><span>&#10456;</span><span>&#10361;</span><span>&#10357;</span><span>&#10382;</span><span>&#10493;</span><span>&#10263;</span><span>&#10258;</span><span>&#10363;</span><span>&#10245;</span><span>&#10382;</span><span>&#10357;</span><span>&#10452;</span><span>&#10350;</span><span>&#10339;</span><span>&#10362;</span><span>&#10385;</span><span>&#10326;</span><span>&#10488;</span><span>&#10249;</span><span>&#10247;</span><span>&#10397;</span><span>&#10326;</span><span>&#10316;</span><span>&#10290;</span><span>&#10441;</span><span>&#10453;</span><span>&#10302;</span><span>&#10458;</span><span>&#10473;</span><span>&#10463;</span><span>&#10335;</span><span>&#10363;</span><span>&#10471;</span><span>&#10450;</span><span>&#10393;</span><span>&#10481;</span><span>&#10267;</span><span>&#10275;</span><span>&#10352;</span><span>&#10361;</span><span>&#10392;</span><span>&#10295;</span>
+            </div>
+            <div class="column col-32"><span>&#10257;</span><span>&#10272;</span><span>&#10313;</span><span>&#10316;</span><span>&#10491;</span><span>&#10307;</span><span>&#10401;</span><span>&#10247;</span><span>&#10400;</span><span>&#10303;</span><span>&#10439;</span><span>&#10364;</span><span>&#10276;</span><span>&#10434;</span><span>&#10319;</span><span>&#10404;</span><span>&#10249;</span><span>&#10472;</span><span>&#10410;</span><span>&#10465;</span><span>&#10248;</span><span>&#10308;</span><span>&#10338;</span><span>&#10367;</span><span>&#10392;</span><span>&#10349;</span><span>&#10341;</span><span>&#10339;</span><span>&#10253;</span><span>&#10403;</span><span>&#10312;</span><span>&#10345;</span><span>&#10295;</span><span>&#10287;</span><span>&#10386;</span><span>&#10379;</span><span>&#10348;</span><span>&#10346;</span><span>&#10319;</span><span>&#10407;</span><span>&#10311;</span><span>&#10472;</span><span>&#10258;</span><span>&#10353;</span><span>&#10346;</span><span>&#10485;</span><span>&#10381;</span><span>&#10371;</span><span>&#10253;</span><span>&#10308;</span>
+            </div>
+            <div class="column col-33"><span>&#10389;</span><span>&#10414;</span><span>&#10359;</span><span>&#10251;</span><span>&#10321;</span><span>&#10355;</span><span>&#10491;</span><span>&#10248;</span><span>&#10351;</span><span>&#10267;</span><span>&#10359;</span><span>&#10467;</span><span>&#10260;</span><span>&#10435;</span><span>&#10494;</span><span>&#10389;</span><span>&#10243;</span><span>&#10447;</span><span>&#10277;</span><span>&#10337;</span><span>&#10416;</span><span>&#10249;</span><span>&#10368;</span><span>&#10369;</span><span>&#10468;</span><span>&#10324;</span><span>&#10298;</span><span>&#10414;</span><span>&#10407;</span><span>&#10247;</span><span>&#10475;</span><span>&#10369;</span><span>&#10345;</span><span>&#10319;</span><span>&#10334;</span><span>&#10386;</span><span>&#10386;</span><span>&#10357;</span><span>&#10473;</span><span>&#10248;</span><span>&#10357;</span><span>&#10472;</span><span>&#10319;</span><span>&#10376;</span><span>&#10350;</span><span>&#10431;</span><span>&#10465;</span><span>&#10364;</span><span>&#10432;</span><span>&#10366;</span>
+            </div>
+            <div class="column col-34"><span>&#10455;</span><span>&#10476;</span><span>&#10492;</span><span>&#10386;</span><span>&#10433;</span><span>&#10412;</span><span>&#10309;</span><span>&#10352;</span><span>&#10405;</span><span>&#10324;</span><span>&#10356;</span><span>&#10395;</span><span>&#10310;</span><span>&#10276;</span><span>&#10274;</span><span>&#10291;</span><span>&#10312;</span><span>&#10464;</span><span>&#10273;</span><span>&#10295;</span><span>&#10331;</span><span>&#10474;</span><span>&#10273;</span><span>&#10451;</span><span>&#10303;</span><span>&#10363;</span><span>&#10296;</span><span>&#10337;</span><span>&#10368;</span><span>&#10440;</span><span>&#10365;</span><span>&#10314;</span><span>&#10364;</span><span>&#10279;</span><span>&#10265;</span><span>&#10294;</span><span>&#10393;</span><span>&#10418;</span><span>&#10377;</span><span>&#10469;</span><span>&#10418;</span><span>&#10434;</span><span>&#10356;</span><span>&#10448;</span><span>&#10458;</span><span>&#10446;</span><span>&#10275;</span><span>&#10448;</span><span>&#10459;</span><span>&#10433;</span>
+            </div>
+            <div class="column col-35"><span>&#10389;</span><span>&#10484;</span><span>&#10474;</span><span>&#10425;</span><span>&#10378;</span><span>&#10381;</span><span>&#10401;</span><span>&#10321;</span><span>&#10388;</span><span>&#10349;</span><span>&#10472;</span><span>&#10490;</span><span>&#10327;</span><span>&#10391;</span><span>&#10293;</span><span>&#10312;</span><span>&#10478;</span><span>&#10327;</span><span>&#10462;</span><span>&#10242;</span><span>&#10266;</span><span>&#10317;</span><span>&#10350;</span><span>&#10377;</span><span>&#10277;</span><span>&#10322;</span><span>&#10412;</span><span>&#10248;</span><span>&#10380;</span><span>&#10377;</span><span>&#10365;</span><span>&#10339;</span><span>&#10259;</span><span>&#10330;</span><span>&#10405;</span><span>&#10272;</span><span>&#10245;</span><span>&#10307;</span><span>&#10336;</span><span>&#10494;</span><span>&#10391;</span><span>&#10365;</span><span>&#10449;</span><span>&#10442;</span><span>&#10432;</span><span>&#10365;</span><span>&#10418;</span><span>&#10270;</span><span>&#10449;</span><span>&#10353;</span>
+            </div>
+            <div class="column col-36"><span>&#10342;</span><span>&#10393;</span><span>&#10445;</span><span>&#10404;</span><span>&#10337;</span><span>&#10476;</span><span>&#10487;</span><span>&#10243;</span><span>&#10251;</span><span>&#10453;</span><span>&#10437;</span><span>&#10353;</span><span>&#10399;</span><span>&#10271;</span><span>&#10328;</span><span>&#10449;</span><span>&#10444;</span><span>&#10408;</span><span>&#10249;</span><span>&#10388;</span><span>&#10251;</span><span>&#10488;</span><span>&#10282;</span><span>&#10455;</span><span>&#10399;</span><span>&#10428;</span><span>&#10354;</span><span>&#10466;</span><span>&#10431;</span><span>&#10442;</span><span>&#10353;</span><span>&#10424;</span><span>&#10428;</span><span>&#10276;</span><span>&#10326;</span><span>&#10315;</span><span>&#10493;</span><span>&#10311;</span><span>&#10415;</span><span>&#10445;</span><span>&#10316;</span><span>&#10473;</span><span>&#10368;</span><span>&#10278;</span><span>&#10334;</span><span>&#10298;</span><span>&#10403;</span><span>&#10267;</span><span>&#10455;</span><span>&#10365;</span>
+            </div>
+            <div class="column col-37"><span>&#10250;</span><span>&#10457;</span><span>&#10487;</span><span>&#10398;</span><span>&#10353;</span><span>&#10467;</span><span>&#10372;</span><span>&#10438;</span><span>&#10256;</span><span>&#10447;</span><span>&#10355;</span><span>&#10433;</span><span>&#10303;</span><span>&#10360;</span><span>&#10266;</span><span>&#10371;</span><span>&#10334;</span><span>&#10482;</span><span>&#10313;</span><span>&#10387;</span><span>&#10246;</span><span>&#10423;</span><span>&#10329;</span><span>&#10241;</span><span>&#10459;</span><span>&#10318;</span><span>&#10483;</span><span>&#10460;</span><span>&#10396;</span><span>&#10440;</span><span>&#10267;</span><span>&#10426;</span><span>&#10286;</span><span>&#10274;</span><span>&#10314;</span><span>&#10372;</span><span>&#10258;</span><span>&#10369;</span><span>&#10451;</span><span>&#10365;</span><span>&#10383;</span><span>&#10310;</span><span>&#10479;</span><span>&#10391;</span><span>&#10465;</span><span>&#10474;</span><span>&#10433;</span><span>&#10286;</span><span>&#10242;</span><span>&#10290;</span>
+            </div>
+            <div class="column col-38"><span>&#10241;</span><span>&#10430;</span><span>&#10356;</span><span>&#10249;</span><span>&#10384;</span><span>&#10469;</span><span>&#10410;</span><span>&#10377;</span><span>&#10330;</span><span>&#10326;</span><span>&#10409;</span><span>&#10421;</span><span>&#10426;</span><span>&#10393;</span><span>&#10421;</span><span>&#10397;</span><span>&#10427;</span><span>&#10264;</span><span>&#10370;</span><span>&#10305;</span><span>&#10291;</span><span>&#10476;</span><span>&#10383;</span><span>&#10353;</span><span>&#10314;</span><span>&#10454;</span><span>&#10340;</span><span>&#10350;</span><span>&#10453;</span><span>&#10444;</span><span>&#10333;</span><span>&#10245;</span><span>&#10374;</span><span>&#10295;</span><span>&#10458;</span><span>&#10394;</span><span>&#10382;</span><span>&#10482;</span><span>&#10488;</span><span>&#10385;</span><span>&#10362;</span><span>&#10470;</span><span>&#10468;</span><span>&#10367;</span><span>&#10248;</span><span>&#10350;</span><span>&#10416;</span><span>&#10388;</span><span>&#10377;</span><span>&#10295;</span>
+            </div>
+            <div class="column col-39"><span>&#10436;</span><span>&#10348;</span><span>&#10481;</span><span>&#10410;</span><span>&#10384;</span><span>&#10319;</span><span>&#10384;</span><span>&#10421;</span><span>&#10456;</span><span>&#10244;</span><span>&#10322;</span><span>&#10368;</span><span>&#10396;</span><span>&#10442;</span><span>&#10349;</span><span>&#10249;</span><span>&#10390;</span><span>&#10365;</span><span>&#10420;</span><span>&#10469;</span><span>&#10267;</span><span>&#10358;</span><span>&#10375;</span><span>&#10272;</span><span>&#10398;</span><span>&#10486;</span><span>&#10397;</span><span>&#10399;</span><span>&#10474;</span><span>&#10363;</span><span>&#10428;</span><span>&#10386;</span><span>&#10491;</span><span>&#10476;</span><span>&#10286;</span><span>&#10418;</span><span>&#10421;</span><span>&#10354;</span><span>&#10300;</span><span>&#10299;</span><span>&#10316;</span><span>&#10249;</span><span>&#10461;</span><span>&#10435;</span><span>&#10399;</span><span>&#10457;</span><span>&#10391;</span><span>&#10487;</span><span>&#10409;</span><span>&#10404;</span>
+            </div>
+            <div class="column col-40"><span>&#10392;</span><span>&#10404;</span><span>&#10313;</span><span>&#10392;</span><span>&#10443;</span><span>&#10349;</span><span>&#10492;</span><span>&#10263;</span><span>&#10480;</span><span>&#10306;</span><span>&#10475;</span><span>&#10447;</span><span>&#10431;</span><span>&#10405;</span><span>&#10303;</span><span>&#10310;</span><span>&#10268;</span><span>&#10356;</span><span>&#10357;</span><span>&#10265;</span><span>&#10281;</span><span>&#10315;</span><span>&#10407;</span><span>&#10438;</span><span>&#10413;</span><span>&#10348;</span><span>&#10444;</span><span>&#10477;</span><span>&#10395;</span><span>&#10276;</span><span>&#10463;</span><span>&#10276;</span><span>&#10366;</span><span>&#10414;</span><span>&#10479;</span><span>&#10284;</span><span>&#10413;</span><span>&#10393;</span><span>&#10412;</span><span>&#10433;</span><span>&#10310;</span><span>&#10483;</span><span>&#10282;</span><span>&#10324;</span><span>&#10321;</span><span>&#10369;</span><span>&#10455;</span><span>&#10256;</span><span>&#10392;</span><span>&#10443;</span>
+            </div>
+            <div class="column col-41"><span>&#10457;</span><span>&#10309;</span><span>&#10320;</span><span>&#10256;</span><span>&#10335;</span><span>&#10264;</span><span>&#10267;</span><span>&#10466;</span><span>&#10291;</span><span>&#10260;</span><span>&#10437;</span><span>&#10379;</span><span>&#10377;</span><span>&#10399;</span><span>&#10309;</span><span>&#10452;</span><span>&#10297;</span><span>&#10491;</span><span>&#10388;</span><span>&#10367;</span><span>&#10411;</span><span>&#10347;</span><span>&#10347;</span><span>&#10322;</span><span>&#10342;</span><span>&#10251;</span><span>&#10387;</span><span>&#10280;</span><span>&#10485;</span><span>&#10470;</span><span>&#10272;</span><span>&#10243;</span><span>&#10353;</span><span>&#10303;</span><span>&#10361;</span><span>&#10366;</span><span>&#10358;</span><span>&#10303;</span><span>&#10392;</span><span>&#10323;</span><span>&#10263;</span><span>&#10435;</span><span>&#10356;</span><span>&#10466;</span><span>&#10370;</span><span>&#10471;</span><span>&#10489;</span><span>&#10372;</span><span>&#10485;</span><span>&#10396;</span>
+            </div>
+            <div class="column col-42"><span>&#10476;</span><span>&#10411;</span><span>&#10254;</span><span>&#10474;</span><span>&#10451;</span><span>&#10249;</span><span>&#10317;</span><span>&#10466;</span><span>&#10455;</span><span>&#10479;</span><span>&#10384;</span><span>&#10372;</span><span>&#10351;</span><span>&#10423;</span><span>&#10477;</span><span>&#10464;</span><span>&#10272;</span><span>&#10337;</span><span>&#10311;</span><span>&#10430;</span><span>&#10257;</span><span>&#10352;</span><span>&#10264;</span><span>&#10468;</span><span>&#10333;</span><span>&#10443;</span><span>&#10464;</span><span>&#10315;</span><span>&#10479;</span><span>&#10397;</span><span>&#10293;</span><span>&#10259;</span><span>&#10443;</span><span>&#10393;</span><span>&#10443;</span><span>&#10250;</span><span>&#10402;</span><span>&#10481;</span><span>&#10410;</span><span>&#10407;</span><span>&#10389;</span><span>&#10392;</span><span>&#10405;</span><span>&#10358;</span><span>&#10336;</span><span>&#10417;</span><span>&#10421;</span><span>&#10398;</span><span>&#10387;</span><span>&#10397;</span>
+            </div>
+            <div class="column col-43"><span>&#10491;</span><span>&#10440;</span><span>&#10259;</span><span>&#10284;</span><span>&#10270;</span><span>&#10262;</span><span>&#10368;</span><span>&#10374;</span><span>&#10389;</span><span>&#10280;</span><span>&#10382;</span><span>&#10459;</span><span>&#10463;</span><span>&#10249;</span><span>&#10403;</span><span>&#10424;</span><span>&#10388;</span><span>&#10437;</span><span>&#10426;</span><span>&#10400;</span><span>&#10288;</span><span>&#10472;</span><span>&#10331;</span><span>&#10344;</span><span>&#10355;</span><span>&#10378;</span><span>&#10293;</span><span>&#10451;</span><span>&#10297;</span><span>&#10280;</span><span>&#10458;</span><span>&#10311;</span><span>&#10249;</span><span>&#10353;</span><span>&#10389;</span><span>&#10404;</span><span>&#10389;</span><span>&#10336;</span><span>&#10341;</span><span>&#10448;</span><span>&#10454;</span><span>&#10363;</span><span>&#10427;</span><span>&#10328;</span><span>&#10276;</span><span>&#10382;</span><span>&#10359;</span><span>&#10468;</span><span>&#10407;</span><span>&#10245;</span>
+            </div>
+            <div class="column col-44"><span>&#10457;</span><span>&#10319;</span><span>&#10407;</span><span>&#10429;</span><span>&#10378;</span><span>&#10444;</span><span>&#10289;</span><span>&#10482;</span><span>&#10482;</span><span>&#10403;</span><span>&#10304;</span><span>&#10378;</span><span>&#10283;</span><span>&#10402;</span><span>&#10284;</span><span>&#10390;</span><span>&#10292;</span><span>&#10489;</span><span>&#10350;</span><span>&#10381;</span><span>&#10404;</span><span>&#10429;</span><span>&#10428;</span><span>&#10353;</span><span>&#10251;</span><span>&#10423;</span><span>&#10437;</span><span>&#10389;</span><span>&#10431;</span><span>&#10379;</span><span>&#10371;</span><span>&#10281;</span><span>&#10435;</span><span>&#10485;</span><span>&#10480;</span><span>&#10419;</span><span>&#10376;</span><span>&#10386;</span><span>&#10414;</span><span>&#10350;</span><span>&#10300;</span><span>&#10431;</span><span>&#10292;</span><span>&#10310;</span><span>&#10406;</span><span>&#10485;</span><span>&#10480;</span><span>&#10273;</span><span>&#10298;</span><span>&#10279;</span>
+            </div>
+            <div class="column col-45"><span>&#10372;</span><span>&#10293;</span><span>&#10326;</span><span>&#10439;</span><span>&#10411;</span><span>&#10316;</span><span>&#10420;</span><span>&#10282;</span><span>&#10267;</span><span>&#10325;</span><span>&#10294;</span><span>&#10284;</span><span>&#10479;</span><span>&#10462;</span><span>&#10269;</span><span>&#10489;</span><span>&#10296;</span><span>&#10455;</span><span>&#10336;</span><span>&#10418;</span><span>&#10254;</span><span>&#10491;</span><span>&#10393;</span><span>&#10448;</span><span>&#10422;</span><span>&#10262;</span><span>&#10385;</span><span>&#10300;</span><span>&#10317;</span><span>&#10268;</span><span>&#10361;</span><span>&#10340;</span><span>&#10386;</span><span>&#10322;</span><span>&#10384;</span><span>&#10251;</span><span>&#10341;</span><span>&#10365;</span><span>&#10468;</span><span>&#10336;</span><span>&#10415;</span><span>&#10363;</span><span>&#10428;</span><span>&#10301;</span><span>&#10363;</span><span>&#10437;</span><span>&#10425;</span><span>&#10409;</span><span>&#10295;</span><span>&#10431;</span>
+            </div>
+            <div class="column col-46"><span>&#10374;</span><span>&#10345;</span><span>&#10461;</span><span>&#10359;</span><span>&#10339;</span><span>&#10397;</span><span>&#10298;</span><span>&#10460;</span><span>&#10417;</span><span>&#10414;</span><span>&#10422;</span><span>&#10404;</span><span>&#10463;</span><span>&#10255;</span><span>&#10261;</span><span>&#10434;</span><span>&#10399;</span><span>&#10457;</span><span>&#10388;</span><span>&#10466;</span><span>&#10459;</span><span>&#10437;</span><span>&#10244;</span><span>&#10355;</span><span>&#10362;</span><span>&#10371;</span><span>&#10295;</span><span>&#10311;</span><span>&#10441;</span><span>&#10264;</span><span>&#10433;</span><span>&#10361;</span><span>&#10329;</span><span>&#10473;</span><span>&#10415;</span><span>&#10460;</span><span>&#10253;</span><span>&#10288;</span><span>&#10421;</span><span>&#10240;</span><span>&#10280;</span><span>&#10488;</span><span>&#10278;</span><span>&#10444;</span><span>&#10436;</span><span>&#10468;</span><span>&#10328;</span><span>&#10431;</span><span>&#10373;</span><span>&#10382;</span>
+            </div>
+            <div class="column col-47"><span>&#10425;</span><span>&#10255;</span><span>&#10336;</span><span>&#10322;</span><span>&#10354;</span><span>&#10336;</span><span>&#10247;</span><span>&#10341;</span><span>&#10372;</span><span>&#10428;</span><span>&#10292;</span><span>&#10371;</span><span>&#10313;</span><span>&#10262;</span><span>&#10386;</span><span>&#10400;</span><span>&#10266;</span><span>&#10246;</span><span>&#10285;</span><span>&#10240;</span><span>&#10386;</span><span>&#10407;</span><span>&#10478;</span><span>&#10274;</span><span>&#10356;</span><span>&#10460;</span><span>&#10335;</span><span>&#10305;</span><span>&#10377;</span><span>&#10335;</span><span>&#10363;</span><span>&#10268;</span><span>&#10414;</span><span>&#10437;</span><span>&#10462;</span><span>&#10272;</span><span>&#10260;</span><span>&#10435;</span><span>&#10299;</span><span>&#10316;</span><span>&#10355;</span><span>&#10413;</span><span>&#10339;</span><span>&#10292;</span><span>&#10353;</span><span>&#10352;</span><span>&#10433;</span><span>&#10321;</span><span>&#10385;</span><span>&#10465;</span>
+            </div>
+            <div class="column col-48"><span>&#10480;</span><span>&#10398;</span><span>&#10436;</span><span>&#10251;</span><span>&#10452;</span><span>&#10436;</span><span>&#10390;</span><span>&#10467;</span><span>&#10415;</span><span>&#10323;</span><span>&#10271;</span><span>&#10419;</span><span>&#10465;</span><span>&#10327;</span><span>&#10348;</span><span>&#10350;</span><span>&#10344;</span><span>&#10435;</span><span>&#10246;</span><span>&#10282;</span><span>&#10262;</span><span>&#10391;</span><span>&#10249;</span><span>&#10410;</span><span>&#10358;</span><span>&#10462;</span><span>&#10294;</span><span>&#10453;</span><span>&#10379;</span><span>&#10437;</span><span>&#10330;</span><span>&#10309;</span><span>&#10383;</span><span>&#10372;</span><span>&#10265;</span><span>&#10484;</span><span>&#10380;</span><span>&#10289;</span><span>&#10257;</span><span>&#10392;</span><span>&#10345;</span><span>&#10295;</span><span>&#10418;</span><span>&#10327;</span><span>&#10242;</span><span>&#10394;</span><span>&#10294;</span><span>&#10384;</span><span>&#10290;</span><span>&#10380;</span>
+            </div>
+            <div class="column col-49"><span>&#10389;</span><span>&#10453;</span><span>&#10351;</span><span>&#10292;</span><span>&#10338;</span><span>&#10401;</span><span>&#10436;</span><span>&#10466;</span><span>&#10412;</span><span>&#10338;</span><span>&#10451;</span><span>&#10282;</span><span>&#10493;</span><span>&#10338;</span><span>&#10346;</span><span>&#10278;</span><span>&#10269;</span><span>&#10343;</span><span>&#10431;</span><span>&#10453;</span><span>&#10470;</span><span>&#10243;</span><span>&#10481;</span><span>&#10258;</span><span>&#10351;</span><span>&#10327;</span><span>&#10265;</span><span>&#10345;</span><span>&#10338;</span><span>&#10257;</span><span>&#10293;</span><span>&#10372;</span><span>&#10352;</span><span>&#10340;</span><span>&#10358;</span><span>&#10489;</span><span>&#10482;</span><span>&#10288;</span><span>&#10410;</span><span>&#10378;</span><span>&#10382;</span><span>&#10291;</span><span>&#10369;</span><span>&#10308;</span><span>&#10285;</span><span>&#10326;</span><span>&#10419;</span><span>&#10494;</span><span>&#10473;</span><span>&#10354;</span>
+            </div>
+            <div class="column col-50"><span>&#10258;</span><span>&#10379;</span><span>&#10480;</span><span>&#10456;</span><span>&#10419;</span><span>&#10356;</span><span>&#10369;</span><span>&#10329;</span><span>&#10323;</span><span>&#10478;</span><span>&#10465;</span><span>&#10479;</span><span>&#10379;</span><span>&#10399;</span><span>&#10377;</span><span>&#10340;</span><span>&#10492;</span><span>&#10492;</span><span>&#10481;</span><span>&#10317;</span><span>&#10448;</span><span>&#10327;</span><span>&#10404;</span><span>&#10464;</span><span>&#10438;</span><span>&#10430;</span><span>&#10367;</span><span>&#10292;</span><span>&#10280;</span><span>&#10259;</span><span>&#10483;</span><span>&#10353;</span><span>&#10354;</span><span>&#10416;</span><span>&#10478;</span><span>&#10441;</span><span>&#10328;</span><span>&#10432;</span><span>&#10339;</span><span>&#10351;</span><span>&#10321;</span><span>&#10366;</span><span>&#10403;</span><span>&#10365;</span><span>&#10406;</span><span>&#10441;</span><span>&#10252;</span><span>&#10434;</span><span>&#10371;</span><span>&#10451;</span>
+            </div>
+            <div class="column col-51"><span>&#10393;</span><span>&#10311;</span><span>&#10314;</span><span>&#10457;</span><span>&#10475;</span><span>&#10345;</span><span>&#10492;</span><span>&#10378;</span><span>&#10281;</span><span>&#10309;</span><span>&#10429;</span><span>&#10494;</span><span>&#10414;</span><span>&#10389;</span><span>&#10352;</span><span>&#10313;</span><span>&#10328;</span><span>&#10424;</span><span>&#10431;</span><span>&#10404;</span><span>&#10242;</span><span>&#10328;</span><span>&#10297;</span><span>&#10342;</span><span>&#10494;</span><span>&#10264;</span><span>&#10308;</span><span>&#10424;</span><span>&#10304;</span><span>&#10241;</span><span>&#10391;</span><span>&#10465;</span><span>&#10251;</span><span>&#10408;</span><span>&#10332;</span><span>&#10278;</span><span>&#10265;</span><span>&#10285;</span><span>&#10435;</span><span>&#10256;</span><span>&#10290;</span><span>&#10382;</span><span>&#10349;</span><span>&#10443;</span><span>&#10385;</span><span>&#10434;</span><span>&#10442;</span><span>&#10256;</span><span>&#10436;</span><span>&#10380;</span>
+            </div>
+            <div class="column col-52"><span>&#10275;</span><span>&#10446;</span><span>&#10447;</span><span>&#10486;</span><span>&#10270;</span><span>&#10366;</span><span>&#10441;</span><span>&#10265;</span><span>&#10310;</span><span>&#10251;</span><span>&#10380;</span><span>&#10494;</span><span>&#10384;</span><span>&#10402;</span><span>&#10438;</span><span>&#10254;</span><span>&#10431;</span><span>&#10249;</span><span>&#10483;</span><span>&#10451;</span><span>&#10416;</span><span>&#10333;</span><span>&#10388;</span><span>&#10444;</span><span>&#10276;</span><span>&#10278;</span><span>&#10354;</span><span>&#10256;</span><span>&#10377;</span><span>&#10277;</span><span>&#10440;</span><span>&#10463;</span><span>&#10274;</span><span>&#10418;</span><span>&#10277;</span><span>&#10395;</span><span>&#10265;</span><span>&#10309;</span><span>&#10296;</span><span>&#10315;</span><span>&#10420;</span><span>&#10272;</span><span>&#10291;</span><span>&#10486;</span><span>&#10281;</span><span>&#10369;</span><span>&#10371;</span><span>&#10394;</span><span>&#10442;</span><span>&#10477;</span>
+            </div>
+            <div class="column col-53"><span>&#10463;</span><span>&#10470;</span><span>&#10444;</span><span>&#10295;</span><span>&#10467;</span><span>&#10247;</span><span>&#10462;</span><span>&#10274;</span><span>&#10256;</span><span>&#10291;</span><span>&#10430;</span><span>&#10366;</span><span>&#10453;</span><span>&#10272;</span><span>&#10288;</span><span>&#10346;</span><span>&#10386;</span><span>&#10397;</span><span>&#10253;</span><span>&#10437;</span><span>&#10250;</span><span>&#10302;</span><span>&#10315;</span><span>&#10445;</span><span>&#10471;</span><span>&#10489;</span><span>&#10478;</span><span>&#10396;</span><span>&#10408;</span><span>&#10298;</span><span>&#10368;</span><span>&#10351;</span><span>&#10340;</span><span>&#10426;</span><span>&#10434;</span><span>&#10476;</span><span>&#10417;</span><span>&#10397;</span><span>&#10296;</span><span>&#10320;</span><span>&#10342;</span><span>&#10383;</span><span>&#10246;</span><span>&#10253;</span><span>&#10478;</span><span>&#10254;</span><span>&#10407;</span><span>&#10341;</span><span>&#10380;</span><span>&#10488;</span>
+            </div>
+            <div class="column col-54"><span>&#10258;</span><span>&#10267;</span><span>&#10367;</span><span>&#10270;</span><span>&#10276;</span><span>&#10276;</span><span>&#10307;</span><span>&#10385;</span><span>&#10356;</span><span>&#10461;</span><span>&#10340;</span><span>&#10275;</span><span>&#10294;</span><span>&#10382;</span><span>&#10243;</span><span>&#10464;</span><span>&#10480;</span><span>&#10317;</span><span>&#10271;</span><span>&#10438;</span><span>&#10249;</span><span>&#10258;</span><span>&#10389;</span><span>&#10294;</span><span>&#10280;</span><span>&#10347;</span><span>&#10457;</span><span>&#10441;</span><span>&#10392;</span><span>&#10271;</span><span>&#10377;</span><span>&#10385;</span><span>&#10303;</span><span>&#10387;</span><span>&#10444;</span><span>&#10410;</span><span>&#10443;</span><span>&#10339;</span><span>&#10287;</span><span>&#10375;</span><span>&#10386;</span><span>&#10290;</span><span>&#10354;</span><span>&#10401;</span><span>&#10264;</span><span>&#10304;</span><span>&#10452;</span><span>&#10304;</span><span>&#10393;</span><span>&#10480;</span>
+            </div>
+            <div class="column col-55"><span>&#10485;</span><span>&#10440;</span><span>&#10241;</span><span>&#10352;</span><span>&#10394;</span><span>&#10435;</span><span>&#10406;</span><span>&#10269;</span><span>&#10317;</span><span>&#10257;</span><span>&#10450;</span><span>&#10361;</span><span>&#10468;</span><span>&#10263;</span><span>&#10290;</span><span>&#10341;</span><span>&#10299;</span><span>&#10446;</span><span>&#10365;</span><span>&#10395;</span><span>&#10290;</span><span>&#10264;</span><span>&#10380;</span><span>&#10352;</span><span>&#10465;</span><span>&#10396;</span><span>&#10435;</span><span>&#10440;</span><span>&#10271;</span><span>&#10494;</span><span>&#10435;</span><span>&#10241;</span><span>&#10465;</span><span>&#10313;</span><span>&#10407;</span><span>&#10473;</span><span>&#10296;</span><span>&#10419;</span><span>&#10267;</span><span>&#10286;</span><span>&#10265;</span><span>&#10462;</span><span>&#10391;</span><span>&#10450;</span><span>&#10278;</span><span>&#10437;</span><span>&#10425;</span><span>&#10458;</span><span>&#10269;</span><span>&#10303;</span>
+            </div>
+            <div class="column col-56"><span>&#10488;</span><span>&#10415;</span><span>&#10241;</span><span>&#10270;</span><span>&#10256;</span><span>&#10300;</span><span>&#10328;</span><span>&#10289;</span><span>&#10398;</span><span>&#10438;</span><span>&#10333;</span><span>&#10397;</span><span>&#10440;</span><span>&#10438;</span><span>&#10310;</span><span>&#10484;</span><span>&#10381;</span><span>&#10248;</span><span>&#10372;</span><span>&#10352;</span><span>&#10436;</span><span>&#10408;</span><span>&#10430;</span><span>&#10274;</span><span>&#10388;</span><span>&#10402;</span><span>&#10388;</span><span>&#10321;</span><span>&#10364;</span><span>&#10322;</span><span>&#10384;</span><span>&#10304;</span><span>&#10354;</span><span>&#10294;</span><span>&#10396;</span><span>&#10350;</span><span>&#10447;</span><span>&#10273;</span><span>&#10460;</span><span>&#10399;</span><span>&#10372;</span><span>&#10464;</span><span>&#10468;</span><span>&#10325;</span><span>&#10247;</span><span>&#10342;</span><span>&#10262;</span><span>&#10326;</span><span>&#10452;</span><span>&#10403;</span>
+            </div>
+            <div class="column col-57"><span>&#10389;</span><span>&#10259;</span><span>&#10469;</span><span>&#10322;</span><span>&#10294;</span><span>&#10340;</span><span>&#10273;</span><span>&#10412;</span><span>&#10438;</span><span>&#10337;</span><span>&#10430;</span><span>&#10358;</span><span>&#10354;</span><span>&#10343;</span><span>&#10384;</span><span>&#10296;</span><span>&#10349;</span><span>&#10411;</span><span>&#10444;</span><span>&#10477;</span><span>&#10443;</span><span>&#10334;</span><span>&#10278;</span><span>&#10301;</span><span>&#10285;</span><span>&#10399;</span><span>&#10315;</span><span>&#10292;</span><span>&#10466;</span><span>&#10355;</span><span>&#10249;</span><span>&#10271;</span><span>&#10380;</span><span>&#10281;</span><span>&#10307;</span><span>&#10474;</span><span>&#10316;</span><span>&#10454;</span><span>&#10331;</span><span>&#10260;</span><span>&#10433;</span><span>&#10423;</span><span>&#10431;</span><span>&#10455;</span><span>&#10336;</span><span>&#10494;</span><span>&#10468;</span><span>&#10426;</span><span>&#10256;</span><span>&#10254;</span>
+            </div>
+            <div class="column col-58"><span>&#10405;</span><span>&#10302;</span><span>&#10479;</span><span>&#10453;</span><span>&#10445;</span><span>&#10286;</span><span>&#10491;</span><span>&#10404;</span><span>&#10310;</span><span>&#10359;</span><span>&#10460;</span><span>&#10424;</span><span>&#10392;</span><span>&#10422;</span><span>&#10462;</span><span>&#10259;</span><span>&#10469;</span><span>&#10265;</span><span>&#10461;</span><span>&#10391;</span><span>&#10280;</span><span>&#10296;</span><span>&#10455;</span><span>&#10494;</span><span>&#10336;</span><span>&#10263;</span><span>&#10321;</span><span>&#10242;</span><span>&#10249;</span><span>&#10436;</span><span>&#10358;</span><span>&#10306;</span><span>&#10411;</span><span>&#10408;</span><span>&#10287;</span><span>&#10371;</span><span>&#10428;</span><span>&#10399;</span><span>&#10303;</span><span>&#10391;</span><span>&#10255;</span><span>&#10257;</span><span>&#10356;</span><span>&#10254;</span><span>&#10480;</span><span>&#10445;</span><span>&#10268;</span><span>&#10328;</span><span>&#10440;</span><span>&#10395;</span>
+            </div>
+            <div class="column col-59"><span>&#10494;</span><span>&#10379;</span><span>&#10244;</span><span>&#10242;</span><span>&#10338;</span><span>&#10299;</span><span>&#10331;</span><span>&#10333;</span><span>&#10351;</span><span>&#10491;</span><span>&#10407;</span><span>&#10289;</span><span>&#10387;</span><span>&#10258;</span><span>&#10468;</span><span>&#10464;</span><span>&#10244;</span><span>&#10396;</span><span>&#10330;</span><span>&#10396;</span><span>&#10475;</span><span>&#10294;</span><span>&#10316;</span><span>&#10407;</span><span>&#10430;</span><span>&#10471;</span><span>&#10324;</span><span>&#10420;</span><span>&#10372;</span><span>&#10444;</span><span>&#10377;</span><span>&#10451;</span><span>&#10478;</span><span>&#10382;</span><span>&#10446;</span><span>&#10397;</span><span>&#10328;</span><span>&#10245;</span><span>&#10331;</span><span>&#10485;</span><span>&#10372;</span><span>&#10260;</span><span>&#10470;</span><span>&#10340;</span><span>&#10297;</span><span>&#10438;</span><span>&#10248;</span><span>&#10457;</span><span>&#10246;</span><span>&#10303;</span>
+            </div>
+            <div class="column col-60"><span>&#10408;</span><span>&#10451;</span><span>&#10391;</span><span>&#10452;</span><span>&#10299;</span><span>&#10460;</span><span>&#10271;</span><span>&#10350;</span><span>&#10319;</span><span>&#10249;</span><span>&#10477;</span><span>&#10265;</span><span>&#10404;</span><span>&#10357;</span><span>&#10355;</span><span>&#10460;</span><span>&#10258;</span><span>&#10260;</span><span>&#10450;</span><span>&#10470;</span><span>&#10472;</span><span>&#10477;</span><span>&#10423;</span><span>&#10280;</span><span>&#10389;</span><span>&#10432;</span><span>&#10281;</span><span>&#10406;</span><span>&#10242;</span><span>&#10392;</span><span>&#10337;</span><span>&#10469;</span><span>&#10398;</span><span>&#10485;</span><span>&#10479;</span><span>&#10440;</span><span>&#10455;</span><span>&#10315;</span><span>&#10386;</span><span>&#10316;</span><span>&#10272;</span><span>&#10329;</span><span>&#10373;</span><span>&#10398;</span><span>&#10484;</span><span>&#10480;</span><span>&#10488;</span><span>&#10367;</span><span>&#10395;</span><span>&#10315;</span>
+            </div>
+            <div class="column col-61"><span>&#10265;</span><span>&#10253;</span><span>&#10387;</span><span>&#10268;</span><span>&#10396;</span><span>&#10340;</span><span>&#10337;</span><span>&#10296;</span><span>&#10253;</span><span>&#10249;</span><span>&#10388;</span><span>&#10448;</span><span>&#10330;</span><span>&#10359;</span><span>&#10453;</span><span>&#10381;</span><span>&#10366;</span><span>&#10346;</span><span>&#10481;</span><span>&#10267;</span><span>&#10427;</span><span>&#10338;</span><span>&#10330;</span><span>&#10440;</span><span>&#10401;</span><span>&#10361;</span><span>&#10244;</span><span>&#10389;</span><span>&#10251;</span><span>&#10245;</span><span>&#10359;</span><span>&#10357;</span><span>&#10327;</span><span>&#10342;</span><span>&#10395;</span><span>&#10422;</span><span>&#10445;</span><span>&#10356;</span><span>&#10270;</span><span>&#10343;</span><span>&#10450;</span><span>&#10416;</span><span>&#10343;</span><span>&#10466;</span><span>&#10444;</span><span>&#10371;</span><span>&#10461;</span><span>&#10350;</span><span>&#10400;</span><span>&#10437;</span>
+            </div>
+            <div class="column col-62"><span>&#10269;</span><span>&#10493;</span><span>&#10253;</span><span>&#10291;</span><span>&#10484;</span><span>&#10337;</span><span>&#10305;</span><span>&#10299;</span><span>&#10285;</span><span>&#10323;</span><span>&#10360;</span><span>&#10315;</span><span>&#10349;</span><span>&#10432;</span><span>&#10356;</span><span>&#10265;</span><span>&#10321;</span><span>&#10256;</span><span>&#10382;</span><span>&#10352;</span><span>&#10361;</span><span>&#10447;</span><span>&#10428;</span><span>&#10347;</span><span>&#10301;</span><span>&#10491;</span><span>&#10377;</span><span>&#10274;</span><span>&#10371;</span><span>&#10370;</span><span>&#10399;</span><span>&#10273;</span><span>&#10274;</span><span>&#10276;</span><span>&#10408;</span><span>&#10441;</span><span>&#10408;</span><span>&#10329;</span><span>&#10435;</span><span>&#10481;</span><span>&#10416;</span><span>&#10377;</span><span>&#10253;</span><span>&#10343;</span><span>&#10403;</span><span>&#10422;</span><span>&#10326;</span><span>&#10310;</span><span>&#10420;</span><span>&#10248;</span>
+            </div>
+            <div class="column col-63"><span>&#10406;</span><span>&#10375;</span><span>&#10332;</span><span>&#10464;</span><span>&#10318;</span><span>&#10412;</span><span>&#10414;</span><span>&#10292;</span><span>&#10337;</span><span>&#10444;</span><span>&#10271;</span><span>&#10346;</span><span>&#10413;</span><span>&#10397;</span><span>&#10441;</span><span>&#10492;</span><span>&#10351;</span><span>&#10426;</span><span>&#10262;</span><span>&#10365;</span><span>&#10349;</span><span>&#10311;</span><span>&#10406;</span><span>&#10402;</span><span>&#10298;</span><span>&#10305;</span><span>&#10465;</span><span>&#10357;</span><span>&#10276;</span><span>&#10318;</span><span>&#10396;</span><span>&#10389;</span><span>&#10242;</span><span>&#10394;</span><span>&#10288;</span><span>&#10478;</span><span>&#10294;</span><span>&#10398;</span><span>&#10421;</span><span>&#10491;</span><span>&#10285;</span><span>&#10364;</span><span>&#10291;</span><span>&#10449;</span><span>&#10241;</span><span>&#10301;</span><span>&#10474;</span><span>&#10363;</span><span>&#10355;</span><span>&#10457;</span>
+            </div>
+            <div class="column col-64"><span>&#10488;</span><span>&#10396;</span><span>&#10334;</span><span>&#10264;</span><span>&#10285;</span><span>&#10311;</span><span>&#10355;</span><span>&#10259;</span><span>&#10262;</span><span>&#10320;</span><span>&#10398;</span><span>&#10379;</span><span>&#10449;</span><span>&#10267;</span><span>&#10356;</span><span>&#10463;</span><span>&#10350;</span><span>&#10481;</span><span>&#10248;</span><span>&#10330;</span><span>&#10421;</span><span>&#10309;</span><span>&#10345;</span><span>&#10408;</span><span>&#10485;</span><span>&#10416;</span><span>&#10308;</span><span>&#10459;</span><span>&#10457;</span><span>&#10400;</span><span>&#10355;</span><span>&#10423;</span><span>&#10353;</span><span>&#10351;</span><span>&#10427;</span><span>&#10272;</span><span>&#10492;</span><span>&#10259;</span><span>&#10249;</span><span>&#10479;</span><span>&#10267;</span><span>&#10443;</span><span>&#10490;</span><span>&#10358;</span><span>&#10416;</span><span>&#10302;</span><span>&#10451;</span><span>&#10254;</span><span>&#10473;</span><span>&#10323;</span>
+            </div>
+            <div class="column col-65"><span>&#10410;</span><span>&#10444;</span><span>&#10351;</span><span>&#10386;</span><span>&#10329;</span><span>&#10286;</span><span>&#10274;</span><span>&#10326;</span><span>&#10406;</span><span>&#10397;</span><span>&#10483;</span><span>&#10426;</span><span>&#10421;</span><span>&#10384;</span><span>&#10284;</span><span>&#10343;</span><span>&#10416;</span><span>&#10330;</span><span>&#10310;</span><span>&#10470;</span><span>&#10351;</span><span>&#10477;</span><span>&#10391;</span><span>&#10274;</span><span>&#10391;</span><span>&#10397;</span><span>&#10485;</span><span>&#10366;</span><span>&#10432;</span><span>&#10397;</span><span>&#10316;</span><span>&#10305;</span><span>&#10345;</span><span>&#10431;</span><span>&#10266;</span><span>&#10365;</span><span>&#10493;</span><span>&#10246;</span><span>&#10425;</span><span>&#10343;</span><span>&#10431;</span><span>&#10441;</span><span>&#10461;</span><span>&#10288;</span><span>&#10480;</span><span>&#10360;</span><span>&#10493;</span><span>&#10365;</span><span>&#10341;</span><span>&#10388;</span>
+            </div>
+            <div class="column col-66"><span>&#10244;</span><span>&#10257;</span><span>&#10413;</span><span>&#10244;</span><span>&#10488;</span><span>&#10286;</span><span>&#10393;</span><span>&#10383;</span><span>&#10249;</span><span>&#10300;</span><span>&#10368;</span><span>&#10454;</span><span>&#10291;</span><span>&#10317;</span><span>&#10475;</span><span>&#10410;</span><span>&#10404;</span><span>&#10415;</span><span>&#10467;</span><span>&#10352;</span><span>&#10269;</span><span>&#10477;</span><span>&#10331;</span><span>&#10469;</span><span>&#10438;</span><span>&#10299;</span><span>&#10370;</span><span>&#10386;</span><span>&#10393;</span><span>&#10308;</span><span>&#10278;</span><span>&#10300;</span><span>&#10372;</span><span>&#10279;</span><span>&#10339;</span><span>&#10456;</span><span>&#10266;</span><span>&#10473;</span><span>&#10480;</span><span>&#10264;</span><span>&#10394;</span><span>&#10407;</span><span>&#10482;</span><span>&#10277;</span><span>&#10430;</span><span>&#10418;</span><span>&#10281;</span><span>&#10378;</span><span>&#10477;</span><span>&#10383;</span>
+            </div>
+            <div class="column col-67"><span>&#10475;</span><span>&#10272;</span><span>&#10384;</span><span>&#10297;</span><span>&#10256;</span><span>&#10350;</span><span>&#10391;</span><span>&#10336;</span><span>&#10464;</span><span>&#10296;</span><span>&#10271;</span><span>&#10319;</span><span>&#10288;</span><span>&#10296;</span><span>&#10333;</span><span>&#10345;</span><span>&#10443;</span><span>&#10257;</span><span>&#10389;</span><span>&#10248;</span><span>&#10456;</span><span>&#10252;</span><span>&#10452;</span><span>&#10460;</span><span>&#10293;</span><span>&#10384;</span><span>&#10446;</span><span>&#10461;</span><span>&#10366;</span><span>&#10382;</span><span>&#10372;</span><span>&#10376;</span><span>&#10406;</span><span>&#10256;</span><span>&#10294;</span><span>&#10464;</span><span>&#10247;</span><span>&#10322;</span><span>&#10317;</span><span>&#10305;</span><span>&#10382;</span><span>&#10287;</span><span>&#10361;</span><span>&#10291;</span><span>&#10486;</span><span>&#10251;</span><span>&#10271;</span><span>&#10418;</span><span>&#10394;</span><span>&#10310;</span>
+            </div>
+            <div class="column col-68"><span>&#10459;</span><span>&#10446;</span><span>&#10317;</span><span>&#10383;</span><span>&#10280;</span><span>&#10360;</span><span>&#10250;</span><span>&#10351;</span><span>&#10445;</span><span>&#10454;</span><span>&#10303;</span><span>&#10247;</span><span>&#10343;</span><span>&#10451;</span><span>&#10476;</span><span>&#10360;</span><span>&#10365;</span><span>&#10443;</span><span>&#10486;</span><span>&#10480;</span><span>&#10328;</span><span>&#10343;</span><span>&#10391;</span><span>&#10261;</span><span>&#10314;</span><span>&#10364;</span><span>&#10337;</span><span>&#10245;</span><span>&#10330;</span><span>&#10383;</span><span>&#10278;</span><span>&#10410;</span><span>&#10311;</span><span>&#10445;</span><span>&#10294;</span><span>&#10270;</span><span>&#10430;</span><span>&#10247;</span><span>&#10379;</span><span>&#10289;</span><span>&#10275;</span><span>&#10297;</span><span>&#10451;</span><span>&#10354;</span><span>&#10468;</span><span>&#10423;</span><span>&#10366;</span><span>&#10491;</span><span>&#10344;</span><span>&#10263;</span>
+            </div>
+            <div class="column col-69"><span>&#10488;</span><span>&#10370;</span><span>&#10257;</span><span>&#10258;</span><span>&#10317;</span><span>&#10425;</span><span>&#10412;</span><span>&#10417;</span><span>&#10333;</span><span>&#10325;</span><span>&#10296;</span><span>&#10295;</span><span>&#10415;</span><span>&#10455;</span><span>&#10288;</span><span>&#10312;</span><span>&#10411;</span><span>&#10448;</span><span>&#10432;</span><span>&#10428;</span><span>&#10264;</span><span>&#10345;</span><span>&#10474;</span><span>&#10469;</span><span>&#10350;</span><span>&#10357;</span><span>&#10315;</span><span>&#10276;</span><span>&#10473;</span><span>&#10384;</span><span>&#10445;</span><span>&#10390;</span><span>&#10353;</span><span>&#10309;</span><span>&#10278;</span><span>&#10491;</span><span>&#10489;</span><span>&#10456;</span><span>&#10302;</span><span>&#10377;</span><span>&#10276;</span><span>&#10448;</span><span>&#10351;</span><span>&#10377;</span><span>&#10446;</span><span>&#10256;</span><span>&#10254;</span><span>&#10360;</span><span>&#10366;</span><span>&#10349;</span>
+            </div>
+            <div class="column col-70"><span>&#10272;</span><span>&#10244;</span><span>&#10321;</span><span>&#10318;</span><span>&#10462;</span><span>&#10260;</span><span>&#10271;</span><span>&#10341;</span><span>&#10454;</span><span>&#10478;</span><span>&#10326;</span><span>&#10415;</span><span>&#10413;</span><span>&#10486;</span><span>&#10486;</span><span>&#10249;</span><span>&#10493;</span><span>&#10377;</span><span>&#10489;</span><span>&#10459;</span><span>&#10242;</span><span>&#10397;</span><span>&#10464;</span><span>&#10269;</span><span>&#10411;</span><span>&#10433;</span><span>&#10430;</span><span>&#10355;</span><span>&#10339;</span><span>&#10374;</span><span>&#10465;</span><span>&#10269;</span><span>&#10321;</span><span>&#10330;</span><span>&#10368;</span><span>&#10444;</span><span>&#10309;</span><span>&#10471;</span><span>&#10296;</span><span>&#10277;</span><span>&#10269;</span><span>&#10462;</span><span>&#10462;</span><span>&#10481;</span><span>&#10376;</span><span>&#10378;</span><span>&#10380;</span><span>&#10255;</span><span>&#10266;</span><span>&#10462;</span>
+            </div>
+            <div class="column col-71"><span>&#10325;</span><span>&#10260;</span><span>&#10471;</span><span>&#10469;</span><span>&#10340;</span><span>&#10490;</span><span>&#10414;</span><span>&#10355;</span><span>&#10368;</span><span>&#10306;</span><span>&#10420;</span><span>&#10467;</span><span>&#10448;</span><span>&#10384;</span><span>&#10343;</span><span>&#10393;</span><span>&#10293;</span><span>&#10262;</span><span>&#10337;</span><span>&#10419;</span><span>&#10454;</span><span>&#10321;</span><span>&#10403;</span><span>&#10294;</span><span>&#10359;</span><span>&#10366;</span><span>&#10347;</span><span>&#10421;</span><span>&#10273;</span><span>&#10254;</span><span>&#10317;</span><span>&#10428;</span><span>&#10408;</span><span>&#10387;</span><span>&#10488;</span><span>&#10471;</span><span>&#10370;</span><span>&#10285;</span><span>&#10338;</span><span>&#10467;</span><span>&#10340;</span><span>&#10335;</span><span>&#10296;</span><span>&#10255;</span><span>&#10393;</span><span>&#10349;</span><span>&#10476;</span><span>&#10381;</span><span>&#10323;</span><span>&#10274;</span>
+            </div>
+            <div class="column col-72"><span>&#10488;</span><span>&#10447;</span><span>&#10473;</span><span>&#10418;</span><span>&#10271;</span><span>&#10464;</span><span>&#10428;</span><span>&#10417;</span><span>&#10420;</span><span>&#10417;</span><span>&#10420;</span><span>&#10307;</span><span>&#10329;</span><span>&#10426;</span><span>&#10412;</span><span>&#10254;</span><span>&#10401;</span><span>&#10292;</span><span>&#10308;</span><span>&#10383;</span><span>&#10325;</span><span>&#10432;</span><span>&#10417;</span><span>&#10280;</span><span>&#10281;</span><span>&#10422;</span><span>&#10281;</span><span>&#10365;</span><span>&#10472;</span><span>&#10433;</span><span>&#10339;</span><span>&#10299;</span><span>&#10449;</span><span>&#10490;</span><span>&#10262;</span><span>&#10343;</span><span>&#10318;</span><span>&#10331;</span><span>&#10261;</span><span>&#10439;</span><span>&#10451;</span><span>&#10257;</span><span>&#10479;</span><span>&#10389;</span><span>&#10391;</span><span>&#10241;</span><span>&#10439;</span><span>&#10367;</span><span>&#10388;</span><span>&#10324;</span>
+            </div>
+            <div class="column col-73"><span>&#10418;</span><span>&#10399;</span><span>&#10433;</span><span>&#10330;</span><span>&#10418;</span><span>&#10467;</span><span>&#10493;</span><span>&#10348;</span><span>&#10363;</span><span>&#10405;</span><span>&#10341;</span><span>&#10359;</span><span>&#10250;</span><span>&#10252;</span><span>&#10327;</span><span>&#10383;</span><span>&#10323;</span><span>&#10463;</span><span>&#10310;</span><span>&#10371;</span><span>&#10372;</span><span>&#10394;</span><span>&#10366;</span><span>&#10251;</span><span>&#10407;</span><span>&#10451;</span><span>&#10478;</span><span>&#10274;</span><span>&#10268;</span><span>&#10377;</span><span>&#10411;</span><span>&#10360;</span><span>&#10295;</span><span>&#10256;</span><span>&#10358;</span><span>&#10334;</span><span>&#10264;</span><span>&#10460;</span><span>&#10276;</span><span>&#10398;</span><span>&#10343;</span><span>&#10327;</span><span>&#10465;</span><span>&#10255;</span><span>&#10364;</span><span>&#10457;</span><span>&#10389;</span><span>&#10400;</span><span>&#10466;</span><span>&#10408;</span>
+            </div>
+            <div class="column col-74"><span>&#10412;</span><span>&#10444;</span><span>&#10440;</span><span>&#10292;</span><span>&#10404;</span><span>&#10477;</span><span>&#10446;</span><span>&#10243;</span><span>&#10245;</span><span>&#10463;</span><span>&#10370;</span><span>&#10387;</span><span>&#10246;</span><span>&#10339;</span><span>&#10306;</span><span>&#10441;</span><span>&#10374;</span><span>&#10491;</span><span>&#10469;</span><span>&#10325;</span><span>&#10460;</span><span>&#10340;</span><span>&#10265;</span><span>&#10249;</span><span>&#10388;</span><span>&#10393;</span><span>&#10282;</span><span>&#10266;</span><span>&#10440;</span><span>&#10399;</span><span>&#10306;</span><span>&#10361;</span><span>&#10461;</span><span>&#10464;</span><span>&#10468;</span><span>&#10276;</span><span>&#10332;</span><span>&#10280;</span><span>&#10449;</span><span>&#10245;</span><span>&#10353;</span><span>&#10383;</span><span>&#10272;</span><span>&#10402;</span><span>&#10437;</span><span>&#10287;</span><span>&#10297;</span><span>&#10328;</span><span>&#10250;</span><span>&#10277;</span>
+            </div>
+            <div class="column col-75"><span>&#10336;</span><span>&#10377;</span><span>&#10374;</span><span>&#10403;</span><span>&#10396;</span><span>&#10470;</span><span>&#10289;</span><span>&#10323;</span><span>&#10384;</span><span>&#10307;</span><span>&#10327;</span><span>&#10330;</span><span>&#10292;</span><span>&#10406;</span><span>&#10268;</span><span>&#10381;</span><span>&#10352;</span><span>&#10396;</span><span>&#10332;</span><span>&#10346;</span><span>&#10246;</span><span>&#10283;</span><span>&#10271;</span><span>&#10406;</span><span>&#10350;</span><span>&#10248;</span><span>&#10304;</span><span>&#10305;</span><span>&#10346;</span><span>&#10303;</span><span>&#10478;</span><span>&#10289;</span><span>&#10270;</span><span>&#10477;</span><span>&#10362;</span><span>&#10387;</span><span>&#10405;</span><span>&#10431;</span><span>&#10343;</span><span>&#10420;</span><span>&#10324;</span><span>&#10372;</span><span>&#10324;</span><span>&#10256;</span><span>&#10413;</span><span>&#10362;</span><span>&#10371;</span><span>&#10362;</span><span>&#10253;</span><span>&#10304;</span>
+            </div>
+            <div class="column col-76"><span>&#10291;</span><span>&#10296;</span><span>&#10416;</span><span>&#10408;</span><span>&#10375;</span><span>&#10420;</span><span>&#10310;</span><span>&#10366;</span><span>&#10376;</span><span>&#10299;</span><span>&#10369;</span><span>&#10291;</span><span>&#10481;</span><span>&#10325;</span><span>&#10388;</span><span>&#10354;</span><span>&#10443;</span><span>&#10353;</span><span>&#10372;</span><span>&#10274;</span><span>&#10338;</span><span>&#10323;</span><span>&#10280;</span><span>&#10278;</span><span>&#10347;</span><span>&#10363;</span><span>&#10352;</span><span>&#10271;</span><span>&#10415;</span><span>&#10475;</span><span>&#10256;</span><span>&#10425;</span><span>&#10437;</span><span>&#10328;</span><span>&#10277;</span><span>&#10413;</span><span>&#10244;</span><span>&#10323;</span><span>&#10487;</span><span>&#10461;</span><span>&#10296;</span><span>&#10269;</span><span>&#10244;</span><span>&#10261;</span><span>&#10448;</span><span>&#10243;</span><span>&#10389;</span><span>&#10372;</span><span>&#10436;</span><span>&#10365;</span>
+            </div>
+            <div class="column col-77"><span>&#10338;</span><span>&#10455;</span><span>&#10458;</span><span>&#10275;</span><span>&#10289;</span><span>&#10396;</span><span>&#10253;</span><span>&#10253;</span><span>&#10422;</span><span>&#10329;</span><span>&#10425;</span><span>&#10243;</span><span>&#10418;</span><span>&#10347;</span><span>&#10450;</span><span>&#10262;</span><span>&#10486;</span><span>&#10427;</span><span>&#10296;</span><span>&#10322;</span><span>&#10340;</span><span>&#10396;</span><span>&#10424;</span><span>&#10313;</span><span>&#10436;</span><span>&#10319;</span><span>&#10473;</span><span>&#10258;</span><span>&#10455;</span><span>&#10404;</span><span>&#10383;</span><span>&#10351;</span><span>&#10274;</span><span>&#10395;</span><span>&#10345;</span><span>&#10244;</span><span>&#10328;</span><span>&#10339;</span><span>&#10424;</span><span>&#10354;</span><span>&#10488;</span><span>&#10427;</span><span>&#10426;</span><span>&#10359;</span><span>&#10483;</span><span>&#10251;</span><span>&#10330;</span><span>&#10245;</span><span>&#10315;</span><span>&#10282;</span>
+            </div>
+            <div class="column col-78"><span>&#10479;</span><span>&#10412;</span><span>&#10321;</span><span>&#10278;</span><span>&#10463;</span><span>&#10262;</span><span>&#10448;</span><span>&#10370;</span><span>&#10298;</span><span>&#10426;</span><span>&#10329;</span><span>&#10468;</span><span>&#10430;</span><span>&#10320;</span><span>&#10474;</span><span>&#10441;</span><span>&#10302;</span><span>&#10421;</span><span>&#10284;</span><span>&#10398;</span><span>&#10429;</span><span>&#10346;</span><span>&#10311;</span><span>&#10393;</span><span>&#10373;</span><span>&#10364;</span><span>&#10457;</span><span>&#10348;</span><span>&#10306;</span><span>&#10428;</span><span>&#10371;</span><span>&#10390;</span><span>&#10481;</span><span>&#10322;</span><span>&#10262;</span><span>&#10438;</span><span>&#10300;</span><span>&#10483;</span><span>&#10306;</span><span>&#10375;</span><span>&#10330;</span><span>&#10353;</span><span>&#10350;</span><span>&#10355;</span><span>&#10278;</span><span>&#10384;</span><span>&#10445;</span><span>&#10410;</span><span>&#10264;</span><span>&#10357;</span>
+            </div>
+            <div class="column col-79"><span>&#10488;</span><span>&#10315;</span><span>&#10465;</span><span>&#10398;</span><span>&#10315;</span><span>&#10356;</span><span>&#10317;</span><span>&#10307;</span><span>&#10350;</span><span>&#10288;</span><span>&#10283;</span><span>&#10400;</span><span>&#10432;</span><span>&#10289;</span><span>&#10480;</span><span>&#10267;</span><span>&#10303;</span><span>&#10394;</span><span>&#10355;</span><span>&#10409;</span><span>&#10280;</span><span>&#10456;</span><span>&#10317;</span><span>&#10428;</span><span>&#10249;</span><span>&#10283;</span><span>&#10280;</span><span>&#10278;</span><span>&#10417;</span><span>&#10293;</span><span>&#10363;</span><span>&#10382;</span><span>&#10371;</span><span>&#10489;</span><span>&#10370;</span><span>&#10469;</span><span>&#10411;</span><span>&#10441;</span><span>&#10464;</span><span>&#10361;</span><span>&#10323;</span><span>&#10360;</span><span>&#10314;</span><span>&#10492;</span><span>&#10375;</span><span>&#10407;</span><span>&#10421;</span><span>&#10444;</span><span>&#10332;</span><span>&#10384;</span>
+            </div>
+            <div class="column col-80"><span>&#10286;</span><span>&#10329;</span><span>&#10258;</span><span>&#10446;</span><span>&#10454;</span><span>&#10481;</span><span>&#10464;</span><span>&#10482;</span><span>&#10282;</span><span>&#10272;</span><span>&#10349;</span><span>&#10246;</span><span>&#10350;</span><span>&#10280;</span><span>&#10415;</span><span>&#10395;</span><span>&#10306;</span><span>&#10424;</span><span>&#10348;</span><span>&#10336;</span><span>&#10452;</span><span>&#10417;</span><span>&#10383;</span><span>&#10371;</span><span>&#10455;</span><span>&#10354;</span><span>&#10312;</span><span>&#10353;</span><span>&#10414;</span><span>&#10488;</span><span>&#10454;</span><span>&#10411;</span><span>&#10351;</span><span>&#10269;</span><span>&#10432;</span><span>&#10337;</span><span>&#10436;</span><span>&#10298;</span><span>&#10261;</span><span>&#10347;</span><span>&#10313;</span><span>&#10364;</span><span>&#10281;</span><span>&#10257;</span><span>&#10420;</span><span>&#10473;</span><span>&#10271;</span><span>&#10361;</span><span>&#10314;</span><span>&#10340;</span>
+            </div>
+            <div class="column col-81"><span>&#10344;</span><span>&#10250;</span><span>&#10249;</span><span>&#10305;</span><span>&#10443;</span><span>&#10452;</span><span>&#10326;</span><span>&#10272;</span><span>&#10336;</span><span>&#10427;</span><span>&#10298;</span><span>&#10255;</span><span>&#10369;</span><span>&#10421;</span><span>&#10378;</span><span>&#10363;</span><span>&#10362;</span><span>&#10359;</span><span>&#10481;</span><span>&#10457;</span><span>&#10333;</span><span>&#10261;</span><span>&#10433;</span><span>&#10356;</span><span>&#10325;</span><span>&#10464;</span><span>&#10464;</span><span>&#10247;</span><span>&#10466;</span><span>&#10404;</span><span>&#10378;</span><span>&#10396;</span><span>&#10370;</span><span>&#10376;</span><span>&#10251;</span><span>&#10318;</span><span>&#10396;</span><span>&#10273;</span><span>&#10436;</span><span>&#10334;</span><span>&#10284;</span><span>&#10432;</span><span>&#10422;</span><span>&#10465;</span><span>&#10268;</span><span>&#10417;</span><span>&#10331;</span><span>&#10489;</span><span>&#10406;</span><span>&#10478;</span>
+            </div>
+        </div>
+        <div class="fondo-overlay"></div> -->
+        
+        <div class="banner">
+            <div class="contenedor-img">
+                <img src="images/foto_personal.jpeg" alt="Sebastian López" title="Sebastian López" id="cont-img-banner">
+            </div>
+            <h1 id="titulo-inicio1" class="titulo">SEBASTIÁN LÓPEZ</h1>
+            <h6 id="titulo-inicio2" class="titulo"><span class="titulo-inicio"></span></h6>
+            <!-- titulo-inicio -->
+            <!-- Desarrollador Junior -->
+            <div class="redes">
+                <!-- <a style="--red:1" href="https://www.linkedin.com/in/sebastian-lopez-nunez" target="_blank" title="linkedin"><i class="fa-brands fa-linkedin-in"></i></a>
+                <a style="--red:2" href="https://github.com/sebalopezx" target="_blank"><i class="fa-brands fa-github" title="github"></i></a>
+                <a style="--red:3" href="https://www.facebook.com/sebalopezxd/" target="_blank"><i class="fa-brands fa-facebook-f" title="facebook"></i></a>
+                <a style="--red:4" href="https://www.instagram.com/sebalopzxd/?hl=es-la" target="_blank"><i class="fa-brands fa-instagram" title="instagram"></i></a> -->
+                <!-- <ul>
+                    <li data-red="1"><a href="https://www.linkedin.com/in/sebastian-lopez-nunez" target="_blank" title="linkedin"><i class="fa-brands fa-linkedin-in"></i></a></li>
+                    <li data-red="2"><a href="https://github.com/sebalopezx" target="_blank"><i class="fa-brands fa-github" title="github"></i></a></li>
+                    <li data-red="3"><a href="https://www.facebook.com/sebalopezxd/" target="_blank"><i class="fa-brands fa-facebook-f" title="facebook"></i></a></li>
+                    <li data-red="4"><a href="https://www.instagram.com/sebalopzxd/?hl=es-la" target="_blank"><i class="fa-brands fa-instagram" title="instagram"></i></a></li>
+                </ul> -->
+                <nav>
+                    <a data-nav="1" href="https://www.linkedin.com/in/sebastian-lopez-nunez" target="_blank" title="linkedin"><i class="fa-brands fa-linkedin-in"></i></a>
+                    <a data-nav="2" href="https://github.com/sebalopezx" target="_blank"><i class="fa-brands fa-github" title="github"></i></a>
+                    <a data-nav="3" href="https://www.facebook.com/sebalopezxd/" target="_blank"><i class="fa-brands fa-facebook-f" title="facebook"></i></a>
+                    <a data-nav="4" href="https://www.instagram.com/sebalopzxd/?hl=es-la" target="_blank"><i class="fa-brands fa-instagram" title="instagram"></i></a>
+                </nav>
+            </div>
+            <a href="docs/SebastianLopezCV.pdf" download="CV_SebastianLopez.pdf">
+                <button id="descargaCV" class="boton" name="descargaCV" onclick="descargaCV()">
+                    <span class="texto-boton">Descargar CV</span>
+                    <i class="fa-solid fa-download"></i>
+                    <span class="overlay"></span>
+                </button>
+            </a>
+        
+        </div>
+        </iframe>
+    </section>
+
+    <!-- ACERCA DE -->
+    <section id="acercade" class="acercade">
+        <div class="contenedor-seccion">
+            <h2 class="titulo">Acerca De</h2>
+            <br>
+            <div class="centro contenedor-informacion">
+            <span>Hola, Soy Sebastián.</span><br><br>
+                <p class="informacion"></p>
+                Soy una persona responsable, comprometido con mi trabajo, ordenado y meticuloso, 
+                dispuesto a dar mi mayor esfuerzo para brindar las necesidades que ser requieran, 
+                con ganas de aprender nuevas tecnologías, metodologías y todo lo que pueda complementarme 
+                tanto en lo profesional como en lo personal. 
+                <br>
+                En estos momentos soy estudiante de la carrera de analista programador y estoy en busca de 
+                experiencias laborales relacionado a ello, aunque actualmente soy titulado de ingeniería en 
+                mecánica automotriz, y trabajo como mecánico de mantenimiento preventivo y correctivo de trenes 
+                para Metro de Santiago.
+                <br>
+                Poseo conocimientos básicos de Python, Tkinter, SQL (MySQL, Oracle), Html y Css, y me encuentro 
+                complementando mis estudios con cursos en Udemy mientras saco mi carrera.
+                </p>
+            </div>
+            <div class="fila">
+                <!-- datos personales -->
+                <div class="col izquierda">
+                    <h3 class="titulo">Datos personales</h3>
+                    <ul>
+                        <li><span>Télefono</span> +569-87526764</li>
+                        <li><span>Email</span> se.lopezn@gmail.com</li>
+                        <li><span>asdf</span> asdf</li>
+
+                        <li><span>Interés Profesional de TI</span> <br>
+                            Estoy interesado en aprender del área Full Stack 
+                            en lenguajes de Pyhton o Java.</li>
+                    </ul>
+                </div>
+
+                <!-- intereses -->
+                <div class="col izquierda">
+                    <h3 class="tituloDerecha">Intereses</h3>
+                    <div class="contenedor-intereses">
+                        <div class="intereses">
+                            <i class="fa-solid fa-gamepad"></i>
+                            <span>Juegos</span>
+                        </div>
+                        <div class="intereses">
+                            <i class="fa-solid fa-bicycle"></i>
+                            <span>Deporte</span>
+                        </div>
+                        <div class="intereses">
+                            <i class="fa-solid fa-headphones"></i>
+                            <span>Música</span>
+                        </div>
+                        <div class="intereses">
+                            <i class="fa-solid fa-desktop"></i>
+                            <span>Tecnología</span>
+                        </div>
+                        <div class="intereses">
+                            <i class="fa-solid fa-car"></i>
+                            <span>Autos</span>
+                        </div>
+                        <div class="intereses">
+                            <i class="fa-solid fa-book"></i>
+                            <span>Aprender</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section id="skills" class="skills">
+        <div class="contenedor-seccion">
+            <h2 class="titulo">Skills</h2>
+            <div class="fila">
+
+                <!-- Skills tecnicas -->
+                <div class="col izquierda">
+                    <h3 class="titulo">Skills técnicas</h3>
+             
+                    <div class="skill">
+                        <span><img src="images/python.png" alt="PYTHON" title="PYTHON">PYTHON</span>
+                        <div class="barra-skill">
+                            <div class="progreso lvl" style="--progreso:25%">
+                                <span>Básico</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="skill">
+                        <span><img src="images/html5.png" alt="HTML5" title="HTML5">HTML5</span>
+                        <div class="barra-skill">
+                            <div class="progreso lvl" style="--progreso:25%">
+                                <span>Básico</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="skill">
+                        <span><img src="images/css3.png" alt="CCS3" title="CCS3">CCS3</span>
+                        <div class="barra-skill">
+                            <div class="progreso lvl" style="--progreso:25%">
+                                <span>Básico</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="skill">
+                        <span><img src="images/javascript.png" alt="JAVASCRIPT" title="JAVASCRIPT">JAVASCRIPT</span>
+                        <div class="barra-skill">
+                            <div class="progreso lvl" style="--progreso:25%">
+                                <span>Básico</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="skill">
+                        <span><img src="images/sql.png" alt="BD_RELACIONALES" title="BD_RELACIONALES">MySQL - ORACLE</span>
+                        <div class="barra-skill">
+                            <div class="progreso lvl" style="--progreso:25%">
+                                <span>Básico</span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Skills profesionales -->
+                <div class="col izquierda">
+                    <h3 class="titulo">Skills Profesionales</h3>
+
+                    <div class="skill">
+                        <span><i class="fa-regular fa-clock"></i>RESPONSABLE</span>
+                        <div class="barra-skill">
+                            <div class="progreso lvl" style="--progreso:100%">
+                                <span>Skill</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="skill">
+                        <span><i class="fa-sharp fa-solid fa-list-check"></i>ORDENADO</span>
+                        <div class="barra-skill">
+                            <div class="progreso lvl" style="--progreso:100%">
+                                <span>Skill</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="skill">
+                        <span><i class="fa-solid fa-people-group"></i>TRABAJO EN EQUIPO</span>
+                        <div class="barra-skill">
+                            <div class="progreso lvl" style="--progreso:100%">
+                                <span>Skill</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- NIVELES INLGES = 6 {A1:16.6, A2:33.3, B1:49.9, B2:66.5, C1:83.1, C2:100}-->
+                    <div class="skill">
+                        <span><i class="fa-solid fa-language"></i>ENGLISH READING</span>
+                        <div class="barra-skill">
+                            <div class="progreso lvl" style="--progreso:49%">
+                                <span>B1</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    
+                    <div class="skill">
+                        <span><i class="fa-solid fa-microphone"></i>ENGLISH SPEAKING</span>
+                        <div class="barra-skill">
+                            <div class="progreso lvl" style="--progreso:33%">
+                                <span>A2</span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CURRICULUM -->
+    <section id="curriculum" class="curriculum">
+        <div class="contenedor-seccion">
+            <h2 class="titulo">Curriculum</h2>
+            <div class="fila">
+                <!-- Educación -->
+                <div class="col izquierda">
+
+                    <h3 class="titulo">Educación</h3>
+                    <div class="item izq">
+                        <h4>Analista Programador</h4>
+                        <span class="lugar">Inacap</span>
+                        <span class="fecha">2022-2024</span>
+                        <p>Cursando</p>
+                        <div class="conector1">
+                            <div class="circulo1"></div>
+                        </div>
+                    </div>
+
+                    <div class="item izq">
+                        <h4>Ingeniería en mecánica automotriz y autotrónica</h4>
+                        <span class="lugar">Duoc UC</span>
+                        <span class="fecha">2016-2019</span>
+                        <p>Titulado</p>
+                        <div class="conector1">
+                            <div class="circulo1"></div>
+                        </div>
+                    </div>
+
+                    <div class="item izq">
+                        <h4>Técnico en mecánica automotriz y autotrónica</h4>
+                        <span class="lugar">Duoc UC</span>
+                        <span class="fecha">2011-2013</span>
+                        <p>Titulado</p>
+                        <div class="conector1">
+                            <div class="circulo1"></div>
+                        </div>
+                    </div>
+
+                    <h3 class="titulo">Cursos</h3>
+                    <div class="item izq">
+                        <h4>Python sin límites. POO, Tkinter, PySide, etc. +50hrs</h4>
+                        <span class="lugar">Udemy</span>
+                        <span class="fecha">2023</span>
+                        <p><a href="http://ude.my/UC-51981b38-6699-4efa-a911-eb9a9ac60f97" target="_blank">Certificado</a></p>
+                        <div class="conector1">
+                            <div class="circulo1"></div>
+                        </div>
+                    </div>
+
+                </div>
+                <!-- Experiencia -->
+                <div class="col derecha">
+                    <h3 class="titulo">Experiencia</h3>
+
+                    <div class="item der">
+                        <h4>CAF Chile Línea 1</h4>
+                        <span class="cargo">Técnico mantenimiento, y supervisor suplente</span>
+                        <span class="fecha">2019-2022</span>
+                        <p>Mantenimiento preventivo y correctivo de diferentes áreas (especialidad neumática).
+                        Supervisor de turno, supervisar trabajos y cumplimiento de las reglas y normas de la empresa, 
+                        y delegación de tareas.</p>
+                        <div class="conector2">
+                            <div class="circulo2"></div>
+                        </div>
+                    </div>
+
+                    <div class="item der">
+                        <h4>Rheem chilena SPA </h4>
+                        <span class="cargo">Práctica Ingeniería</span>
+                        <span class="fecha">2 Meses</span>
+                        <p>Estandarización de procesos y procedimientos.
+                        Inicio de 5S Kaizen, para implementación futura en taller.</p>
+                        <div class="conector2">
+                            <div class="circulo2"></div>
+                        </div>
+                    </div>
+
+                    <div class="item der">
+                        <h4>Alstom Línea 4 y 4a</h4>
+                        <span class="cargo">Técnico en mantenimiento general</span>
+                        <span class="fecha">2014-2015</span>
+                        <p>Mantenimiento preventivo y correctivo en diferentes áreas, Gran Mantenimiento 
+                        de trenes (GR) específicamente del área neumática.</p>
+                        <div class="conector2">
+                            <div class="circulo2"></div>
+                        </div>
+                    </div>
+                    
+                </div>
+
+            </div>
+        </div>
+    </section>
+ 
+    <!-- PROYECTOS -->
+    <section id="proyectos" class="proyectos">
+        <div class="contenedor-seccion">
+            <h2 class="titulo">Portafolio</h2>
+
+            <div class="galeria">
+
+                <div class="proyecto" data-nav="1">
+                    <img src="images/fondo_ingles.jpg" alt="app-ingles" title="app-ingles">
+                    <a href="https://sebalopezx.github.io/app-ingles/index.html" target="_blank">
+                        <div class="overlay">
+                            <h3>App Ingles<br>HTML, CSS y JS</h3>
+                            <p>Proyecto propio<br>> Pagina interactiva para verbos regulares e irregulares</p>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- <div class="proyecto" data-nav="2">
+                    <img src="images/fondo_ingles.jpg" alt="app-ingles" title="app-ingles">
+                    <a href="https://sebalopezx.github.io/app-ingles/index.html" target="_blank">
+                        <div class="overlay">
+                            <h3>App Ingles<br>HTML, CSS y JS</h3>
+                            <p>Proyecto propio<br>> Pagina interactiva para verbos regulares e irregulares</p>
+                        </div>
+                    </a>
+                </div> -->
+
+                <!-- <div class="proyecto" style="--proy:2">
+                    <img src="images/fondo_ingles.jpg" alt="">
+                    <div class="overlay">
+                        <h3>App Ingles</h3>
+                        <p>asdf asdf</p>
+                    </div>
+                </div>
+
+                <div class="proyecto">
+                    <img src="images/fondo_ingles.jpg" alt="">
+                    <div class="overlay">
+                        <h3>App Ingles</h3>
+                        <p>asdf asdf</p>
+                    </div>
+                </div>
+
+                <div class="proyecto">
+                    <img src="images/fondo_ingles.jpg" alt="">
+                    <div class="overlay">
+                        <h3>App Ingles</h3>
+                        <p>asdf asdf</p>
+                    </div>
+                </div> -->
+                
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACTO -->
+    <section id="contacto" class="contacto">
+        <div class="contenedor-seccion">
+            <h2 class="titulo">Contacto</h2>
+            <div class="fila">
+
+                <!-- Formulario -->
+                <div class="col izquierda">
+                    <form class="formulario" id="formulario" action="">
+                        <input type="text" placeholder="Ingresa tu nombre" name="nombre" id="nombre" required="true">
+                        <input type="email" placeholder="Ingresa tu email" name="email" id="email" required="true">
+                        <input type="text" placeholder="Ingresa el asunto" name="asunto" id="asunto" required="true">
+                        <textarea name="mensaje" id="mensaje" cols="30" rows="9" placeholder="Escribe un mensaje" required="true"></textarea>
+
+                        <div class="boton">
+                            <button class="">
+                                <span class="texto-boton">Enviar Mensaje</span>
+                                <i class="fa-solid fa-paper-plane"></i>
+                                <span class="overlay"></span>
+                            </button>
+                        </div>
+                    </form>
+                </div>
+
+                <div class="col izquierda">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d23418.6417504272!2d-70.76140177656123!3d-33.52209388407441!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9662dd19ae9068f9%3A0xa09dd0d6b6a79749!2sRenato%20V%C3%A1squez%2C%20Maip%C3%BA%2C%20Regi%C3%B3n%20Metropolitana!5e0!3m2!1ses!2scl!4v1673839368816!5m2!1ses!2scl" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    <div class="info">
+                        <ul>
+                            <li>
+                                <i class="fa-solid fa-location-dot"></i>
+                                Santiago, Maipú.
+                            </li>
+                            <li>
+                                <i class="fa-solid fa-mobile-screen"></i>
+                                +569-87526764
+                            </li>
+                            <li>
+                                <i class="fa-solid fa-envelope"></i>
+                                Email: se.lopezn@gmail.com
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <a href="#inicio" class="centro arriba">
+            <i class="fa-solid fa-angles-up"></i>
+        </a>
+        <div class="redes">
+            <nav>
+                <a data-nav="1" href="https://www.linkedin.com/in/sebastian-lopez-nunez" target="_blank" title="linkedin"><i class="fa-brands fa-linkedin-in"></i></a>
+                <a data-nav="2" href="https://github.com/sebalopezx" target="_blank"><i class="fa-brands fa-github" title="github"></i></a>
+                <a data-nav="3" href="https://www.facebook.com/sebalopezxd/" target="_blank"><i class="fa-brands fa-facebook-f" title="facebook"></i></a>
+                <a data-nav="4" href="https://www.instagram.com/sebalopzxd/?hl=es-la" target="_blank"><i class="fa-brands fa-instagram" title="instagram"></i></a>
+            </nav>
+        </div>
+        <h3>Sebastián López ~ 2023</h3>
+    </footer>
+
+    <!-- Iconos Font Awesome -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Animacion de typed -->
+    <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+    <!-- JavaScript -->
+    <script src="js/script.js"></script>
+</body>
+</html>
