@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curriculum</title>
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/estilos.css">
+    <!-- ICONOS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" 
+    integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" 
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body id="cv">
+    <br id="cv-inicio">
+     <!-- MENU -->
+     <div class="contenedor-header animacion" id="contenedor-cv">
+        <header>
+            <div class="logo animacion">
+                <a href="#">Seba Curriculum</a>
+            </div>
+            <nav id="nav" class="">
+                <a href="index.html" id="click-cv">Volver a Portafolio</a>
+                <!-- <ul> -->
+                    <!-- <li data-nav="1"><a href="index.html" onclick="seleccionar()" id="click-cv">Volver a Portafolio</a></li> -->
+                    <!-- <li data-nav="1"><a href="index.html" id="click-cv">Volver a Portafolio</a></li> -->
+                <!-- </ul> -->
+            </nav>
+           
+            <!-- <div class="menu-responsive animacion" onclick="menuMostrarOcultar(),cambiarClase()" id="click-responsive"> -->
+            <div class="menu-responsive animacion" id="click-responsive"> 
+                <!-- <div id="crear-responsive"></div> -->
+                <i class="fa-solid fa-bars" id="icono-menu"></i>
+            </div>
+        </header>
+    </div>
+
+    <!-- CURRICULUM -->
+    <div class="contenedor-cv">
+        <!-- <span class="titulo-inicio"></span> -->
+        <!-- <h1 class="titulo-cv">Curriculum</h1> -->
+        <!-- <object class="pdfview" data="docs/SebastianLopezCV.pdf" type="application/pdf"></object> -->
+        <iframe src="docs/SebastianLopezCV.pdf" class="pdfview" frameborder="0"></iframe>
+    </div>
+    
+    <!-- <div class="contenedor-cv">
+        <span class="titulo-inicio"></span>
+        <canvas class="pdfview"></canvas>
+    </div> -->
+    
+
+    <!-- FOOTER -->
+    <footer>
+        <div>
+            <a href="#cv-inicio" class="arriba animacion">
+                <i class="fa-solid fa-angles-up"></i>
+            </a>
+        </div>
+        <div class="redes">
+            <nav>
+                <ul>
+                    <li data-nav="1"><a href="https://www.linkedin.com/in/sebastian-lopez-nunez" target="_blank" title="linkedin"><i class="fa-brands fa-linkedin-in"></i></a></li>
+                    <li data-nav="2"><a href="https://github.com/sebalopezx" target="_blank" title="github"><i class="fa-brands fa-github"></i></a></li>
+                    <li data-nav="3"><a href="https://www.facebook.com/sebalopezxd/" target="_blank" title="facebook"><i class="fa-brands fa-facebook-f"></i></a></li>
+                    <li data-nav="4"><a href="https://www.instagram.com/sebalopzxd/" target="_blank" title="instagram"><i class="fa-brands fa-instagram"></i></a></li>
+                </ul>
+            </nav>
+        </div>
+        <h3 class="animacion">Sebastián López ~ 2023</h3>
+    </footer>
+
+    <!-- Iconos Font Awesome -->
+    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script> -->
+    <!-- Animacion de typed -->
+    <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+    <!-- JavaScript -->
+    <script src="js/script.js"></script>
+ 
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.8.162/pdf.min.js" integrity="sha512-9Wd08apcJEwm8g3lBTg1UW/njdN0iuuOVWKpyinK3uA7ISAE5PmEZ4y8bZYTXVOE3tlt7aFlCBBLmLt5cUxe2Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script> -->
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.10.377/pdf.worker.min.js"></script> -->
+
+</body>
+</html>
