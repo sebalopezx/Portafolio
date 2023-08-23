@@ -1,0 +1,133 @@
+{
+    "idioma":"es",
+    "menu": {
+        "nav1":"Inicio",
+        "nav2":"Acerca de",
+        "nav3":"Skills",
+        "nav4":"CV",
+        "nav5":"Proyectos",
+        "nav6":"Contacto"
+    },
+    "tipado":{
+        "title":["Desarrollador Junior", "Ingeniero Mecánico"]
+    },
+    "profile":{
+        "name":"Hola, soy Sebastián.",
+        "description":"Mi enfoque principal se refleja en la dedicación que dispongo en satisfacer las necesidades requeridas. ",
+        "description2":"Tengo una fuerte disposición para adquirir conocimientos sobre nuevas tecnologías y metodologías, buscando constantemente oportunidades de crecimiento tanto en el ámbito profesional como personal.",
+        "description3":"Poseo <a href='#skills'>conocimientos básicos</a> en diferentes tecnologías, y me encuentro complementando mis estudios con cursos en Udemy mientras termino mi carrera.",
+        
+        "title1":"Datos Personales",
+        "title_info1":"Número Télefono:",
+        "title_info2":"Interés de lenguajes:",
+        "info2":"Python o Java. Tengo la disposición de trabajar en lenguajes que no conozco, con el objetivo de aprender y adquirir nuevos conocimientos.",
+        "title_info3":"Interés profesional de TI:",
+        "info3":"Estoy interesado en aprender del área Backend o Full Stack.",
+        "title_info4":"Disponibilidad:",
+        "info4":"INMEDIATA!.",
+
+        "title2":"Intereses",
+        "interests":["Juegos","Deporte","Música","Tecnología","Autos","Aprender"]
+    },
+    "skills":{
+        "title":"Skills Técnicas",
+        "title2":"Skills Profesionales"
+    },
+    "education":{
+        "title":"Educación",
+        "education_title_1":"Técnico en mecánica automotriz y autotrónica",
+        "education_description_1":"Titulado",
+        "education_date_1":"2011-2013",
+
+        "education_title_2":"Ingeniería en mecánica automotriz y autotrónica",
+        "education_description_2":"Titulado",
+        "education_date_2":"2016-2019",
+
+        "education_title_3":"Analista Programador",
+        "education_description_3":"Cursando",
+        "education_date_3":"2022-2024"
+    },
+    "cv":{
+        "title":"Experiencia",
+        "experience_company_1":"Alstom Línea 4 y 4a",
+        "experience_title_1":"Técnico en mantenimiento general",
+        "experience_date_1":"2014-2015",
+        "experience_description_1":"Mantenimiento preventivo y correctivo en diferentes áreas. <br>Gran Mantenimiento de trenes (GR) específicamente del área neumática.",
+
+        "experience_company_2":"Rheem chilena SPA",
+        "experience_title_2":"Práctica Ingeniería",
+        "experience_date_2":"2 Meses",
+        "experience_description_2":"Estandarización de procesos y procedimientos. <br>Inicio de 5S Kaizen, para implementación futura en taller.",
+
+        "experience_company_3":"CAF Chile Línea 1",
+        "experience_title_3":"Técnico mantenimiento, y<br>Supervisor suplente.",
+        "experience_date_3":"2019-2022",
+        "experience_description_3":"Mantenimiento preventivo y correctivo de diferentes áreas, especialidad neumática. <br>Supervisor de turno, supervisar trabajos y cumplimiento de las reglas y normas de la empresa, y delegación de tareas."
+    },
+    "courses":{
+        "title":"Cursos",
+
+        "course_title_1":"Python sin límites. POO, Tkinter, PySide, etc. +50hrs",
+        "course_company_1":"Udemy",
+        "course_date_1":"2023",
+        "course_url_1":"Certificado",
+
+        "course_title_2":"Universidad Desarrollo Web - FrontEnd Web Developer!",
+        "course_company_2":"Udemy",
+        "course_date_2":"2023",
+        "course_url_2":"Certificado"
+
+    },
+    "projects":{
+        "title":"Proyectos",
+        
+        "title1": "APP Inglés",
+        "info1": "Proyecto propio",
+        "btn1": "Ver detalles",
+        "project1":{
+            "title": "APP Inglés",
+            "id":"proyecto1",
+            "imagen":"images/projects/proyecto1_modal.png",
+            "info1":"Proyecto propio, creado con html, css y javascript para aprender y practicar las funcionalidades básicas de estos lenguajes, y reforzar el inglés.",
+            "info2":"El proyecto es una aplicación web creada utilizando diferentes tecnologías. Su objetivo principal es proporcionar una herramienta para mejorar y practicar el conocimiento del inglés, enfocándose en el aprendizaje de verbos en diferentes conjugaciones.",    
+            "ref":"https://sebalopezx.github.io/app-ingles/",
+            "btn1":"Ver",
+            "btn2":"Cerrar"
+        },
+
+        "title2": "Carrito de Compras",
+        "info2": "Proyecto de instituto",
+        "btn2": "Ver detalles",
+        "project2":{
+            "title": "Carrito de Compras",
+            "id":"proyecto2",
+            "imagen":"images/projects/proyecto2_modal.png",
+            "info1":"Proyecto de instituto, desarrollada como parte del curso de Front-End con uso de HTML, CSS y JS con LocalStorage.",
+            "info2":"Se ha desarrollado una aplicación funcional de un carrito de compras utilizando el LocalStorage. Además, se ha fortalecido la comprensión de conceptos clave en el desarrollo web y la importancia de una interfaz interactiva y amigable para el usuario.",    
+            "ref":"https://sebalopezx.github.io/carrito_compras/",
+            "btn1":"Ver",
+            "btn2":"Cerrar"
+        }
+       
+    },
+    "contact":{
+        "title":"Contacto",
+        "name":"Nombre:",
+        "email":"E-mail:",
+        "subject":"Asunto:",
+        "message":"Escribe tu mensaje:",
+        "btn":"Enviar Mensaje"
+    },
+    "contact_modal":{
+        "title":"Tu mensaje ha sido enviado.",
+        "text":"Te respondere en la brevedad, Saludos.",
+        "title_error":"Tu mensaje no ha sido enviado.",
+        "text_error":"¡Ha ocurrido un error!."
+    },
+    "cv_pagina":{
+        "title":"Seba Currículum",
+        "nav":"Volver a Portafolio",
+        "pdf":"docs/SebastianLopezCV.pdf"
+    }
+
+}

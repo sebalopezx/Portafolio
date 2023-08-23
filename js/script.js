@@ -1,6 +1,113 @@
+// CAMBIO DE IDIOMA
+
+// Función para guardar el idioma seleccionado en localStorage
+function guardarIdiomaSeleccionado(idioma) {
+    localStorage.setItem('idiomaSeleccionado', idioma);
+};
+
+// Función para obtener el idioma seleccionado de localStorage
+function obtenerIdiomaSeleccionado() {
+    return localStorage.getItem('idiomaSeleccionado') || 'es'; // Valor predeterminado 'es'
+};
+
+// Función para cambiar el idioma seleccionado y guardar en localStorage
+function cambiarIdiomaSeleccionado(idioma) {
+    guardarIdiomaSeleccionado(idioma);
+    // Aquí podrías realizar las acciones necesarias para refrescar la página o cargar el contenido en el nuevo idioma  
+};
+
+cambiarIdiomaSeleccionado('es');
+const idiomaInicial = obtenerIdiomaSeleccionado();
+
+
+// Función para establecer el idioma activo
+function establecerIdiomaActivo(idioma) {
+    const botonesIdioma = document.querySelectorAll('.idioma_item');
+
+    botonesIdioma.forEach(boton => {
+        const botonIdioma = boton.getAttribute('data-language');
+        if (botonIdioma === idioma) {
+            boton.classList.add('active');
+        } else {
+            boton.classList.remove('active');
+        }
+    });
+};
+
+// Escuchar clicks en los botones de idioma
+document.querySelectorAll('.idioma_item').forEach(boton => {
+    boton.addEventListener('click', () => {
+        const idiomaSeleccionado = boton.getAttribute('data-language');
+        localStorage.setItem('idioma', idiomaSeleccionado); // Guardar en Local Storage
+        establecerIdiomaActivo(idiomaSeleccionado);
+
+        // Aquí puedes llamar a funciones para cambiar el contenido según el idioma
+        // cambiarIdioma(idiomaSeleccionado);
+    });
+});
+
+// Establecer el idioma activo al cargar la página
+establecerIdiomaActivo(idiomaInicial);
+
+
+/* TOOGLE de cambio de idioma */
+const idiomas = document.getElementById("idiomas");
+// Obtenemos NODOS con todos los elementos HTML que contengan [data-section]
+const cambiarTexto = document.querySelectorAll("[data-section]");
+
+const cambiarIdioma = async (lenguaje) =>{
+    // Cargamos el JSON segun idioma obtenido
+    const requestJson = await fetch(`./languages/${lenguaje}.json`);
+    const texto = await requestJson.json();
+
+    // FOR para recorrer todo el documento JSON y cambiar valores segun idioma
+    for (const textoACambiar of cambiarTexto){
+        const seccion = textoACambiar.dataset.section;
+        const valor = textoACambiar.dataset.value;
+
+        textoACambiar.innerHTML = texto[seccion][valor];
+    };
+    // Mandar el cambio de idioma para guardar en localStorage
+    cambiarIdiomaSeleccionado(texto.idioma);
+};
+
+// Cuando se carga la pagina se ejecutan funciones principales para cargar idioma
+document.addEventListener("DOMContentLoaded", async () => {
+    // Cargar contenido inicial en el idioma deseado y segun pagina ejectuada
+    await cambiarIdioma(idiomaInicial);
+    if (window.location.pathname.endsWith("index.html")){
+        await tipado(idiomaInicial); 
+        await cargarIntereses(idiomaInicial);
+        await establecerPlaceholders(idiomaInicial);
+    };
+});
+
+// Escuchar clicks para cambio de idioma e iniciar funciones segun pagina (modulo)
+if (window.location.pathname.endsWith("index.html")){
+    idiomas.addEventListener("click", (e) =>{
+        const nuevoIdioma = e.target.parentElement.dataset.language;
+        cambiarIdioma(nuevoIdioma);
+        tipado(nuevoIdioma);
+        cargarIntereses(nuevoIdioma);
+        establecerPlaceholders(nuevoIdioma);
+    });
+};
+if (window.location.pathname.endsWith("cv.html")){
+    idiomas.addEventListener("click", (e) =>{
+        const nuevoIdioma = e.target.parentElement.dataset.language;
+        cambiarIdioma(nuevoIdioma);
+        establecerPDF(nuevoIdioma);
+    });
+};
+
+
+
+// MENU RESPONSIVE
+
+/* TOGGLE de menu responsive */
 let menuVisible = false;
 
-// funcion que oculta o muestra menu
+// Funcion que oculta o muestra menu
 function menuMostrarOcultar(){
     if(menuVisible){
         document.getElementById("nav").classList = "";
@@ -10,14 +117,14 @@ function menuMostrarOcultar(){
         document.getElementById("nav").classList = "responsive";
         document.getElementById("icono-menu").style.color = "#2bff00";
         menuVisible = true;
-    }
-}
+    };
+};
 
 // Cambia icono al mostrar menu
 function cambiarClase(){
     let icono = document.getElementById("icono-menu");
     icono.classList.toggle("fa-bars-staggered");
-} 
+}; 
 
 // Obtener el elemento del menú responsive y agregar el evento click
 const menuResponsive = document.getElementById('click-responsive');
@@ -31,95 +138,47 @@ const menuLinks = document.querySelectorAll('#nav ul li a');
 menuLinks.forEach(link => {
     link.addEventListener('click', (evento) => {
         evento.preventDefault();
-        seleccionar();
-        const targetID = link.getAttribute('href');
-        const targetSeccion = document.querySelector(targetID);
-        targetSeccion.scrollIntoView({ behavior: 'smooth' });
+        menuMostrarOcultar();
+        cambiarClase();
+        // seleccionar();
+        const pagina = esPaginaIndex()
+        if(pagina){
+            const targetID = link.getAttribute('href');
+            const targetSeccion = document.querySelector(targetID);
+            targetSeccion.scrollIntoView({ behavior: 'smooth' });
+        }else{
+            // Si se esta en index.html, redirecciona al href del enlace
+            window.location.href = link.getAttribute('href');
+        };
     });
 });
 
-// ocultar el menu una vez que selecciono una opcion
-function seleccionar(){
-    if(menuVisible){
-        document.getElementById("nav").classList = "";
-        document.getElementById("icono-menu").style.color = "#f5f5f5";
-        cambiarClase();
-        menuVisible = false;
-    } 
-}
 
 
-
-
-
-// FUNCION MENU RESPONSIVE
-
-// let menuVisible = false;
-// let claseMenu = "fa-solid fa-bars-sort";
-// let icono = document.getElementById("icono-menu");
-
-
-// // funcion que oculta o muestra menu
-// function menuMostrarOcultar(){
-    
-//     if(menuVisible){
-//         document.getElementById("nav").classList = "";
-
-//         document.getElementById("icono-menu").style.color = "#f5f5f5";
-//         menuVisible = false;
-//     }else{
-//         document.getElementById("nav").classList = "responsive";
-//         //document.getElementById("nav").style.transition = "to bottom 0.5s";
-
-//         document.getElementById("icono-menu").style.color = "#2bff00";
-//         menuVisible = true;
-        
-//     }
-// }
-
-// // ocultar el menu una vez que selecciono una opcion
-// function seleccionar(){
-//     if(menuVisible){
-//         document.getElementById("nav").classList = "";
-//         document.getElementById("icono-menu").style.color = "#f5f5f5";
-//         cambiarClase();
-//         menuVisible = false;
-//     } 
-// }
-// // Cambia icono al mostrar menu
-// function cambiarClase(){
-//     let icono = document.getElementById("icono-menu");
-//     icono.classList.toggle("fa-bars-staggered");
-// }
-
-
-
-
-// LINKS DE MENU  
-
-// Obtener todos los enlaces del menú
-// const menuLinks = document.querySelectorAll('.nav ul li a');
+// LINKS DE MENU DE NAVEGACIÓN 
 
 // Crear un Intersection Observer para detectar cuando una sección está en el viewport
 const visualizar = new IntersectionObserver(entradas => {
     entradas.forEach(entrada => {
         const ID = entrada.target.getAttribute('id');
+        
+        // Obtener todos los enlaces del menú
         const link = document.querySelector(`nav ul li a[href="#${ID}"]`);
      
+        // Funcion para indicar link activo
         if (entrada.isIntersecting) {
             link.classList.add('active');
-            // console.log(link);
         } else {
             link.classList.remove('active');
-        }
+        };
     });
-}, { threshold: 0.2 });
+}, { threshold: .9 }); // Establecer límite de observado
   
-  // Visualizar cada sección para detectar cuando entra y sale del viewport
+// Visualizar cada sección para detectar cuando entra y sale del viewport
 const secciones = document.querySelectorAll('section');
 secciones.forEach(seccion => {
     visualizar.observe(seccion);
-  });
+});
 
 // Agrega evento clic a cada enlace del menú
 menuLinks.forEach(link => {
@@ -129,7 +188,6 @@ menuLinks.forEach(link => {
 
     // Obtener el identificador de la sección a la que se enlaza
     const targetID = link.getAttribute('href');
-    //console.log(targetId);
 
     // Remover la clase 'active' de todos los enlaces del menú
     menuLinks.forEach(menuLink => {
@@ -137,127 +195,130 @@ menuLinks.forEach(link => {
         menuLink.classList.remove('active');
     });
 
-    ///////////////////////////////////////////
-
     // Agregar la clase 'active' al enlace del menú actual
     link.classList.add('active');
 
     // Desplazarse suavemente hasta la sección correspondiente
-    const targetSeccion = document.querySelector(targetID);
-    targetSeccion.scrollIntoView({ behavior: 'smooth' });
-    }, {passive:true});
+    const pagina = esPaginaIndex()
+    if(pagina){
+        const targetSeccion = document.querySelector(targetID);
+        targetSeccion.scrollIntoView({ behavior: 'smooth' });
+    }else{
+        // Si se esta en index.html, redirecciona al href del enlace
+        window.location.href = link.getAttribute('href');
+    };
+}, {passive:true});
 
     // Agregar evento 'touchstart' al enlace del menú
     link.addEventListener('touchstart', () => {
-    // Remover la clase 'active' de todos los enlaces del menú
-    menuLinks.forEach(menuLink => {
-        menuLink.classList.remove('active');
-    });
+        // Remover la clase 'active' de todos los enlaces del menú
+        menuLinks.forEach(menuLink => {
+            menuLink.classList.remove('active');
+        });
 
-    // Agregar la clase 'active' al enlace del menú actual
-    link.classList.add('active');
+        // Agregar la clase 'active' al enlace del menú actual
+        link.classList.add('active');
     }, { passive: true }); // Agregar el modificador 'passive' al evento 'touchstart'
 
     // Agregar evento 'scroll' al documento
     document.addEventListener('scroll', () => {
-    // Remover la clase 'active' de todos los enlaces del menú
-    menuLinks.forEach(menuLink => {
-      menuLink.classList.remove('active');
-    });
-  
-    // Obtener el enlace activo basado en la sección actualmente visible
-    const activeLink = [...secciones].reverse().find(seccion => seccion.getBoundingClientRect().top <= 100);
-    if (activeLink) {
-        const target_ID = activeLink.getAttribute('ID');
-        const link = document.querySelector(`nav ul li a[href="#${target_ID}"]`);
-        link.classList.add('active');
-        }
+        // Remover la clase 'active' de todos los enlaces del menú
+        menuLinks.forEach(menuLink => {
+            menuLink.classList.remove('active');
+        });
+
+        // Obtener el enlace activo basado en la sección actualmente visible
+        const activeLink = [...secciones].reverse().find(seccion => seccion.getBoundingClientRect().top <= 100);
+        if (activeLink) {
+            const target_ID = activeLink.getAttribute('ID');
+            const link = document.querySelector(`nav ul li a[href="#${target_ID}"]`);
+            link.classList.add('active');
+        };
     }, { passive: true });
 
 });
 
 
 
-// PDF
-// const pdfURL = 'docs/SebastianLopezCV.pdf';
-// const canvas = document.querySelector('.pdfview');
-// const context = canvas.getContext('2d');
-
-// const renderPDF = async () => {
-//   const pdfDoc = await pdfjsLib.getDocument(pdfURL).promise;
-//   const page = await pdfDoc.getPage(1);
-//   const viewport = page.getViewport({ scale: 1 });
-//   canvas.height = viewport.height;
-//   canvas.width = viewport.width;
-
-//   const renderContext = {
-//     canvasContext: context,
-//     viewport: viewport,
-//   };
-//   await page.render(renderContext);
-// };
-
-// renderPDF();
 
 
+// TIPADO AUTOMÁTICO
+
+let instanciaTipado;
+function tipado(idioma) {
+    const elementoTitulo = document.querySelector(".titulo-inicio");
+    if (instanciaTipado){
+        instanciaTipado.destroy();
+    };
+    fetch(`./languages/${idioma}.json`)
+        .then(response => response.json())
+        .then(texto => {
+            let titulos = texto.tipado.title;
+    
+            instanciaTipado = new Typed(elementoTitulo, {
+                strings: titulos,
+                typeSpeed: 100,
+                backSpeed: 30,
+                backDelay: 1500,
+                loop: true
+            });
+        });
+    };
 
 
 
-// TIPADO DE PALABRAS
 
-// let tipado = new Typed(".titulo-inicio", {
-//     strings: ["Desarrollador Junior","Ingeniero Mecánico"],
-//     typeSpeed: 100,
-//     backSpeed: 30,
-//     backDelay: 1500,
-//     loop: true
-// });
+// CREACIÓN DE CONTENDOR DE INTERESES 'acerca de'
 
+const contenedorIntereses = document.getElementById("contenedor-intereses");
+const listaIconos = ["fa-gamepad","fa-bicycle","fa-headphones","fa-desktop","fa-car","fa-book"]
 
-// tipado();
+const cargarIntereses = async (idioma) => {
+    // Se carga la data del JSON segun idioma
+    const data = await cargarDatos(idioma);
+    // JSON "interest" entrega una listaIntereses ordenada igual a listaIconos
+    const listaIntereses = data.profile.interests;
 
-function tipado() {
-    let tipado = new Typed(".titulo-inicio", {
-        strings: ["Desarrollador Junior", "Ingeniero Mecánico"],
-        typeSpeed: 100,
-        backSpeed: 30,
-        backDelay: 1500,
-        loop: true
-    });
-}
-
-document.addEventListener("DOMContentLoaded", () => {
-    // Verificar si la URL actual es "index.html"
-    if (window.location.pathname.endsWith("index.html")) {
-        tipado();
+    let nuevoContenedorIntereses = "";
+    for (let i = 0; i < listaIntereses.length; i++) {
+        nuevoContenedorIntereses += crearContenedorInteres(i, listaIntereses[i], listaIconos[i]);
     }
-});
-  
+    if (window.location.pathname.endsWith("index.html")){
+        contenedorIntereses.innerHTML = nuevoContenedorIntereses;
+    }
+};
+// HTML para contenedores de intereses
+const crearContenedorInteres = (index,valor,icono)=>{
+    let interesHTML = `
+    <div class="intereses">
+        <i class="fa-solid ${icono}"></i>
+        <span data-section="profile" data-value="interest[${index}]">${valor}</span>
+    </div>`;
+    return interesHTML;
+};
 
 
-// ANIMACION SKILLS
+
+
+
+// ANIMACIÓN SKILLS
 
 const efectoHabilidades =()=>{
     let skills = document.getElementById("skills");
     let distancia_skills = window.innerHeight - skills.getBoundingClientRect().top;
+
     if(distancia_skills >= 300){
         let habilidades = document.getElementsByClassName("progreso");
-        habilidades[0].classList.add("lvl");
-        habilidades[1].classList.add("lvl");
-        // habilidades[2].classList.add("lvl");
-        // habilidades[3].classList.add("lvl");  
-        // habilidades[4].classList.add("lvl"); 
-        // habilidades[5].classList.add("lvl");
-        // habilidades[6].classList.add("lvl");  
-        // habilidades[7].classList.add("lvl"); 
-        // habilidades[8].classList.add("lvl"); 
-    }
-}   
+        for (i=0;i<habilidades.length;i++){
+            habilidades[i].classList.add("lvl");
+        };
+    };
+};
 
-// detectar scrolling para aplicar animacion de barra hab
+// detectar scrolling para aplicar animación de barra hab
 function esPaginaIndex() {
     return window.location.pathname.endsWith('index.html');
-}
+};
 
 if (esPaginaIndex()) {
     window.onscroll = function () {
@@ -265,86 +326,38 @@ if (esPaginaIndex()) {
     };
 }
 
-// window.onscroll = function(){
-//     efectoHabilidades();
-// }
 
 
 
 // Scroll para sliders de animaciones de contenedores
-// const seccion = document.querySelector(".animacion");
-// const animacionCentro = document.querySelectorAll(".centro");
+
 const animacion = document.querySelectorAll(".animacion");
-// const animacionIzquierda = document.querySelectorAll(".izquierda");
 const animacionNav = document.querySelectorAll("nav ul li");
 
-// const derecha = document.querySelectorAll(".derecha");
-
-// const menu = document.getElementById("contenedor-header");
-// const nav = document.querySelectorAll(".contenedor-header header nav ul li");
-
-// const menu_responsive = document.getElementById("click-responsive");
-// const nav_responsive = document.getElementById("nav");
-
-
-// // BANNER
-// const banner = document.querySelector(".banner");
-// const imgBanner = document.getElementById("cont-img-banner");
-// const redes = document.querySelectorAll(".redes nav ul li")
-
-// // TITULOS PRINCIPALES
-// const titulo = document.querySelectorAll(".titulo");
-// const tituloDerecha = document.querySelectorAll(".tituloDerecha");
-
-// // BOTONES
-// const boton = document.querySelectorAll(".boton");
-
-// // COLUMNAS
-// const centro = document.querySelectorAll(".centro");
-// const izquierda = document.querySelectorAll(".izquierda");
-// const derecha = document.querySelectorAll(".derecha");
-
-// // PROYECTOS
-// const proyectos = document.querySelectorAll(".proyectos .galeria .proyecto");
-
-
-
 const cargarAnimacion = (entradas, observador) => {
-    // if(entrada.isIntersecting){
-    //     entrada.target.classList.add("animado");
-    // }
+
     entradas.forEach((entrada) => {
         if(entrada.isIntersecting){
-            console.log("entrada en el viewport");
 
             const delay = entrada.target.dataset.nav; // Obtener el valor de data-nav
             entrada.target.style.transitionDelay = `${delay * 0.15}s`; // Aplicar retraso en la animación
             entrada.target.classList.add("animado");
 
-            // const delay2 = entrada.target.dataset.red; // Obtener el valor de data-nav
-            // entrada.target.style.transitionDelay = `${delay2 * 0.5}s`; // Aplicar retraso en la animación
-            // entrada.target.classList.add("animado");
-
-
-            // const delay_red = entrada.target.dataset.red; // Obtener el valor de data-nav
-            // entrada.target.style.transitionDelay = `${delay_red * 0.15}s`; // Aplicar retraso en la animación
-            // entrada.target.classList.add("animado");
-        }
-    });
-    
-}
+        };
+    });   
+};
+// Parámetros para el intersecter
 const observador = new IntersectionObserver(cargarAnimacion, {
     root: null,
     rootMargin: "50px 200px",
-    threshold: 0.3
+    // threshold: 0.3
+    threshold: 0.25
 });
-
+// Observador de elementos
 animacion.forEach((enlace)=>{
     observador.observe(enlace);
 });
-// animacionIzquierda.forEach((enlace)=>{
-//     observador.observe(enlace);
-// });
+// Observador de elementos de menu o navegadores
 animacionNav.forEach((enlace)=>{
     observador.observe(enlace);
 });
@@ -352,246 +365,15 @@ animacionNav.forEach((enlace)=>{
 
 
 
-// observador.observe(menu);
-// nav.forEach((enlace) => {
-//     observador.observe(enlace);
-// });
-// observador.observe(menu_responsive);
-
-// observador.observe(nav_responsive);
-
-
-// // banner
-// observador.observe(banner);
-// observador.observe(imgBanner);
-
-// redes.forEach((enlace) => {
-//     observador.observe(enlace);
-// });
-
-// titulo.forEach((enlace) => {
-//     observador.observe(enlace);
-// });
-// tituloDerecha.forEach((enlace) => {
-//     observador.observe(enlace);
-// });
-// boton.forEach((enlace) => {
-//     observador.observe(enlace);
-// });
-// izquierda.forEach((enlace) => {
-//     observador.observe(enlace);
-// });
-// derecha.forEach((enlace) => {
-//     observador.observe(enlace);
-// });
-// centro.forEach((enlace) => {
-//     observador.observe(enlace);
-// });
-// proyectos.forEach((enlace) => {
-//     observador.observe(enlace);
-// });
-
-
-
-
-
-
-
-
-
-
-
-// const menu = document.getElementById("contenedor-header");
-// const nav = document.querySelectorAll(".contenedor-header header nav ul li");
-
-// const menu_responsive = document.getElementById("click-responsive");
-// const nav_responsive = document.getElementById("nav");
-
-
-// // BANNER
-// const banner = document.querySelector(".banner");
-// const imgBanner = document.getElementById("cont-img-banner");
-// const redes = document.querySelectorAll(".redes nav ul li")
-
-// // TITULOS PRINCIPALES
-// const titulo = document.querySelectorAll(".titulo");
-// const tituloDerecha = document.querySelectorAll(".tituloDerecha");
-
-// // BOTONES
-// const boton = document.querySelectorAll(".boton");
-
-// // COLUMNAS
-// const centro = document.querySelectorAll(".centro");
-// const izquierda = document.querySelectorAll(".izquierda");
-// const derecha = document.querySelectorAll(".derecha");
-
-// // PROYECTOS
-// const proyectos = document.querySelectorAll(".proyectos .galeria .proyecto");
-
-
-
-// const cargarAnimacion = (entradas, observador) => {
-//     // if(entrada.isIntersecting){
-//     //     entrada.target.classList.add("animado");
-//     // }
-//     entradas.forEach((entrada) => {
-//         if(entrada.isIntersecting){
-//             console.log("entrada en el viewport");
-
-//             const delay = entrada.target.dataset.nav; // Obtener el valor de data-nav
-//             entrada.target.style.transitionDelay = `${delay * 0.15}s`; // Aplicar retraso en la animación
-//             entrada.target.classList.add("animado");
-
-//             // const delay2 = entrada.target.dataset.red; // Obtener el valor de data-nav
-//             // entrada.target.style.transitionDelay = `${delay2 * 0.5}s`; // Aplicar retraso en la animación
-//             // entrada.target.classList.add("animado");
-
-
-//             // const delay_red = entrada.target.dataset.red; // Obtener el valor de data-nav
-//             // entrada.target.style.transitionDelay = `${delay_red * 0.15}s`; // Aplicar retraso en la animación
-//             // entrada.target.classList.add("animado");
-//         }
-//     });
-    
-// }
-// const observador = new IntersectionObserver(cargarAnimacion, {
-//     root: null,
-//     rootMargin: "50px 200px",
-//     threshold: 0.3
-// });
-// observador.observe(menu);
-// nav.forEach((enlace) => {
-//     observador.observe(enlace);
-// });
-// observador.observe(menu_responsive);
-
-// observador.observe(nav_responsive);
-
-
-// // banner
-// observador.observe(banner);
-// observador.observe(imgBanner);
-
-// redes.forEach((enlace) => {
-//     observador.observe(enlace);
-// });
-
-// titulo.forEach((enlace) => {
-//     observador.observe(enlace);
-// });
-// tituloDerecha.forEach((enlace) => {
-//     observador.observe(enlace);
-// });
-// boton.forEach((enlace) => {
-//     observador.observe(enlace);
-// });
-// izquierda.forEach((enlace) => {
-//     observador.observe(enlace);
-// });
-// derecha.forEach((enlace) => {
-//     observador.observe(enlace);
-// });
-// centro.forEach((enlace) => {
-//     observador.observe(enlace);
-// });
-// proyectos.forEach((enlace) => {
-//     observador.observe(enlace);
-// });
-
-
-// Esperamos a que el DOM esté completamente cargado
-// const p = document.querySelectorAll(".proyecto");
-
-// p.forEach((proyecto) => {
-//     const overlay = proyecto.querySelector(".overlay");
-//     const boton = proyecto.querySelector(".ver-detalle");
-  
-//     proyecto.addEventListener("mouseenter", function () {
-//       overlay.style.opacity = 1;
-//       boton.style.display = "none"; // Ocultamos el botón al inicio del hover
-//     });
-  
-//     proyecto.addEventListener("mouseleave", function () {
-//       overlay.style.opacity = 0;
-//       boton.style.display = "none"; // Ocultamos el botón al salir del hover
-//     });
-  
-//     overlay.addEventListener("transitionend", function (event) {
-//       // Mostramos el botón solo cuando la opacidad sea 0.5 (50%) o superior (efecto hover completo)
-//       if (event.propertyName === "opacity" && parseFloat(overlay.style.opacity) >= 0.5) {
-//         boton.style.display = "inline-block";
-//       }
-//     });
-//   });
-  
-// const p = document.querySelectorAll(".proyecto");
-
-// p.forEach((proyecto) => {
-//     const overlay = proyecto.querySelector(".overlay");
-//     const boton = proyecto.querySelector(".ver-detalle");
-//     const overlayOpacity = window.getComputedStyle(overlay).opacity;
-//     console.log(boton);
-//     console.log(overlayOpacity);
-
-//     proyecto.addEventListener("mouseenter", function () {
-//         overlay.style.opacity = 1;
-//         const overlayOpacity = parseFloat(window.getComputedStyle(overlay).opacity);
-    
-//         if (overlayOpacity >= 0.5) {
-//           boton.style.pointerEvents = "auto";
-//         } else {
-//           boton.style.pointerEvents = "none";
-//         }
-//       });
-    
-//       proyecto.addEventListener("mouseleave", function () {
-//         overlay.style.opacity = 0;
-//         boton.style.pointerEvents = "none";
-//       });
-//     });
-
-
-//     if (overlayOpacity  >= 0.5){
-//         boton.style.pointerEvents = "auto";
-//     }
-// });
-  
-
-
-
-  
-
-
-// PORTAFOLIO - PROYECTOS
-const proyectos = [
-    {
-        id:"proyecto1",
-        nombre:"APP Inglés",
-        imagen:"images/proyecto1_modal.png",
-        info1:"Proyecto propio, creado con html, css y javascript para aprender y practicar las funcionalidades básicas de estos lenguajes, y reforzar el inglés.",
-        info2:"> El proyecto es una aplicación web creada utilizando las tecnologías HTML, CSS y JavaScript. Su objetivo principal es proporcionar"+ 
-        " una herramienta para mejorar y practicar el conocimiento del inglés, enfocándose en el aprendizaje de verbos en diferentes conjugaciones.",    
-        ref:"https://sebalopezx.github.io/app-ingles/"
-    },
-    {
-        id:"proyecto2",
-        nombre:"Carrito de Compras",
-        imagen:"images/proyecto2_modal.png",
-        info1:"Proyecto de instituto, desarrollada como parte del curso de Front-End con uso de HTML, CSS y JS con LocalStorage.",
-        info2:"> Se ha desarrollado una aplicación funcional de un carrito de compras utilizando el LocalStorage."+
-        " Además, se ha fortalecido la comprensión de conceptos clave en el desarrollo web y la importancia de una interfaz interactiva y amigable para el usuario.",    
-        ref:"https://sebalopezx.github.io/carrito_compras/"
-    }
-];
 
 // MODAL DE PROYECTOS
 
+// HTML para creación de modales
 const crearModal = (proyecto) =>{
-let modalHTML = `
-    
-        <h3 class="modal-titulo">${proyecto.nombre}</h3>
+    let modalHTML = `    
+        <h3 class="modal-titulo">${proyecto.title}</h3>
         <div class="contenedor-modal-img">
-            <img src="${proyecto.imagen}" alt="${proyecto.nombre}" title="${proyecto.nombre}" class="modal-img">
+            <img src="${proyecto.imagen}" alt="${proyecto.title}" title="${proyecto.title}" class="modal-img">
         </div>
         <p class="modal-parrafo">${proyecto.info1}</p>
         <hr>
@@ -599,22 +381,20 @@ let modalHTML = `
         <div class="modal-botones">
             <a href="${proyecto.ref}" target="_blank">
                     <button class="modal-ver">
-                    <span class="texto-boton">Ver</span>
+                    <span class="texto-boton">${proyecto.btn1}</span>
                     <i class="fa-solid fa-file-export"></i>
 
                     <span class="overlay"></span>
                 </button>
             </a>
             <button class="btn modal-close">
-                <span class="texto-boton">Cerrar</span>
+                <span class="texto-boton">${proyecto.btn2}</span>
                 <i class="fa-solid fa-x"></i>
                 <span class="overlay"></span>
             </button>
-        </div>
-    `;
+        </div>`;
     return modalHTML;
-}
-
+};
 
 
 // FUNCION DE APERTURA DE MODALES
@@ -623,17 +403,38 @@ const openModal = document.querySelectorAll('.ver-detalle');
 const modal = document.querySelector('.modal');
 const contenedorModal = document.querySelector('.modal-contenedor')
 
+// FUNCION GENERAL para cargar datos de JSON segun idioma
+const cargarDatos = async (idioma) => {
+    try {
+        const response = await fetch(`./languages/${idioma}.json`);
+        const data = await response.json();
+        return data;
+    } catch (error) {
+        console.error('Error al cargar los datos:', error);
+        return null;
+    };
+};
+
 
 openModal.forEach((boton) => {
-    boton.addEventListener('click', (e) => {
+    boton.addEventListener('click', async (e) => {
         e.preventDefault();
+
         let proyectoDiv = boton.closest('.proyecto');
         let proyectoId = proyectoDiv.id;
-        let proyecto = proyectos.find((p) => p.id === proyectoId);
+
+        const idiomaActual = obtenerIdiomaSeleccionado();
+
+        const data = await cargarDatos(idiomaActual);
+        const listaProyectos = data.projects;
+        // PROJECTS: entrega información general para el contenedor del proyecto y un documento embebido con datos del modal 
+        const proyecto = listaProyectos[proyectoId];
+
+        // Crear y Mostrar el modal con click
         contenedorModal.innerHTML = crearModal(proyecto);
         modal.classList.add('mostrar-detalle');
 
-        // PARA CERRAR EL MODAL
+        // Para Cerrar el modal
         const closeModal = document.querySelector('.modal-close');
         closeModal.addEventListener('click', (e) => {
             e.preventDefault();
@@ -643,39 +444,34 @@ openModal.forEach((boton) => {
 });
 
 
-// const openModal = document.querySelectorAll('.ver-detalle');
-// const modal = document.querySelector('.modal');
-// const contenedorModal = document.querySelector('.modal-contenedor');
 
-// openModal.forEach((boton) => {
-//   boton.addEventListener('click', (e) => {
-//     e.preventDefault();
-//     let proyectoDiv = boton.closest('.proyecto');
-//     let proyectoId = proyectoDiv.id;
-//     let proyecto = proyectos.find((p) => p.id === proyectoId);
+// CONTACTO 
 
-//     // Deshabilitamos el botón durante la transición
-//     boton.style.pointerEvents = 'none';
-
-//     contenedorModal.innerHTML = crearModal(proyecto);
-//     modal.classList.add('mostrar-detalle');
-
-//     // PARA CERRAR EL MODAL
-//     const closeModal = document.querySelector('.modal-close');
-//     closeModal.addEventListener('click', (e) => {
-//       e.preventDefault();
-//       modal.classList.remove('mostrar-detalle');
-//     });
-//   });
-// });
-
-// // Agregamos un listener al evento transitionend para habilitar el botón después de la transición
-// const overlays = document.querySelectorAll('.proyecto .overlay');
-// overlays.forEach((overlay) => {
-//   overlay.addEventListener('transitionend', () => {
-//     const boton = overlay.querySelector('button.ver-detalle');
-//     boton.style.pointerEvents = 'auto';
-//   });
-// });
+// Función para establecer los valores de los placeholders en el formulario de contacto
+async function establecerPlaceholders(idioma) {
+    // const idiomaActual = obtenerIdiomaSeleccionado();
+    const data = await cargarDatos(idioma);
+    if (window.location.pathname.endsWith("index.html")){
+        if (data && data.contact) {
+            const placeholders = data.contact;
+            document.getElementById('nombre').placeholder = placeholders.name;
+            document.getElementById('email').placeholder = placeholders.email;
+            document.getElementById('asunto').placeholder = placeholders.subject;
+            document.getElementById('mensaje').placeholder = placeholders.message;
+        };
+    };
+};
 
 
+
+// PDF segun idioma elegido
+
+async function establecerPDF(idioma){
+    const data = await cargarDatos(idioma);
+    if (window.location.pathname.endsWith("cv.html")){
+        if(data && data.cv_pagina){
+            const pdf_data = data.cv_pagina;
+            document.getElementById('pdf').src = pdf_data.pdf;
+        };
+    };
+};

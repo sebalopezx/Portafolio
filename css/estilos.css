@@ -1,14 +1,28 @@
 /* @import url('https://fonts.googleapis.com/css2?family=Righteous&family=Work+Sans:wght@100;300;400;600;800&display=swap'); */
 :root{
+    /* ESTANDARIZACION DE COLORES */
     --color-primario: #2bff00;
     --color-secundario: #f5f5f5;
     --color-terciario: #38996d;  
     --color-menu: #181818;
     --color-background: #253237;
+    --color-close: #ff0000;
+
+    /* ESTANDARIZACION DE SHADOWS */
+    --shadow-btn:   
+        0 0 5px var(--color-primario),
+        0 0 25px var(--color-primario),
+        0 0 100px var(--color-primario),
+        0 0 200px var(--color-primario);
+    --shadow-btn-close:
+        0 0 5px var(--color-close),
+        0 0 25px var(--color-close),
+        0 0 100px var(--color-close),
+        0 0 200px var(--color-close);
+            
 }
-/* #2f7a58 */
-/* #38996d */
-/* FUENTE */
+
+/* ESTANDARIZACION DE FUENTE */
 @font-face {
     font-family: fuentePrincipal;
     src: url(../font/Righteous-Regular.ttf);
@@ -28,9 +42,11 @@
 html{
     scroll-behavior: smooth;
 }
+
+
 /* ----- FORMATO GENERAL ----- */
 
-/* CONTENEDOR */
+/* CONTENEDORES */
 .contenedor-seccion{
     max-width: 1100px;
     margin: auto;
@@ -49,57 +65,41 @@ h1,h2,h3,h6{
 h1{
     text-shadow: 0 0 18px var(--color-terciario); 
 }
-h3{
-    text-align: center;
-    font-style: italic;
-    text-shadow: 0 0 18px var(--color-primario); 
-}
 h2{
     color: var(--color-primario);
     font-size: 48px;
-    text-shadow: 2px 2px 10px var(--color-secundario);
-    text-align: center;
+    text-shadow: 2px 2px 20px var(--color-terciario);
     padding: 20px 0;
 }
+h3{
+    font-style: italic;
+    text-shadow: 0 0 18px var(--color-primario); 
+}
 h2,h3{
+    text-align: center;
     opacity: 0;
-    /* animation: slideTitulo 2s ease forwards; */
 }
 
 /* BOTONES */
 button{
     cursor: pointer;
     background-color: transparent;
-    /* border: 0px solid var(--color-primario); */
+    border: 1px solid var(--color-primario) !important;
     border: none;
     border-radius: 20px;
     width: 160px;
+    height: 45px;
     display: block;
     margin: 20px auto;
     padding: 10px 22px;
     font-size: 16px;
     color: var(--color-secundario);
-    position: relative;
-    z-index: 10;
-    overflow: hidden;
-    transition: transform 0.3s ease 0s;
-    box-shadow: 0 0 2px 2px var(--color-primario);
-    
-    z-index: 4;
-    /* animation: slideBoton 2s ease forwards; */
 }
-button .overlay{
-    margin-top: 0;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 0;
-    height: 100%;
+button:hover{
     background-color: var(--color-primario);
-    /* overflow: auto; */
-    z-index: -1;
-    transition: 1s;
+    box-shadow: var(--shadow-btn);
 }
+
 /* HOVER */
 button:hover .texto-boton{
     display: none;
@@ -108,16 +108,45 @@ button:hover i{
     color: var(--color-terciario);
     border: 1px solid var(--color-terciario);
 }
-button:hover .overlay{
-    width: 100%;
+
+
+
+/* SLIDER cambio de idioma*/
+.idiomas{
+    width: 75px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    opacity: .1;
+    transition: 1.5s ease;
+    transform: scale(0);
+}
+.idiomas.animado{
+    opacity: 1;
+    transform: scale(1);
+}
+.idiomas .idioma_item{
+    opacity: .2;
+    border-radius: 50%;
+    transition: .5s;
+}
+.idiomas .idioma_item:hover{
+    opacity: .5;
+    box-shadow: 0 0 10px 3px var(--color-secundario);
+}
+.idiomas .idioma_item.active{
+    opacity: 1;
+    transform: scale(1.1);
+    box-shadow: 0 0 10px 3px var(--color-primario);
+    scrollbar-gutter: stable;
+}
+.idiomas .idioma_item img{
+    width: 35px;
+    display: block;
+    cursor: pointer;
 }
 
-/* button:hover{
-    transform: translateY(-5px);
-    box-shadow: 0px 4px 2px var(--color-terciario);
-    border: 1px solid var(--color-terciario);
-    margin-bottom: 21px;
-} */
 
 
 /* ----- FORMATO ----- */
@@ -126,7 +155,6 @@ button:hover .overlay{
 /* MENU */
 .contenedor-header{
     background-color: var(--color-menu);
-    /* background-image: url(../images/fondo.png); */
     border-radius: 0 0 20px 20px;
     border: 1px solid var(--color-primario);
     position: fixed;
@@ -136,7 +164,6 @@ button:hover .overlay{
     z-index: 99;
 
     opacity: .1;
-    /* animation: nav 1.5s ease forwards; */
     transition: 1.5s ease;
 }
 .contenedor-header.animado{
@@ -167,6 +194,11 @@ button:hover .overlay{
 .contenedor-header header ul{
     display: flex;
     list-style: none;
+    width: 535px;
+}
+.contenedor-header header nav ul li {
+    width: auto;
+    /* scrollbar-gutter: stable; */
 }
 .contenedor-header header nav ul li a{
     font-family: "fuentePrincipal"; 
@@ -176,21 +208,8 @@ button:hover .overlay{
     padding: 3px;
     transition: 0.5s;
     text-decoration: none;
-
- 
-    /* animation: slideNav 1.5s ease forwards; */   
-    /* animation-delay: calc(.15s * var(--nav)); */
-
-    /* opacity: 0.01;  */
-    /* transition: 1.5s ease; */
-    /* transform: translateX(-150px); */
-
 }
-/* .contenedor-header header nav ul li a.animado{
-    opacity: 1;
-    transform: translateX(0);
-    transition: opacity 0.5s ease, transform 0.5s ease;
-} */
+
 .contenedor-header header nav ul li {
     opacity: 0.01;
     transform: translateX(-200px);   
@@ -201,22 +220,18 @@ button:hover .overlay{
     transition: opacity 1.5s ease, transform 1.5s ease;
 }
 
-
 .contenedor-header header nav ul li a:hover{
-/* Clase .active con creación por JS para fijar color y scroll*/
     color: var(--color-terciario) !important;
     text-shadow: 0 0 10px var(--color-terciario);
 }
+/* Clase .active con creación por JS para fijar color y scroll*/
 .contenedor-header header nav ul li a.active{
     color: var(--color-primario);
     text-shadow: 0 0 10px var(--color-primario);
 }
-/* .contenedor-header header nav ul li a.active{
-    color: var(--color-primario);
-} */
-
 
 .menu-responsive{
+    width: 35px;
     background-color: var(--color-terciario);
     color: var(--color-secundario);
     padding: 5px 10px;
@@ -236,10 +251,6 @@ button:hover .overlay{
 
 
 
-
-
-
-
 /* CV */
 #cv{
     background: linear-gradient(to top, var(--color-background), var(--color-menu));
@@ -254,12 +265,12 @@ button:hover .overlay{
     margin-bottom: 60px;
     display: block;
     width: 90%;
-    /* height: 100%; */
     height: 100vh;
     border-radius: 20px;
-    /* position: relative; */
-    /* padding-top: 100%; */
-    /* opacity: 1; */
+
+}
+#contenedor-cv header nav{
+    width: 200px;
 }
 #contenedor-cv header nav a{
     font-family: fuentePrincipal;
@@ -272,27 +283,32 @@ button:hover .overlay{
 #contenedor-cv header nav a:active{
     color: var(--color-primario);
 }
+
 @media screen and (max-width:768px){
     #contenedor-cv header .logo a{
         font-size: 1.5rem;
     }
     .pdfview{
-        /* margin-top: 10px; */
         top: 0;
         left: 0;
         bottom: 0;
         right: 0;
         width: 100%;
-        /* height: 70vh; */
         border-radius: 5px;
     }
     #contenedor-cv header nav.responsive{
-        width: 200px;
-        height: 30px;
+        width: 180px;  
+        height: fit-content;   
     } 
-    #contenedor-cv header nav a{
+    #contenedor-cv header nav ul li a{
         padding: 5px;
-        padding-left: 20px;
+    }
+    .idiomas{
+        justify-content: center;
+        gap: 15px;
+    }
+    .idiomas .idioma_item img{
+        width: 25px;   
     }
 }
 
@@ -302,50 +318,44 @@ button:hover .overlay{
 /* INICIO */
 
 .inicio{
-    /* background: url(../fondo.html); */
-    background: linear-gradient(to top, rgb(24, 24, 24, .9), rgb(37, 50, 55, .8)),url(../images/fondo_auto_1920x1080.jpg); 
-        /* background-size: contain; */
-
+    background: linear-gradient(to top, rgb(24, 24, 24, .7), rgb(37, 50, 55, .5)),url(../images//template/fondo_auto_1920x1080.jpg); 
     background-size: 100% 100%;
-  
+    /* background-size: cover; */
+
     height: 100vh;
     color: var(--color-secundario);
     position: relative;
     display: flex;
     align-items: center;
-
 }
 
 .inicio .banner{
     padding: 20px;
     /* background-color: rgba(var(--color-menu), 0.7); */
-    background: #18181870;
-    backdrop-filter: blur(3px);
-    -webkit-backdrop-filter: blur(3px);
+    background: transparent;
+    border: 1px solid #f5f5f550;
+    backdrop-filter: blur(7px);
+    -webkit-backdrop-filter: blur(7px);
     max-width: 350px;
     margin: 0 auto;
     text-align: center;
     border-radius: 40px;
 
     z-index: 2;
-    /* opacity: 0; */
-    /* animation: slideBanner 2s ease forwards; */
     opacity: 0;
     transform: translateX(150px);
-
 }
 
 .inicio .banner.animado{
     opacity: 1;
     transform: translateX(0);
     transition: opacity 1.5s ease, transform 1.5s ease;
-
 }
 
 .inicio .banner img{
     margin-top: 40px;
-    /* border: 5px outset var(--color-primario); */
-    box-shadow: 0 0 25px 4px var(--color-primario);
+    box-shadow: 0 0 50px 1px var(--color-secundario);
+    
     display: block;
     width: 250px;
     margin: auto;
@@ -355,28 +365,39 @@ button:hover .overlay{
 
     opacity: 0;
     transform: translateX(-200px);
-    /* animation: slideImgBanner 2s ease forwards; */
-    /* , floatImage 4s ease-in-out infinite; */
-
 }
-/* .inicio .banner img:hover{
-    animation: zoom 1s ease forwards; 
-    -webkit-transform:scale(1.12);transform:scale(1.12);
-} */
+
 .inicio .banner img.animado{
     opacity: 1;
     transform: translateX(0);
-    transition: opacity 1.5s ease, transform 1.5s ease;
+    transition: .5s, opacity 1.5s ease, transform 1.5s ease;
 }
 .inicio .banner img:hover{
-    -webkit-transform:scale(1);transform:scale(1.12);
+    /* -webkit-transform:scale(1); */
+    transform:scale(1.12);
+    box-shadow: 0 0 50px 1px var(--color-primario);
 } 
 .inicio .banner h1{
     margin-top: 25px;
-    font-size: 35px;
+    font-size: 2.1rem;
 }
+/* .inicio .banner h1 p{
+    font-family: fuentePrincipal;
+    margin-top: 25px;
+    font-size: 2.2rem;
+    display: inline-flex;
+    margin-right: -1px;
+    transition: .8s ease !important;
+}
+.inicio .banner h1 p:hover{
+    cursor: pointer;
+    color: var(--color-primario);
+    transform: scale(1.2);
+} */
+
 .inicio .banner h6 span{
-    font-size: 20px;
+    font-size: 1.3rem;
+    /* font-size: 20px; */
     font-weight: normal;
     color: var(--color-primario);
     text-shadow: 0 0 18px var(--color-primario); 
@@ -384,13 +405,11 @@ button:hover .overlay{
 .inicio .banner h1{
     opacity: 0.1;
     transform: translateX(-300px);
-    /* animation: slideTituloInicio 2.5s ease forwards; */
 }
 .inicio .banner h6{
     opacity: 0.1;
     transform: scale(0.01);
-    /* transform: translateX(-300px); */
-    /* animation: slideTituloInicio 2.5s ease forwards; */
+    height: 25px;
 }
 .inicio .banner h1.animado{
     opacity: 1;
@@ -404,18 +423,6 @@ button:hover .overlay{
     transition: opacity 2.5s ease, transform 2.5s ease;
 }
 
-/* .contenedor-header header ul{
-    display: flex;
-    list-style: none;
-}
-.contenedor-header header nav ul li a{
-    font-family: "fuentePrincipal"; 
-    text-align: none;
-    color: var(--color-secundario);
-    margin: 0 15px;
-    padding: 3px;
-    transition: 0.5s;
-    text-decoration: none; */
 
 .inicio .banner .redes nav ul{
     display: flex;
@@ -432,18 +439,15 @@ button:hover .overlay{
     height: 42px;
     line-height: 42px;
     margin: 20px 5px;
-    /* align-items: center; */
-
     font-size: 20px;
     transition: .5s;
-
-    /* opacity: 0;
-    transform: translateX(-300px); */
 }
 .inicio .banner .redes nav ul li a:hover{
     background-color: var(--color-primario);
     color: var(--color-menu);
-    box-shadow: 0 0 15px 5px var(--color-terciario);   
+    border: transparent;
+    box-shadow: var(--shadow-btn);
+    transform: scale(1.2);
 }
 
 .inicio .banner .redes nav ul li{
@@ -456,56 +460,18 @@ button:hover .overlay{
     transition: opacity 1.5s ease, transform 1.5s ease;
 }
 
-/* .inicio .banner .redes nav ul li.animado{
-    opacity: 1;
-    transform: translateX(0px);
-    transition: opacity 1.5s ease, transform 1.5s ease, .5s;
-} */
-
-/* .inicio .banner .redes nav a{
-    color: var(--color-terciario);
-    display: inline-block;
-    border: 1px solid var(--color-terciario);
-    border-radius: 100%;
-    width: 42px;
-    height: 42px;
-    line-height: 42px;
-    margin: 40px 5px;
-
-    font-size: 20px;
-    transition: .5s !important;
-
-    opacity: 0;
-    transform: translateX(-300px);
-}
-.inicio .banner .redes nav a:hover{
-    background-color: var(--color-primario);
-    color: var(--color-menu);
-    box-shadow: 0 0 8px 6px var(--color-terciario);   
-}
-
-.inicio .banner .redes nav a.animado{
-    opacity: 1;
-    transform: translateX(0px);
-    transition: opacity 1.5s ease, transform 1.5s ease;
-} */
-
-
 
 .inicio a{
     text-decoration: none;
 }
-
-
-
 .inicio .banner .boton{
     opacity: 0.1;
     transform: translateX(-300px);
+    transition: 1s, opacity 3.5s ease, transform 2.5s ease !important;
 }
 .inicio .banner .boton.animado{
     opacity: 1;
     transform: translateX(0px);
-    transition: opacity 3.5s ease, transform 2.5s ease;
 }
 .inicio .banner button i{
     display: none;
@@ -516,12 +482,13 @@ button:hover .overlay{
 }
 
 
+
 /* ACERCA DE */
+
 .acercade{
     background: linear-gradient(to top, var(--color-background), var(--color-menu));
     color: var(--color-secundario);
     padding: 50px 20px;
-    /* height: 100vh; */
 }
 .acercade .contenedor-seccion h2{
     opacity: 0.1;
@@ -531,33 +498,28 @@ button:hover .overlay{
     opacity: 0.1;
     transform: translateX(150px);
 }
-/* .acercade .contenedor-seccion .col.derecha.animado{
-    opacity: 1;
-    transform: translateX(0px);
-    transition: opacity 1.5s ease, transform 1.5s ease;
-} */
 .acercade .contenedor-seccion h2.animado,h3.animado{
     opacity: 1;
     transform: translateX(0px);
     transition: opacity 1.5s ease, transform 1.5s ease;
 }
-
 .acercade .contenedor-seccion span{
     font: 18px;
     line-height: 22px;
-    margin-bottom: 20px;
+    margin-bottom: 0px;
     color: var(--color-terciario);
     font-weight: bold;
 }
-
 .acercade .contenedor-seccion .contenedor-informacion a{
     color: var(--color-terciario);
 }
 .acercade .contenedor-seccion .contenedor-informacion a:hover{
     color: var(--color-primario);
 }
-
-
+.acercade .contenedor-informacion p{
+    text-align: justify;
+    margin-bottom: 15px;
+}
 .acercade .contenedor-informacion{
     opacity: 0.1;
     transform: scale(0%);
@@ -570,23 +532,9 @@ button:hover .overlay{
 }
 
 
-/* .acercade .contenedor-seccion span p {
-    color: var(--color-secundario);
-    font-family: "fuenteSecundaria";
-}
-.acercade .contenedor-seccion span p hr{
-    color: var(--color-terciario);
-}
-.acercade .contenedor-seccion span p a{
-    /* color: var(--color-secundario); */
-    /* color: red; */
-/*} */
-
-
 .acercade .fila{
     display: flex;  
 }
-
 .acercade .fila .col{
     width: 50%;
 }
@@ -610,16 +558,7 @@ button:hover .overlay{
     transform: translateX(0px);
     transition: opacity 1.5s ease, transform 1.5s ease;
 }
-/* MEJORAR, ERROR SE VE FONDO BLANCO ANTES DE EJECUTARSE */
-/* .acercade .fila .col.derecha{
-    opacity: 0;
-    transform: translateX(150px);
-}
-.acercade .fila .col.derecha.animado{
-    opacity: 1;
-    transform: translateX(0px);
-    transition: opacity 1.5s ease, transform 1.5s ease;
-} */
+
 
 .acercade .fila .col h3{
     font-size: 28px;
@@ -658,14 +597,11 @@ button:hover .overlay{
     cursor: pointer;
     overflow: hidden;
 }
-
-
-
 .acercade .fila .col .contenedor-intereses .intereses:hover{
     transition: .5s;
     background-color: var(--color-primario);
     color: var(--color-menu);
-    box-shadow: 0 0 10px 3px var(--color-primario);
+    box-shadow: var(--shadow-btn);
 }
 .acercade .fila .col .contenedor-intereses .intereses:hover span{
     color: var(--color-menu);
@@ -680,13 +616,12 @@ button:hover .overlay{
 }
 
 
-
 /* SKILLS */
+
 .skills{
     background: linear-gradient(to top, var(--color-menu), var(--color-background));
     color: var(--color-secundario);
     padding: 50px 20px;
-    /* height: 100vh; */
 }
 .skills h2{
     opacity: 0;
@@ -706,7 +641,6 @@ button:hover .overlay{
 }
 
 /* Animacion skills */
-
 .skills .fila .col h3{
     opacity: 0;
     transform: translate(-150px);
@@ -719,12 +653,10 @@ button:hover .overlay{
 .skills .fila .col{
     opacity: 0;
     transform: translateX(-150px);
-    /* animation: slideContenedorIZQ 2s ease forwards; */
 }
 .skills .fila .col.izquierda{
     opacity: 0;
     transform: translateX(-150px);
-    /* animation: slideContenedorDER 2s ease forwards; */
 }
 .skills .fila .col.izquierda.animado{
     opacity: 1;
@@ -746,11 +678,30 @@ button:hover .overlay{
     margin-top: 25px;
     margin-bottom: 25px;
 }
+.skills .contenedor-skill{
+    width: 80%;
+    justify-content: space-between;
+}
+.skills span{
+    width: 100%;
+    justify-content: start;
+}
+.skills .skills-img{
+    display: flex;
+    margin-left: auto;
+    justify-content: end;
+    justify-items: end;
+    align-items: end;
+    align-self: flex-end;
+}
 .skills img{
+    background-color: var(--color-secundario);
+    border: 1px solid var(--color-terciario);
+    border-radius: 10px;
+    
     width: 50px;
     height: 50px;
     padding: 5px;
-    margin-right: 10px;
 }
 .skills i{
     width: 50px;
@@ -770,13 +721,13 @@ button:hover .overlay{
     cursor: pointer;
     color: var(--color-primario);
 }
-
-.skills .skill > span{
+.skills .skill > .contenedor-skill,span{
     font-weight: bold;
     display: inline-flex;
     margin-bottom: 10px;
     align-items: center;
 }
+
 .skills .skill .barra-skill{
     height: 8px;
     width: 80%;
@@ -793,43 +744,43 @@ button:hover .overlay{
     top: 0;
     left: 0;
     height: 8px;
-    animation: lvlclick 2s ease;
 }
 .skills .skill .barra-skill span{
     position: absolute;
-    height: 40px;
+    height: 30px;
     width: fit-content;
     background-color: var(--color-primario);
+    box-shadow: var(--shadow-btn);
     color: var(--color-menu);
     border-radius: 20px;
     line-height: 40px;
     text-align: center;
-    top: -17px;
+    /* top: -17px; */
+    top: -13px;
     right: -15px;
     font-size:14px ;
 }
 
 .skills .skill .lvl{
     width: 0%;
-    animation: lvl 2s forwards 1.8s;
+    animation: lvl 2s forwards 1s;
 }
 @keyframes lvl {
     0%{width: 0%;}
     100%{width: var(--progreso);}    
 }
 .skills .skill .progreso:active{
-    animation: lvlclick 1s ease; 
+    animation: lvlclick; 
 }
 
 
 /* CV */
+
 .curriculum{
     background: linear-gradient(to top, var(--color-background), var(--color-menu));
     color: var(--color-secundario);
     padding: 50px 20px;
-    /* height: 100vh; */
 }
-
 .curriculum .fila{
     display: flex;
     justify-content: space-between;
@@ -844,15 +795,9 @@ button:hover .overlay{
 }
 .curriculum .fila .izquierda{
     border-right: 2px solid var(--color-terciario);
-
-    /* opacity: 1; */
-    /* animation: slideContenedorIZQ 2s ease forwards; */
 }
 .curriculum .fila .derecha{
     border-left: 2px solid var(--color-terciario);
-
-    /* opacity: 1; */
-    /* animation: slideContenedorDER 2s ease forwards; */
 }
 
 /* Animacion CV */
@@ -883,25 +828,6 @@ button:hover .overlay{
     transform: translate(0px);
     transition: opacity 1.5s ease, transform 1.5s ease;
 }
-
-/* .curriculum .fila .izquierda{
-    opacity: 0;
-    transform: translate(-150px);
-}
-.curriculum .fila .derecha{
-    opacity: 0;
-    transform: translate(100px);
-}
-.curriculum .fila .izquierda.animado{
-    opacity: 1;
-    transform: translate(0px);
-    transition: opacity 1.5s ease, transform 1.5s ease;
-}
-.curriculum .fila .derecha.animado{
-    opacity: 1;
-    transform: translate(0px);
-    transition: opacity 1.5s ease, transform 1.5s ease;
-} */
 
 
 .curriculum .fila .item{
@@ -988,7 +914,6 @@ button:hover .overlay{
     background: linear-gradient(to top, var(--color-menu), var(--color-background));
     color: var(--color-secundario);
     padding: 50px 20px;
-    /* height: 100vh; */
 }
 
 /* Proyectos animados*/
@@ -1010,7 +935,6 @@ button:hover .overlay{
     transform: translate(0px);
     transition: opacity 1.5s ease, transform 1.5s ease;
 }
-
 
 .proyectos .galeria{
     display: flex;
@@ -1035,60 +959,7 @@ button:hover .overlay{
 }
 
 
-/* OVERLAY */
-
-/* .proyectos .galeria .proyecto .overlay{
-    position: absolute;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    text-align: center;
-    background: rgba(18, 18, 18, .8);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    transition: 1s;
-    font-size: 18px;
-    letter-spacing: 3px;
-    opacity: 0;
-
-    animation: overlayAnimacion 2s ease;
-}
-@keyframes overlayAnimacion{
-    0% {opacity: 0; }
-    100% {opacity: 1; }
-}
-
-.proyectos .galeria .proyecto .overlay h3{
-    margin-bottom: 20px;
-    transition: 1s;
-    opacity: 1;
-    
-}
-.proyectos .galeria .proyecto .overlay:hover{
-    opacity: 1;
-}
-
-.proyectos .galeria .proyecto .overlay:hover h3{
-    margin-bottom: 0px;
-}
-.proyectos .galeria .proyecto .overlay button{
-    background-color: #18181850;
-    font-weight: bold;
-
-}
-.proyectos .galeria .proyecto .overlay button:hover{
-    transition: .5s !important;
-    background-color: var(--color-primario); 
-    color: var(--color-menu);
-} */
-
-
-
-
-/* pruebas */
-
-
+/* overlay proyectos */
 .proyectos .galeria .proyecto .overlay{
     position: absolute;
     top: 0;
@@ -1103,22 +974,22 @@ button:hover .overlay{
     font-size: 18px;
     letter-spacing: 3px;
     opacity: 0;
-
 }
-
-
 .proyectos .galeria .proyecto .overlay h3{
     margin-bottom: 20px;
     transition: 1s;
     opacity: 1;
-    
 }
-
+.proyectos .galeria .proyecto .overlay .contenedor-img-projects img{
+    width: 50px;
+    display: inline;
+    margin: auto;
+    align-items: center;
+    justify-content: center;
+}
 .proyectos .galeria .proyecto .overlay:hover{
     opacity: 1;
-
 }
-
 .proyectos .galeria .proyecto .overlay:hover h3{
     margin-bottom: 0px;
 }
@@ -1139,12 +1010,9 @@ button:hover .overlay{
 
 
 
-/* pruebas */
-
-
-
 
 /* MODAL PORTAFOLIO*/
+
 .proyectos .modal{
     position: fixed;
     top: 0;
@@ -1172,9 +1040,8 @@ button:hover .overlay{
     place-items: center;
     grid-auto-columns: 100%;
     transform: var(--transformar);
-    /* transition: transform .3s; */
     transition: var(--transicion);
-    box-shadow: 0px 0px 20px 4px var(--color-primario);
+    box-shadow: 0px 0px 15px 1px var(--color-primario);
 }
 
 .proyectos .modal .modal-contenedor .modal-titulo{
@@ -1225,27 +1092,26 @@ button:hover .overlay{
     width: 120px;
     height: 40px;
     margin: 5px;
+    transition: .5s;
 }
 .proyectos .modal .modal-contenedor .modal-ver{
     text-decoration: none;
     background-color: var(--color-background);
 }
 .proyectos .modal .modal-contenedor .modal-close{
-    box-shadow: 0 0 4px 4px red;
-    border: none;
+
+    background-color: #ff000050;
+    border: 1px solid var(--color-close) !important;
 }
 .proyectos .modal .modal-contenedor .modal-ver i,
-.proyectos .modal .modal-contenedor .modal-close i
-{
-    display: none;
-}
+.proyectos .modal .modal-contenedor .modal-close i,
 .proyectos .modal .modal-contenedor .modal-ver:hover .texto-boton,
 .proyectos .modal .modal-contenedor .modal-close:hover .texto-boton{
     display: none;
 }
 .proyectos .modal .modal-contenedor .modal-ver:hover{
     text-decoration: bold;
-    color: var(--color-menu);
+    color: var(--color-primario);
 }
 .proyectos .modal .modal-contenedor .modal-ver:hover i{
     display: contents;
@@ -1258,34 +1124,25 @@ button:hover .overlay{
     font-size: 18px;
 }
 
-/* .proyectos .modal .modal-contenedor .modal-close i{
-    display: none;
-} */
-.proyectos .modal .modal-contenedor .modal-close{
-    background-color: #ff000090;
-}
-.proyectos .modal .modal-contenedor .modal-close .overlay{
-    background-color: red;
-}
-/* HOVER */
-/* button:hover .texto-boton{
-    display: none;
-} */
-/* button:hover i{
-    color: var(--color-terciario);
-    border: 1px solid var(--color-terciario);
-} */
 
+.proyectos .modal .modal-contenedor .modal-ver:hover{
+    background-color: var(--color-primario);
+    box-shadow: var(--shadow-btn);
+}
+.proyectos .modal .modal-contenedor .modal-close:hover{
+    background-color: var(--color-close);
+    box-shadow: var(--shadow-btn-close);
+}
 
 
 
 /* CONTACTO */
+
 .contacto{
     background: linear-gradient(to top, var(--color-background), var(--color-menu));
     color: var(--color-secundario);
     padding: 50px 0;
 }
-
 .contacto .fila{
     display: flex;
 }
@@ -1294,14 +1151,6 @@ button:hover .overlay{
     padding: 10px;
     position: relative;
 }
-/* .contacto .col.izq {
-    opacity: 0;
-    animation: slideContenedorIZQ 2s ease forwards;
-}
-.contacto .col.der {
-    opacity: 0;
-    animation: slideContenedorDER 2s ease forwards;
-} */
 .contacto .col input,textarea{
     background-color: var(--color-background);
     color: var(--color-secundario);
@@ -1366,21 +1215,76 @@ button:hover .overlay{
     transition: opacity 1.5s ease, transform 1.5s ease;
 }
 .contacto .boton{
-    opacity: 0;
+    opacity: .01;
     transform: translate(-150px);
+    transition: 1s, opacity 2.5s ease, transform 2.5s ease !important;
 }
 .contacto .boton.animado{
     opacity: 1;
     transform: translate(0px);
-    transition: opacity 2.5s ease, transform 2.5s ease;
+}
+
+/* ALERT */
+.titulo-alert{
+    opacity: 1;
+    color: var(--color-primario);
+    text-shadow: none;
+}
+
+.swal2-html-container{
+    color: var(--color-secundario) !important;
+}
+
+.popup-alert{
+    border-radius: 20px;
+    background-color: var(--color-background);
+    box-shadow: 0px 0px 15px 1px var(--color-primario);
+}
+.popup-alert-error{
+    border-radius: 40px;
+    background-color: var(--color-background);
+    box-shadow: 0px 0px 15px 1px var(--color-close);
+}
+/* .icon-alert{
+    color: red !important;
+} */
+/* .swal2-icon.swal2-success .swal2-success-circular-line-left,
+.swal2-icon.swal2-success .swal2-success-circular-line-right {
+  border-color: blue !important; 
+} */
+.swal2-icon.swal2-success .swal2-success-ring {
+    border: 3px solid rgba(56, 153, 109, .4) !important; /* Cambiar el color del símbolo interior */
+}
+
+.timer-alert{
+    background-color: var(--color-primario);
+    border: 1px solid var(--color-secundario);
+}
+.timer-alert-error{
+    background-color: red;
+    border: 1px solid var(--color-secundario);
+}
+/* div:where(.swal2-container) div:where(.swal2-popup){
+    background: var(--color-background);
+} */
+/* .swal2-title {
+    color: tu-color-aqui;
+} */
+/* body.swal2-shown {
+    overflow: hidden;
+  } */
+body.swal2-shown {
+    /* overflow-y: scroll; */
+    overflow: hidden;
+    padding-right: 0 !important;
 }
 
 
 
 /* FOOTER */
+
 footer{
     background-color: var(--color-menu);
-    /* background-size: cover; */
     padding: 5px;
     text-align: center;
     position: relative;
@@ -1394,7 +1298,6 @@ footer .arriba{
     color: var(--color-secundario);
     position: absolute;
     left: 50%;
-    /* transform: translateX(-50%); */
     top: -25px;
     border-radius: 10px;
     line-height: 50px;
@@ -1407,20 +1310,15 @@ footer .arriba:hover{
     box-shadow: 0 0 2px 2px var(--color-secundario);
     font-size: 28px;
 }
-
-
 footer .arriba{
-    /* transition: .5s; */
     transition: opacity 1.5s ease, transform 2s ease;
     opacity: 0.01;
     transform: scale(.01);
 }
-
 footer .arriba.animado{
     opacity: 1;
     transform: scale(1);
     transform: translateX(-50%);
-    /* transition: opacity 1.5s ease, transform 2s ease; */
 }
 
 
@@ -1431,7 +1329,6 @@ footer .redes nav ul{
     max-height: 90px;
     justify-content: center;
 }
-
 footer .redes nav ul li a{
     color: var(--color-terciario);
     display: inline-block;
@@ -1441,17 +1338,16 @@ footer .redes nav ul li a{
     height: 42px;
     line-height: 42px;
     margin: 40px 5px;
-    /* align-items: center; */
-    
 
     font-size: 20px;
     transition: .5s;
-
 }
 footer .redes nav ul li a:hover{
     background-color: var(--color-primario);
     color: var(--color-menu);
-    box-shadow: 0 0 15px 5px var(--color-terciario);   
+    border: transparent;
+    box-shadow: var(--shadow-btn);
+    transform: scale(1.2);  
 }
 
 footer .redes nav ul li {
@@ -1477,6 +1373,10 @@ footer h3.animado{
 
 /*  RESPONSIVE  */
 @media screen and (max-width:980px) {
+    .inicio{
+        background: linear-gradient(to top, rgb(24, 24, 24, .7), rgb(37, 50, 55, .5)),url(../images//template/velocimetro.jpg); 
+        background-size: 100% 100%;
+    }
     .contenedor-header header .logo a{
         font-size: 1.5rem;
     }
@@ -1487,7 +1387,7 @@ footer h3.animado{
         display: block;
         background-color: var(--color-terciario);
     }
-    nav.responsive{
+    header nav.responsive{
         display: block;
         position: absolute;
         right: 0;
@@ -1499,10 +1399,10 @@ footer h3.animado{
         overflow: hidden;
     }
 
-    nav.responsive ul{
+    header nav.responsive ul{
         display: block !important;
     }
-    nav.responsive ul li{
+    header nav.responsive ul li{
         border-bottom: 1px solid var(--color-secundario);
         padding: 10px 0;
     }
@@ -1513,7 +1413,7 @@ footer h3.animado{
     header nav.responsive ul li.animado {
         opacity: 1;
         transform: translateX(0);
-        transition: opacity 1.5s ease, transform 1.5s ease;
+        transition: opacity 1.5s ease, transform 1.5s ease ;
     }
 
     .inicio .banner{
@@ -1526,10 +1426,18 @@ footer h3.animado{
     }
     .inicio .banner img{
         width: 180px;
-        /* border: 3px solid var(--color-primario); */
     }
 }
 @media screen and (max-width:768px) {
+    .inicio .banner h1{
+        font-size: 1.7rem;
+    }
+    /* .inicio .banner h1 p{
+        font-size: 1.6rem;
+    } */
+    .inicio .banner h6 span{
+        font-size: 1.1rem;
+    }
     .acercade,.skills .contenedor-seccion{
         height: auto;
     }
@@ -1548,6 +1456,10 @@ footer h3.animado{
     }
     .skills .fila .col .barra-skill{
         width: 100%;
+    }
+    .skills .contenedor-skill{
+        width: 100%;
+        justify-content: space-between;
     }
 
     .curriculum .fila{

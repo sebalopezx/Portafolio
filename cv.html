@@ -2,14 +2,21 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="sebalopezx">
+    <meta name="description" content="Portafolio para visualizar mi cv y mis proyectos">
+    <meta name="author" content="Sebastian Lopez">
     <title>Curriculum</title>
+    <!-- LOGO -->
+    <link rel="icon" type="image/png" href="icons/seba_logo.JPG"/>
     <!-- CSS -->
     <link rel="stylesheet" href="css/estilos.css">
     <!-- ICONOS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" 
     integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" 
     crossorigin="anonymous" referrerpolicy="no-referrer" />
+
 </head>
 <body id="cv">
     <br id="cv-inicio">
@@ -19,17 +26,26 @@
             <div class="logo animacion">
                 <a href="#">Seba Curriculum</a>
             </div>
+
+            <!-- CAMBIO DE IDIOMA -->
+            <div id="idiomas" class="idiomas animacion">
+                <div class="idioma_item" data-language="es">
+                    <img src="icons/chile_64px.png" alt="Chile">
+                </div>
+                <div class="idioma_item" data-language="en">
+                    <img src="icons/estados-unidos_64px.png" alt="Estados Unidos">
+                </div>
+            </div>
+
             <nav id="nav" class="">
-                <a href="index.html" id="click-cv">Volver a Portafolio</a>
-                <!-- <ul> -->
-                    <!-- <li data-nav="1"><a href="index.html" onclick="seleccionar()" id="click-cv">Volver a Portafolio</a></li> -->
-                    <!-- <li data-nav="1"><a href="index.html" id="click-cv">Volver a Portafolio</a></li> -->
-                <!-- </ul> -->
+                <ul>
+                    <li data-nav="1">
+                        <a href="index.html" id="click-cv" data-section="cv_pagina" data-value="nav"></a>
+                    </li>
+                </ul>
             </nav>
            
-            <!-- <div class="menu-responsive animacion" onclick="menuMostrarOcultar(),cambiarClase()" id="click-responsive"> -->
             <div class="menu-responsive animacion" id="click-responsive"> 
-                <!-- <div id="crear-responsive"></div> -->
                 <i class="fa-solid fa-bars" id="icono-menu"></i>
             </div>
         </header>
@@ -37,18 +53,11 @@
 
     <!-- CURRICULUM -->
     <div class="contenedor-cv">
-        <!-- <span class="titulo-inicio"></span> -->
-        <!-- <h1 class="titulo-cv">Curriculum</h1> -->
-        <!-- <object class="pdfview" data="docs/SebastianLopezCV.pdf" type="application/pdf"></object> -->
-        <iframe src="docs/SebastianLopezCV.pdf" class="pdfview" frameborder="0"></iframe>
+
+        <iframe src="docs/SebastianLopezCV.pdf" class="pdfview" id="pdf" frameborder="0" title="pdf"></iframe>
+
     </div>
     
-    <!-- <div class="contenedor-cv">
-        <span class="titulo-inicio"></span>
-        <canvas class="pdfview"></canvas>
-    </div> -->
-    
-
     <!-- FOOTER -->
     <footer>
         <div>
@@ -72,7 +81,8 @@
     <!-- Iconos Font Awesome -->
     <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script> -->
     <!-- Animacion de typed -->
-    <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+    <!-- <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script> -->
+
     <!-- JavaScript -->
     <script src="js/script.js"></script>
  

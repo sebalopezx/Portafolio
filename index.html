@@ -4,14 +4,21 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/png" href="images/logo.ico">
+    <meta name="keywords" content="sebalopezx">
+    <meta name="description" content="Portafolio para visualizar mi cv y mis proyectos">
+    <meta name="author" content="Sebastian Lopez">
     <title>Portafolio</title>
+    <!-- LOGO -->
+    <link rel="icon" type="image/png" href="icons/seba_logo.JPG">
     <!-- CSS -->
     <link rel="stylesheet" href="css/estilos.css">
     <!-- ICONOS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" 
     integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" 
     crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- <link href="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.20/dist/sweetalert2.min.css" rel="stylesheet"> -->
+
 </head>
 <body>
     <!-- MENU -->
@@ -20,25 +27,31 @@
             <div class="logo animacion">
                 <a href="#">Seba</a>
             </div>
+            <!-- CAMBIO DE IDIOMA -->
+            <div id="idiomas" class="idiomas animacion">
+                <div class="idioma_item" data-language="es">
+                    <img src="icons/chile_64px.png" alt="Chile">
+                </div>
+                <div class="idioma_item" data-language="en">
+                    <img src="icons/estados-unidos_64px.png" alt="Estados Unidos">
+                </div>
+            </div>
+            
+            <!-- MENU DE NAVEGACION -->
             <nav id="nav" class="">
                 <ul>
-                    <li data-nav="1"><a href="#inicio" id="click-inicio">Inicio</a></li>
-                    <li data-nav="2"><a href="#acercade"  id="click-acercade">Acerca De</a></li>
-                    <li data-nav="3"><a href="#skills"  id="click-skills">Skills</a></li>
-                    <li data-nav="4"><a href="#curriculum"  id="click-curriculum">CV</a></li>
-                    <li data-nav="5"><a href="#proyectos"  id="click-proyectos">Proyectos</a></li>
-                    <li data-nav="6"><a href="#contacto"  id="click-contacto">Contacto</a></li>
-                    <!-- <li data-nav="1"><a href="#inicio" onclick="seleccionar()" id="click-inicio">Inicio</a></li>
-                    <li data-nav="2"><a href="#acercade"  onclick="seleccionar()" id="click-acercade">Acerca De</a></li>
-                    <li data-nav="3"><a href="#skills"  onclick="seleccionar()" id="click-skills">Skills</a></li>
-                    <li data-nav="4"><a href="#curriculum"  onclick="seleccionar()" id="click-curriculum">Curriculum</a></li>
-                    <li data-nav="5"><a href="#proyectos"  onclick="seleccionar()" id="click-proyectos">Proyectos</a></li>
-                    <li data-nav="6"><a href="#contacto"  onclick="seleccionar()" id="click-contacto">Contacto</a></li> -->
+                    <li data-nav="1"><a href="#inicio" id="click-inicio" data-section="menu" data-value="nav1">Inicio</a></li>
+                    <li data-nav="2"><a href="#acercade"  id="click-acercade" data-section="menu" data-value="nav2">Acerca De</a></li>
+                    <li data-nav="3"><a href="#skills"  id="click-skills" data-section="menu" data-value="nav3">Skills</a></li>
+                    <li data-nav="4"><a href="#curriculum"  id="click-curriculum" data-section="menu" data-value="nav4">CV</a></li>
+                    <li data-nav="5"><a href="#proyectos"  id="click-proyectos" data-section="menu" data-value="nav5">Proyectos</a></li>
+                    <li data-nav="6"><a href="#contacto"  id="click-contacto" data-section="menu" data-value="nav6">Contacto</a></li>
                 </ul>
             </nav>
             <div class="menu-responsive animacion" id="click-responsive">
-            <!-- <div class="menu-responsive animacion" onclick="menuMostrarOcultar(),cambiarClase()" id="click-responsive"> -->
+                <!-- <div class="menu-responsive animacion" onclick="menuMostrarOcultar(),cambiarClase()" id="click-responsive"> -->
                 <!-- <div id="crear-responsive"></div> -->
+
                 <i class="fa-solid fa-bars" id="icono-menu"></i>
             </div>
         </header>
@@ -49,31 +62,17 @@
         
         <div class="banner animacion">
             <div class="contenedor-img">
-                <img src="images/foto_personal.jpeg" alt="Sebastian López" title="Sebastian López" id="cont-img-banner" class="animacion">
+                <img src="images/template/foto_personal.jpeg" alt="Sebastian López" title="Sebastian López" id="cont-img-banner" class="animacion">
             </div>
-            <h1 id="titulo-inicio1" class="animacion">SEBASTIÁN LÓPEZ</h1>
+            <h1 id="titulo-inicio1" class="animacion">
+                SEBASTIÁN LÓPEZ
+                <!-- <p>S</p><p>E</p><p>B</p><p>A</p><p>S</p><p>T</p><p>I</p><p>Á</p><p>N</p>
+                <p>L</p><p>Ó</p><p>P</p><p>E</p><p>Z</p> -->
+            </h1>
+                
             <h6 id="titulo-inicio2" class="animacion"><span class="titulo-inicio"></span></h6>
-            <!-- titulo-inicio -->
-            <!-- Desarrollador Junior -->
+
             <div class="redes">
-                <!-- <a style="--red:1" href="https://www.linkedin.com/in/sebastian-lopez-nunez" target="_blank" title="linkedin"><i class="fa-brands fa-linkedin-in"></i></a>
-                <a style="--red:2" href="https://github.com/sebalopezx" target="_blank"><i class="fa-brands fa-github" title="github"></i></a>
-                <a style="--red:3" href="https://www.facebook.com/sebalopezxd/" target="_blank"><i class="fa-brands fa-facebook-f" title="facebook"></i></a>
-                <a style="--red:4" href="https://www.instagram.com/sebalopzxd/?hl=es-la" target="_blank"><i class="fa-brands fa-instagram" title="instagram"></i></a> -->
-                <!-- <ul>
-                    <li data-red="1"><a href="https://www.linkedin.com/in/sebastian-lopez-nunez" target="_blank" title="linkedin"><i class="fa-brands fa-linkedin-in"></i></a></li>
-                    <li data-red="2"><a href="https://github.com/sebalopezx" target="_blank"><i class="fa-brands fa-github" title="github"></i></a></li>
-                    <li data-red="3"><a href="https://www.facebook.com/sebalopezxd/" target="_blank"><i class="fa-brands fa-facebook-f" title="facebook"></i></a></li>
-                    <li data-red="4"><a href="https://www.instagram.com/sebalopzxd/?hl=es-la" target="_blank"><i class="fa-brands fa-instagram" title="instagram"></i></a></li>
-                </ul> -->
-                <!-- <nav>
-                    <ul>
-                        <li><a data-nav="1" href="https://www.linkedin.com/in/sebastian-lopez-nunez" target="_blank" title="linkedin"><i class="fa-brands fa-linkedin-in"></i></a></li>
-                        <li><a data-nav="2" href="https://github.com/sebalopezx" target="_blank" title="github"><i class="fa-brands fa-github"></i></a></li>
-                        <li><a data-nav="3" href="https://www.facebook.com/sebalopezxd/" target="_blank" title="facebook"><i class="fa-brands fa-facebook-f"></i></a></li>
-                        <li><a data-nav="4" href="https://www.instagram.com/sebalopzxd/" target="_blank" title="instagram"><i class="fa-brands fa-instagram"></i></a></li>
-                    </ul>
-                </nav> -->
                 <nav>
                     <ul>
                         <li data-nav="1"><a href="https://www.linkedin.com/in/sebastian-lopez-nunez" target="_blank" title="linkedin"><i class="fa-brands fa-linkedin-in"></i></a></li>
@@ -85,18 +84,11 @@
             </div>
             <a href="cv.html">
                 <button id="descargaCV" class="btn boton animacion" name="descargaCV" onclick="descargaCV()">
-                    <span class="texto-boton">Ver CV</span>
+                    <span class="texto-boton">Currículum</span>
                     <i class="fa-solid fa-download"></i>
                     <span class="overlay"></span>
                 </button>
             </a>
-            <!-- <a href="docs/SebastianLopezCV.pdf" download="CV_SebastianLopez.pdf">
-                <button id="descargaCV" class="btn boton animacion" name="descargaCV" onclick="descargaCV()">
-                    <span class="texto-boton">Descargar CV</span>
-                    <i class="fa-solid fa-download"></i>
-                    <span class="overlay"></span>
-                </button>
-            </a> -->
         
         </div>
     </section>
@@ -104,12 +96,15 @@
     <!-- ACERCA DE -->
     <section id="acercade" class="acercade">
         <div class="contenedor-seccion">
-            <h2 class="animacion">Acerca De</h2>
+            <h2 class="animacion" data-section="menu" data-value="nav2">Acerca De</h2>
             <br>
             <div class="animacion contenedor-informacion">
-                <span>Hola, Soy Sebastián.</span><br><br>
-                <p class="informacion">
-                Soy una persona responsable, comprometido con mi trabajo, ordenado y meticuloso, 
+                <span data-section="profile" data-value="name">Hola, Soy Sebastián.</span><br><br>
+                <p class="informacion" data-section="profile" data-value="description"></p>
+                <p class="informacion" data-section="profile" data-value="description2"></p>
+                <p class="informacion" data-section="profile" data-value="description3"></p>
+                
+                <!-- Soy una persona responsable, comprometido con mi trabajo, ordenado y meticuloso, 
                 dispuesto a dar mi mayor esfuerzo para brindar las necesidades que ser requieran, 
                 en busca de aprender nuevas tecnologías, metodologías y todo lo que pueda complementarme 
                 tanto en lo profesional como en lo personal. <hr>
@@ -124,55 +119,69 @@
                 SQL y NoSQL (MySQL, Oracle, MongoDB), 
                 Html, Css y JavaScript, y me encuentro 
                 complementando mis estudios con cursos en Udemy mientras saco mi carrera.
-                </p>
+                </p> -->
             </div>
 
             <div class="fila">
                 <!-- datos personales -->
                 <div class="col izquierda animacion">
-                    <h3 class="animacion">Datos personales</h3>
+                    <h3 class="animacion" data-section="profile" data-value="title1">Datos personales</h3>
                     <ul>
-                        <li><span>Télefono:</span> +569-87526764</li>
-                        <li><span>Email:</span> se.lopezn@gmail.com</li>
-                        <li><span>Interés de lenguajes:</span> 
-                            Python o Java. Además, tengo la disposición de trabajar en lenguajes que no conozco,
-                            con el objetivo de aprender y adquirir nuevos conocimientos.</li>
-
-                        <li><span>Interés Profesional de TI:</span>
-                            Estoy interesado en aprender del área Full Stack o Backend.</li>
-                        <li><span>Disponibilidad:</span>
-                            INMEDIATA!.</li>
+                        <!-- <li>
+                            <span data-section="profile" data-value="title_info1">Télefono:</span>
+                            +569-87526764
+                        </li> -->
+                        <li>
+                            <span>Email:</span> 
+                            se.lopezn@gmail.com
+                        </li>
+                        <li>
+                            <span data-section="profile" data-value="title_info2">Interés de lenguajes:</span> 
+                            <p data-section="profile" data-value="info2">Python o Java. Además, tengo la disposición de trabajar en lenguajes que no conozco,
+                            con el objetivo de aprender y adquirir nuevos conocimientos.</p>
+                        </li>
+                        <li>
+                            <span data-section="profile" data-value="title_info3">Interés Profesional de TI:</span>
+                            <p data-section="profile" data-value="info3">Estoy interesado en aprender del área Full Stack o Backend.</p>
+                        </li>
+                        <li>
+                            <span data-section="profile" data-value="title_info4">Disponibilidad:</span>
+                            <p data-section="profile" data-value="info4">INMEDIATA!.</p>
+                        </li>
                     </ul>
                 </div>
 
-                <!-- intereses -->
+                <!-- INTERESES -->
                 <div class="col izquierda animacion">
-                    <h3 class="animacion">Intereses</h3>
-                    <div class="contenedor-intereses">
-                        <div class="intereses">
+                    <h3 class="animacion" data-section="profile" data-value="title2">Intereses</h3>
+                    <div class="contenedor-intereses" id="contenedor-intereses">
+
+                        <!-- Intereses creados por js -->
+                        
+                        <!-- <div class="intereses">
                             <i class="fa-solid fa-gamepad"></i>
-                            <span>Juegos</span>
+                            <span data-section="profile" data-value="interest[0]">Juegos</span>
                         </div>
                         <div class="intereses">
                             <i class="fa-solid fa-bicycle"></i>
-                            <span>Deporte</span>
+                            <span data-section="profile" data-value="interest[1]">Deporte</span>
                         </div>
                         <div class="intereses">
                             <i class="fa-solid fa-headphones"></i>
-                            <span>Música</span>
+                            <span data-section="profile" data-value="interest[2]">Música</span>
                         </div>
                         <div class="intereses">
                             <i class="fa-solid fa-desktop"></i>
-                            <span>Tecnología</span>
+                            <span data-section="profile" data-value="interest[3]">Tecnología</span>
                         </div>
                         <div class="intereses">
                             <i class="fa-solid fa-car"></i>
-                            <span>Autos</span>
+                            <span data-section="profile" data-value="interest[4]">Autos</span>
                         </div>
                         <div class="intereses">
                             <i class="fa-solid fa-book"></i>
-                            <span>Aprender</span>
-                        </div>
+                            <span data-section="profile" data-value="interest[5]">Aprender</span>
+                        </div> -->
                     </div>
                 </div>
             </div>
@@ -187,63 +196,118 @@
 
                 <!-- Skills tecnicas -->
                 <div class="col izquierda animacion">
-                    <h3 class="animacion">Skills técnicas</h3>
-             
+                    <h3 class="animacion" data-section="skills" data-value="title">Skills técnicas</h3>
+                    <!-- NIVELES SKILL = {Basico:25%, Mid:50%, Avanzado:75%, Senior:100%}-->
+
                     <div class="skill">
-                        <span><img src="images/python.png" alt="PYTHON" title="PYTHON">PYTHON, DJANGO</span>
+                        <div class="contenedor-skill">
+                            <span>
+                                PYTHON - DJANGO
+                            </span>
+                            <div class="skills-img">
+                                <img src="images/python.png" alt="python" title="python">
+                                <img src="images/django.png" alt="django" title="django">
+                            </div>
+                        </div>
                         <div class="barra-skill">
-                            <div class="progreso lvl" style="--progreso:25%">
+                            <div class="progreso " style="--progreso:25%">
                                 <span>Básico</span>
                             </div>
                         </div>
                     </div>
 
                     <div class="skill">
-                        <span><img src="images/html5.png" alt="HTML5" title="HTML5">HTML5</span>
+                        <div class="contenedor-skill">
+                            <span>
+                                HTML5
+                            </span>
+                            <div class="skills-img">
+                                <img src="images/html5.png" alt="html5" title="html5">
+                            </div>
+                        </div>
                         <div class="barra-skill">
-                            <div class="progreso lvl" style="--progreso:25%">
+                            <div class="progreso " style="--progreso:25%">
                                 <span>Básico</span>
                             </div>
                         </div>
                     </div>
 
                     <div class="skill">
-                        <span><img src="images/css3.png" alt="CCS3" title="CCS3">CCS3, BOOTSTRAP5</span>
+                        <div class="contenedor-skill">
+                            <span>
+                                CCS3 - BOOTSTRAP5
+                            </span>
+                            <div class="skills-img">
+                                <img src="images/css3.png" alt="ccs3" title="ccs3">
+                                <img src="images/bootstrap.png" alt="bootstrap" title="bootstrap" style="padding-top: 10px;">
+                            </div>
+                        </div>
                         <div class="barra-skill">
-                            <div class="progreso lvl" style="--progreso:25%">
+                            <div class="progreso " style="--progreso:25%">
                                 <span>Básico</span>
                             </div>
                         </div>
                     </div>
 
                     <div class="skill">
-                        <span><img src="images/javascript.png" alt="JAVASCRIPT" title="JAVASCRIPT">JAVASCRIPT</span>
+                        <div class="contenedor-skill">
+                            <span>
+                                JAVASCRIPT
+                            </span>
+                            <div class="skills-img">
+                                <img src="images/javascript.png" alt="javascript" title="javascript">
+                            </div>
+                        </div>
                         <div class="barra-skill">
-                            <div class="progreso lvl" style="--progreso:25%">
+                            <div class="progreso " style="--progreso:25%">
                                 <span>Básico</span>
                             </div>
                         </div>
                     </div>
 
                     <div class="skill">
-                        <span><img src="images/sql.png" alt="BD_RELACIONALES" title="BD_RELACIONALES">MySQL - ORACLE - MONGODB</span>
+                        <div class="contenedor-skill">
+                            <span>
+                                MySQL - ORACLE - POSTGREE
+                            </span>
+                            <div class="skills-img">
+                                <img src="images/mysql.png" alt="mysql" title="mysql">
+                                <img src="images/oracle.png" alt="oracle" title="oracle">
+                                <img src="images/postgre.png" alt="postgre" title="postgre">
+                            </div>
+                        </div>
                         <div class="barra-skill">
-                            <div class="progreso lvl" style="--progreso:25%">
+                            <div class="progreso " style="--progreso:25%">
                                 <span>Básico</span>
                             </div>
                         </div>
                     </div>
 
+                    <div class="skill">
+                        <div class="contenedor-skill">
+                            <span>
+                                NoSQL MONGODB
+                            </span>
+                            <div class="skills-img">
+                                <img src="images/mongodb.png" alt="mongo" title="mongo">
+                            </div>
+                        </div>
+                        <div class="barra-skill">
+                            <div class="progreso " style="--progreso:25%">
+                                <span>Básico</span>
+                            </div>
+                        </div>
+                    </div>
                 </div>
 
                 <!-- Skills profesionales -->
                 <div class="col izquierda animacion">
-                    <h3 class="animacion">Skills Profesionales</h3>
+                    <h3 class="animacion" data-section="skills" data-value="title2">Skills Profesionales</h3>
 
                     <div class="skill">
                         <span><i class="fa-regular fa-clock"></i>RESPONSABLE</span>
                         <div class="barra-skill">
-                            <div class="progreso lvl" style="--progreso:100%">
+                            <div class="progreso " style="--progreso:100%">
                                 <span>Skill</span>
                             </div>
                         </div>
@@ -252,7 +316,7 @@
                     <div class="skill">
                         <span><i class="fa-sharp fa-solid fa-list-check"></i>ORDENADO</span>
                         <div class="barra-skill">
-                            <div class="progreso lvl" style="--progreso:100%">
+                            <div class="progreso " style="--progreso:100%">
                                 <span>Skill</span>
                             </div>
                         </div>
@@ -261,7 +325,7 @@
                     <div class="skill">
                         <span><i class="fa-solid fa-people-group"></i>TRABAJO EN EQUIPO</span>
                         <div class="barra-skill">
-                            <div class="progreso lvl" style="--progreso:100%">
+                            <div class="progreso " style="--progreso:100%">
                                 <span>Skill</span>
                             </div>
                         </div>
@@ -271,7 +335,7 @@
                     <div class="skill">
                         <span><i class="fa-solid fa-language"></i>ENGLISH READING</span>
                         <div class="barra-skill">
-                            <div class="progreso lvl" style="--progreso:49%">
+                            <div class="progreso " style="--progreso:49%">
                                 <span>B1</span>
                             </div>
                         </div>
@@ -281,7 +345,7 @@
                     <div class="skill">
                         <span><i class="fa-solid fa-microphone"></i>ENGLISH SPEAKING</span>
                         <div class="barra-skill">
-                            <div class="progreso lvl" style="--progreso:33%">
+                            <div class="progreso " style="--progreso:33%">
                                 <span>A2</span>
                             </div>
                         </div>
@@ -301,44 +365,61 @@
                 <!-- EDUCACIÓN -->
                 <div class="col izquierda animacion">
 
-                    <h3 class="animacion">Educación</h3>
+                    <h3 class="animacion" data-section="education" data-value="title">Educación</h3>
                     <div class="item izq">
-                        <h4>Analista Programador</h4>
+                        <h4 data-section="education" data-value="education_title_3">Analista Programador</h4>
                         <span class="lugar">Inacap</span>
                         <span class="fecha">2022-2024</span>
-                        <p>Cursando</p>
+                        <p data-section="education" data-value="education_description_3">Cursando</p>
                         <div class="conector1">
                             <div class="circulo1"></div>
                         </div>
                     </div>
 
                     <div class="item izq">
-                        <h4>Ingeniería en mecánica automotriz y autotrónica</h4>
+                        <h4 data-section="education" data-value="education_title_2">Ingeniería en mecánica automotriz y autotrónica</h4>
                         <span class="lugar">Duoc UC</span>
                         <span class="fecha">2016-2019</span>
-                        <p>Titulado</p>
+                        <p data-section="education" data-value="education_description_2">Titulado</p>
                         <div class="conector1">
                             <div class="circulo1"></div>
                         </div>
                     </div>
 
                     <div class="item izq">
-                        <h4>Técnico en mecánica automotriz y autotrónica</h4>
+                        <h4 data-section="education" data-value="education_title_1">Técnico en mecánica automotriz y autotrónica</h4>
                         <span class="lugar">Duoc UC</span>
                         <span class="fecha">2011-2013</span>
-                        <p>Titulado</p>
+                        <p data-section="education" data-value="education_description_1">Titulado</p>
                         <div class="conector1">
                             <div class="circulo1"></div>
                         </div>
                     </div>
 
                     <!-- CURSOS -->
-                    <h3 class="animacion">Cursos</h3>
+                    <h3 class="animacion" data-section="courses" data-value="title">Cursos</h3>
                     <div class="item izq">
-                        <h4>Python sin límites. POO, Tkinter, PySide, etc. +50hrs</h4>
-                        <span class="lugar">Udemy</span>
-                        <span class="fecha">2023</span>
-                        <p><a href="http://ude.my/UC-51981b38-6699-4efa-a911-eb9a9ac60f97" target="_blank">Certificado</a></p>
+                        <h4 data-section="courses" data-value="course_title_1">Python sin límites. POO, Tkinter, PySide, etc. +50hrs</h4>
+                        <span class="lugar" data-section="courses" data-value="course_company_1">Udemy</span>
+                        <span class="fecha" data-section="courses" data-value="course_date_1">2023</span>
+                        <p>
+                            <a href="http://ude.my/UC-51981b38-6699-4efa-a911-eb9a9ac60f97" 
+                            target="_blank"
+                            data-section="courses" data-value="course_url_1">Certificado</a>
+                        </p>
+                        <div class="conector1">
+                            <div class="circulo1"></div>
+                        </div>
+                    </div>
+                    <div class="item izq">
+                        <h4 data-section="courses" data-value="course_title_2">Python sin límites. POO, Tkinter, PySide, etc. +50hrs</h4>
+                        <span class="lugar" data-section="courses" data-value="course_company_2">Udemy</span>
+                        <span class="fecha" data-section="courses" data-value="course_date_2">2023</span>
+                        <p>
+                            <a href="http://ude.my/UC-2ab388c7-8732-4e54-9bf2-0c29d5ded61b" 
+                            target="_blank"
+                            data-section="courses" data-value="course_url_2">Certificado</a>
+                        </p>
                         <div class="conector1">
                             <div class="circulo1"></div>
                         </div>
@@ -348,13 +429,13 @@
 
                 <!-- EXPRECIENCIA -->
                 <div class="col derecha animacion">
-                    <h3 class="animacion">Experiencia</h3>
+                    <h3 class="animacion" data-section="cv" data-value="title">Experiencia</h3>
 
                     <div class="item der ">
-                        <h4>CAF Chile Línea 1</h4>
-                        <span class="cargo">Técnico mantenimiento, y<br>Supervisor suplente.</span>
-                        <span class="fecha">2019-2022</span>
-                        <p>Mantenimiento preventivo y correctivo de diferentes áreas (especialidad neumática).
+                        <h4 data-section="cv" data-value="experience_company_3">CAF Chile Línea 1</h4>
+                        <span class="cargo" data-section="cv" data-value="experience_title_3">Técnico mantenimiento, y<br>Supervisor suplente.</span>
+                        <span class="fecha" data-section="cv" data-value="experience_date_3">2019-2022</span>
+                        <p data-section="cv" data-value="experience_description_3">Mantenimiento preventivo y correctivo de diferentes áreas (especialidad neumática).
                         Supervisor de turno, supervisar trabajos y cumplimiento de las reglas y normas de la empresa, 
                         y delegación de tareas.</p>
                         <div class="conector2">
@@ -363,10 +444,10 @@
                     </div>
 
                     <div class="item der">
-                        <h4>Rheem chilena SPA </h4>
-                        <span class="cargo">Práctica Ingeniería</span>
-                        <span class="fecha">2 Meses</span>
-                        <p>Estandarización de procesos y procedimientos.
+                        <h4 data-section="cv" data-value="experience_company_2">Rheem chilena SPA </h4>
+                        <span class="cargo" data-section="cv" data-value="experience_title_2">Práctica Ingeniería</span>
+                        <span class="fecha" data-section="cv" data-value="experience_date_2">2 Meses</span>
+                        <p data-section="cv" data-value="experience_description_2">Estandarización de procesos y procedimientos.
                         Inicio de 5S Kaizen, para implementación futura en taller.</p>
                         <div class="conector2">
                             <div class="circulo2"></div>
@@ -374,10 +455,10 @@
                     </div>
 
                     <div class="item der">
-                        <h4>Alstom Línea 4 y 4a</h4>
-                        <span class="cargo">Técnico en mantenimiento general</span>
-                        <span class="fecha">2014-2015</span>
-                        <p>Mantenimiento preventivo y correctivo en diferentes áreas, Gran Mantenimiento 
+                        <h4 data-section="cv" data-value="experience_company_1">Alstom Línea 4 y 4a</h4>
+                        <span class="cargo" data-section="cv" data-value="experience_title_1">Técnico en mantenimiento general</span>
+                        <span class="fecha" data-section="cv" data-value="experience_date_1">2014-2015</span>
+                        <p data-section="cv" data-value="experience_description_1">Mantenimiento preventivo y correctivo en diferentes áreas, Gran Mantenimiento 
                         de trenes (GR) específicamente del área neumática.</p>
                         <div class="conector2">
                             <div class="circulo2"></div>
@@ -393,43 +474,42 @@
     <!-- PROYECTOS -->
     <section id="proyectos" class="proyectos">
         <div class="contenedor-seccion">
-            <h2 class="animacion">Portafolio</h2>
+            <h2 class="animacion" data-section="projects" data-value="title">Portafolio</h2>
 
             <div class="galeria animacion">
 
-                <!-- <div class="proyecto animacion" data-nav="1">
-                    <img src="images/fondo_ingles.jpg" alt="app-ingles" title="app-ingles">
-                    <a href="https://sebalopezx.github.io/app-ingles/index.html" target="_blank">
-                        <div class="overlay">
-                            <h3>App Ingles<br>HTML, CSS y JS</h3>
-                            <p>Proyecto propio<br>> Pagina interactiva para verbos regulares e irregulares</p>
-                        </div>
-                    </a>
-                </div> -->
-            
-
-
-                <div class="proyecto animacion" data-nav="1" id="proyecto1">
-                    <img src="images/proyecto1_fondo.PNG" alt="app-ingles" title="app-ingles">           
+                <div class="proyecto animacion" data-nav="1" id="project1">
+                    <img src="images/projects/proyecto1_fondo.PNG" alt="app-ingles" title="app-ingles">           
                     <div class="nombre-proyecto">
-                        <span>APP de Inglés</span>
+                        <span data-section="projects" data-value="title1">APP de Inglés</span>
                     </div>
                     <div class="overlay">
-                        <h3>App Ingles<br>HTML, CSS y JS</h3>
-                        <p>Proyecto propio</p>
-                        <button class="ver-detalle">Ver detalles</button>
+                        <h3 data-section="projects" data-value="title1">App Ingles</h3>
+                        <div class="contenedor-img-projects">
+                            <img src="images/html5.png" alt="" title="">
+                            <img src="images/css3.png" alt="" title="">
+                            <img src="images/javascript.png" alt="" title="">
+                        </div>
+                        <p data-section="projects" data-value="info1">Proyecto propio</p>
+                        <button class="ver-detalle" data-section="projects" data-value="btn1">Ver detalles</button>
                     </div>
                 </div>
 
-                <div class="proyecto animacion" data-nav="2" id="proyecto2">
-                    <img src="images/proyecto2_fondo.PNG" alt="app-ingles" title="app-ingles">           
+                <div class="proyecto animacion" data-nav="2" id="project2">
+                    <img src="images/projects/proyecto2_fondo.PNG" alt="app-ingles" title="app-ingles">           
                     <div class="nombre-proyecto">
-                        <span>Carrito de Compras</span>
+                        <span data-section="projects" data-value="title2">Carrito de Compras</span>
                     </div>
                     <div class="overlay">
-                        <h3>Carrito Compras<br>HTML, Bootstrap 5, JS y LocalStorage</h3>
-                        <p>Proyecto propio</p>
-                        <button class="ver-detalle">Ver detalles</button>
+                        <h3 data-section="projects" data-value="title2">Carrito Compras</h3>
+                        <div class="contenedor-img-projects">
+                            <img src="images/html5.png" alt="html5" title="html5">
+                            <img src="images/bootstrap.png" alt="bootstrap" title="bootstrap" >
+                            <img src="images/javascript.png" alt="javascript" title="javascript">
+                            <img src="images/localstorage.png" alt="localstorage" title="localstorage">
+                        </div>
+                        <p data-section="projects" data-value="info2">Proyecto de estudiante</p>
+                        <button class="ver-detalle" data-section="projects" data-value="btn2">Ver detalles</button>
                     </div>
                 </div>
 
@@ -437,8 +517,11 @@
             </div>
 
             <div class="modal ">
-                <div class="modal-contenedor">
-                    <!-- <h3 class="modal-titulo">MODAL</h3>
+                <div class="modal-contenedor ">
+
+                    <!-- MODAL creado por js -->
+
+                    <!-- <h3 class="modal-titulo ">MODAL</h3>
                     <div class="contenedor-modal-img">
                         <img src="images/python.png" alt="" class="modal-img">
                     </div>
@@ -448,7 +531,6 @@
                             <button class="modal-ver">
                                 <span class="texto-boton">Ver</span>
                                 <i class="fa-solid fa-file-export"></i>
-
                                 <span class="overlay"></span>
                             </button>
                         </a>
@@ -458,90 +540,35 @@
                             <span class="overlay"></span>
                         </button> 
                     </div> -->
+
                 </div>
             </div>
 
-
-                <!-- <div class="proyecto animacion" data-nav="2">
-                    <img src="images/fondo_ingles.jpg" alt="app-ingles" title="app-ingles">           
-                        <div class="overlay">
-                            <h3>App Ingles<br>HTML, CSS y JS</h3>
-                            <p>Proyecto propio</p>
-                            <button class="boton">Ver detalles</button>
-                            <a href="https://sebalopezx.github.io/app-ingles/index.html" target="_blank"></a>
-                        </div>
-                        <div class="modal">
-                            <div class="modal-contenedor">
-                                <h2 class="modal-titulo">MODAL</h2>
-                                <img src="" alt="">
-                                <p class="modal-parrafo">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Obcaecati tempora aut doloribus accusantium tenetur delectus sunt! Ea aliquam accusantium impedit, ex magnam dolore reprehenderit porro sapiente animi consequatur repellendus nihil?</p>
-                                <a href="modal-close">Cerrar</a>
-                            </div>
-                        </div>
-                </div> -->
-           
-
-                <!-- <div class="proyecto" data-nav="2">
-                    <img src="images/fondo_ingles.jpg" alt="app-ingles" title="app-ingles">
-                    <a href="https://sebalopezx.github.io/app-ingles/index.html" target="_blank">
-                        <div class="overlay">
-                            <h3>App Ingles<br>HTML, CSS y JS</h3>
-                            <p>Proyecto propio<br>> Pagina interactiva para verbos regulares e irregulares</p>
-                        </div>
-                    </a>
-                </div> -->
-
-                <!-- <div class="proyecto" style="--proy:2">
-                    <img src="images/fondo_ingles.jpg" alt="">
-                    <div class="overlay">
-                        <h3>App Ingles</h3>
-                        <p>asdf asdf</p>
-                    </div>
-                </div>
-
-                <div class="proyecto">
-                    <img src="images/fondo_ingles.jpg" alt="">
-                    <div class="overlay">
-                        <h3>App Ingles</h3>
-                        <p>asdf asdf</p>
-                    </div>
-                </div>
-
-                <div class="proyecto">
-                    <img src="images/fondo_ingles.jpg" alt="">
-                    <div class="overlay">
-                        <h3>App Ingles</h3>
-                        <p>asdf asdf</p>
-                    </div>
-                </div> -->
-                
-            <!-- </div> -->
         </div>
     </section>
 
     <!-- CONTACTO -->
     <section id="contacto" class="contacto">
         <div class="contenedor-seccion">
-            <h2 class="animacion">Contacto</h2>
+            <h2 class="animacion" data-section="contact" data-value="title">Contacto</h2>
             <div class="fila ">
 
                 <!-- Formulario -->
                 <div class="col izquierda animacion">
 
-                    <form class="formulario" id="formulario" action="form.php" method="POST">
-                        <input type="text" placeholder="Ingresa tu nombre" name="nombre" id="nombre" required="true">
-                        <input type="email" placeholder="Ingresa tu email" name="email" id="email" required="true">
-                        <input type="text" placeholder="Ingresa el asunto" name="asunto" id="asunto" required="true">
-                        <textarea name="mensaje" id="mensaje" cols="30" rows="9" placeholder="Escribe un mensaje" required="true"></textarea>
+                    <form class="formulario" id="formulario" action="" method="POST" autocomplete="off">
+                        <input type="text" placeholder="" name="nombre" id="nombre" required="true">
+                        <input type="email" placeholder="" name="email" id="email" required="true">
+                        <input type="text" placeholder="" name="asunto" id="asunto" required="true">
+                        <textarea placeholder="" name="mensaje" id="mensaje" cols="30" rows="9" required="true"></textarea>
 
-                        <div class="btn boton animacion">
-                            <button class="">
-                                <span class="texto-boton">Enviar Mensaje</span>
-                                <i class="fa-solid fa-paper-plane"></i>
-                                <span class="overlay"></span>
-                            </button>
-                        </div>
+                        <button class="btn boton animacion" id="btnContacto" type="submit">
+                            <span class="texto-boton" data-section="contact" data-value="btn">Enviar Mensaje</span>
+                            <i class="fa-solid fa-paper-plane"></i>
+                            <span class="overlay"></span>
+                        </button>
                     </form>
+
                 </div>
 
                 <div class="col izquierda animacion">
@@ -552,10 +579,10 @@
                                 <i class="fa-solid fa-location-dot"></i>
                                 Santiago, Maipú.
                             </li>
-                            <li>
+                            <!-- <li>
                                 <i class="fa-solid fa-mobile-screen"></i>
                                 +569-87526764
-                            </li>
+                            </li> -->
                             <li>
                                 <i class="fa-solid fa-envelope"></i>
                                 Email: se.lopezn@gmail.com
@@ -594,5 +621,18 @@
     <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
     <!-- JavaScript -->
     <script src="js/script.js"></script>
+
+    <!-- EMAILJS para Contacto -->
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+    </script>
+    <script type="text/javascript">
+        emailjs.init('POsxjNNkWs31Jgamw')
+    </script>
+
+    <script src="js/contacto.js"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.20/dist/sweetalert2.all.min.js"></script>
+    <!-- <link href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css" rel="stylesheet"> -->
 </body>
 </html>
