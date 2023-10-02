@@ -7,6 +7,7 @@
     --color-menu: #181818;
     --color-background: #253237;
     --color-close: #ff0000;
+    --color-git: #09c6fffd;
 
     /* ESTANDARIZACION DE SHADOWS */
     --shadow-btn:   
@@ -19,7 +20,11 @@
         0 0 25px var(--color-close),
         0 0 100px var(--color-close),
         0 0 200px var(--color-close);
-            
+    --shadow-btn-git:
+        0 0 5px var(--color-git),
+        0 0 25px var(--color-git),
+        0 0 100px var(--color-git),
+        0 0 200px var(--color-git); 
 }
 
 /* ESTANDARIZACION DE FUENTE */
@@ -155,10 +160,10 @@ button:hover i{
 /* MENU */
 .contenedor-header{
     background-color: var(--color-menu);
-    border-radius: 0 0 20px 20px;
-    border: 1px solid var(--color-primario);
+    /* border-radius: 0 0 20px 20px; */
+    /* border: 1px solid var(--color-primario); */
     position: fixed;
-    width: 99.9%;
+    width: 100%;
     top: 0;
     left: 0;
     z-index: 99;
@@ -943,19 +948,23 @@ button:hover i{
 }
 .proyectos .galeria .proyecto{
     position: relative;
-    max-width: 340px;
+    width: 340px;
     height: fit-content;
     margin: 10px;
     border: 10px double var(--color-terciario);
     border-radius: 10px;
-
+    height: 260px;
+    /* max-width: 100px; */
 }
 .proyectos .galeria .proyecto .nombre-proyecto{
     text-align: center;
+    min-width: 340px;
+    /* min-height: 150px; */
 }
 .proyectos .galeria .proyecto img{
     width: 100%;
     display: block;
+    height: 220px;
 }
 
 
@@ -982,8 +991,9 @@ button:hover i{
 }
 .proyectos .galeria .proyecto .overlay .contenedor-img-projects img{
     width: 50px;
+    height: 50px;
     display: inline;
-    margin: auto;
+    margin: 5px auto;
     align-items: center;
     justify-content: center;
 }
@@ -1088,8 +1098,8 @@ button:hover i{
 .proyectos .modal .modal-contenedor a{
     text-decoration: none;
 }
-.proyectos .modal .modal-contenedor .modal-ver,.modal-close{
-    width: 120px;
+.proyectos .modal .modal-contenedor .modal-ver,.modal-close,.modal-git{
+    width: 100px;
     height: 40px;
     margin: 5px;
     transition: .5s;
@@ -1099,30 +1109,38 @@ button:hover i{
     background-color: var(--color-background);
 }
 .proyectos .modal .modal-contenedor .modal-close{
-
     background-color: #ff000050;
     border: 1px solid var(--color-close) !important;
 }
+.proyectos .modal .modal-contenedor .modal-git{
+    background-color: #09c6ff75;
+    border: 1px solid var(--color-git) !important;
+}
+
 .proyectos .modal .modal-contenedor .modal-ver i,
 .proyectos .modal .modal-contenedor .modal-close i,
+.proyectos .modal .modal-contenedor .modal-git i,
 .proyectos .modal .modal-contenedor .modal-ver:hover .texto-boton,
-.proyectos .modal .modal-contenedor .modal-close:hover .texto-boton{
+.proyectos .modal .modal-contenedor .modal-close:hover .texto-boton,
+.proyectos .modal .modal-contenedor .modal-git:hover .texto-boton{
     display: none;
 }
 .proyectos .modal .modal-contenedor .modal-ver:hover{
     text-decoration: bold;
     color: var(--color-primario);
 }
-.proyectos .modal .modal-contenedor .modal-ver:hover i{
+.proyectos .modal .modal-contenedor .modal-ver:hover i,
+.proyectos .modal .modal-contenedor .modal-close:hover i,
+.proyectos .modal .modal-contenedor .modal-git:hover i{
     display: contents;
     color: var(--color-menu);
     font-size: 18px;
 }
-.proyectos .modal .modal-contenedor .modal-close:hover i{
+/* .proyectos .modal .modal-contenedor .modal-close:hover i{
     display: contents;
     color: var(--color-menu);
     font-size: 18px;
-}
+} */
 
 
 .proyectos .modal .modal-contenedor .modal-ver:hover{
@@ -1133,7 +1151,10 @@ button:hover i{
     background-color: var(--color-close);
     box-shadow: var(--shadow-btn-close);
 }
-
+.proyectos .modal .modal-contenedor .modal-git:hover{
+    background-color: var(--color-git);
+    box-shadow: var(--shadow-btn-git);
+}
 
 
 /* CONTACTO */
@@ -1477,7 +1498,9 @@ footer h3.animado{
         width: 100%;
     }
     .proyectos .galeria .proyecto{
-        max-width: 100%;
+        /* max-width: 100%; */
+        /* margin-bottom: 105px; */
+        margin: 15px auto;
     }
     .proyectos .galeria .proyecto img{
         width: 100%;

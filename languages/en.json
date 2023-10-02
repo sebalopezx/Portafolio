@@ -91,9 +91,12 @@
             "info1":"Own project, created with html, css and javascript to learn and practice the basic functionalities of these languages, and reinforce English.",
             "info2":"The project is a web application created using different technologies. Its main objective is to provide a tool to improve and practice knowledge of English, focusing on learning verbs in different conjugations.",    
             "ref":"https://sebalopezx.github.io/app-ingles/",
+            "ref2":"https://github.com/sebalopezx/app-ingles",
             "btn1":"Go",
-            "btn2":"Close"
+            "btn2":"Close",
+            "btn3":"Git"
         },
+
         "title2": "Shopping Cart",
         "info2": "Institute project",
         "btn2": "Show details",
@@ -104,9 +107,28 @@
             "info1":"Institute project, developed as part of the Front-End course using HTML, CSS and JS with LocalStorage.",
             "info2":"A functional shopping cart application has been developed using LocalStorage. In addition, the understanding of key concepts in web development and the importance of an interactive and user-friendly interface have been strengthened.",    
             "ref":"https://sebalopezx.github.io/carrito_compras/",
+            "ref2":"https://github.com/sebalopezx/carrito_compras",
             "btn1":"Go",
-            "btn2":"Close"
+            "btn2":"Close",
+            "btn3":"Git"
+        },
+       
+        "title3": "Appointment management",
+        "info3": "Institute project",
+        "btn3": "Show details",
+        "project3":{
+            "title": "Appointment management",
+            "id":"proyecto3",
+            "imagen":"images/projects/proyecto3_modal.PNG",
+            "info1":"Institute project, developed as part of the Back-End course using HTML, CSS, Django and PostreSQL upload to Render.",
+            "info2":"A functional automotive appointment management application has been developed. With two interfaces (Customer and Receptionist) where you can manage vehicles and manage maintenance appointments.",    
+            "ref":"https://gestion-automotriz.onrender.com/",
+            "ref2":"https://github.com/sebalopezx/Gestion_Automotriz",
+            "btn1":"Go",
+            "btn2":"Close",
+            "btn3":"Git"
         }
+
     },
     "contact":{
         "title":"Contact",

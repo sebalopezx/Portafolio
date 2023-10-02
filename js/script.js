@@ -392,6 +392,14 @@ const crearModal = (proyecto) =>{
                 <i class="fa-solid fa-x"></i>
                 <span class="overlay"></span>
             </button>
+            <a href="${proyecto.ref2}" target="_blank">
+                    <button class="modal-git">
+                    <span class="texto-boton">${proyecto.btn3}</span>
+                    <i class="fa-brands fa-github"></i>
+
+                    <span class="overlay"></span>
+                </button>
+            </a>
         </div>`;
     return modalHTML;
 };

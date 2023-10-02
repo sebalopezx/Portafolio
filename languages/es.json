@@ -91,8 +91,10 @@
             "info1":"Proyecto propio, creado con html, css y javascript para aprender y practicar las funcionalidades básicas de estos lenguajes, y reforzar el inglés.",
             "info2":"El proyecto es una aplicación web creada utilizando diferentes tecnologías. Su objetivo principal es proporcionar una herramienta para mejorar y practicar el conocimiento del inglés, enfocándose en el aprendizaje de verbos en diferentes conjugaciones.",    
             "ref":"https://sebalopezx.github.io/app-ingles/",
+            "ref2":"https://github.com/sebalopezx/app-ingles",
             "btn1":"Ver",
-            "btn2":"Cerrar"
+            "btn2":"Cerrar",
+            "btn3":"Git"
         },
 
         "title2": "Carrito de Compras",
@@ -105,11 +107,30 @@
             "info1":"Proyecto de instituto, desarrollada como parte del curso de Front-End con uso de HTML, CSS y JS con LocalStorage.",
             "info2":"Se ha desarrollado una aplicación funcional de un carrito de compras utilizando el LocalStorage. Además, se ha fortalecido la comprensión de conceptos clave en el desarrollo web y la importancia de una interfaz interactiva y amigable para el usuario.",    
             "ref":"https://sebalopezx.github.io/carrito_compras/",
+            "ref2":"https://github.com/sebalopezx/carrito_compras",
             "btn1":"Ver",
-            "btn2":"Cerrar"
-        }
+            "btn2":"Cerrar",
+            "btn3":"Git"
+        },
        
+        "title3": "Gestión Automotriz",
+        "info3": "Proyecto de instituto",
+        "btn3": "Ver detalles",
+        "project3":{
+            "title": "Gestión Automotriz",
+            "id":"proyecto3",
+            "imagen":"images/projects/proyecto3_modal.PNG",
+            "info1":"Proyecto de instituto, desarrollada como parte del curso de Back-End con uso de HTML, CSS, Django y PostgreSQL subido en Render.",
+            "info2":"Se ha desarrollado una aplicación funcional de gestiónm de citas automotrices. Con dos intefaces (Cliente y Recepcionista) en las que se puede gestionar los vehículos y gestionar las citas de mantenimiento.",    
+            "ref":"https://gestion-automotriz.onrender.com/",
+            "ref2":"https://github.com/sebalopezx/Gestion_Automotriz",
+            "btn1":"Ver",
+            "btn2":"Cerrar",
+            "btn3":"Git"
+        }
+    
     },
+
     "contact":{
         "title":"Contacto",
         "name":"Nombre:",
