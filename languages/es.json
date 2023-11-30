@@ -1,5 +1,6 @@
 {
     "idioma":"es",
+
     "menu": {
         "nav1":"Inicio",
         "nav2":"Acerca de",
@@ -8,9 +9,13 @@
         "nav5":"Proyectos",
         "nav6":"Contacto"
     },
+
+
     "tipado":{
         "title":["Desarrollador Junior", "Ingeniero Mecánico"]
     },
+
+
     "profile":{
         "name":"Hola, soy Sebastián.",
         "description":"Mi enfoque principal se refleja en la dedicación que dispongo en satisfacer las necesidades requeridas. ",
@@ -26,13 +31,57 @@
         "title_info4":"Disponibilidad:",
         "info4":"INMEDIATA!.",
 
+        "title_info5":"Conocimientos destacados:",
+        "languages":[
+            {"name":"Python", "image":"images/python.png"},
+            {"name":"Django", "image":"images/django.png"},
+            {"name":"HTML5", "image":"images/html5.png"},
+            {"name":"CSS3", "image":"images/css3.png"},
+            {"name":"JavaScript", "image":"images/javascript.png"},
+            {"name":"Bootstrap5", "image":"images/bootstrap.png"},
+            {"name":"MySQL", "image":"images/mysql.png"}
+        ],
+
         "title2":"Intereses",
         "interests":["Juegos","Deporte","Música","Tecnología","Autos","Aprender"]
     },
+
+
     "skills":{
-        "title":"Skills Técnicas",
-        "title2":"Skills Profesionales"
+        "backend":"Backend",
+        "skillBackend":[
+            {"name":"Python", "image":"images/python.png"},
+            {"name":"Django", "image":"images/django.png"}
+        ],
+        "frontend":"Frontend",
+        "skillFrontend":[
+            {"name":"HTML5", "image":"images/html5.png"},
+            {"name":"CSS3", "image":"images/css3.png"},
+            {"name":"JavaScript", "image":"images/javascript.png"},
+            {"name":"Bootstrap5", "image":"images/bootstrap.png"}
+        ],
+        "basedato":"Base de datos",
+        "skillBaseDato":[
+            {"name":"MySQL", "image":"images/mysql.png"},
+            {"name":"ORACLE", "image":"images/oracle.png"},
+            {"name":"PostGre", "image":"images/postgre.png"},
+            {"name":"Mongo", "image":"images/mongodb.png"}
+        ],
+
+        "title1":"Skills Profesionales",
+        "skillProfesional":[
+            {"name":"Responsable" , "icon":"fa-regular fa-clock"},
+            {"name":"Ordenado" , "icon":"fa-sharp fa-solid fa-list-check"},
+            {"name":"Colaborador" , "icon":"fa-solid fa-people-group"}
+        ],
+        "title2":"Skills técnicas",
+        "skillTechnical":[
+            {"name":"Inglés hablado: A2" , "icon":"fa-solid fa-microphone", "lvl":"A2"},
+            {"name":"Inglés lectura: B1" , "icon":"fa-solid fa-language", "lvl":"B1"}
+        ]
     },
+
+
     "education":{
         "title":"Educación",
         "education_title_1":"Técnico en mecánica automotriz y autotrónica",
@@ -47,6 +96,8 @@
         "education_description_3":"Cursando",
         "education_date_3":"2022-2024"
     },
+
+
     "cv":{
         "title":"Experiencia",
         "experience_company_1":"Alstom Línea 4 y 4a",
@@ -64,6 +115,8 @@
         "experience_date_3":"2019-2022",
         "experience_description_3":"Mantenimiento preventivo y correctivo de diferentes áreas, especialidad neumática. <br>Supervisor de turno, supervisar trabajos y cumplimiento de las reglas y normas de la empresa, y delegación de tareas."
     },
+
+
     "courses":{
         "title":"Cursos",
 
@@ -78,6 +131,8 @@
         "course_url_2":"Certificado"
 
     },
+
+
     "projects":{
         "title":"Proyectos",
         
@@ -131,20 +186,25 @@
     
     },
 
+
     "contact":{
         "title":"Contacto",
         "name":"Nombre:",
         "email":"E-mail:",
         "subject":"Asunto:",
         "message":"Escribe tu mensaje:",
-        "btn":"Enviar Mensaje"
+        "btn":"Enviar mensaje"
     },
+
+
     "contact_modal":{
         "title":"Tu mensaje ha sido enviado.",
         "text":"Te respondere en la brevedad, Saludos.",
         "title_error":"Tu mensaje no ha sido enviado.",
         "text_error":"¡Ha ocurrido un error!."
     },
+
+
     "cv_pagina":{
         "title":"Seba Currículum",
         "nav":"Volver a Portafolio",

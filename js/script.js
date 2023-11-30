@@ -78,6 +78,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     if (window.location.pathname.endsWith("index.html")){
         await tipado(idiomaInicial); 
         await cargarIntereses(idiomaInicial);
+        await cargarSkills(idiomaInicial);
         await establecerPlaceholders(idiomaInicial);
     };
 });
@@ -89,6 +90,7 @@ if (window.location.pathname.endsWith("index.html")){
         cambiarIdioma(nuevoIdioma);
         tipado(nuevoIdioma);
         cargarIntereses(nuevoIdioma);
+        cargarSkills(nuevoIdioma);
         establecerPlaceholders(nuevoIdioma);
     });
 };
@@ -271,6 +273,7 @@ function tipado(idioma) {
 // CREACIÓN DE CONTENDOR DE INTERESES 'acerca de'
 
 const contenedorIntereses = document.getElementById("contenedor-intereses");
+const contenedorLenguajes = document.getElementById("contenedor-lenguajes");
 const listaIconos = ["fa-gamepad","fa-bicycle","fa-headphones","fa-desktop","fa-car","fa-book"]
 
 const cargarIntereses = async (idioma) => {
@@ -278,14 +281,23 @@ const cargarIntereses = async (idioma) => {
     const data = await cargarDatos(idioma);
     // JSON "interest" entrega una listaIntereses ordenada igual a listaIconos
     const listaIntereses = data.profile.interests;
+    const listalenguajesDestacados = data.profile.languages;
+
 
     let nuevoContenedorIntereses = "";
     for (let i = 0; i < listaIntereses.length; i++) {
         nuevoContenedorIntereses += crearContenedorInteres(i, listaIntereses[i], listaIconos[i]);
     }
+    let nuevoContenedorLenguajes = "";
+    for (let i = 0; i < listalenguajesDestacados.length; i++){
+        nuevoContenedorLenguajes += crearContenedorLenguajesDestacados(listalenguajesDestacados[i], [i]);
+    }
+
     if (window.location.pathname.endsWith("index.html")){
         contenedorIntereses.innerHTML = nuevoContenedorIntereses;
+        contenedorLenguajes.innerHTML = nuevoContenedorLenguajes;
     }
+
 };
 // HTML para contenedores de intereses
 const crearContenedorInteres = (index,valor,icono)=>{
@@ -297,79 +309,195 @@ const crearContenedorInteres = (index,valor,icono)=>{
     return interesHTML;
 };
 
+const crearContenedorLenguajesDestacados = (lenguaje, index)=>{
+    let lenguajesHTML = `
+        <img class="animacion" data-nav="${index}" src="${lenguaje.image}" alt="${lenguaje.name}">`;
+    return lenguajesHTML;
+};
 
 
 
 
 // ANIMACIÓN SKILLS
 
-const efectoHabilidades =()=>{
-    let skills = document.getElementById("skills");
-    let distancia_skills = window.innerHeight - skills.getBoundingClientRect().top;
+// const efectoHabilidades =()=>{
+//     let skills = document.getElementById("skills");
+//     let distancia_skills = window.innerHeight - skills.getBoundingClientRect().top;
 
-    if(distancia_skills >= 300){
-        let habilidades = document.getElementsByClassName("progreso");
-        for (i=0;i<habilidades.length;i++){
-            habilidades[i].classList.add("lvl");
-        };
-    };
-};
+//     if(distancia_skills >= 300){
+//         let habilidades = document.getElementsByClassName("progreso");
+//         for (i=0;i<habilidades.length;i++){
+//             habilidades[i].classList.add("lvl");
+//         };
+//     };
+// };
 
 // detectar scrolling para aplicar animación de barra hab
 function esPaginaIndex() {
     return window.location.pathname.endsWith('index.html');
 };
 
-if (esPaginaIndex()) {
-    window.onscroll = function () {
-        efectoHabilidades();
-    };
-}
+// if (esPaginaIndex()) {
+//     window.onscroll = function () {
+//         efectoHabilidades();
+//     };
+// }
+
+const contenedorSkillsBackend = document.getElementById("contenedor-skills-backend");
+const contenedorSkillsFrontend = document.getElementById("contenedor-skills-frontend");
+const contenedorSkillsBaseDato = document.getElementById("contenedor-skills-basedato");
+
+const contenedorSkillsProfesional = document.getElementById("contenedor-skills-profesional");
+const contenedorSkillsTecnicas = document.getElementById("contenedor-skills-tecnicas");
+
+const crearSkill =(skill, index)=>{
+    let skillHTML = `
+        <div class="skill animacion" data-nav="${index}">
+            <span>
+                <img src="${skill.image}" alt="${skill.name}" title="${skill.name}">
+                ${skill.name.toUpperCase()}
+            </span>
+        </div>`;
+    return skillHTML;
+};
+
+const crearSkillProf =(skill, index)=>{
+    let skillHTML = `
+        <div class="skill animacion" data-lvl="${skill.lvl}" data-nav="${index}">
+            <span>
+                <i class="skill-icon ${skill.icon}"></i>
+                <p class="lvl-parrafo">${skill.lvl}</p>
+                ${skill.name.toUpperCase()}
+            </span>
+        </div>`;
+    return skillHTML;
+};
+
+const cargarSkills = async(idioma)=>{
+    // Se carga la data del JSON segun idioma
+    const data = await cargarDatos(idioma);
+    // JSON "interest" entrega una listaIntereses ordenada igual a listaIconos
+    const listaSkillsBackend = data.skills.skillBackend;
+    const listaSkillsFrontend = data.skills.skillFrontend;
+    const listaSkillsBaseDato = data.skills.skillBaseDato;
+
+
+    let nuevoContenedorSkillsBackend = recorrerListaSkills(listaSkillsBackend, crearSkill);
+    let nuevoContenedorSkillsFrontend = recorrerListaSkills(listaSkillsFrontend, crearSkill);
+    let nuevoContenedorSkillsBaseDato = recorrerListaSkills(listaSkillsBaseDato, crearSkill);
+
+
+    const listaSkillsProfesional = data.skills.skillProfesional;
+    const listaSkillsTecnica = data.skills.skillTechnical;
+
+    let nuevoContenedorSkillsProfesional = recorrerListaSkills(listaSkillsProfesional, crearSkillProf);
+    let nuevoContenedorSkillsTecnica = recorrerListaSkills(listaSkillsTecnica, crearSkillProf);
+
+    if (window.location.pathname.endsWith("index.html")){
+        // Skill lenguajes y tecnologias
+        contenedorSkillsBackend.innerHTML = nuevoContenedorSkillsBackend;
+        contenedorSkillsFrontend.innerHTML = nuevoContenedorSkillsFrontend;
+        contenedorSkillsBaseDato.innerHTML = nuevoContenedorSkillsBaseDato;
+        // Skill profesionales y tecnicas
+        contenedorSkillsProfesional.innerHTML = nuevoContenedorSkillsProfesional;
+        contenedorSkillsTecnicas.innerHTML = nuevoContenedorSkillsTecnica;
+    }
+};
+
+// Recorres cada lista sacada desde la data de los JSON
+const recorrerListaSkills = (lista, crearSkill)=>{
+    let nuevoContenedor = "";
+    for (let i = 0; i < lista.length; i++){
+        nuevoContenedor += crearSkill(lista[i], [i]);
+    }
+    return nuevoContenedor;
+};
+
+
+// Funcion hover para los contenedor-skills-technical
+document.addEventListener('DOMContentLoaded', (event) => {
+    esperarElementos();
+});
+const esperarElementos = () => {
+    const contenedorSkillsTecnicas = document.getElementById("contenedor-skills-tecnicas");
+
+    // Verificar si el contenedor existe antes de continuar
+    if (contenedorSkillsTecnicas) {
+        contenedorSkillsTecnicas.addEventListener("mouseover", (event) => {
+            const target = event.target.closest('.skill');
+
+            if (target) {
+                // Guardar el icono original
+                target.dataset.iconOriginal = target.querySelector("i").classList.value;
+
+                // Ocultar el ícono y mostrar el texto al hacer hover
+                target.querySelector("i").style.display = "none";
+                target.querySelector(".lvl-parrafo").style.display = "block";
+            }
+        });
+
+        contenedorSkillsTecnicas.addEventListener("mouseout", (event) => {
+            const target = event.target.closest('.skill');
+
+            if (target) {
+                // Volver al ícono original al salir del hover
+                target.querySelector("i").style.display = "block";
+                target.querySelector(".lvl-parrafo").style.display = "none";
+            }
+        });
+    }
+
+};
+
+// Llamar a la función que espera a que los elementos se carguen
+esperarElementos();
+
 
 
 
 
 // Scroll para sliders de animaciones de contenedores
 
-const animacion = document.querySelectorAll(".animacion");
-const animacionNav = document.querySelectorAll("nav ul li");
+document.addEventListener('DOMContentLoaded', () => {
+    const animacion = document.querySelectorAll(".animacion");
+    const animacionNav = document.querySelectorAll("nav ul li");
 
-const cargarAnimacion = (entradas, observador) => {
+    const cargarAnimacion = (entradas, observador) => {
 
-    entradas.forEach((entrada) => {
-        if(entrada.isIntersecting){
+        entradas.forEach((entrada) => {
+            if(entrada.isIntersecting){
+                // console.log("Elemento visible:", entrada.target);
+                const delay = entrada.target.dataset.nav; // Obtener el valor de data-nav
+                // console.log("Valor de data-nav:", delay);
+                entrada.target.style.transitionDelay = `${delay * 0.15}s`; // Aplicar retraso en la animación
+                entrada.target.classList.add("animado");
+            };
+        });   
+    };
+    // Parámetros para el intersecter
+    const observador = new IntersectionObserver(cargarAnimacion, {
+        root: null,
+        rootMargin: "50px 200px",
+        // threshold: 0.3
+        threshold: 0.25
+    });
+    // Observador de elementos
+    animacion.forEach((enlace)=>{
+        observador.observe(enlace);
+    });
+    // Observador de elementos de menu o navegadores
+    animacionNav.forEach((enlace)=>{
+        observador.observe(enlace);
+    });
 
-            const delay = entrada.target.dataset.nav; // Obtener el valor de data-nav
-            entrada.target.style.transitionDelay = `${delay * 0.15}s`; // Aplicar retraso en la animación
-            entrada.target.classList.add("animado");
-
-        };
-    });   
-};
-// Parámetros para el intersecter
-const observador = new IntersectionObserver(cargarAnimacion, {
-    root: null,
-    rootMargin: "50px 200px",
-    // threshold: 0.3
-    threshold: 0.25
 });
-// Observador de elementos
-animacion.forEach((enlace)=>{
-    observador.observe(enlace);
-});
-// Observador de elementos de menu o navegadores
-animacionNav.forEach((enlace)=>{
-    observador.observe(enlace);
-});
-
-
 
 
 
 // MODAL DE PROYECTOS
 
 // HTML para creación de modales
-const crearModal = (proyecto) =>{
+const crearModal =(proyecto) =>{
     let modalHTML = `    
         <h3 class="modal-titulo">${proyecto.title}</h3>
         <div class="contenedor-modal-img">
@@ -483,3 +611,7 @@ async function establecerPDF(idioma){
         };
     };
 };
+
+
+// window.addEventListener('scroll', cargarAnimacion);
+// window.addEventListener('scroll', cargarAnimacion, { passive: true });

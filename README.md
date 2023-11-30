@@ -1,7 +1,7 @@
 # Portafolio: "Sebastián López"
 `<link>` : <https://sebalopezx.github.io/Portafolio/>
 
-<img src="https://github.com/sebalopezx/Portafolio/blob/master/icons/seba_logo.JPG" alt="Logo del proyecto" width="100" height="100"> <img src="https://github.com/sebalopezx/Portafolio/blob/master/icons/chile_64px.png" alt="Chile" width="100" height="100"> 
+<img src="https://github.com/sebalopezx/Portafolio/blob/master/icons/seba_logo.JPG" alt="Logo del proyecto" width="60" height="60"> <img src="https://github.com/sebalopezx/Portafolio/blob/master/icons/chile_64px.png" alt="Chile" width="60" height="60"> 
 
 
 ![Static Badge](https://img.shields.io/badge/creador-Sebasti%C3%A1n_L%C3%B3pez-green) ![Static Badge](https://img.shields.io/badge/Especialidad-Junior-green) ![Static Badge](https://img.shields.io/badge/versi%C3%B3n-1.0-green) 

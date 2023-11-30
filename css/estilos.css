@@ -584,6 +584,16 @@ button:hover i{
     font-weight: bold;
     border-radius: 5px;
 }
+.acercade .fila .col .contenedor-lenguajes img{
+    display: inline;
+    width: 40px;
+    height: 40px;
+    transition: .5s;
+}
+.acercade .fila .col .contenedor-lenguajes img:hover{
+    transform: scale(1.2);
+}
+
 .acercade .fila .col .contenedor-intereses{
     display: flex;
     flex-wrap: wrap; 
@@ -601,9 +611,9 @@ button:hover i{
     align-items: center;
     cursor: pointer;
     overflow: hidden;
+    transition: .8s ;
 }
 .acercade .fila .col .contenedor-intereses .intereses:hover{
-    transition: .5s;
     background-color: var(--color-primario);
     color: var(--color-menu);
     box-shadow: var(--shadow-btn);
@@ -647,7 +657,7 @@ button:hover i{
 
 /* Animacion skills */
 .skills .fila .col h3{
-    opacity: 0;
+    opacity: 0.01;
     transform: translate(-150px);
 }
 .skills .fila .col h3.animado{
@@ -656,11 +666,11 @@ button:hover i{
     transition: opacity 1.5s ease, transform 1.5s ease;
 }
 .skills .fila .col{
-    opacity: 0;
+    opacity: 0.01;
     transform: translateX(-150px);
 }
 .skills .fila .col.izquierda{
-    opacity: 0;
+    opacity: 0.01;
     transform: translateX(-150px);
 }
 .skills .fila .col.izquierda.animado{
@@ -669,7 +679,7 @@ button:hover i{
     transition: opacity 1.5s ease, transform 1.5s ease;
 }
 .skills .fila .col.derecha{
-    opacity: 0;
+    opacity: 0.01;
     transform: translateX(150px);
 }
 .skills .fila .col.derecha.animado{
@@ -678,16 +688,85 @@ button:hover i{
     transition: opacity 1.5s ease, transform 1.5s ease;
 }
 
+
+
+
 .skills .fila .col h3{
     font-size: 28px;
     margin-top: 25px;
     margin-bottom: 25px;
 }
-.skills .contenedor-skill{
+/* .skills .contenedor-skill{
     width: 80%;
     justify-content: space-between;
+} */
+
+
+
+
+.skills .contenedor-skills{
+    /* border: 1px solid red; */
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 10px;
+    padding: 10px;
 }
-.skills span{
+
+.skills .contenedor-skills .skill span{
+    /* border: 1px solid yellow; */
+    display: block;
+    width: 100%;
+    font-size: .8rem;
+    text-align: center;
+    transition: .8s;
+    /* height: 100px; */
+}
+.skills .contenedor-skills .skill img,.skill-icon,.lvl-parrafo{
+    cursor: pointer;
+    width: 100%;
+    max-width: 90px;
+    height: 70px;
+    font-size: 50px;
+    margin-bottom: 5px;
+    display: block;
+    padding: 5px;
+    border-radius: 20px 20px 0 0;
+    background-color: var(--color-background);
+    border: 2px solid var(--color-terciario);
+    transition: .8s;
+}
+.skills .contenedor-skills .skill .lvl-parrafo{
+    font-family: fuentePrincipal;
+    display: none;
+}
+.skills .contenedor-skills .skill img:hover,.skill-icon:hover,.lvl-parrafo:hover{
+    background-color: var(--color-secundario);
+    box-shadow: var(--shadow-btn);
+}
+.skills .contenedor-skills .skill .skill-icon:hover{
+    color: var(--color-menu);
+}
+.skills .contenedor-skills .skill .lvl-parrafo:hover{
+    color: var(--color-menu);
+    font-family: fuentePrincipal;
+}
+.skills .contenedor-skills .skill span:hover{
+    color: var(--color-primario);
+}
+
+
+/* .skills .contenedor-skills .skill {
+    opacity: 0.1;
+    transform: translateX(-30px);   
+}
+.skills .contenedor-skills .skill.animado {
+    opacity: 1;
+    transform: translateX(0);
+    transition: opacity 1.5s ease, transform 1.5s ease;
+} */
+
+
+/* .skills span{
     width: 100%;
     justify-content: start;
 }
@@ -760,7 +839,6 @@ button:hover i{
     border-radius: 20px;
     line-height: 40px;
     text-align: center;
-    /* top: -17px; */
     top: -13px;
     right: -15px;
     font-size:14px ;
@@ -776,7 +854,7 @@ button:hover i{
 }
 .skills .skill .progreso:active{
     animation: lvlclick; 
-}
+} */
 
 
 /* CV */
@@ -1475,13 +1553,28 @@ footer h3.animado{
     .skills .fila .col{
         width: 100%;
     }
-    .skills .fila .col .barra-skill{
+    .skills .contenedor-skills {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 5px;
+        padding: 5px;
+    }
+    .skills .contenedor-skills .skill img,.skill-icon,.lvl-parrafo{
+        width: 70px;
+        max-width: 70px;
+        font-size: 40px;
+        padding-top: 10px;
+    }
+    .skills .contenedor-skills .skill span{
+        font-size: .7rem;
+    }
+    
+    /* .skills .fila .col .barra-skill{
         width: 100%;
     }
     .skills .contenedor-skill{
         width: 100%;
         justify-content: space-between;
-    }
+    } */
 
     .curriculum .fila{
         display: block;

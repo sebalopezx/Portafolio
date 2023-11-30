@@ -8,9 +8,13 @@
         "nav5":"Projects",
         "nav6":"Contact"
     },
+
+
     "tipado":{
         "title":["Junior Developer", "Mechanic Engineer"]
     },
+
+
     "profile":{
         "name":"Hi, i'm Sebastián.",
         "description":"My main focus is reflected in the dedication that I have in satisfying the required needs.", 
@@ -26,13 +30,57 @@
         "title_info4":"Availability:",
         "info4":"IMMEDIATE!.",
 
+        "title_info5":"Relevant experience:",
+        "languages":[
+            {"name":"Python", "image":"images/python.png"},
+            {"name":"Django", "image":"images/django.png"},
+            {"name":"HTML5", "image":"images/html5.png"},
+            {"name":"CSS3", "image":"images/css3.png"},
+            {"name":"JavaScript", "image":"images/javascript.png"},
+            {"name":"Bootstrap5", "image":"images/bootstrap.png"},
+            {"name":"MySQL", "image":"images/mysql.png"}
+        ],
+
         "title2":"Interests",
         "interests":["Games","Sport","Music","Technology","Cars","Learn"]
     },
+
+
     "skills":{
-        "title":"Technical Skills",
-        "title2":"Professional Skills"
+        "backend":"Backend",
+        "skillBackend":[
+            {"name":"Python", "image":"images/python.png"},
+            {"name":"Django", "image":"images/django.png"}
+        ],
+        "frontend":"Frontend",
+        "skillFrontend":[
+            {"name":"HTML5", "image":"images/html5.png"},
+            {"name":"CSS3", "image":"images/css3.png"},
+            {"name":"JavaScript", "image":"images/javascript.png"},
+            {"name":"Bootstrap5", "image":"images/bootstrap.png"}
+        ],
+        "basedato":"Data Bases",
+        "skillBaseDato":[
+            {"name":"MySQL", "image":"images/mysql.png"},
+            {"name":"ORACLE", "image":"images/oracle.png"},
+            {"name":"PostGre", "image":"images/postgre.png"},
+            {"name":"Mongo", "image":"images/mongodb.png"}
+        ],
+
+        "title1":"Professional Skills",
+        "skillProfesional":[
+            {"name":"Responsable" , "icon":"fa-regular fa-clock"},
+            {"name":"Ordenado" , "icon":"fa-sharp fa-solid fa-list-check"},
+            {"name":"Colaborador" , "icon":"fa-solid fa-people-group"}
+        ],
+        "title2":"Technical Skills",
+        "skillTechnical":[
+            {"name":"Inglés hablado: A2" , "icon":"fa-solid fa-microphone", "lvl":"A2"},
+            {"name":"Inglés lectura: B1" , "icon":"fa-solid fa-language", "lvl":"B1"}
+        ]
     },
+
+
     "education":{
         "title":"Education",
         "education_title_1":"Mechanical and autotronic technician",
@@ -47,6 +95,8 @@
         "education_description_3":"Studying",
         "education_date_3":"2022-2024"
     },
+
+
     "cv":{
         "title":"Experience",
         "experience_company_1":"Alstom Line 4 y 4a",
@@ -64,6 +114,8 @@
         "experience_date_3":"2019-2022",
         "experience_description_3":"Preventive and corrective maintenance of different areas, pneumatic specialty. <br>Supervise work and compliance with company rules and regulations, and task delegation."
     },
+
+
     "courses":{
         "title":"Courses",
 
@@ -78,6 +130,8 @@
         "course_url_2":"Certificate"
 
     },
+
+
     "projects":{
         "title":"Projects",
         
@@ -130,6 +184,8 @@
         }
 
     },
+
+
     "contact":{
         "title":"Contact",
         "name":"Name:",
@@ -138,12 +194,16 @@
         "message":"Write your message:",
         "btn":"Send message"
     },
+
+
     "contact_modal":{
         "title":"Your message has been sent.",
         "text":"I will answer you shortly, Regards.",
         "title_error":"Your message has not been sent.",
         "text_error":"An error occurred!."
     },
+
+
     "cv_pagina":{
         "title":"Seba Currículum",
         "nav":"Back to Portfolio",
