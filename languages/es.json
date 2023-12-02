@@ -1,5 +1,7 @@
 {
     "idioma":"es",
+
+
     "menu": {
         "nav1":"Inicio",
         "nav2":"Acerca de",
@@ -8,9 +10,13 @@
         "nav5":"Proyectos",
         "nav6":"Contacto"
     },
+
+
     "tipado":{
         "title":["Desarrollador Junior", "Ingeniero Mecánico"]
     },
+
+
     "profile":{
         "name":"Hola, soy Sebastián.",
         "description":"Mi enfoque principal se refleja en la dedicación que dispongo en satisfacer las necesidades requeridas. ",
@@ -23,113 +29,217 @@
         "info2":"Python o Java. Tengo la disposición de trabajar en lenguajes que no conozco, con el objetivo de aprender y adquirir nuevos conocimientos.",
         "title_info3":"Interés profesional de TI:",
         "info3":"Estoy interesado en aprender del área Backend o Full Stack.",
-        "title_info4":"Disponibilidad:",
-        "info4":"INMEDIATA!.",
+        "title_info4":"Stack destacado:",
+        "stack":[
+            {"name":"Python", "image":"images/python.png"},
+            {"name":"Django", "image":"images/django.png"},
+            {"name":"HTML5", "image":"images/html5.png"},
+            {"name":"CSS3", "image":"images/css3.png"},
+            {"name":"JavaScript", "image":"images/javascript.png"},
+            {"name":"Bootstrap5", "image":"images/bootstrap.png"},
+            {"name":"MySQL", "image":"images/mysql.png"}
+        ],
+        "title_info5":"Disponibilidad:",
+        "info5":"INMEDIATA!.",
 
         "title2":"Intereses",
-        "interests":["Juegos","Deporte","Música","Tecnología","Autos","Aprender"]
+        "interests":[
+            {"name":"Juegos", "icon":"fa-solid fa-gamepad"},
+            {"name":"Deporte", "icon":"fa-solid fa-bicycle"},
+            {"name":"Música", "icon":"fa-solid fa-headphones"},
+            {"name":"Tecnología", "icon":"fa-solid fa-desktop"},
+            {"name":"Autos", "icon":"fa-solid fa-car"},
+            {"name":"Aprender", "icon":"fa-solid fa-book"}
+        ]
     },
+
+
     "skills":{
         "title":"Skills Técnicas",
-        "title2":"Skills Profesionales"
+        "values": ["Básico","Medio","Experto","Senior"],
+        "skill":[
+            {"name":"Python", "image":"images/python.png", "value":"Básico", "lvl":"25"},
+            {"name":"Django", "image":"images/django.png", "value":"Básico", "lvl":"25"},
+            {"name":"HTML5", "image":"images/html5.png", "value":"Básico", "lvl":"25"},
+            {"name":"CSS3", "image":"images/css3.png", "value":"Básico", "lvl":"25"},
+            {"name":"JavaScript", "image":"images/javascript.png", "value":"Básico", "lvl":"25"},
+            {"name":"Bootstrap5", "image":"images/bootstrap.png", "value":"Básico", "lvl":"25"},
+            {"name":"MySQL", "image":"images/mysql.png", "value":"Básico", "lvl":"25"},
+            {"name":"Oracle", "image":"images/oracle.png", "value":"Básico", "lvl":"25"},
+            {"name":"Postgre", "image":"images/postgre.png", "value":"Básico", "lvl":"25"},
+            {"name":"MongoDB", "image":"images/mongodb.png", "value":"Experto", "lvl":"25"}
+        ],
+        "title2":"Herramientas",
+        "tools":[
+            {"name":"Git", "image":"images/git.png", "value":"Básico", "lvl":"25"},
+            {"name":"Github", "image":"images/github.png", "value":"Básico", "lvl":"25"}
+        ],
+        "title3":"Skills Profesionales",
+        "ability":[
+            {"name":"Responsable", "icon":"fa-regular fa-clock", "value":"Skill", "lvl":"100"},
+            {"name":"Ordenado", "icon":"fa-sharp fa-solid fa-list-check", "value":"Skill", "lvl":"100"},
+            {"name":"Trabajo en equipo", "icon":"fa-solid fa-people-group", "value":"Skill", "lvl":"100"},
+            {"name":"Inglés escrito", "icon":"fa-solid fa-language", "value":"B-1", "lvl":"40"},
+            {"name":"Inglés hablado", "icon":"fa-solid fa-microphone", "value":"A-2", "lvl":"25"}
+        ]
     },
+
+
     "education":{
         "title":"Educación",
-        "education_title_1":"Técnico en mecánica automotriz y autotrónica",
-        "education_description_1":"Titulado",
-        "education_date_1":"2011-2013",
-
-        "education_title_2":"Ingeniería en mecánica automotriz y autotrónica",
-        "education_description_2":"Titulado",
-        "education_date_2":"2016-2019",
-
-        "education_title_3":"Analista Programador",
-        "education_description_3":"Cursando",
-        "education_date_3":"2022-2024"
+        "education":[
+            {
+                "name":"Analista Programador",
+                "place":"Inacap",
+                "date":"2022-2024",
+                "description":"Cursando"
+            },
+            {
+                "name":"Ingeniería en mecánica automotriz y autotrónica",
+                "place":"Duoc UC",
+                "date":"2016-2019",
+                "description":"Titulado"
+            },
+            {
+                "name":"Técnico en mecánica automotriz y autotrónica",
+                "place":"Duoc UC",
+                "date":"2011-2013",
+                "description":"Titulado"
+            }          
+        ]
     },
-    "cv":{
-        "title":"Experiencia",
-        "experience_company_1":"Alstom Línea 4 y 4a",
-        "experience_title_1":"Técnico en mantenimiento general",
-        "experience_date_1":"2014-2015",
-        "experience_description_1":"Mantenimiento preventivo y correctivo en diferentes áreas. <br>Gran Mantenimiento de trenes (GR) específicamente del área neumática.",
 
-        "experience_company_2":"Rheem chilena SPA",
-        "experience_title_2":"Práctica Ingeniería",
-        "experience_date_2":"2 Meses",
-        "experience_description_2":"Estandarización de procesos y procedimientos. <br>Inicio de 5S Kaizen, para implementación futura en taller.",
 
-        "experience_company_3":"CAF Chile Línea 1",
-        "experience_title_3":"Técnico mantenimiento, y<br>Supervisor suplente.",
-        "experience_date_3":"2019-2022",
-        "experience_description_3":"Mantenimiento preventivo y correctivo de diferentes áreas, especialidad neumática. <br>Supervisor de turno, supervisar trabajos y cumplimiento de las reglas y normas de la empresa, y delegación de tareas."
-    },
     "courses":{
         "title":"Cursos",
 
-        "course_title_1":"Python sin límites. POO, Tkinter, PySide, etc. +50hrs",
-        "course_company_1":"Udemy",
-        "course_date_1":"2023",
-        "course_url_1":"Certificado",
-
-        "course_title_2":"Universidad Desarrollo Web - FrontEnd Web Developer!",
-        "course_company_2":"Udemy",
-        "course_date_2":"2023",
-        "course_url_2":"Certificado"
-
+        "courses":[
+            {
+                "name":"Python sin límites. POO, Tkinter, PySide, etc. +50hrs", 
+                "company":"Udemy", 
+                "date":"2023", 
+                "url":"http://ude.my/UC-51981b38-6699-4efa-a911-eb9a9ac60f97",
+                "description":"Certificado"
+            },
+            {
+                "name":"Universidad Desarrollo Web - FrontEnd Web Developer!", 
+                "company":"Udemy", 
+                "date":"2023", 
+                "url":"http://ude.my/UC-2ab388c7-8732-4e54-9bf2-0c29d5ded61b",
+                "description":"Certificado"
+            }
+        ]
     },
+
+
+    "cv_programmer":{
+        "title":"Experiencia en Informática",
+        "cv_programmer":[
+            {
+                "name":"Estudiante.",
+                "place":"Proyectos de estudio.",
+                "date":"2022-2023",
+                "description":"Proyectos para practicar y aprender diferentes tecnologías. Estudiando su sintaxis, estructura, patrones de diseño, lógica, etc..."
+            }
+        ]
+    },
+
+
+    "cv_mechanic":{
+        "title":"Experiencia en Mecánica",
+        "cv_mechanic":[
+            {
+                "name":"Técnico mantenimiento, y<br>Supervisor suplente.",
+                "place":"CAF Chile Línea 1",
+                "date":"2019-2022",
+                "description":"Mantenimiento preventivo y correctivo de diferentes áreas, especialidad neumática. <br>Supervisor de turno, supervisar trabajos y cumplimiento de las reglas y normas de la empresa, y delegación de tareas."
+            },
+            {
+                "name":"Práctica Ingeniería",
+                "place":"Rheem chilena SPA",
+                "date":"2 Meses",
+                "description":"Estandarización de procesos y procedimientos. <br>Inicio de 5S Kaizen, para implementación futura en taller."
+            },
+            {
+                "name":"Técnico en mantenimiento general",
+                "place":"Alstom Línea 4 y 4a",
+                "date":"2014-2015",
+                "description":"Mantenimiento preventivo y correctivo en diferentes áreas. <br>Gran Mantenimiento de trenes (GR) específicamente del área neumática."
+            }
+        ]
+    },
+
+
+   
+
+
     "projects":{
         "title":"Proyectos",
-        
-        "title1": "APP Inglés",
-        "info1": "Proyecto propio",
-        "btn1": "Ver detalles",
-        "project1":{
-            "title": "APP Inglés",
-            "id":"proyecto1",
-            "imagen":"images/projects/proyecto1_modal.png",
-            "info1":"Proyecto propio, creado con html, css y javascript para aprender y practicar las funcionalidades básicas de estos lenguajes, y reforzar el inglés.",
-            "info2":"El proyecto es una aplicación web creada utilizando diferentes tecnologías. Su objetivo principal es proporcionar una herramienta para mejorar y practicar el conocimiento del inglés, enfocándose en el aprendizaje de verbos en diferentes conjugaciones.",    
-            "ref":"https://sebalopezx.github.io/app-ingles/",
-            "ref2":"https://github.com/sebalopezx/app-ingles",
-            "btn1":"Ver",
-            "btn2":"Cerrar",
-            "btn3":"Git"
-        },
+        "subtitle1":"Proyectos estudio",
+        "subtitle2":"Proyectos profesionales",
 
-        "title2": "Carrito de Compras",
-        "info2": "Proyecto de instituto",
-        "btn2": "Ver detalles",
-        "project2":{
-            "title": "Carrito de Compras",
-            "id":"proyecto2",
-            "imagen":"images/projects/proyecto2_modal.png",
-            "info1":"Proyecto de instituto, desarrollada como parte del curso de Front-End con uso de HTML, CSS y JS con LocalStorage.",
-            "info2":"Se ha desarrollado una aplicación funcional de un carrito de compras utilizando el LocalStorage. Además, se ha fortalecido la comprensión de conceptos clave en el desarrollo web y la importancia de una interfaz interactiva y amigable para el usuario.",    
-            "ref":"https://sebalopezx.github.io/carrito_compras/",
-            "ref2":"https://github.com/sebalopezx/carrito_compras",
-            "btn1":"Ver",
-            "btn2":"Cerrar",
-            "btn3":"Git"
-        },
-       
-        "title3": "Gestión Automotriz",
-        "info3": "Proyecto de instituto",
-        "btn3": "Ver detalles",
-        "project3":{
-            "title": "Gestión Automotriz",
-            "id":"proyecto3",
-            "imagen":"images/projects/proyecto3_modal.PNG",
-            "info1":"Proyecto de instituto, desarrollada como parte del curso de Back-End con uso de HTML, CSS, Django y PostgreSQL subido en Render.",
-            "info2":"Se ha desarrollado una aplicación funcional de gestiónm de citas automotrices. Con dos intefaces (Cliente y Recepcionista) en las que se puede gestionar los vehículos y gestionar las citas de mantenimiento.",    
-            "ref":"https://gestion-automotriz.onrender.com/",
-            "ref2":"https://github.com/sebalopezx/Gestion_Automotriz",
-            "btn1":"Ver",
-            "btn2":"Cerrar",
-            "btn3":"Git"
-        }
-    
+        "projectsConfig": {
+            "section": "projects",
+            "btn": "Ver detalles",
+            "btn1": "Web",
+            "btn2": "Cerrar",
+            "btn3": "Github"
+          },
+
+        "study_projects":[
+            {
+                "id":"proyecto1",
+                "title":"APP Inglés",
+                "type":"Proyecto propio",
+                "image1":"images/projects/proyecto1_fondo.PNG",
+                "image2":"images/projects/proyecto1_modal.png",
+                "languages":[
+                    "images/html5.png",
+                    "images/css3.png",
+                    "images/javascript.png"
+                ],
+                "info1":"Proyecto propio, creado con html, css y javascript para aprender y practicar las funcionalidades básicas de estos lenguajes, y reforzar el inglés.",
+                "info2":"El proyecto es una aplicación web creada utilizando diferentes tecnologías. Su objetivo principal es proporcionar una herramienta para mejorar y practicar el conocimiento del inglés, enfocándose en el aprendizaje de verbos en diferentes conjugaciones.",    
+                "ref":"https://sebalopezx.github.io/app-ingles/",
+                "ref2":"https://github.com/sebalopezx/app-ingles"
+            },
+            {
+                "id":"proyecto2",
+                "title": "Carrito de Compras",
+                "type":"Proyecto de instituto",
+                "image1":"images/projects/proyecto2_fondo.PNG",
+                "image2":"images/projects/proyecto2_modal.png",
+                "languages":[
+                    "images/html5.png",
+                    "images/bootstrap.png",
+                    "images/javascript.png",
+                    "images/localstorage.png"
+                ],
+                "info1":"Proyecto de instituto, desarrollada como parte del curso de Front-End con uso de HTML, CSS y JS con LocalStorage.",
+                "info2":"Se ha desarrollado una aplicación funcional de un carrito de compras utilizando el LocalStorage. Además, se ha fortalecido la comprensión de conceptos clave en el desarrollo web y la importancia de una interfaz interactiva y amigable para el usuario.",    
+                "ref":"https://sebalopezx.github.io/carrito_compras/",
+                "ref2":"https://github.com/sebalopezx/carrito_compras"
+            },
+            {
+                "id":"proyecto3",
+                "title": "Gestión Automotriz",
+                "type":"Proyecto de instituto",
+                "image1":"images/projects/proyecto3_fondo.PNG",
+                "image2":"images/projects/proyecto3_modal.PNG",
+                "languages":[
+                    "images/django.png",
+                    "images/html5.png",
+                    "images/bootstrap.png",
+                    "images/postgre.png"
+                ],
+                "info1":"Proyecto de instituto, desarrollada como parte del curso de Back-End con uso de HTML, CSS, Django y PostgreSQL subido en Render.",
+                "info2":"Se ha desarrollado una aplicación funcional de gestiónm de citas automotrices. Con diferentes intefaces de (Cliente, Recepcionista y Administrador) en las que se puede gestionar los vehículos y las citas de mantenimiento.",    
+                "ref":"https://gestion-automotriz.onrender.com/",
+                "ref2":"https://github.com/sebalopezx/Gestion_Automotriz"
+            }
+        ]
     },
+
 
     "contact":{
         "title":"Contacto",
@@ -139,12 +249,16 @@
         "message":"Escribe tu mensaje:",
         "btn":"Enviar Mensaje"
     },
+
+
     "contact_modal":{
         "title":"Tu mensaje ha sido enviado.",
         "text":"Te respondere en la brevedad, Saludos.",
         "title_error":"Tu mensaje no ha sido enviado.",
         "text_error":"¡Ha ocurrido un error!."
     },
+
+
     "cv_pagina":{
         "title":"Seba Currículum",
         "nav":"Volver a Portafolio",

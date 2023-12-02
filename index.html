@@ -92,7 +92,7 @@
             </div>
             <a href="cv.html">
                 <button id="descargaCV" class="btn boton animacion" name="descargaCV" onclick="descargaCV()">
-                    <span class="texto-boton">Currículum</span>
+                    <span class="texto-boton">CV</span>
                     <i class="fa-solid fa-download"></i>
                     <span class="overlay"></span>
                 </button>
@@ -112,22 +112,6 @@
                 <p class="informacion" data-section="profile" data-value="description2"></p>
                 <p class="informacion" data-section="profile" data-value="description3"></p>
                 
-                <!-- Soy una persona responsable, comprometido con mi trabajo, ordenado y meticuloso, 
-                dispuesto a dar mi mayor esfuerzo para brindar las necesidades que ser requieran, 
-                en busca de aprender nuevas tecnologías, metodologías y todo lo que pueda complementarme 
-                tanto en lo profesional como en lo personal. <hr>
-                <br>
-                En estos momentos soy estudiante de la carrera de analista programador y estoy en busca de 
-                experiencias laborales relacionado a ello, aunque actualmente soy titulado de ingeniería en 
-                mecánica automotriz, y trabajo como mecánico de mantenimiento preventivo y correctivo de trenes 
-                para Metro de Santiago. <hr>
-                <br>
-                Poseo <a href="#skills">conocimientos básicos</a> 
-                en Python con frameworks y librerias (Django, Tkinter), 
-                SQL y NoSQL (MySQL, Oracle, MongoDB), 
-                Html, Css y JavaScript, y me encuentro 
-                complementando mis estudios con cursos en Udemy mientras saco mi carrera.
-                </p> -->
             </div>
 
             <div class="fila">
@@ -153,8 +137,12 @@
                             <p data-section="profile" data-value="info3">Estoy interesado en aprender del área Full Stack o Backend.</p>
                         </li>
                         <li>
-                            <span data-section="profile" data-value="title_info4">Disponibilidad:</span>
-                            <p data-section="profile" data-value="info4">INMEDIATA!.</p>
+                            <span data-section="profile" data-value="title_info4">Stack destacado:</span>
+                            <div class="stack-destacado" id="stack-destacado"></div>
+                        </li>
+                        <li>
+                            <span data-section="profile" data-value="title_info5">Disponibilidad:</span>
+                            <p data-section="profile" data-value="info5">INMEDIATA!.</p>
                         </li>
                     </ul>
                 </div>
@@ -162,34 +150,9 @@
                 <!-- INTERESES -->
                 <div class="col izquierda animacion">
                     <h3 class="animacion" data-section="profile" data-value="title2">Intereses</h3>
+                    <!-- Intereses creados por js -->
                     <div class="contenedor-intereses" id="contenedor-intereses">
-
-                        <!-- Intereses creados por js -->
-                        
-                        <!-- <div class="intereses">
-                            <i class="fa-solid fa-gamepad"></i>
-                            <span data-section="profile" data-value="interest[0]">Juegos</span>
-                        </div>
-                        <div class="intereses">
-                            <i class="fa-solid fa-bicycle"></i>
-                            <span data-section="profile" data-value="interest[1]">Deporte</span>
-                        </div>
-                        <div class="intereses">
-                            <i class="fa-solid fa-headphones"></i>
-                            <span data-section="profile" data-value="interest[2]">Música</span>
-                        </div>
-                        <div class="intereses">
-                            <i class="fa-solid fa-desktop"></i>
-                            <span data-section="profile" data-value="interest[3]">Tecnología</span>
-                        </div>
-                        <div class="intereses">
-                            <i class="fa-solid fa-car"></i>
-                            <span data-section="profile" data-value="interest[4]">Autos</span>
-                        </div>
-                        <div class="intereses">
-                            <i class="fa-solid fa-book"></i>
-                            <span data-section="profile" data-value="interest[5]">Aprender</span>
-                        </div> -->
+                      
                     </div>
                 </div>
             </div>
@@ -206,8 +169,40 @@
                 <div class="col izquierda animacion">
                     <h3 class="animacion" data-section="skills" data-value="title">Skills técnicas</h3>
                     <!-- NIVELES SKILL = {Basico:25%, Mid:50%, Avanzado:75%, Senior:100%}-->
+                    <div class="contenedor-conocimiento" id="contenedor-conocimiento">
 
-                    <div class="skill">
+                        <div class="skill">
+                            <div class="contenedor-skill">
+                                <div class="skills-img">
+                                    <img src="images/python.png" alt="python">
+                                </div>
+                            </div>
+                            <div class="barra-skill">
+                                <div class="progreso " style="--progreso:100%">
+                                    <span>Básico</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="skill">
+                            <div class="contenedor-skill">
+                                <div class="skills-img">
+                                    <img src="images/django.png" alt="django">
+                                </div>
+                            </div>
+                            <div class="barra-skill">
+                                <div class="progreso " style="--progreso:25%">
+                                    <span>Básico</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+            
+
+
+
+                    <!-- <div class="skill">
                         <div class="contenedor-skill">
                             <span>
                                 PYTHON - DJANGO
@@ -305,14 +300,24 @@
                                 <span>Básico</span>
                             </div>
                         </div>
-                    </div>
+                    </div> -->
                 </div>
 
                 <!-- Skills profesionales -->
                 <div class="col izquierda animacion">
                     <h3 class="animacion" data-section="skills" data-value="title2">Skills Profesionales</h3>
+  
+                    <div class="contenedor-conocimiento" id="contenedor-herramientas">
 
-                    <div class="skill">
+                    </div>
+
+                    <h3 class="animacion" data-section="skills" data-value="title3">Skills Profesionales</h3>
+   
+                    <div class="contenedor-conocimiento" id="contenedor-habilidades">
+
+                    </div>
+
+                    <!-- <div class="skill">
                         <span><i class="fa-regular fa-clock"></i>RESPONSABLE</span>
                         <div class="barra-skill">
                             <div class="progreso " style="--progreso:100%">
@@ -337,10 +342,10 @@
                                 <span>Skill</span>
                             </div>
                         </div>
-                    </div>
+                    </div> -->
 
                     <!-- NIVELES INLGES = 6 {A1:16.6, A2:33.3, B1:49.9, B2:66.5, C1:83.1, C2:100}-->
-                    <div class="skill">
+                    <!-- <div class="skill">
                         <span><i class="fa-solid fa-language"></i>ENGLISH READING</span>
                         <div class="barra-skill">
                             <div class="progreso " style="--progreso:49%">
@@ -357,7 +362,7 @@
                                 <span>A2</span>
                             </div>
                         </div>
-                    </div>
+                    </div> -->
 
                 </div>
             </div>
@@ -370,108 +375,29 @@
             <h2 class="animacion">Curriculum</h2>
             <div class="fila">
 
-                <!-- EDUCACIÓN -->
+                <!-- COLUMNA IZQUIERDA -->
                 <div class="col izquierda animacion">
-
+                    
+                    <!-- EDUCACIÓN -->
                     <h3 class="animacion" data-section="education" data-value="title">Educación</h3>
-                    <div class="item izq">
-                        <h4 data-section="education" data-value="education_title_3">Analista Programador</h4>
-                        <span class="lugar">Inacap</span>
-                        <span class="fecha">2022-2024</span>
-                        <p data-section="education" data-value="education_description_3">Cursando</p>
-                        <div class="conector1">
-                            <div class="circulo1"></div>
-                        </div>
-                    </div>
-
-                    <div class="item izq">
-                        <h4 data-section="education" data-value="education_title_2">Ingeniería en mecánica automotriz y autotrónica</h4>
-                        <span class="lugar">Duoc UC</span>
-                        <span class="fecha">2016-2019</span>
-                        <p data-section="education" data-value="education_description_2">Titulado</p>
-                        <div class="conector1">
-                            <div class="circulo1"></div>
-                        </div>
-                    </div>
-
-                    <div class="item izq">
-                        <h4 data-section="education" data-value="education_title_1">Técnico en mecánica automotriz y autotrónica</h4>
-                        <span class="lugar">Duoc UC</span>
-                        <span class="fecha">2011-2013</span>
-                        <p data-section="education" data-value="education_description_1">Titulado</p>
-                        <div class="conector1">
-                            <div class="circulo1"></div>
-                        </div>
-                    </div>
+                    <div class="contenedor-estudios" id="contenedor-estudios"></div>
 
                     <!-- CURSOS -->
                     <h3 class="animacion" data-section="courses" data-value="title">Cursos</h3>
-                    <div class="item izq">
-                        <h4 data-section="courses" data-value="course_title_1">Python sin límites. POO, Tkinter, PySide, etc. +50hrs</h4>
-                        <span class="lugar" data-section="courses" data-value="course_company_1">Udemy</span>
-                        <span class="fecha" data-section="courses" data-value="course_date_1">2023</span>
-                        <p>
-                            <a href="http://ude.my/UC-51981b38-6699-4efa-a911-eb9a9ac60f97" 
-                            target="_blank"
-                            data-section="courses" data-value="course_url_1">Certificado</a>
-                        </p>
-                        <div class="conector1">
-                            <div class="circulo1"></div>
-                        </div>
-                    </div>
-                    <div class="item izq">
-                        <h4 data-section="courses" data-value="course_title_2">Python sin límites. POO, Tkinter, PySide, etc. +50hrs</h4>
-                        <span class="lugar" data-section="courses" data-value="course_company_2">Udemy</span>
-                        <span class="fecha" data-section="courses" data-value="course_date_2">2023</span>
-                        <p>
-                            <a href="http://ude.my/UC-2ab388c7-8732-4e54-9bf2-0c29d5ded61b" 
-                            target="_blank"
-                            data-section="courses" data-value="course_url_2">Certificado</a>
-                        </p>
-                        <div class="conector1">
-                            <div class="circulo1"></div>
-                        </div>
-                    </div>
+                    <div class="contenedor-cursos" id="contenedor-cursos"></div>
 
                 </div>
 
-                <!-- EXPRECIENCIA -->
+                <!-- COLUMNA DERECHA -->
                 <div class="col derecha animacion">
-                    <h3 class="animacion" data-section="cv" data-value="title">Experiencia</h3>
 
-                    <div class="item der ">
-                        <h4 data-section="cv" data-value="experience_company_3">CAF Chile Línea 1</h4>
-                        <span class="cargo" data-section="cv" data-value="experience_title_3">Técnico mantenimiento, y<br>Supervisor suplente.</span>
-                        <span class="fecha" data-section="cv" data-value="experience_date_3">2019-2022</span>
-                        <p data-section="cv" data-value="experience_description_3">Mantenimiento preventivo y correctivo de diferentes áreas (especialidad neumática).
-                        Supervisor de turno, supervisar trabajos y cumplimiento de las reglas y normas de la empresa, 
-                        y delegación de tareas.</p>
-                        <div class="conector2">
-                            <div class="circulo2"></div>
-                        </div>
-                    </div>
+                    <!-- EXP INFORMATICA -->
+                    <h3 class="animacion" data-section="cv_programmer" data-value="title">Experiencia</h3>
+                    <div class="contenedor-exp-programador" id="contenedor-exp-programador"></div>
 
-                    <div class="item der">
-                        <h4 data-section="cv" data-value="experience_company_2">Rheem chilena SPA </h4>
-                        <span class="cargo" data-section="cv" data-value="experience_title_2">Práctica Ingeniería</span>
-                        <span class="fecha" data-section="cv" data-value="experience_date_2">2 Meses</span>
-                        <p data-section="cv" data-value="experience_description_2">Estandarización de procesos y procedimientos.
-                        Inicio de 5S Kaizen, para implementación futura en taller.</p>
-                        <div class="conector2">
-                            <div class="circulo2"></div>
-                        </div>
-                    </div>
-
-                    <div class="item der">
-                        <h4 data-section="cv" data-value="experience_company_1">Alstom Línea 4 y 4a</h4>
-                        <span class="cargo" data-section="cv" data-value="experience_title_1">Técnico en mantenimiento general</span>
-                        <span class="fecha" data-section="cv" data-value="experience_date_1">2014-2015</span>
-                        <p data-section="cv" data-value="experience_description_1">Mantenimiento preventivo y correctivo en diferentes áreas, Gran Mantenimiento 
-                        de trenes (GR) específicamente del área neumática.</p>
-                        <div class="conector2">
-                            <div class="circulo2"></div>
-                        </div>
-                    </div>
+                    <!-- EXP MECANICA -->
+                    <h3 class="animacion" data-section="cv_mechanic" data-value="title">Experiencia</h3>
+                    <div class="contenedor-exp-mecanico" id="contenedor-exp-mecanico"></div>
                     
                 </div>
 
@@ -484,9 +410,11 @@
         <div class="contenedor-seccion">
             <h2 class="animacion" data-section="projects" data-value="title">Portafolio</h2>
 
-            <div class="galeria animacion">
+            <h3 class="animacion subtitulo-proyectos" data-section="projects" data-value="subtitle1">Proyectos de estudio</h3>
 
-                <div class="proyecto animacion" data-nav="1" id="project1">
+            <div class="galeria animacion" id="galeria">
+
+                <!-- <div class="proyecto animacion" data-nav="1" id="project1">
                     <img src="images/projects/proyecto1_fondo.PNG" alt="app-ingles" title="app-ingles">           
                     <div class="nombre-proyecto">
                         <span data-section="projects" data-value="title1">APP de Inglés</span>
@@ -537,9 +465,17 @@
                         <p data-section="projects" data-value="info2">Proyecto de estudiante</p>
                         <button class="ver-detalle" data-section="projects" data-value="btn2">Ver detalles</button>
                     </div>
-                </div>
+                </div> -->
             
             </div>
+<!-- 
+            <h3 class="animacion subtitulo-proyectos" data-section="projects" data-value="subtitle2">Proyectos profesionales</h3>
+
+            <div class="galeria animacion">
+
+                
+            </div> -->
+
 
             <div class="modal ">
                 <div class="modal-contenedor ">
