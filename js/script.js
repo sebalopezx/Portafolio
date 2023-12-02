@@ -261,7 +261,7 @@ const cargarAnimacion = (entradas, observador) => {
             entrada.target.classList.add("animado");
 
         };
-    });   
+    }, { passive: true });   
 };
 // Parámetros para el intersecter
 const aplicarIntersectionObserver = (selector) => {
@@ -272,7 +272,7 @@ const aplicarIntersectionObserver = (selector) => {
         rootMargin: "50px 200px",
         // threshold: 0.3
         threshold: 0.25
-    });
+    }, { passive: true });
     // Observador de elementos
     animacion.forEach((enlace)=>{
         observador.observe(enlace);
@@ -286,7 +286,10 @@ const aplicarIntersectionObserver = (selector) => {
         observador.observe(elemento);
     });
 };
-
+document.addEventListener("DOMContentLoaded", () => {
+    aplicarIntersectionObserver(".animacion");
+    aplicarIntersectionObserver("nav ul li");
+});
 
 
 // TIPADO AUTOMÁTICO
@@ -825,3 +828,5 @@ async function establecerPDF(idioma){
         };
     };
 };
+
+
