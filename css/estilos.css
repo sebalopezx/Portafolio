@@ -586,14 +586,14 @@ button:hover i{
     border-radius: 5px;
 }
 
-.acercade .fila .col .stack-destacado img{
+.acercade .fila .col .stack-destacado .stack-img{
     display: inline;
     width: 45px;
     height: 45px;
     transition: .8s;
     cursor: pointer;
 }
-.acercade .fila .col .stack-destacado img:hover{
+.acercade .fila .col .stack-destacado .stack-img:hover{
     transform: scale(1.2);
 }
 

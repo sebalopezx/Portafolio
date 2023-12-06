@@ -369,7 +369,7 @@ const crearContenedorInteres = (valor)=>{
 // HTML para contenedores de stack destacado
 const crearContenedorStackDestacado = (stack, index)=>{
     let stackHTML = `
-        <img class="animacion" data-nav="${index}" src="${stack.image}" alt="${stack.name}">`;
+        <img class="animacion stack-img" src="${stack.image}" alt="${stack.name}">`;
     return stackHTML;
 };
 
