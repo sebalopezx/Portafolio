@@ -397,7 +397,7 @@ function esPaginaIndex() {
 if (esPaginaIndex()) {
     window.onscroll = function () {
         efectoHabilidades();
-    };
+    },{ passive:true };
 };
 
 
@@ -445,7 +445,7 @@ const contenedorHabilidades = document.getElementById("contenedor-habilidades");
 const cargarSkills = async(idioma)=>{
     // Se carga la data del JSON segun idioma
     const data = await cargarDatos(idioma);
-    // JSON "interest" entrega una listaIntereses ordenada igual a listaIconos
+    // JSON "skills" entrega una lista ordenada de los elementos
     const listaSkillsTecnicas = data.skills.skill;
     const listaSkillsHerramientas = data.skills.tools;
     const listaSkillsHabilidades = data.skills.ability;
@@ -513,7 +513,7 @@ const contenedorExpMecanico = document.getElementById("contenedor-exp-mecanico")
 const cargarCV = async(idioma)=>{
     // Se carga la data del JSON segun idioma
     const data = await cargarDatos(idioma);
-    // JSON "interest" entrega una listaIntereses ordenada igual a listaIconos
+    // JSON "cv" entrega una lista ordenada de los elementos
     const listaEstudios = data.education.education;
     const listaCursos = data.courses.courses;
     const listaExpProgramador = data.cv_programmer.cv_programmer;
@@ -604,7 +604,7 @@ const contenedorGaleria = document.getElementById("galeria");
 const cargarProyectos = async(idioma)=>{
     // Se carga la data del JSON segun idioma
     const data = await cargarDatos(idioma);
-    // JSON "interest" entrega una listaIntereses ordenada igual a listaIconos
+    // JSON "projects" entrega una lista ordenada de los elementos
     const proyectosConfig = data.projects.projectsConfig;
     const listaProyectos = data.projects.study_projects;
 
@@ -701,100 +701,10 @@ document.addEventListener("DOMContentLoaded", function() {
                 modal.classList.remove('mostrar-detalle');
             });
         }
-
-            // const idiomaActual = obtenerIdiomaSeleccionado();
-
-            // const data = await cargarDatos(idiomaActual);
-            // const listaProyectos = data.projects.study_projects;
-            // // PROJECTS: entrega información general para el contenedor del proyecto y un documento embebido con datos del modal 
-            // const proyecto = listaProyectos[proyectoId];
-
-            // // Crear y Mostrar el modal con click
-            // contenedorModal.innerHTML = crearModal(proyecto);
-            // modal.classList.add('mostrar-detalle');
-
-            // // Para Cerrar el modal
-            // const closeModal = document.querySelector('.modal-close');
-            // closeModal.addEventListener('click', (e) => {
-            //     e.preventDefault();
-            //     modal.classList.remove('mostrar-detalle');
-            // });
-        });
     });
+});
 
 
-
-
-// const crearModal = (proyecto) =>{
-//     let modalHTML = `    
-//         <h3 class="modal-titulo">${proyecto.title}</h3>
-//         <div class="contenedor-modal-img">
-//             <img src="${proyecto.imagen}" alt="${proyecto.title}" title="${proyecto.title}" class="modal-img">
-//         </div>
-//         <p class="modal-parrafo">${proyecto.info1}</p>
-//         <hr>
-//         <p class="modal-parrafo">${proyecto.info2}</p>
-//         <div class="modal-botones">
-//             <a href="${proyecto.ref}" target="_blank">
-//                     <button class="modal-ver">
-//                     <span class="texto-boton">${proyecto.btn1}</span>
-//                     <i class="fa-solid fa-file-export"></i>
-
-//                     <span class="overlay"></span>
-//                 </button>
-//             </a>
-//             <button class="btn modal-close">
-//                 <span class="texto-boton">${proyecto.btn2}</span>
-//                 <i class="fa-solid fa-x"></i>
-//                 <span class="overlay"></span>
-//             </button>
-//             <a href="${proyecto.ref2}" target="_blank">
-//                     <button class="modal-git">
-//                     <span class="texto-boton">${proyecto.btn3}</span>
-//                     <i class="fa-brands fa-github"></i>
-
-//                     <span class="overlay"></span>
-//                 </button>
-//             </a>
-//         </div>`;
-//     return modalHTML;
-// };
-
-
-// // FUNCION DE APERTURA DE MODALES
-
-// const openModal = document.querySelectorAll('.ver-detalle');
-// const modal = document.querySelector('.modal');
-// const contenedorModal = document.querySelector('.modal-contenedor')
-
-
-
-// openModal.forEach((boton) => {
-//     boton.addEventListener('click', async (e) => {
-//         e.preventDefault();
-
-//         let proyectoDiv = boton.closest('.proyecto');
-//         let proyectoId = proyectoDiv.id;
-
-//         const idiomaActual = obtenerIdiomaSeleccionado();
-
-//         const data = await cargarDatos(idiomaActual);
-//         const listaProyectos = data.projects;
-//         // PROJECTS: entrega información general para el contenedor del proyecto y un documento embebido con datos del modal 
-//         const proyecto = listaProyectos[proyectoId];
-
-//         // Crear y Mostrar el modal con click
-//         contenedorModal.innerHTML = crearModal(proyecto);
-//         modal.classList.add('mostrar-detalle');
-
-//         // Para Cerrar el modal
-//         const closeModal = document.querySelector('.modal-close');
-//         closeModal.addEventListener('click', (e) => {
-//             e.preventDefault();
-//             modal.classList.remove('mostrar-detalle');
-//         });
-//     });
-// });
 
 
 
