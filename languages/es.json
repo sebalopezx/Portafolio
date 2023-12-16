@@ -60,12 +60,13 @@
         "skill":[
             {"name":"Python", "image":"images/python.png", "value":"Básico", "lvl":"25"},
             {"name":"Django", "image":"images/django.png", "value":"Básico", "lvl":"25"},
+            {"name":"Node", "image":"images/nodejs.png", "value":"Básico", "lvl":"25"},
             {"name":"HTML5", "image":"images/html5.png", "value":"Básico", "lvl":"25"},
             {"name":"CSS3", "image":"images/css3.png", "value":"Básico", "lvl":"25"},
             {"name":"JavaScript", "image":"images/javascript.png", "value":"Básico", "lvl":"25"},
             {"name":"Bootstrap5", "image":"images/bootstrap.png", "value":"Básico", "lvl":"25"},
+            {"name":"React", "image":"images/react.png", "value":"Básico", "lvl":"25"},
             {"name":"MySQL", "image":"images/mysql.png", "value":"Básico", "lvl":"25"},
-            {"name":"Oracle", "image":"images/oracle.png", "value":"Básico", "lvl":"25"},
             {"name":"Postgre", "image":"images/postgre.png", "value":"Básico", "lvl":"25"},
             {"name":"MongoDB", "image":"images/mongodb.png", "value":"Experto", "lvl":"25"}
         ],
@@ -236,6 +237,23 @@
                 "info2":"Se ha desarrollado una aplicación funcional de gestiónm de citas automotrices. Con diferentes intefaces de (Cliente, Recepcionista y Administrador) en las que se puede gestionar los vehículos y las citas de mantenimiento.",    
                 "ref":"https://gestion-automotriz.onrender.com/",
                 "ref2":"https://github.com/sebalopezx/Gestion_Automotriz"
+            },
+            {
+                "id":"proyecto4",
+                "title": "API Detalles Vehículos",
+                "type":"Proyecto propio",
+                "image1":"images/projects/proyecto4_fondo.png",
+                "image2":"images/projects/proyecto4_modal.png",
+                "languages":[
+                    "images/nodejs.png",
+                    "images/react.png",
+                    "images/bootstrap.png",
+                    "images/mongodb.png"
+                ],
+                "info1":"Proyecto propio desarrollada con el fin de entender sintaxis del stack MERN (Mongo, Express, React con Bootstrap y Node).",
+                "info2":"Es una api simple para guardar información de marcas y modelos con su años respectivos.",    
+                "ref":"https://apicardetails-production.up.railway.app/",
+                "ref2":"https://github.com/sebalopezx/api_CarDetails"
             }
         ]
     },

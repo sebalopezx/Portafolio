@@ -231,6 +231,23 @@
                 "info2":"A functional automotive appointment management application has been developed. With different interfaces (Customer, Receptionist and Administrator) where you can manage vehicles and maintenance appointments.",    
                 "ref":"https://gestion-automotriz.onrender.com/",
                 "ref2":"https://github.com/sebalopezx/Gestion_Automotriz"
+            },
+            {
+                "id":"proyecto4",
+                "title": "API Car Details",
+                "type":"Own project",
+                "image1":"images/projects/proyecto4_fondo.png",
+                "image2":"images/projects/proyecto4_modal.png",
+                "languages":[
+                    "images/nodejs.png",
+                    "images/react.png",
+                    "images/bootstrap.png",
+                    "images/mongodb.png"
+                ],
+                "info1":"Personal project developed to understand the syntax of the MERN stack (Mongo, Express, React with Bootstrap, and Node).",
+                "info2":"It's a simple API to save information about car details with brands, models and years. ",    
+                "ref":"https://apicardetails-production.up.railway.app/",
+                "ref2":"https://github.com/sebalopezx/api_CarDetails"
             }
         ]
     },
