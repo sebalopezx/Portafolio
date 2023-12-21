@@ -66,7 +66,7 @@
             {"name":"Bootstrap5", "image":"images/bootstrap.png", "value":"Basic", "lvl":"25"},
             {"name":"MySQL", "image":"images/mysql.png", "value":"Basic", "lvl":"25"},
             {"name":"Oracle", "image":"images/oracle.png", "value":"Basic", "lvl":"25"},
-            {"name":"Postgre", "image":"images/postgre.png", "value":"Basic", "lvl":"25"},
+            {"name":"PostgreSQL", "image":"images/postgre.png", "value":"Basic", "lvl":"25"},
             {"name":"MongoDB", "image":"images/mongodb.png", "value":"Basic", "lvl":"25"}
         ],
         "title2":"Tools",
