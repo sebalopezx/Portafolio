@@ -68,7 +68,7 @@
             {"name":"React", "image":"images/react.png", "value":"Básico", "lvl":"25"},
             {"name":"MySQL", "image":"images/mysql.png", "value":"Básico", "lvl":"25"},
             {"name":"Postgre", "image":"images/postgre.png", "value":"Básico", "lvl":"25"},
-            {"name":"MongoDB", "image":"images/mongodb.png", "value":"Experto", "lvl":"25"}
+            {"name":"MongoDB", "image":"images/mongodb.png", "value":"Básico", "lvl":"25"}
         ],
         "title2":"Herramientas",
         "tools":[
