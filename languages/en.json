@@ -80,7 +80,7 @@
         "tools":[
             {"name":"Git", "image":"images/tools/git.png", "value":"Basic", "lvl":"25"},
             {"name":"Github", "image":"images/tools/github.png", "value":"Basic", "lvl":"25"},
-            {"name":"JSON", "image":"images/tools/json.png", "value":"Básico", "lvl":"25"}
+            {"name":"JSON", "image":"images/tools/json.png", "value":"Basic", "lvl":"25"}
         ],
         "title3":"Professional Skills",
         "ability":[
@@ -99,19 +99,22 @@
                 "name":"Programmer analyst",
                 "place":"Inacap",
                 "date":"2022-2024",
-                "description":"Studying"
+                "description":"Studying",
+                "pdf":""
             },
             {
                 "name":"Mechanical and autotronics engineer",
                 "place":"Duoc UC",
                 "date":"2016-2019",
-                "description":"Graduate"
+                "description":"Graduate",
+                "pdf":"docs/certificados/certificado_titulo_ingenieriamecanica"
             },
             {
                 "name":"Mechanical and autotronic technician",
                 "place":"Duoc UC",
                 "date":"2011-2013",
-                "description":"Graduate"
+                "description":"Graduate",
+                "pdf":"docs/certificados/certificado_titulo_tecnico"
             }
         ]
     },
