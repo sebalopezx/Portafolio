@@ -29,24 +29,24 @@
             <div class="logo animacion">
                 <a class="logo-href" href="#">
                     <img class="logo-img" src="images/template/seba_logo.JPG" width="30px" alt="">
-                    eba CV "Informática"
+                    eba Certificados
                 </a>
             </div>
 
             <!-- CAMBIO DE IDIOMA -->
-            <div id="idiomas" class="idiomas animacion">
+            <!-- <div id="idiomas" class="idiomas animacion">
                 <div class="idioma_item" data-language="es">
-                    <img src="icons/chile_64px.png" alt="Chile" title="Español">
+                    <img src="icons/chile_64px.png" alt="Chile">
                 </div>
                 <div class="idioma_item" data-language="en">
-                    <img src="icons/estados-unidos_64px.png" alt="Estados Unidos" title="Inglés">
+                    <img src="icons/estados-unidos_64px.png" alt="Estados Unidos">
                 </div>
-            </div>
+            </div> -->
 
             <nav id="nav" class="">
                 <ul>
                     <li data-nav="1">
-                        <a href="./index.html" id="click-cv" data-section="cv_pagina" data-value="nav"></a>
+                        <a href="./index.html#curriculum" id="click-cv" data-section="cv_pagina" data-value="nav"></a>
                     </li>
                 </ul>
             </nav>
@@ -58,9 +58,19 @@
     </div>
 
     <!-- CURRICULUM -->
+    
+    <div class="contenedor-botones-certificados">
+
+        <button class="btn-certificado" data-src="docs/certificados/certificado_titulo_tecnico.pdf">Título Técnico</button>
+        <button class="btn-certificado" data-src="docs/certificados/certificado_titulo_ingenieriamecanica.pdf">Título Ingenieria Mecánica</button>
+        <button class="btn-certificado" data-src="" disabled>Título Analista Programador</button>
+
+    </div>
+    
     <div class="contenedor-cv">
 
-        <iframe src="docs/SebastianLopezCV.pdf" class="pdfview" id="pdf" frameborder="0" title="pdf"></iframe>
+        <iframe src="docs/certificados/certificado_titulo_tecnico.pdf" 
+        class="pdfview" id="pdf-iframe" frameborder="0" title="pdf"></iframe>
 
     </div>
     

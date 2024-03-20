@@ -71,6 +71,7 @@ const cambiarIdioma = async (lenguaje) =>{
     cambiarIdiomaSeleccionado(texto.idioma);
 };
 
+
 // Cuando se carga la pagina se ejecutan funciones principales para cargar idioma
 document.addEventListener("DOMContentLoaded", async () => {
     // Cargar contenido inicial en el idioma deseado y segun pagina ejectuada
@@ -369,7 +370,7 @@ const crearContenedorInteres = (valor)=>{
 // HTML para contenedores de stack destacado
 const crearContenedorStackDestacado = (stack, index)=>{
     let stackHTML = `
-        <img class="animacion stack-img" src="${stack.image}" alt="${stack.name}">`;
+        <img class="animacion stack-img" src="${stack.image}" alt="${stack.name}" title="${stack.name}">`;
     return stackHTML;
 };
 
@@ -475,13 +476,34 @@ const recorrerListaSkills = (lista, crearSkill)=>{
 
 // Creacion de estudios, cursos y experiencia
 
+{/* <p>${cv.description}</p> */}
+
 const crearCV =(cv, columna, posicion)=>{
+    const agregar_tech =(cv)=>{
+        let tech = ''
+        let lista_tech = cv.tech
+        // console.log(lista_tech);
+        for (const t of lista_tech) {
+            tech += ` <img class="img-project-tech" src="${t.image}" alt="${t.name}" title="${t.name}"/> `
+        }
+        return tech;
+    }
     let cvHTML = `
         <div class="${columna}">
             <h4">${cv.name}</h4>
-            <span class="lugar">${cv.place}</span>
+            <span class="lugar">${cv.place} 
+                <a class="project-href" href="${cv.href}">${cv.href ? '&#8617;' : ''}</a>
+            </span>
             <span class="fecha">${cv.date}</span>
-            <p>${cv.description}</p>
+            ${cv.tech 
+                ? agregar_tech(cv)
+                : ''
+            }
+            <p>
+                ${cv.pdf
+                ? `<a class="project-href" href="certificados.html">${cv.description} &#8617;</a>`
+                : `${cv.description}`}
+            </p>
             
             <div class="conector${posicion}">
                 <div class="circulo${posicion}"></div>
@@ -496,7 +518,7 @@ const crearCursos =(cv, columna, posicion)=>{
             <span class="lugar">${cv.company}</span>
             <span class="fecha">${cv.date}</span>
             <p>
-                <a href="${cv.url}" target="_blank">${cv.description}</a>
+                <a href="${cv.url}" target="_blank">${cv.description} &#8617;</a>
             </p>
             <div class="conector${posicion}">
                 <div class="circulo${posicion}"></div>
@@ -669,7 +691,6 @@ const crearModal = (proyecto, proyectosConfig) =>{
 
 // FUNCION DE APERTURA DE MODALES
 
-
 document.addEventListener("DOMContentLoaded", function() {
     // const openModal = document.querySelectorAll('.ver-detalle');
     const modal = document.querySelector('.modal');
@@ -677,7 +698,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
     document.body.addEventListener('click', async (e)=>{
         if (e.target.classList.contains('ver-detalle')){
-
+            
             e.preventDefault();
             
             let proyectoDiv = e.target.closest('.proyecto');
@@ -737,6 +758,32 @@ async function establecerPDF(idioma){
             document.getElementById('pdf').src = pdf_data.pdf;
         };
     };
+    if (window.location.pathname.endsWith("cv_mechanic.html")){
+        if(data && data.cv_pagina){
+            const pdf_data = data.cv_pagina;
+            document.getElementById('pdf').src = pdf_data.pdf_mechanic;
+        };
+    };
 };
 
+
+if (window.location.pathname.endsWith("certificados.html")){
+    document.addEventListener('DOMContentLoaded', function () {
+        var botones = document.querySelectorAll('.contenedor-botones-certificados button');
+
+        // Función para cambiar el PDF mostrado
+        function cambiarPDF(event) {
+            var boton = event.target; // El botón que fue clickeado
+            console.log(boton);
+            var src = boton.getAttribute('data-src'); // Obtiene el 'data-src' del botón
+            var iframe = document.getElementById('pdf-iframe'); // Selecciona el iframe
+            iframe.src = src; // Cambia el 'src' del iframe al del botón
+        }
+
+        // Añade el evento 'click' a cada botón
+        botones.forEach(function (boton) {
+            boton.addEventListener('click', cambiarPDF);
+        });
+    });
+};
 

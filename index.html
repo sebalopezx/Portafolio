@@ -33,15 +33,18 @@
     <div class="contenedor-header animacion" id="contenedor-header">
         <header>
             <div class="logo animacion">
-                <a href="#">Seba</a>
+                <a class="logo-href" href="#">
+                    <img class="logo-img" src="images/template/seba_logo.JPG" width="30px" alt="">
+                    eba
+                </a>
             </div>
             <!-- CAMBIO DE IDIOMA -->
             <div id="idiomas" class="idiomas animacion">
                 <div class="idioma_item" data-language="es">
-                    <img src="icons/chile_64px.png" alt="Chile">
+                    <img src="icons/chile_64px.png" alt="Chile" title="Español">
                 </div>
                 <div class="idioma_item" data-language="en">
-                    <img src="icons/estados-unidos_64px.png" alt="Estados Unidos">
+                    <img src="icons/estados-unidos_64px.png" alt="Estados Unidos" title="Inglés">
                 </div>
             </div>
             
@@ -91,8 +94,15 @@
                 </nav>
             </div>
             <a href="cv.html">
-                <button id="descargaCV" class="btn boton animacion" name="descargaCV" onclick="descargaCV()">
-                    <span class="texto-boton">CV</span>
+                <button id="descargaCV" class="btn boton animacion" name="descargaCV" >
+                    <span data-section="btn_cv" data-value="btn1" class="texto-boton">CV Informática</span>
+                    <i class="fa-solid fa-download"></i>
+                    <span class="overlay"></span>
+                </button> 
+            </a>
+            <a href="cv_mechanic.html">
+                <button id="descargaCV" class="btn boton animacion" name="descargaCV" >
+                    <span data-section="btn_cv" data-value="btn2" class="texto-boton">CV Mecánica</span>
                     <i class="fa-solid fa-download"></i>
                     <span class="overlay"></span>
                 </button>

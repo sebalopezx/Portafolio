@@ -186,6 +186,13 @@ button:hover i{
     opacity: 0;
     transition: 1.5s;
 }
+.contenedor-header header .logo .logo-href {
+    vertical-align: middle;
+}
+.contenedor-header header .logo .logo-href .logo-img {
+    margin-right: -11px;
+    margin-bottom: -5px;
+}
 .contenedor-header header .logo a{
     font-family: "fuentePrincipal"; 
     font-size: 36px;
@@ -289,6 +296,19 @@ button:hover i{
     color: var(--color-primario);
 }
 
+.contenedor-botones-certificados {
+    display: flex;
+    margin-top: 70px;   
+}
+.contenedor-botones-certificados .btn-certificado {
+    width: 300px;
+    transition: .5s !important;
+}
+.contenedor-botones-certificados .btn-certificado:disabled {
+    opacity: 0.3;
+    cursor: wait;
+}
+
 @media screen and (max-width:768px){
     #contenedor-cv header .logo a{
         font-size: 1.5rem;
@@ -314,6 +334,9 @@ button:hover i{
     }
     .idiomas .idioma_item img{
         width: 25px;   
+    }
+    .contenedor-botones-certificados {
+        display: block;
     }
 }
 
@@ -362,9 +385,9 @@ button:hover i{
     box-shadow: 0 0 50px 1px var(--color-secundario);
     
     display: block;
-    width: 250px;
+    width: 200px;
     margin: auto;
-    border-radius: 50%;
+    border-radius: 20%;
     cursor: pointer;
     transition: .5s;
 
@@ -379,7 +402,7 @@ button:hover i{
 }
 .inicio .banner img:hover{
     /* -webkit-transform:scale(1); */
-    transform:scale(1.12);
+    transform:scale(1.08);
     box-shadow: 0 0 50px 1px var(--color-primario);
 } 
 .inicio .banner h1{
@@ -477,6 +500,9 @@ button:hover i{
 .inicio .banner .boton.animado{
     opacity: 1;
     transform: translateX(0px);
+}
+.inicio .banner button {
+    margin-bottom: 15px !important;
 }
 .inicio .banner button i{
     display: none;
@@ -915,6 +941,17 @@ button:hover i{
     margin-bottom: 30px;
     background-color: var(--color-menu);
     position: relative;
+}
+.curriculum .fila .item .lugar .project-href {
+    text-decoration: none !important;
+}
+.curriculum .fila .item .img-project-tech{
+    width: 23px;
+    transition: .5s;
+}
+.curriculum .fila .item .img-project-tech:hover{
+    transform: scale(1.3);
+    cursor: pointer;
 }
 .curriculum .fila .item h4{
     font-size: 20px;

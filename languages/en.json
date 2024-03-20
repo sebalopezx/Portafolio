@@ -16,6 +16,10 @@
         "title":["Junior Developer", "Mechanic Engineer"]
     },
 
+    "btn_cv":{
+        "btn1":"CV Developer",
+        "btn2":"CV Mechanic"
+    },
 
     "profile":{
         "name":"Hi, i'm Sebastián.",
@@ -26,17 +30,19 @@
         "title1":"Personal Information",
         "title_info1":"Phone number:",
         "title_info2":"Language interests:",
-        "info2":"Python or Java. In addition, I am willing to work in languages that I do not know, with the aim of learning and acquiring new knowledge.",
+        "info2":"Python or MERN. In addition, I am willing to work in languages that I do not know, with the aim of learning and acquiring new knowledge.",
         "title_info3":"IT Professional Interest:",
         "info3":"I'm interested in learning about the Full Stack or Backend area",
         "title_info4":"Main stack",
         "stack":[
             {"name":"Python", "image":"images/python.png"},
             {"name":"Django", "image":"images/django.png"},
+            {"name":"Node", "image":"images/nodejs.png"},
             {"name":"HTML5", "image":"images/html5.png"},
             {"name":"CSS3", "image":"images/css3.png"},
             {"name":"JavaScript", "image":"images/javascript.png"},
             {"name":"Bootstrap5", "image":"images/bootstrap.png"},
+            {"name":"React", "image":"images/react.png"},
             {"name":"MySQL", "image":"images/mysql.png"}
         ],
         "title_info5":"Disponibilidad:",
@@ -60,25 +66,29 @@
         "skill":[
             {"name":"Python", "image":"images/python.png", "value":"Basic", "lvl":"25"},
             {"name":"Django", "image":"images/django.png", "value":"Basic", "lvl":"25"},
+            {"name":"Node", "image":"images/nodejs.png", "value":"Basic", "lvl":"25"},
             {"name":"HTML5", "image":"images/html5.png", "value":"Basic", "lvl":"25"},
             {"name":"CSS3", "image":"images/css3.png", "value":"Basic", "lvl":"25"},
             {"name":"JavaScript", "image":"images/javascript.png", "value":"Basic", "lvl":"25"},
             {"name":"Bootstrap5", "image":"images/bootstrap.png", "value":"Basic", "lvl":"25"},
+            {"name":"React", "image":"images/react.png", "value":"Basic", "lvl":"25"},
             {"name":"MySQL", "image":"images/mysql.png", "value":"Basic", "lvl":"25"},
-            {"name":"Oracle", "image":"images/oracle.png", "value":"Basic", "lvl":"25"},
             {"name":"PostgreSQL", "image":"images/postgre.png", "value":"Basic", "lvl":"25"},
             {"name":"MongoDB", "image":"images/mongodb.png", "value":"Basic", "lvl":"25"}
         ],
         "title2":"Tools",
         "tools":[
-            {"name":"Git", "image":"images/git.png", "value":"Basic", "lvl":"25"},
-            {"name":"Github", "image":"images/github.png", "value":"Basic", "lvl":"25"}
+            {"name":"Git", "image":"images/tools/git.png", "value":"Basic", "lvl":"25"},
+            {"name":"Github", "image":"images/tools/github.png", "value":"Basic", "lvl":"25"},
+            {"name":"JSON", "image":"images/tools/json.png", "value":"Básico", "lvl":"25"}
         ],
         "title3":"Professional Skills",
         "ability":[
             {"name":"Responsibility", "icon":"fa-regular fa-clock", "value":"Skill", "lvl":"100"},
             {"name":"Methodical", "icon":"fa-sharp fa-solid fa-list-check", "value":"Skill", "lvl":"100"},
-            {"name":"Work team", "icon":"fa-solid fa-people-group", "value":"Skill", "lvl":"100"}
+            {"name":"Work team", "icon":"fa-solid fa-people-group", "value":"Skill", "lvl":"100"},
+            {"name":"English reading", "icon":"fa-solid fa-language", "value":"B-1", "lvl":"40"},
+            {"name":"English speaking", "icon":"fa-solid fa-microphone", "value":"A-2", "lvl":"25"}
         ]
     },
 
@@ -133,10 +143,38 @@
         "title":"Programming experience",
         "cv_programmer":[
             {
-                "name":"Estudiante.",
+                "name":"Student.",
                 "place":"Study projects",
                 "date":"2022-2023",
                 "description":"Projects to practice and learn different technologies. Studying the syntax, structure, design patterns, logic, etc..."
+            },
+            {
+                "name":"Student.",
+                "place":"Appointment Management",
+                "date":"2023",
+                "description":"Management of maintenance appointments with different interfaces and ranks (Customer, Receptionist, Administrator). <br> Know the language, their syntax and structure.",
+                "tech": [
+                    {"name":"Python", "image":"images/python.png"},
+                    {"name":"Django", "image":"images/django.png"},
+                    {"name":"HTML5", "image":"images/html5.png"},
+                    {"name":"Bootstrap5", "image":"images/bootstrap.png"},
+                    {"name":"PostgreSQL", "image":"images/postgre.png"}
+                ],
+                "href":"#proyectos"
+            },
+            {
+                "name":"Student.",
+                "place":"API Vehicle details",
+                "date":"2023",
+                "description":"Vehicle management for brands and models <br> Understand the use of the Rest Full API, and integration through endpoint to the “Appointment Management” project.",
+                "tech": [
+                    {"name":"Node", "image":"images/nodejs.png"},
+                    {"name":"JavaScript", "image":"images/javascript.png"},
+                    {"name":"React", "image":"images/react.png"},
+                    {"name":"Bootstrap5", "image":"images/bootstrap.png"},
+                    {"name":"MongoDB", "image":"images/mongodb.png"}
+                ],
+                "href":"#proyectos"
             }
         ]
     },
@@ -234,7 +272,7 @@
             },
             {
                 "id":"proyecto4",
-                "title": "API Car Details",
+                "title": "API Vehicle Details",
                 "type":"Own project",
                 "image1":"images/projects/proyecto4_fondo.png",
                 "image2":"images/projects/proyecto4_modal.png",
