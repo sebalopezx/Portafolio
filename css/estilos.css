@@ -126,6 +126,7 @@ button:hover i{
     opacity: .1;
     transition: 1.5s ease;
     transform: scale(0);
+    margin-right: 15px;
 }
 .idiomas.animado{
     opacity: 1;
@@ -198,7 +199,7 @@ button:hover i{
     font-size: 36px;
     color: var(--color-primario);
     text-decoration: none;
-    text-shadow: 0 0 10px var(--color-primario);
+    text-shadow: 0 0 5px var(--color-primario);
 }
 .contenedor-header header .logo.animado{
     opacity: 1;
@@ -1558,7 +1559,7 @@ footer h3.animado{
     }
 
     .inicio .banner{
-        margin-top: 90px;
+        margin-top: 30px;
         transform: translateX(-150px);
     }
  
