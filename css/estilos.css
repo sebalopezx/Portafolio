@@ -8,6 +8,7 @@
     --color-background: #253237;
     --color-close: #ff0000;
     --color-git: #09c6fffd;
+    --color-company: #ffe600fd;
 
     /* ESTANDARIZACION DE SHADOWS */
     --shadow-btn:   
@@ -25,6 +26,11 @@
         0 0 25px var(--color-git),
         0 0 100px var(--color-git),
         0 0 200px var(--color-git); 
+    --shadow-btn-company:
+        0 0 5px var(--color-company),
+        0 0 25px var(--color-company),
+        0 0 100px var(--color-company),
+        0 0 200px var(--color-company); 
 }
 
 /* ESTANDARIZACION DE FUENTE */
@@ -83,6 +89,18 @@ h3{
 h2,h3{
     text-align: center;
     opacity: 0;
+}
+
+.link{
+    transition: .5s;
+    color: var(--color-terciario);
+}
+.link-white{
+    transition: .5s;
+    color: var(--color-secundario);
+}
+.link:hover,.link-white:hover{
+    color: var(--color-primario);
 }
 
 /* BOTONES */
@@ -384,6 +402,7 @@ button:hover i{
 .inicio .banner img{
     margin-top: 40px;
     box-shadow: 0 0 50px 1px var(--color-secundario);
+    /* border: 3px solid whitesmoke; */
     
     display: block;
     width: 200px;
@@ -541,13 +560,6 @@ button:hover i{
     margin-bottom: 0px;
     color: var(--color-terciario);
     font-weight: bold;
-}
-.acercade .contenedor-seccion .contenedor-informacion a{
-    transition: .5s;
-    color: var(--color-terciario);
-}
-.acercade .contenedor-seccion .contenedor-informacion a:hover{
-    color: var(--color-primario);
 }
 .acercade .contenedor-informacion p{
     text-align: justify;
@@ -781,7 +793,7 @@ button:hover i{
 }
 .skills .skill .nombre-skill{
     display: block;
-    margin-top: 10px;
+    margin-top: 13px;
     opacity: 0;
     /* transition: opacity 0.5s ease-in-out; */
 }
@@ -812,7 +824,7 @@ button:hover i{
 
 .skills .skill .barra-skill .nombre-habilidad{
     display: block;
-    margin-top: 10px;
+    margin-top: 13px;
     /* margin-right: auto;
     text-align: start; */
     /* padding-bottom: 505px; */
@@ -854,8 +866,10 @@ button:hover i{
     position: absolute;
     height: 25px;
     width: fit-content;
+    padding: 2px;
     background-color: var(--color-primario);
     /* box-shadow: var(--shadow-btn); */
+    box-shadow: 0 0 15px var(--color-primario);
     color: var(--color-menu);
     border-radius: 10px;
     line-height: 40px;
@@ -974,7 +988,6 @@ button:hover i{
 }
 .curriculum .fila .item a{
     transition: .5s;
-    color: var(--color-secundario);
 }
 .curriculum .fila .item a:hover{
     color: var(--color-primario);
@@ -1215,14 +1228,16 @@ button:hover i{
     display: flex;
     justify-content: center;
     align-items: center;
+    text-align: center;
 }
 .proyectos .modal .modal-contenedor a{
     text-decoration: none;
 }
-.proyectos .modal .modal-contenedor .modal-ver,.modal-close,.modal-git{
+.proyectos .modal .modal-contenedor .modal-ver,.modal-close,.modal-git,.modal-company{
     width: 100px;
     height: 40px;
     margin: 5px;
+    padding: 0;
     transition: .5s;
 }
 .proyectos .modal .modal-contenedor .modal-ver{
@@ -1237,13 +1252,19 @@ button:hover i{
     background-color: #09c6ff75;
     border: 1px solid var(--color-git) !important;
 }
+.proyectos .modal .modal-contenedor .modal-company {
+    background-color: #ada206;
+    border: 1px solid var(--color-company) !important;
+}
 
 .proyectos .modal .modal-contenedor .modal-ver i,
 .proyectos .modal .modal-contenedor .modal-close i,
 .proyectos .modal .modal-contenedor .modal-git i,
+.proyectos .modal .modal-contenedor .modal-company i,
 .proyectos .modal .modal-contenedor .modal-ver:hover .texto-boton,
 .proyectos .modal .modal-contenedor .modal-close:hover .texto-boton,
-.proyectos .modal .modal-contenedor .modal-git:hover .texto-boton{
+.proyectos .modal .modal-contenedor .modal-git:hover .texto-boton,
+.proyectos .modal .modal-contenedor .modal-company:hover .texto-boton{
     display: none;
 }
 .proyectos .modal .modal-contenedor .modal-ver:hover{
@@ -1252,7 +1273,8 @@ button:hover i{
 }
 .proyectos .modal .modal-contenedor .modal-ver:hover i,
 .proyectos .modal .modal-contenedor .modal-close:hover i,
-.proyectos .modal .modal-contenedor .modal-git:hover i{
+.proyectos .modal .modal-contenedor .modal-git:hover i,
+.proyectos .modal .modal-contenedor .modal-company:hover i{
     display: contents;
     color: var(--color-menu);
     font-size: 18px;
@@ -1275,6 +1297,10 @@ button:hover i{
 .proyectos .modal .modal-contenedor .modal-git:hover{
     background-color: var(--color-git);
     box-shadow: var(--shadow-btn-git);
+}
+.proyectos .modal .modal-contenedor .modal-company:hover{
+    background-color: var(--color-company);
+    box-shadow: var(--shadow-btn-company);
 }
 
 

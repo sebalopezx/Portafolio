@@ -26,7 +26,7 @@
         "name":"Hola, soy Sebastián.",
         "description":"Como estudiante de Analista Programador estoy en busca de oportunidades para realizar mi práctica profesional, interesado en las áreas de backend y fullstack. Me considero una persona responsable, organizada, con enfoque proactivo y con una firme disposición para aprender y crecer tanto en el ámbito laboral como personal.",
         "description2":"Mi objetivo es aprovechar mi experiencia en ingeniería mecánica junto con mis habilidades en programación para aportar soluciones innovadoras y eficientes. Estoy comprometido con el aprendizaje continuo y estoy entusiasmado por enfrentar nuevos desafíos que me permitan expandir mis conocimientos y habilidades.",
-        "description3":"Poseo <a href='#skills'>conocimientos básicos</a> en diferentes tecnologías, y me encuentro complementando mis estudios con cursos en Udemy mientras termino mi carrera.",
+        "description3":"Poseo <a class='link' href='#skills'>conocimientos básicos</a> en diferentes tecnologías, y me encuentro complementando mis estudios con cursos en Udemy mientras termino mi carrera.",
         
         "title1":"Datos Personales",
         "title_info1":"Número Télefono:",
@@ -38,16 +38,14 @@
         "stack":[
             {"name":"Python", "image":"images/python.png"},
             {"name":"Django", "image":"images/django.png"},
-            {"name":"Node", "image":"images/nodejs.png"},
             {"name":"HTML5", "image":"images/html5.png"},
             {"name":"CSS3", "image":"images/css3.png"},
             {"name":"JavaScript", "image":"images/javascript.png"},
             {"name":"Bootstrap5", "image":"images/bootstrap.png"},
-            {"name":"React", "image":"images/react.png"},
             {"name":"MySQL", "image":"images/mysql.png"}
         ],
         "title_info5":"Disponibilidad:",
-        "info5":"INMEDIATA!.",
+        "info5":"NO INMEDIATA!.",
 
         "title2":"Intereses",
         "interests":[
@@ -65,30 +63,36 @@
         "title":"Skills Técnicas",
         "values": ["Básico","Medio","Experto","Senior"],
         "skill":[
-            {"name":"Python", "image":"images/python.png", "value":"Básico", "lvl":"25"},
-            {"name":"Django", "image":"images/django.png", "value":"Básico", "lvl":"25"},
+            {"name":"Python", "image":"images/python.png", "value":"Medio", "lvl":"45"},
+            {"name":"Django", "image":"images/django.png", "value":"Medio", "lvl":"45"},
             {"name":"Node", "image":"images/nodejs.png", "value":"Básico", "lvl":"25"},
-            {"name":"HTML5", "image":"images/html5.png", "value":"Básico", "lvl":"25"},
-            {"name":"CSS3", "image":"images/css3.png", "value":"Básico", "lvl":"25"},
-            {"name":"JavaScript", "image":"images/javascript.png", "value":"Básico", "lvl":"25"},
-            {"name":"Bootstrap5", "image":"images/bootstrap.png", "value":"Básico", "lvl":"25"},
+            {"name":"Java", "image":"images/java.png", "value":"Inicial", "lvl":"10"},
+            {"name":"HTML5", "image":"images/html5.png", "value":"Medio", "lvl":"45"},
+            {"name":"CSS3", "image":"images/css3.png", "value":"Medio", "lvl":"45"},
+            {"name":"JavaScript", "image":"images/javascript.png", "value":"Medio", "lvl":"45"},
+            {"name":"Bootstrap5", "image":"images/bootstrap.png", "value":"Medio", "lvl":"45"},
             {"name":"React", "image":"images/react.png", "value":"Básico", "lvl":"25"},
+            {"name":"Angular", "image":"images/angular.png", "value":"Inicial", "lvl":"10"},
             {"name":"MySQL", "image":"images/mysql.png", "value":"Básico", "lvl":"25"},
             {"name":"Postgre", "image":"images/postgre.png", "value":"Básico", "lvl":"25"},
             {"name":"MongoDB", "image":"images/mongodb.png", "value":"Básico", "lvl":"25"}
         ],
         "title2":"Herramientas",
         "tools":[
-            {"name":"Git", "image":"images/tools/git.png", "value":"Básico", "lvl":"25"},
-            {"name":"Github", "image":"images/tools/github.png", "value":"Básico", "lvl":"25"},
-            {"name":"JSON", "image":"images/tools/json.png", "value":"Básico", "lvl":"25"}
+            {"name":"Excel", "image":"images/tools/excel.png", "value":"Medio", "lvl":"45"},
+            {"name":"Git", "image":"images/tools/git.png", "value":"Medio", "lvl":"45"},
+            {"name":"Github", "image":"images/tools/github.png", "value":"Medio", "lvl":"45"},
+            {"name":"JSON", "image":"images/tools/json.png", "value":"Medio", "lvl":"45"},
+            {"name":"HTMX", "image":"images/tools/htmx.png", "value":"Medio", "lvl":"45"},
+            {"name":"Docker", "image":"images/tools/docker.png", "value":"Básico", "lvl":"25"},
+            {"name":"Amazon Web Services", "image":"images/tools/aws.png", "value":"Inicial", "lvl":"10"}
         ],
         "title3":"Skills Profesionales",
         "ability":[
             {"name":"Responsable", "icon":"fa-regular fa-clock", "value":"Skill", "lvl":"100"},
             {"name":"Ordenado", "icon":"fa-sharp fa-solid fa-list-check", "value":"Skill", "lvl":"100"},
             {"name":"Trabajo en equipo", "icon":"fa-solid fa-people-group", "value":"Skill", "lvl":"100"},
-            {"name":"Inglés escrito", "icon":"fa-solid fa-language", "value":"B-1", "lvl":"40"},
+            {"name":"Inglés escrito", "icon":"fa-solid fa-language", "value":"B-1", "lvl":"45"},
             {"name":"Inglés hablado", "icon":"fa-solid fa-microphone", "value":"A-2", "lvl":"25"}
         ]
     },
@@ -138,6 +142,13 @@
                 "date":"2023", 
                 "url":"http://ude.my/UC-2ab388c7-8732-4e54-9bf2-0c29d5ded61b",
                 "description":"Certificado"
+            },
+            {
+                "name":"Universidad De Excel!", 
+                "company":"Udemy", 
+                "date":"2024", 
+                "url":"http://ude.my/UC-c2847eca-33b3-42c0-92d4-b43338760944",
+                "description":"Certificado"
             }
         ]
     },
@@ -147,10 +158,33 @@
         "title":"Experiencia en Informática",
         "cv_programmer":[
             {
+                "name":"Independiente - Híbrido.",
+                "place":"Syzlab",
+                "date":"2024",
+                "description":"Desarrollo de aplicación de citas <a class='link' href='https://ddirt.com/'>Ddirt.com</a>. <br> Creación de funciones (backend y frontend). <br> Seguimiento de buenas prácticas y sintaxys.",
+                "tech": [
+                    {"name":"Django", "image":"images/django.png"},
+                    {"name":"CSS", "image":"images/css3.png"},
+                    {"name":"JavaScript", "image":"images/javascript.png"},
+                    {"name":"Bootstrap5", "image":"images/bootstrap.png"},
+                    {"name":"HTMX", "image":"images/tools/htmx.png"},
+                    {"name":"Docker", "image":"images/tools/docker.png"}
+                ],
+                "href":"#proyectos"
+            },
+            {
                 "name":"Estudiante.",
-                "place":"Proyectos de estudio.",
-                "date":"2022-2023",
-                "description":"Proyectos para practicar y aprender diferentes tecnologías. Estudiando su sintaxis, estructura, patrones de diseño, lógica, etc..."
+                "place":"API Detalle de vehículos.",
+                "date":"2023",
+                "description":"Gestión de vehículos para marcas y modelos. <br> Entender uso de API Rest Full, e integración mediante endpoint a proyecto de “Gestión automotriz”.",
+                "tech": [
+                    {"name":"Node", "image":"images/nodejs.png"},
+                    {"name":"JavaScript", "image":"images/javascript.png"},
+                    {"name":"React", "image":"images/react.png"},
+                    {"name":"Bootstrap5", "image":"images/bootstrap.png"},
+                    {"name":"MongoDB", "image":"images/mongodb.png"}
+                ],
+                "href":"#proyectos"
             },
             {
                 "name":"Estudiante.",
@@ -168,21 +202,12 @@
             },
             {
                 "name":"Estudiante.",
-                "place":"API Detalle de vehículos.",
-                "date":"2023",
-                "description":"Gestión de vehículos para marcas y modelos. <br> Entender uso de API Rest Full, e integración mediante endpoint a proyecto de “Gestión automotriz”.",
-                "tech": [
-                    {"name":"Node", "image":"images/nodejs.png"},
-                    {"name":"JavaScript", "image":"images/javascript.png"},
-                    {"name":"React", "image":"images/react.png"},
-                    {"name":"Bootstrap5", "image":"images/bootstrap.png"},
-                    {"name":"MongoDB", "image":"images/mongodb.png"}
-                ],
-                "href":"#proyectos"
+                "place":"Proyectos de estudio.",
+                "date":"2022-2023",
+                "description":"Proyectos para practicar y aprender diferentes tecnologías. Estudiando su sintaxis, estructura, patrones de diseño, lógica, etc..."
             }
         ]
     },
-
 
     "cv_mechanic":{
         "title":"Experiencia en Mecánica",
@@ -191,25 +216,33 @@
                 "name":"Técnico mantenimiento, y<br>Supervisor suplente.",
                 "place":"CAF Chile Línea 1",
                 "date":"2019-2022",
-                "description":"Mantenimiento preventivo y correctivo de diferentes áreas, especialidad neumática. <br>Supervisor de turno, supervisar trabajos y cumplimiento de las reglas y normas de la empresa, y delegación de tareas."
+                "description":"Mantenimiento preventivo y correctivo de diferentes áreas, especialidad neumática. <br>Supervisor de turno, supervisar trabajos y cumplimiento de las reglas y normas de la empresa, y delegación de tareas.",
+                "tech": [
+                    {"name":"Metro", "image":"images/mecanica/metro.png"},
+                    {"name":"Mantenimiento", "image":"images/mecanica/mantenimiento.png"}
+                ]
             },
             {
                 "name":"Práctica Ingeniería",
                 "place":"Rheem chilena SPA",
                 "date":"2 Meses",
-                "description":"Estandarización de procesos y procedimientos. <br>Inicio de 5S Kaizen, para implementación futura en taller."
+                "description":"Estandarización de procesos y procedimientos. <br>Inicio de 5S Kaizen, para implementación futura en taller.",
+                "tech": [
+                    {"name":"Gestion", "image":"images/mecanica/gestion.png"}
+                ]
             },
             {
                 "name":"Técnico en mantenimiento general",
                 "place":"Alstom Línea 4 y 4a",
                 "date":"2014-2015",
-                "description":"Mantenimiento preventivo y correctivo en diferentes áreas. <br>Gran Mantenimiento de trenes (GR) específicamente del área neumática."
+                "description":"Mantenimiento preventivo y correctivo en diferentes áreas. <br>Gran Mantenimiento de trenes (GR) específicamente del área neumática.",
+                "tech": [
+                    {"name":"Metro", "image":"images/mecanica/metro.png"},
+                    {"name":"Mantenimiento", "image":"images/mecanica/mantenimiento.png"}
+                ]
             }
         ]
     },
-
-
-   
 
 
     "projects":{
@@ -219,15 +252,17 @@
 
         "projectsConfig": {
             "section": "projects",
-            "btn": "Ver detalles",
-            "btn1": "Web",
-            "btn2": "Cerrar",
-            "btn3": "Github"
+            "btn_detail": "Ver detalles",
+            "btn_web": "Web",
+            "btn_close": "Cerrar",
+            "btn_github": "Github",
+            "btn_link_company": "Empresa"
           },
 
         "study_projects":[
             {
-                "id":"proyecto1",
+                "id":"proyecto_1",
+                "show_github": true,
                 "title":"APP Inglés",
                 "type":"Proyecto propio",
                 "image1":"images/projects/proyecto1_fondo.PNG",
@@ -243,7 +278,8 @@
                 "ref2":"https://github.com/sebalopezx/app-ingles"
             },
             {
-                "id":"proyecto2",
+                "id":"proyecto_2",
+                "show_github": true,
                 "title": "Carrito de Compras",
                 "type":"Proyecto de instituto",
                 "image1":"images/projects/proyecto2_fondo.PNG",
@@ -260,7 +296,8 @@
                 "ref2":"https://github.com/sebalopezx/carrito_compras"
             },
             {
-                "id":"proyecto3",
+                "id":"proyecto_3",
+                "show_github": true,
                 "title": "Gestión Automotriz",
                 "type":"Proyecto de instituto",
                 "image1":"images/projects/proyecto3_fondo.PNG",
@@ -277,7 +314,8 @@
                 "ref2":"https://github.com/sebalopezx/Gestion_Automotriz"
             },
             {
-                "id":"proyecto4",
+                "id":"proyecto_4",
+                "show_github": true,
                 "title": "API Detalles Vehículos",
                 "type":"Proyecto propio",
                 "image1":"images/projects/proyecto4_fondo.png",
@@ -292,6 +330,28 @@
                 "info2":"Es una api simple para guardar información de marcas y modelos con su años respectivos.",    
                 "ref":"https://apicardetails-production.up.railway.app/",
                 "ref2":"https://github.com/sebalopezx/api_CarDetails"
+            }
+        ],
+
+        "professional_projects": [
+            {
+                "id":"proyecto_profesional_1",
+                "show_github": false,
+                "title":"DDirt",
+                "type":"Proyecto de empresa Syzlab",
+                "image1":"images/projects/professional/proyectoprofesional1_fondo.png",
+                "image2":"images/projects/professional/proyectoprofesional1_fondo.png",
+                "languages":[
+                    "images/django.png",
+                    "images/css3.png",
+                    "images/bootstrap.png",
+                    "images/tools/htmx.png",
+                    "images/javascript.png"
+                ],
+                "info1":"Proyecto de empresa Syzlab, creado en Django, Websocket, Daphne, Htmx y Docker.",
+                "info2":"El proyecto es una aplicación citas.",    
+                "ref":"https://ddirt.com",
+                "ref2":"https://syzlab.com/"
             }
         ]
     },
@@ -318,8 +378,8 @@
     "cv_pagina":{
         "title":"Seba Currículum",
         "nav":"Volver a Portafolio",
-        "pdf":"docs/SebastianLopezCV.pdf",
-        "pdf_mechanic":"docs/SebastianLopezCV_Mecanico.pdf"
+        "pdf":"docs/cv/SebastianLopezCV.pdf",
+        "pdf_mechanic":"docs/cv/SebastianLopezCV_Mecanico.pdf"
 
     }
 

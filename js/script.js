@@ -1,3 +1,9 @@
+// DETECTAR PAGINA INDEX
+function esPaginaIndex() {
+    return window.location.pathname.endsWith('') || window.location.pathname === '/' || window.location.pathname.endsWith('index.html');
+};
+
+
 // CAMBIO DE IDIOMA
 
 // Función para guardar el idioma seleccionado en localStorage
@@ -76,7 +82,7 @@ const cambiarIdioma = async (lenguaje) =>{
 document.addEventListener("DOMContentLoaded", async () => {
     // Cargar contenido inicial en el idioma deseado y segun pagina ejectuada
     await cambiarIdioma(idiomaInicial);
-    if (window.location.pathname.endsWith("index.html")){
+    if (esPaginaIndex()){
         await tipado(idiomaInicial); 
         await cargarIntereses(idiomaInicial);
         await cargarSkills(idiomaInicial);
@@ -87,7 +93,7 @@ document.addEventListener("DOMContentLoaded", async () => {
 });
 
 // Escuchar clicks para cambio de idioma e iniciar funciones segun pagina (modulo)
-if (window.location.pathname.endsWith("index.html")){
+if (esPaginaIndex()){
     idiomas.addEventListener("click", (e) =>{
         const nuevoIdioma = e.target.parentElement.dataset.language;
         cambiarIdioma(nuevoIdioma);
@@ -99,7 +105,8 @@ if (window.location.pathname.endsWith("index.html")){
         establecerPlaceholders(nuevoIdioma);
     });
 };
-if (window.location.pathname.endsWith("cv.html")){
+
+if (!esPaginaIndex()) {
     idiomas.addEventListener("click", (e) =>{
         const nuevoIdioma = e.target.parentElement.dataset.language;
         cambiarIdioma(nuevoIdioma);
@@ -148,11 +155,13 @@ menuLinks.forEach(link => {
         menuMostrarOcultar();
         cambiarClase();
         // seleccionar();
-        const pagina = esPaginaIndex()
-        if(pagina){
-            const targetID = link.getAttribute('href');
+        // const pagina = esPaginaIndex()}
+        const targetID = link.getAttribute('href');
+        if(esPaginaIndex() && targetID.startsWith('#')){
             const targetSeccion = document.querySelector(targetID);
-            targetSeccion.scrollIntoView({ behavior: 'smooth' });
+            if (targetSeccion) {
+                targetSeccion.scrollIntoView({ behavior: 'smooth' });
+            }
         }else{
             // Si se esta en index.html, redirecciona al href del enlace
             window.location.href = link.getAttribute('href');
@@ -298,23 +307,26 @@ document.addEventListener("DOMContentLoaded", () => {
 let instanciaTipado;
 function tipado(idioma) {
     const elementoTitulo = document.querySelector(".titulo-inicio");
-    if (instanciaTipado){
-        instanciaTipado.destroy();
-    };
-    fetch(`./languages/${idioma}.json`)
-        .then(response => response.json())
-        .then(texto => {
-            let titulos = texto.tipado.title;
-    
-            instanciaTipado = new Typed(elementoTitulo, {
-                strings: titulos,
-                typeSpeed: 100,
-                backSpeed: 30,
-                backDelay: 1500,
-                loop: true
+    if (elementoTitulo) {
+        if (instanciaTipado){
+            instanciaTipado.destroy();
+        };
+        fetch(`./languages/${idioma}.json`)
+            .then(response => response.json())
+            .then(texto => {
+                let titulos = texto.tipado.title;
+        
+                instanciaTipado = new Typed(elementoTitulo, {
+                    strings: titulos,
+                    typeSpeed: 100,
+                    backSpeed: 30,
+                    backDelay: 1500,
+                    loop: true
+                });
             });
-        });
-    };
+        };
+    }
+   
 
 
 // // FUNCION GENERAL para cargar datos de JSON segun idioma
@@ -333,11 +345,12 @@ const cargarDatos = async (idioma) => {
 
 // CREACIÓN DE CONTENDOR DE INTERESES 'acerca de'
 
-const contenedorIntereses = document.getElementById("contenedor-intereses");
-const contenedorStack = document.getElementById("stack-destacado");
 const listaIconos = ["fa-gamepad","fa-bicycle","fa-headphones","fa-desktop","fa-car","fa-book"]
 
 const cargarIntereses = async (idioma) => {
+    const contenedorIntereses = document.getElementById("contenedor-intereses");
+    const contenedorStack = document.getElementById("stack-destacado");
+
     // Se carga la data del JSON segun idioma
     const data = await cargarDatos(idioma);
     // JSON "interest" entrega una listaIntereses ordenada igual a listaIconos
@@ -353,9 +366,13 @@ const cargarIntereses = async (idioma) => {
         nuevoContenedorStack += crearContenedorStackDestacado(listaStackDestacados[i], [i]);
     }
 
-    if (window.location.pathname.endsWith("index.html")){
-        contenedorIntereses.innerHTML = nuevoContenedorIntereses;
-        contenedorStack.innerHTML = nuevoContenedorStack;
+    if (esPaginaIndex()){
+        if (contenedorIntereses) {
+            contenedorIntereses.innerHTML = nuevoContenedorIntereses;
+        }
+        if (contenedorStack) {
+            contenedorStack.innerHTML = nuevoContenedorStack;
+        }
     }
 };
 // HTML para contenedores de intereses
@@ -390,16 +407,11 @@ const efectoHabilidades =()=>{
     };
 };
 
-// detectar scrolling para aplicar animación de barra hab
-function esPaginaIndex() {
-    return window.location.pathname.endsWith('index.html');
-};
-
-if (esPaginaIndex()) {
+// if (esPaginaIndex()) {
     window.onscroll = function () {
         efectoHabilidades();
     },{ passive:true };
-};
+// };
 
 
 // Creacion de skills 
@@ -438,12 +450,11 @@ const crearHabilidad =(skill)=>{
 
 
 
-const contenedorConocimiento = document.getElementById("contenedor-conocimiento");
-const contenedorHerramientas = document.getElementById("contenedor-herramientas");
-const contenedorHabilidades = document.getElementById("contenedor-habilidades");
-
-
 const cargarSkills = async(idioma)=>{
+    const contenedorConocimiento = document.getElementById("contenedor-conocimiento");
+    const contenedorHerramientas = document.getElementById("contenedor-herramientas");
+    const contenedorHabilidades = document.getElementById("contenedor-habilidades");
+
     // Se carga la data del JSON segun idioma
     const data = await cargarDatos(idioma);
     // JSON "skills" entrega una lista ordenada de los elementos
@@ -456,10 +467,12 @@ const cargarSkills = async(idioma)=>{
     let nuevoContenedorSkillsHabilidades = recorrerListaSkills(listaSkillsHabilidades, crearHabilidad);
     
 
-    if (window.location.pathname.endsWith("index.html")){
-        contenedorConocimiento.innerHTML = nuevoContenedorSkillsTecnicas;
-        contenedorHerramientas.innerHTML = nuevoContenedorSkillsHerramientas;
-        contenedorHabilidades.innerHTML = nuevoContenedorSkillsHabilidades;
+    if (esPaginaIndex()){
+        if (contenedorConocimiento || contenedorHerramientas || contenedorHabilidades) {
+            contenedorConocimiento.innerHTML = nuevoContenedorSkillsTecnicas;
+            contenedorHerramientas.innerHTML = nuevoContenedorSkillsHerramientas;
+            contenedorHabilidades.innerHTML = nuevoContenedorSkillsHabilidades;
+        }
     }
 }
 
@@ -478,9 +491,10 @@ const recorrerListaSkills = (lista, crearSkill)=>{
 
 {/* <p>${cv.description}</p> */}
 
-const crearCV =(cv, columna, posicion)=>{
+const crearCV = (cv, columna, posicion) => {
+    const flecha_redireccion = '&#8617;';
     const agregar_tech =(cv)=>{
-        let tech = ''
+        let tech = '';
         let lista_tech = cv.tech
         // console.log(lista_tech);
         for (const t of lista_tech) {
@@ -490,9 +504,9 @@ const crearCV =(cv, columna, posicion)=>{
     }
     let cvHTML = `
         <div class="${columna}">
-            <h4">${cv.name}</h4>
+            <h4>${cv.name}</h4>
             <span class="lugar">${cv.place} 
-                <a class="project-href" href="${cv.href}">${cv.href ? '&#8617;' : ''}</a>
+                <a class="project-href link-white" ${cv.blank ? blank : null} href="${cv.href}">${cv.href ? flecha_redireccion : ''}</a>
             </span>
             <span class="fecha">${cv.date}</span>
             ${cv.tech 
@@ -501,7 +515,7 @@ const crearCV =(cv, columna, posicion)=>{
             }
             <p>
                 ${cv.pdf
-                ? `<a class="project-href" href="certificados.html">${cv.description} &#8617;</a>`
+                ? `<a class="project-href link" href="certificados.html">${cv.description} ${flecha_redireccion}</a>`
                 : `${cv.description}`}
             </p>
             
@@ -518,7 +532,7 @@ const crearCursos =(cv, columna, posicion)=>{
             <span class="lugar">${cv.company}</span>
             <span class="fecha">${cv.date}</span>
             <p>
-                <a href="${cv.url}" target="_blank">${cv.description} &#8617;</a>
+                <a class='link' href="${cv.url}" target="_blank">${cv.description} &#8617;</a>
             </p>
             <div class="conector${posicion}">
                 <div class="circulo${posicion}"></div>
@@ -527,12 +541,13 @@ const crearCursos =(cv, columna, posicion)=>{
     return cursoHTML;
 };
 
-const contenedorEstudios = document.getElementById("contenedor-estudios");
-const contenedorCursos = document.getElementById("contenedor-cursos");
-const contenedorExpProgramador = document.getElementById("contenedor-exp-programador");
-const contenedorExpMecanico = document.getElementById("contenedor-exp-mecanico");
 
 const cargarCV = async(idioma)=>{
+    const contenedorEstudios = document.getElementById("contenedor-estudios");
+    const contenedorCursos = document.getElementById("contenedor-cursos");
+    const contenedorExpProgramador = document.getElementById("contenedor-exp-programador");
+    const contenedorExpMecanico = document.getElementById("contenedor-exp-mecanico");
+
     // Se carga la data del JSON segun idioma
     const data = await cargarDatos(idioma);
     // JSON "cv" entrega una lista ordenada de los elementos
@@ -547,16 +562,18 @@ const cargarCV = async(idioma)=>{
     let nuevoContenedorExpMecanico = recorrerListaCV(listaExpMecanico, crearCV, "item der");
     
 
-    if (window.location.pathname.endsWith("index.html")){
-        contenedorEstudios.innerHTML = nuevoContenedorEstudios;
-        contenedorCursos.innerHTML = nuevoContenedorCursos;
-        contenedorExpProgramador.innerHTML = nuevoContenedorExpProgramador;
-        contenedorExpMecanico.innerHTML = nuevoContenedorExpMecanico;
+    if (esPaginaIndex()){
+        if (contenedorEstudios || contenedorCursos || contenedorExpProgramador || contenedorExpMecanico){
+            contenedorEstudios.innerHTML = nuevoContenedorEstudios;
+            contenedorCursos.innerHTML = nuevoContenedorCursos;
+            contenedorExpProgramador.innerHTML = nuevoContenedorExpProgramador;
+            contenedorExpMecanico.innerHTML = nuevoContenedorExpMecanico;
+        }
     }
 }
 
 // Recorres cada lista sacada desde la data de los JSON
-const recorrerListaCV = (lista, crearCV, columna)=>{
+const recorrerListaCV = (lista, crearCV, columna) => {
     let nuevoContenedor = "";
     let posicion = 0;
     switch (columna) {
@@ -577,9 +594,9 @@ const recorrerListaCV = (lista, crearCV, columna)=>{
 
 // Creacion de trabajos
 
-const crearProyectos =(proyecto, index, proyectosConfig)=>{
+const crearProyectos = (proyecto, indexProyectos, proyectosConfig) => {
     let proyectoHTML = `
-        <div class="proyecto animacion" data-nav="${index}" id="${proyecto.id}">
+        <div class="proyecto animacion" data-nav="${indexProyectos}" id="${proyecto.id}">
             <img src="${proyecto.image1}" alt="${proyecto.title}" title="${proyecto.title}">           
             <div class="nombre-proyecto">
                 <span>${proyecto.title}</span>
@@ -590,12 +607,12 @@ const crearProyectos =(proyecto, index, proyectosConfig)=>{
                     ${crearLenguajes(proyecto)}
                 </div>
                 <p>${proyecto.type}</p>
-                <button class="ver-detalle">${proyectosConfig.btn}</button>
+                <button class="ver-detalle">${proyectosConfig.btn_detail}</button>
             </div>
         </div>`;
     return proyectoHTML;
 };
-const crearLenguajes =(proyecto)=>{
+const crearLenguajes = (proyecto) => {
     let stackHTML = "";
     let lenguajes = proyecto.languages;
     for (let l of lenguajes){
@@ -621,28 +638,38 @@ const crearBoton =()=>{
     return proyectoHTML;
 }
 
-const contenedorGaleria = document.getElementById("galeria");
 
-const cargarProyectos = async(idioma)=>{
+const cargarProyectos = async(idioma) => {
+    const contenedorGaleria = document.getElementById("galeria");
+    const contenedorGaleriaProfesionales = document.getElementById("galeria_profesionales");
+
     // Se carga la data del JSON segun idioma
     const data = await cargarDatos(idioma);
     // JSON "projects" entrega una lista ordenada de los elementos
     const proyectosConfig = data.projects.projectsConfig;
     const listaProyectos = data.projects.study_projects;
+    const listaProyectosProfesionales = data.projects.professional_projects;
 
     let nuevoContenedorProyectos = recorrerListaProyectos(listaProyectos, crearProyectos, proyectosConfig);
+    let nuevoContenedorProyectosProfesionales = recorrerListaProyectos(listaProyectosProfesionales, crearProyectos, proyectosConfig);
 
-    if (window.location.pathname.endsWith("index.html")){
-        contenedorGaleria.innerHTML = nuevoContenedorProyectos;
-        aplicarIntersectionObserver(".animacion");
+    if (esPaginaIndex()) {
+        if (contenedorGaleria || contenedorGaleriaProfesionales) {
+            contenedorGaleria.innerHTML = nuevoContenedorProyectos;
+            contenedorGaleriaProfesionales.innerHTML = nuevoContenedorProyectosProfesionales;
+            aplicarIntersectionObserver(".animacion");
+        }
     }
 };
 
 // Recorres cada lista sacada desde la data de los JSON
-const recorrerListaProyectos =(lista, crearProyectos, proyectosConfig)=>{
+let indexProyectos = 0;
+
+const recorrerListaProyectos = (lista, crearProyectos, proyectosConfig) => {
     let nuevoContenedor = "";
     for (let i = 0; i < lista.length; i++){
-        nuevoContenedor += crearProyectos(lista[i], [i], proyectosConfig);
+        nuevoContenedor += crearProyectos(lista[i], indexProyectos, proyectosConfig);
+        indexProyectos++;
     }
     return nuevoContenedor;
 };
@@ -665,22 +692,28 @@ const crearModal = (proyecto, proyectosConfig) =>{
         <div class="modal-botones">
             <a href="${proyecto.ref}" target="_blank">
                     <button class="modal-ver">
-                    <span class="texto-boton">${proyectosConfig.btn1}</span>
+                    <span class="texto-boton">${proyectosConfig.btn_web}</span>
                     <i class="fa-solid fa-file-export"></i>
 
                     <span class="overlay"></span>
                 </button>
             </a>
             <button class="btn modal-close">
-                <span class="texto-boton">${proyectosConfig.btn2}</span>
+                <span class="texto-boton">${proyectosConfig.btn_close}</span>
                 <i class="fa-solid fa-x"></i>
                 <span class="overlay"></span>
             </button>
             <a href="${proyecto.ref2}" target="_blank">
-                    <button class="modal-git">
-                    <span class="texto-boton">${proyectosConfig.btn3}</span>
-                    <i class="fa-brands fa-github"></i>
-
+                    ${proyecto.show_github 
+                    ?   
+                        `<button class="modal-git">
+                        <span class="texto-boton">${proyectosConfig.btn_github}</span>
+                        <i class="fa-brands fa-github"></i>`
+                    :   
+                        `<button class="modal-company">
+                        <span class="texto-boton">${proyectosConfig.btn_link_company}</span>
+                        <i class="fa-solid fa-briefcase"></i>`
+                    }
                     <span class="overlay"></span>
                 </button>
             </a>
@@ -703,24 +736,37 @@ document.addEventListener("DOMContentLoaded", function() {
             
             let proyectoDiv = e.target.closest('.proyecto');
             let proyectoId = proyectoDiv.id;
-            console.log(proyectoId);
+            if (!proyectoDiv) {
+                console.error('No se encontró el elemento .proyecto más cercano');
+                return;
+            }
 
             const idiomaActual = obtenerIdiomaSeleccionado();
             const data = await cargarDatos(idiomaActual);
             const listaProyectos = data.projects.study_projects;
+            const listaProyectosProfesionales = data.projects.professional_projects;
             const proyectosConfig = data.projects.projectsConfig;
-            const proyecto = listaProyectos.find(p => p.id === proyectoId);
 
-            // Crear y Mostrar el modal con click
-            contenedorModal.innerHTML = crearModal(proyecto, proyectosConfig);
-            modal.classList.add('mostrar-detalle');
+            const todosLosProyectos = listaProyectos.concat(listaProyectosProfesionales);
+            // console.log('Todos los proyectos:', todosLosProyectos);
 
-            // // Para Cerrar el modal
-            const closeModal = document.querySelector('.modal-close');
-            closeModal.addEventListener('click', (e) => {
-                e.preventDefault();
-                modal.classList.remove('mostrar-detalle');
-            });
+            const proyecto = todosLosProyectos.find(p => p.id === proyectoId);
+            // console.log('Proyecto encontrado:', proyecto);
+
+            if (proyecto) {
+                // Crear y Mostrar el modal con click
+                contenedorModal.innerHTML = crearModal(proyecto, proyectosConfig);
+                modal.classList.add('mostrar-detalle');
+
+                // // Para Cerrar el modal
+                const closeModal = document.querySelector('.modal-close');
+                closeModal.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    modal.classList.remove('mostrar-detalle');
+                });
+            } else {
+                console.error(`Proyecto con ID ${proyectoId} no encontrado`);
+            }
         }
     });
 });
@@ -735,13 +781,20 @@ document.addEventListener("DOMContentLoaded", function() {
 async function establecerPlaceholders(idioma) {
     // const idiomaActual = obtenerIdiomaSeleccionado();
     const data = await cargarDatos(idioma);
-    if (window.location.pathname.endsWith("index.html")){
+    if (esPaginaIndex()){
         if (data && data.contact) {
             const placeholders = data.contact;
-            document.getElementById('nombre').placeholder = placeholders.name;
-            document.getElementById('email').placeholder = placeholders.email;
-            document.getElementById('asunto').placeholder = placeholders.subject;
-            document.getElementById('mensaje').placeholder = placeholders.message;
+            const nombreInput = document.getElementById('nombre');
+            const emailInput = document.getElementById('email');
+            const asuntoInput = document.getElementById('asunto');
+            const mensajeInput = document.getElementById('mensaje');
+
+            if (nombreInput || emailInput || asuntoInput || mensajeInput) {
+                nombreInput.placeholder = placeholders.name;
+                emailInput.placeholder = placeholders.email;
+                asuntoInput.placeholder = placeholders.subject;
+                mensajeInput.placeholder = placeholders.message;
+            }
         };
     };
 };
@@ -774,7 +827,7 @@ if (window.location.pathname.endsWith("certificados.html")){
         // Función para cambiar el PDF mostrado
         function cambiarPDF(event) {
             var boton = event.target; // El botón que fue clickeado
-            console.log(boton);
+            // console.log(boton);
             var src = boton.getAttribute('data-src'); // Obtiene el 'data-src' del botón
             var iframe = document.getElementById('pdf-iframe'); // Selecciona el iframe
             iframe.src = src; // Cambia el 'src' del iframe al del botón
