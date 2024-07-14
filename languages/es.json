@@ -339,8 +339,8 @@
                 "show_github": false,
                 "title":"DDirt",
                 "type":"Proyecto de empresa Syzlab",
-                "image1":"images/projects/professional/proyectoprofesional1_fondo.png",
-                "image2":"images/projects/professional/proyectoprofesional1_fondo.png",
+                "image1":"images/projects/professional/proyectoprofesional1_fondo.PNG",
+                "image2":"images/projects/professional/proyectoprofesional1_fondo.PNG",
                 "languages":[
                     "images/django.png",
                     "images/css3.png",
