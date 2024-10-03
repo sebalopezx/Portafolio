@@ -518,7 +518,6 @@ const crearCV = (cv, columna, posicion) => {
                 ? `<a class="project-href link" href="certificados.html">${cv.description} ${flecha_redireccion}</a>`
                 : `${cv.description}`}
             </p>
-            
             <div class="conector${posicion}">
                 <div class="circulo${posicion}"></div>
             </div>
@@ -529,11 +528,16 @@ const crearCursos =(cv, columna, posicion)=>{
     let cursoHTML = `
         <div class="${columna}">
             <h4">${cv.name}</h4>
+            ${cv.image
+                ? `<span class="badges"><img src="${cv.image}" alt="${cv.description}" title="${cv.description}"></span>`
+                : 'a'
+            }
             <span class="lugar">${cv.company}</span>
             <span class="fecha">${cv.date}</span>
             <p>
                 <a class='link' href="${cv.url}" target="_blank">${cv.description} &#8617;</a>
             </p>
+  
             <div class="conector${posicion}">
                 <div class="circulo${posicion}"></div>
             </div>

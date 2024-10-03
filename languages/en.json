@@ -134,21 +134,32 @@
                 "company":"Udemy", 
                 "date":"2023", 
                 "url":"http://ude.my/UC-51981b38-6699-4efa-a911-eb9a9ac60f97",
-                "description":"Certificate"
+                "description":"Certificate",
+                "image":""
             },
             {
                 "name":"Universidad Desarrollo Web - FrontEnd Web Developer!", 
                 "company":"Udemy", 
                 "date":"2023", 
                 "url":"http://ude.my/UC-2ab388c7-8732-4e54-9bf2-0c29d5ded61b",
-                "description":"Certificate"
+                "description":"Certificate",
+                "image":""
             },
             {
                 "name":"Universidad De Excel!", 
                 "company":"Udemy", 
                 "date":"2024", 
                 "url":"http://ude.my/UC-c2847eca-33b3-42c0-92d4-b43338760944",
-                "description":"Certificate"
+                "description":"Certificate",
+                "image":""
+            },
+            {
+                "name":"AWS Academy Graduate - Cloud Foundations", 
+                "company":"AWS Academy", 
+                "date":"2024", 
+                "url":"https://www.credly.com/badges/63f1c89b-700a-4fc8-a63f-3c122d2041e4/public_url",
+                "description":"Badge",
+                "image":"images/tools/aws-cloud-foundations.png"
             }
         ]
     },
