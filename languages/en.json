@@ -41,6 +41,7 @@
             {"name":"CSS3", "image":"images/techs/css3.png"},
             {"name":"JavaScript", "image":"images/techs/javascript.png"},
             {"name":"Bootstrap5", "image":"images/techs/bootstrap.png"},
+            {"name":"HTMX", "image":"images/tools/htmx.png"},
             {"name":"MySQL", "image":"images/techs/mysql.png"}
         ],
         "title_info5":"Disponibilidad:",
