@@ -23,9 +23,9 @@
 
     "profile":{
         "name":"Hi, i'm Sebastián.",
-        "description":"As a student of Programming Analyst, I am actively seeking opportunities for my professional internship, with a specific interest in the backend and fullstack areas. I consider myself a responsible, organized individual with a proactive mindset and a strong willingness to learn and grow both professionally and personally.", 
+        "description":"Currently, I work as a junior fullstack developer, and I continue building my professional career by constantly growing and learning.", 
         "description2":"My goal is to leverage my experience in mechanical engineering alongside my programming skills to contribute innovative and efficient solutions.  I am dedicated to continuous learning and enthusiastic about taking on new challenges that allow me to expand my knowledge and skills.",
-        "description3":" I have <a class='link' href='#skills'>basic knowledge</a> in different technologies, and I am complementing my studies with courses on Udemy while i finish my degree.",
+        "description3":"I consider myself a responsible, organized person, with a proactive approach, committed to learning and growing both in my professional and personal life. I have <a class='link' href='#skills'>intermediate and basic knowledge</a> in different technologies, while continuing to complement and expand my skills.",
 
         "title1":"Personal Information",
         "title_info1":"Phone number:",
@@ -35,13 +35,13 @@
         "info3":"I'm interested in learning about the Full Stack or Backend area",
         "title_info4":"Main stack",
         "stack":[
-            {"name":"Python", "image":"images/python.png"},
-            {"name":"Django", "image":"images/django.png"},
-            {"name":"HTML5", "image":"images/html5.png"},
-            {"name":"CSS3", "image":"images/css3.png"},
-            {"name":"JavaScript", "image":"images/javascript.png"},
-            {"name":"Bootstrap5", "image":"images/bootstrap.png"},
-            {"name":"MySQL", "image":"images/mysql.png"}
+            {"name":"Python", "image":"images/techs/python.png"},
+            {"name":"Django", "image":"images/techs/django.png"},
+            {"name":"HTML5", "image":"images/techs/html5.png"},
+            {"name":"CSS3", "image":"images/techs/css3.png"},
+            {"name":"JavaScript", "image":"images/techs/javascript.png"},
+            {"name":"Bootstrap5", "image":"images/techs/bootstrap.png"},
+            {"name":"MySQL", "image":"images/techs/mysql.png"}
         ],
         "title_info5":"Disponibilidad:",
         "info5":"NOT IMMEDIATE!.",
@@ -62,19 +62,19 @@
         "title":"Technical Skills",
         "values": ["Basic","Mid","Expert","Senior"],
         "skill":[
-            {"name":"Python", "image":"images/python.png", "value":"Mid", "lvl":"45"},
-            {"name":"Django", "image":"images/django.png", "value":"Basic", "lvl":"45"},
-            {"name":"Node", "image":"images/nodejs.png", "value":"Basic", "lvl":"25"},
-            {"name":"Java", "image":"images/java.png", "value":"Beginner", "lvl":"12"},
-            {"name":"HTML5", "image":"images/html5.png", "value":"Mid", "lvl":"45"},
-            {"name":"CSS3", "image":"images/css3.png", "value":"Mid", "lvl":"45"},
-            {"name":"JavaScript", "image":"images/javascript.png", "value":"Mid", "lvl":"45"},
-            {"name":"Bootstrap5", "image":"images/bootstrap.png", "value":"Mid", "lvl":"45"},
-            {"name":"React", "image":"images/react.png", "value":"Basic", "lvl":"25"},
-            {"name":"Angular", "image":"images/angular.png", "value":"Beginner", "lvl":"12"},
-            {"name":"MySQL", "image":"images/mysql.png", "value":"Basic", "lvl":"25"},
-            {"name":"PostgreSQL", "image":"images/postgre.png", "value":"Basic", "lvl":"25"},
-            {"name":"MongoDB", "image":"images/mongodb.png", "value":"Basic", "lvl":"25"}
+            {"name":"Python", "image":"images/techs/python.png", "value":"Mid", "lvl":"45"},
+            {"name":"Django", "image":"images/techs/django.png", "value":"Basic", "lvl":"45"},
+            {"name":"Node", "image":"images/techs/nodejs.png", "value":"Basic", "lvl":"25"},
+            {"name":"Java", "image":"images/techs/java.png", "value":"Beginner", "lvl":"12"},
+            {"name":"HTML5", "image":"images/techs/html5.png", "value":"Mid", "lvl":"45"},
+            {"name":"CSS3", "image":"images/techs/css3.png", "value":"Mid", "lvl":"45"},
+            {"name":"JavaScript", "image":"images/techs/javascript.png", "value":"Mid", "lvl":"45"},
+            {"name":"Bootstrap5", "image":"images/techs/bootstrap.png", "value":"Mid", "lvl":"45"},
+            {"name":"React", "image":"images/techs/react.png", "value":"Basic", "lvl":"25"},
+            {"name":"Angular", "image":"images/techs/angular.png", "value":"Beginner", "lvl":"12"},
+            {"name":"MySQL", "image":"images/techs/mysql.png", "value":"Basic", "lvl":"25"},
+            {"name":"PostgreSQL", "image":"images/techs/postgre.png", "value":"Basic", "lvl":"25"},
+            {"name":"MongoDB", "image":"images/techs/mongodb.png", "value":"Basic", "lvl":"25"}
         ],
         "title2":"Tools",
         "tools":[
@@ -162,10 +162,10 @@
                 "date":"2024",
                 "description":"Development of appointment application <a class='link' href='https://ddirt.com/'>Ddirt.com</a>. <br> Creation of functions (backend and frontend). <br> Following best practices and syntax.",
                 "tech": [
-                    {"name":"Django", "image":"images/django.png"},
-                    {"name":"CSS", "image":"images/css3.png"},
-                    {"name":"JavaScript", "image":"images/javascript.png"},
-                    {"name":"Bootstrap5", "image":"images/bootstrap.png"},
+                    {"name":"Django", "image":"images/techs/django.png"},
+                    {"name":"CSS", "image":"images/techs/css3.png"},
+                    {"name":"JavaScript", "image":"images/techs/javascript.png"},
+                    {"name":"Bootstrap5", "image":"images/techs/bootstrap.png"},
                     {"name":"HTMX", "image":"images/tools/htmx.png"},
                     {"name":"Docker", "image":"images/tools/docker.png"}
                 ],
@@ -177,11 +177,11 @@
                 "date":"2023",
                 "description":"Vehicle management for brands and models <br> Understand the use of the Rest Full API, and integration through endpoint to the “Appointment Management” project.",
                 "tech": [
-                    {"name":"Node", "image":"images/nodejs.png"},
-                    {"name":"JavaScript", "image":"images/javascript.png"},
-                    {"name":"React", "image":"images/react.png"},
-                    {"name":"Bootstrap5", "image":"images/bootstrap.png"},
-                    {"name":"MongoDB", "image":"images/mongodb.png"}
+                    {"name":"Node", "image":"images/techs/nodejs.png"},
+                    {"name":"JavaScript", "image":"images/techs/javascript.png"},
+                    {"name":"React", "image":"images/techs/react.png"},
+                    {"name":"Bootstrap5", "image":"images/techs/bootstrap.png"},
+                    {"name":"MongoDB", "image":"images/techs/mongodb.png"}
                 ],
                 "href":"#proyectos"
             },
@@ -191,11 +191,11 @@
                 "date":"2023",
                 "description":"Management of maintenance appointments with different interfaces and ranks (Customer, Receptionist, Administrator). <br> Know the language, their syntax and structure.",
                 "tech": [
-                    {"name":"Python", "image":"images/python.png"},
-                    {"name":"Django", "image":"images/django.png"},
-                    {"name":"HTML5", "image":"images/html5.png"},
-                    {"name":"Bootstrap5", "image":"images/bootstrap.png"},
-                    {"name":"PostgreSQL", "image":"images/postgre.png"}
+                    {"name":"Python", "image":"images/techs/python.png"},
+                    {"name":"Django", "image":"images/techs/django.png"},
+                    {"name":"HTML5", "image":"images/techs/html5.png"},
+                    {"name":"Bootstrap5", "image":"images/techs/bootstrap.png"},
+                    {"name":"PostgreSQL", "image":"images/techs/postgre.png"}
                 ],
                 "href":"#proyectos"
             },
@@ -268,9 +268,9 @@
                 "image1":"images/projects/proyecto1_fondo.PNG",
                 "image2":"images/projects/proyecto1_modal.png",
                 "languages":[
-                    "images/html5.png",
-                    "images/css3.png",
-                    "images/javascript.png"
+                    "images/techs/html5.png",
+                    "images/techs/css3.png",
+                    "images/techs/javascript.png"
                 ],
                 "info1":"Own project, created with html, css and javascript to learn and practice the basic functionalities of these languages, and reinforce English.",
                 "info2":"The project is a web application created using different technologies. Its main objective is to provide a tool to improve and practice knowledge of English, focusing on learning verbs in different conjugations.",    
@@ -285,10 +285,10 @@
                 "image1":"images/projects/proyecto2_fondo.PNG",
                 "image2":"images/projects/proyecto2_modal.png",
                 "languages":[
-                    "images/html5.png",
-                    "images/bootstrap.png",
-                    "images/javascript.png",
-                    "images/localstorage.png"
+                    "images/techs/html5.png",
+                    "images/techs/bootstrap.png",
+                    "images/techs/javascript.png",
+                    "images/techs/localstorage.png"
                 ],
                 "info1":"Institute project, developed as part of the Front-End course using HTML, CSS and JS with LocalStorage.",
                 "info2":"A functional shopping cart application has been developed using LocalStorage. In addition, the understanding of key concepts in web development and the importance of an interactive and user-friendly interface have been strengthened.",    
@@ -303,10 +303,10 @@
                 "image1":"images/projects/proyecto3_fondo.PNG",
                 "image2":"images/projects/proyecto3_modal.PNG",
                 "languages":[
-                    "images/django.png",
-                    "images/html5.png",
-                    "images/bootstrap.png",
-                    "images/postgre.png"
+                    "images/techs/django.png",
+                    "images/techs/html5.png",
+                    "images/techs/bootstrap.png",
+                    "images/techs/postgre.png"
                 ],
                 "info1":"Institute project, developed as part of the Back-End course using HTML, CSS, Django and PostreSQL upload to Render.",
                 "info2":"A functional automotive appointment management application has been developed. With different interfaces (Customer, Receptionist and Administrator) where you can manage vehicles and maintenance appointments.",    
@@ -321,10 +321,10 @@
                 "image1":"images/projects/proyecto4_fondo.png",
                 "image2":"images/projects/proyecto4_modal.png",
                 "languages":[
-                    "images/nodejs.png",
-                    "images/react.png",
-                    "images/bootstrap.png",
-                    "images/mongodb.png"
+                    "images/techs/nodejs.png",
+                    "images/techs/react.png",
+                    "images/techs/bootstrap.png",
+                    "images/techs/mongodb.png"
                 ],
                 "info1":"Personal project developed to understand the syntax of the MERN stack (Mongo, Express, React with Bootstrap, and Node).",
                 "info2":"It's a simple API to save information about car details with brands, models and years. ",    
@@ -339,14 +339,14 @@
                 "show_github": false,
                 "title":"DDirt",
                 "type":"Company project Syzlab",
-                "image1":"images/projects/professional/proyectoprofesional1_fondo.png",
-                "image2":"images/projects/professional/proyectoprofesional1_fondo.png",
+                "image1":"images/projects/professional/proyectoprofesional1_fondo.PNG",
+                "image2":"images/projects/professional/proyectoprofesional1_fondo.PNG",
                 "languages":[
-                    "images/django.png",
-                    "images/css3.png",
-                    "images/bootstrap.png",
+                    "images/techs/django.png",
+                    "images/techs/css3.png",
+                    "images/techs/bootstrap.png",
                     "images/tools/htmx.png",
-                    "images/javascript.png"
+                    "images/techs/javascript.png"
                 ],
                 "info1":"Company project Syzlab, created using Django, Websocket, Daphne, Htmx, and Docker.",
                 "info2":"The project is an appointment application.",    

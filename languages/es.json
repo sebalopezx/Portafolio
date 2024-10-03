@@ -24,9 +24,9 @@
 
     "profile":{
         "name":"Hola, soy Sebastián.",
-        "description":"Como estudiante de Analista Programador estoy en busca de oportunidades para realizar mi práctica profesional, interesado en las áreas de backend y fullstack. Me considero una persona responsable, organizada, con enfoque proactivo y con una firme disposición para aprender y crecer tanto en el ámbito laboral como personal.",
+        "description":"Actualmente trabajo como programador junior fullstack, y sigo formando mi carrera profesional creciendo y aprendiendo constantemente.",
         "description2":"Mi objetivo es aprovechar mi experiencia en ingeniería mecánica junto con mis habilidades en programación para aportar soluciones innovadoras y eficientes. Estoy comprometido con el aprendizaje continuo y estoy entusiasmado por enfrentar nuevos desafíos que me permitan expandir mis conocimientos y habilidades.",
-        "description3":"Poseo <a class='link' href='#skills'>conocimientos básicos</a> en diferentes tecnologías, y me encuentro complementando mis estudios con cursos en Udemy mientras termino mi carrera.",
+        "description3":"Me considero una persona responsable, organizada, con enfoque proactivo y comprometido con aprender y crecer tanto en el ámbito laboral como personal. Además poseo <a class='link' href='#skills'>conocimientos medios y básicos</a> en diferentes tecnologías, mientras sigo complementando mis conocimientos.",
         
         "title1":"Datos Personales",
         "title_info1":"Número Télefono:",
@@ -36,13 +36,14 @@
         "info3":"Estoy interesado en aprender del área Backend o Full Stack.",
         "title_info4":"Stack destacado:",
         "stack":[
-            {"name":"Python", "image":"images/python.png"},
-            {"name":"Django", "image":"images/django.png"},
-            {"name":"HTML5", "image":"images/html5.png"},
-            {"name":"CSS3", "image":"images/css3.png"},
-            {"name":"JavaScript", "image":"images/javascript.png"},
-            {"name":"Bootstrap5", "image":"images/bootstrap.png"},
-            {"name":"MySQL", "image":"images/mysql.png"}
+            {"name":"Python", "image":"images/techs/python.png"},
+            {"name":"Django", "image":"images/techs/django.png"},
+            {"name":"HTML5", "image":"images/techs/html5.png"},
+            {"name":"CSS3", "image":"images/techs/css3.png"},
+            {"name":"JavaScript", "image":"images/techs/javascript.png"},
+            {"name":"Bootstrap5", "image":"images/techs/bootstrap.png"},
+            {"name":"HTMX", "image":"images/tools/htmx.png"},
+            {"name":"MySQL", "image":"images/techs/mysql.png"}
         ],
         "title_info5":"Disponibilidad:",
         "info5":"NO INMEDIATA!.",
@@ -63,19 +64,19 @@
         "title":"Skills Técnicas",
         "values": ["Básico","Medio","Experto","Senior"],
         "skill":[
-            {"name":"Python", "image":"images/python.png", "value":"Medio", "lvl":"45"},
-            {"name":"Django", "image":"images/django.png", "value":"Medio", "lvl":"45"},
-            {"name":"Node", "image":"images/nodejs.png", "value":"Básico", "lvl":"25"},
-            {"name":"Java", "image":"images/java.png", "value":"Inicial", "lvl":"10"},
-            {"name":"HTML5", "image":"images/html5.png", "value":"Medio", "lvl":"45"},
-            {"name":"CSS3", "image":"images/css3.png", "value":"Medio", "lvl":"45"},
-            {"name":"JavaScript", "image":"images/javascript.png", "value":"Medio", "lvl":"45"},
-            {"name":"Bootstrap5", "image":"images/bootstrap.png", "value":"Medio", "lvl":"45"},
-            {"name":"React", "image":"images/react.png", "value":"Básico", "lvl":"25"},
-            {"name":"Angular", "image":"images/angular.png", "value":"Inicial", "lvl":"10"},
-            {"name":"MySQL", "image":"images/mysql.png", "value":"Básico", "lvl":"25"},
-            {"name":"Postgre", "image":"images/postgre.png", "value":"Básico", "lvl":"25"},
-            {"name":"MongoDB", "image":"images/mongodb.png", "value":"Básico", "lvl":"25"}
+            {"name":"Python", "image":"images/techs/python.png", "value":"Medio", "lvl":"45"},
+            {"name":"Django", "image":"images/techs/django.png", "value":"Medio", "lvl":"45"},
+            {"name":"Node", "image":"images/techs/nodejs.png", "value":"Básico", "lvl":"25"},
+            {"name":"Java", "image":"images/techs/java.png", "value":"Inicial", "lvl":"10"},
+            {"name":"HTML5", "image":"images/techs/html5.png", "value":"Medio", "lvl":"45"},
+            {"name":"CSS3", "image":"images/techs/css3.png", "value":"Medio", "lvl":"45"},
+            {"name":"JavaScript", "image":"images/techs/javascript.png", "value":"Medio", "lvl":"45"},
+            {"name":"Bootstrap5", "image":"images/techs/bootstrap.png", "value":"Medio", "lvl":"45"},
+            {"name":"React", "image":"images/techs/react.png", "value":"Básico", "lvl":"25"},
+            {"name":"Angular", "image":"images/techs/angular.png", "value":"Inicial", "lvl":"10"},
+            {"name":"MySQL", "image":"images/techs/mysql.png", "value":"Básico", "lvl":"25"},
+            {"name":"Postgre", "image":"images/techs/postgre.png", "value":"Básico", "lvl":"25"},
+            {"name":"MongoDB", "image":"images/techs/mongodb.png", "value":"Básico", "lvl":"25"}
         ],
         "title2":"Herramientas",
         "tools":[
@@ -163,10 +164,10 @@
                 "date":"2024",
                 "description":"Desarrollo de aplicación de citas <a class='link' href='https://ddirt.com/'>Ddirt.com</a>. <br> Creación de funciones (backend y frontend). <br> Seguimiento de buenas prácticas y sintaxys.",
                 "tech": [
-                    {"name":"Django", "image":"images/django.png"},
-                    {"name":"CSS", "image":"images/css3.png"},
-                    {"name":"JavaScript", "image":"images/javascript.png"},
-                    {"name":"Bootstrap5", "image":"images/bootstrap.png"},
+                    {"name":"Django", "image":"images/techs/django.png"},
+                    {"name":"CSS", "image":"images/techs/css3.png"},
+                    {"name":"JavaScript", "image":"images/techs/javascript.png"},
+                    {"name":"Bootstrap5", "image":"images/techs/bootstrap.png"},
                     {"name":"HTMX", "image":"images/tools/htmx.png"},
                     {"name":"Docker", "image":"images/tools/docker.png"}
                 ],
@@ -178,11 +179,11 @@
                 "date":"2023",
                 "description":"Gestión de vehículos para marcas y modelos. <br> Entender uso de API Rest Full, e integración mediante endpoint a proyecto de “Gestión automotriz”.",
                 "tech": [
-                    {"name":"Node", "image":"images/nodejs.png"},
-                    {"name":"JavaScript", "image":"images/javascript.png"},
-                    {"name":"React", "image":"images/react.png"},
-                    {"name":"Bootstrap5", "image":"images/bootstrap.png"},
-                    {"name":"MongoDB", "image":"images/mongodb.png"}
+                    {"name":"Node", "image":"images/techs/nodejs.png"},
+                    {"name":"JavaScript", "image":"images/techs/javascript.png"},
+                    {"name":"React", "image":"images/techs/react.png"},
+                    {"name":"Bootstrap5", "image":"images/techs/bootstrap.png"},
+                    {"name":"MongoDB", "image":"images/techs/mongodb.png"}
                 ],
                 "href":"#proyectos"
             },
@@ -192,11 +193,11 @@
                 "date":"2023",
                 "description":"Gestión de citas de mantenimiento con diferentes interfaces y rangos (Cliente, Recepcionista, Administrador). <br> Para conocer el lenguaje, su sintaxis y estructura.",
                 "tech": [
-                    {"name":"Python", "image":"images/python.png"},
-                    {"name":"Django", "image":"images/django.png"},
-                    {"name":"HTML5", "image":"images/html5.png"},
-                    {"name":"Bootstrap5", "image":"images/bootstrap.png"},
-                    {"name":"PostgreSQL", "image":"images/postgre.png"}
+                    {"name":"Python", "image":"images/techs/python.png"},
+                    {"name":"Django", "image":"images/techs/django.png"},
+                    {"name":"HTML5", "image":"images/techs/html5.png"},
+                    {"name":"Bootstrap5", "image":"images/techs/bootstrap.png"},
+                    {"name":"PostgreSQL", "image":"images/techs/postgre.png"}
                 ],
                 "href":"#proyectos"
             },
@@ -268,9 +269,9 @@
                 "image1":"images/projects/proyecto1_fondo.PNG",
                 "image2":"images/projects/proyecto1_modal.png",
                 "languages":[
-                    "images/html5.png",
-                    "images/css3.png",
-                    "images/javascript.png"
+                    "images/techs/html5.png",
+                    "images/techs/css3.png",
+                    "images/techs/javascript.png"
                 ],
                 "info1":"Proyecto propio, creado con html, css y javascript para aprender y practicar las funcionalidades básicas de estos lenguajes, y reforzar el inglés.",
                 "info2":"El proyecto es una aplicación web creada utilizando diferentes tecnologías. Su objetivo principal es proporcionar una herramienta para mejorar y practicar el conocimiento del inglés, enfocándose en el aprendizaje de verbos en diferentes conjugaciones.",    
@@ -285,10 +286,10 @@
                 "image1":"images/projects/proyecto2_fondo.PNG",
                 "image2":"images/projects/proyecto2_modal.png",
                 "languages":[
-                    "images/html5.png",
-                    "images/bootstrap.png",
-                    "images/javascript.png",
-                    "images/localstorage.png"
+                    "images/techs/html5.png",
+                    "images/techs/bootstrap.png",
+                    "images/techs/javascript.png",
+                    "images/techs/localstorage.png"
                 ],
                 "info1":"Proyecto de instituto, desarrollada como parte del curso de Front-End con uso de HTML, CSS y JS con LocalStorage.",
                 "info2":"Se ha desarrollado una aplicación funcional de un carrito de compras utilizando el LocalStorage. Además, se ha fortalecido la comprensión de conceptos clave en el desarrollo web y la importancia de una interfaz interactiva y amigable para el usuario.",    
@@ -303,10 +304,10 @@
                 "image1":"images/projects/proyecto3_fondo.PNG",
                 "image2":"images/projects/proyecto3_modal.PNG",
                 "languages":[
-                    "images/django.png",
-                    "images/html5.png",
-                    "images/bootstrap.png",
-                    "images/postgre.png"
+                    "images/techs/django.png",
+                    "images/techs/html5.png",
+                    "images/techs/bootstrap.png",
+                    "images/techs/postgre.png"
                 ],
                 "info1":"Proyecto de instituto, desarrollada como parte del curso de Back-End con uso de HTML, CSS, Django y PostgreSQL subido en Render.",
                 "info2":"Se ha desarrollado una aplicación funcional de gestión de citas automotrices. Con diferentes intefaces de (Cliente, Recepcionista y Administrador) en las que se puede gestionar los vehículos y las citas de mantenimiento.",    
@@ -321,10 +322,10 @@
                 "image1":"images/projects/proyecto4_fondo.png",
                 "image2":"images/projects/proyecto4_modal.png",
                 "languages":[
-                    "images/nodejs.png",
-                    "images/react.png",
-                    "images/bootstrap.png",
-                    "images/mongodb.png"
+                    "images/techs/nodejs.png",
+                    "images/techs/react.png",
+                    "images/techs/bootstrap.png",
+                    "images/techs/mongodb.png"
                 ],
                 "info1":"Proyecto propio desarrollada con el fin de entender sintaxis del stack MERN (Mongo, Express, React con Bootstrap y Node).",
                 "info2":"Es una api simple para guardar información de marcas y modelos con su años respectivos.",    
@@ -342,11 +343,11 @@
                 "image1":"images/projects/professional/proyectoprofesional1_fondo.PNG",
                 "image2":"images/projects/professional/proyectoprofesional1_fondo.PNG",
                 "languages":[
-                    "images/django.png",
-                    "images/css3.png",
-                    "images/bootstrap.png",
+                    "images/techs/django.png",
+                    "images/techs/css3.png",
+                    "images/techs/bootstrap.png",
                     "images/tools/htmx.png",
-                    "images/javascript.png"
+                    "images/techs/javascript.png"
                 ],
                 "info1":"Proyecto de empresa Syzlab, creado en Django, Websocket, Daphne, Htmx y Docker.",
                 "info2":"El proyecto es una aplicación citas.",    
