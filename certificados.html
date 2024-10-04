@@ -9,7 +9,7 @@
     <meta name="author" content="Sebastian Lopez">
     <meta http-equiv="Permissions-Policy" content="interest-cohort=()">
 
-    <title>Curriculum</title>
+    <title data-section="titles" data-value="certificates">Certificados</title>
     <!-- LOGO -->
     <link rel="icon" type="image/png" href="icons/seba_logo.JPG"/>
     <!-- CSS -->
@@ -29,24 +29,24 @@
             <div class="logo animacion">
                 <a class="logo-href" href="#">
                     <img class="logo-img" src="images/template/seba_logo.JPG" width="30px" alt="">
-                    eba <span style="font-size: 1rem;">Certificados</span>
+                    eba <span style="font-size: 1rem;" data-section="titles" data-value="certificates">Certificados</span>
                 </a>
             </div>
 
             <!-- CAMBIO DE IDIOMA -->
-            <!-- <div id="idiomas" class="idiomas animacion">
-                <div class="idioma_item" data-language="es">
+            <div id="idiomas" class="idiomas animacion">
+                <div class="idioma_item" data-language="es"> 
                     <img src="icons/chile_64px.png" alt="Chile">
                 </div>
                 <div class="idioma_item" data-language="en">
                     <img src="icons/estados-unidos_64px.png" alt="Estados Unidos">
-                </div>
-            </div> -->
+                </div> 
+            </div> 
 
             <nav id="nav" class="">
                 <ul>
                     <li data-nav="1">
-                        <a href="./index.html#curriculum" id="click-cv" data-section="cv_pagina" data-value="nav"></a>
+                        <a href="./index.html" id="click-cv" data-section="cv_pagina" data-value="nav"></a>
                     </li>
                 </ul>
             </nav>
@@ -61,9 +61,27 @@
     
     <div class="contenedor-botones-certificados">
 
-        <button class="btn-certificado" data-src="docs/certificados/certificado_titulo_tecnico.pdf">Título Técnico</button>
-        <button class="btn-certificado" data-src="docs/certificados/certificado_titulo_ingenieriamecanica.pdf">Título Ingenieria Mecánica</button>
-        <button class="btn-certificado" data-src="" disabled>Título Analista Programador</button>
+        <button 
+            class="btn-certificado" 
+            data-src="docs/certificados/certificado_titulo_tecnico.pdf"
+            data-section="cert_buttons" 
+            data-value="button1">
+            <!-- Título Técnico -->
+        </button>
+        <button 
+            class="btn-certificado" 
+            data-src="docs/certificados/certificado_titulo_ingenieriamecanica.pdf"
+            data-section="cert_buttons" 
+            data-value="button2">
+            <!-- Título Ingenieria Mecánica -->
+        </button>
+        <button 
+            class="btn-certificado" 
+            data-src="docs/certificados/certificado_titulo_analista_programador.pdf"
+            data-section="cert_buttons" 
+            data-value="button3">
+            <!-- Título Analista Programador -->
+        </button>
 
     </div>
     
@@ -86,8 +104,9 @@
                 <ul>
                     <li data-nav="1"><a href="https://www.linkedin.com/in/sebastian-lopez-nunez" target="_blank" title="linkedin"><i class="fa-brands fa-linkedin-in"></i></a></li>
                     <li data-nav="2"><a href="https://github.com/sebalopezx" target="_blank" title="github"><i class="fa-brands fa-github"></i></a></li>
-                    <li data-nav="3"><a href="https://www.facebook.com/sebalopezxd/" target="_blank" title="facebook"><i class="fa-brands fa-facebook-f"></i></a></li>
-                    <li data-nav="4"><a href="https://www.instagram.com/sebalopzxd/" target="_blank" title="instagram"><i class="fa-brands fa-instagram"></i></a></li>
+                    <li data-nav="3"><a href="certificados.html" title="titulos"><i class="fa-solid fa-user-graduate"></i></a></li>
+                    <li data-nav="4"><a href="https://www.facebook.com/sebalopezxd/" target="_blank" title="facebook"><i class="fa-brands fa-facebook-f"></i></a></li>
+                    <li data-nav="5"><a href="https://www.instagram.com/sebalopzxd/" target="_blank" title="instagram"><i class="fa-brands fa-instagram"></i></a></li>
                 </ul>
             </nav>
         </div>

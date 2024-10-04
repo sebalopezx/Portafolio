@@ -73,45 +73,23 @@ const cambiarIdioma = async (lenguaje) =>{
 
         textoACambiar.innerHTML = texto[seccion][valor];
     };
+
+    // Actualizar los titulos de redes sociales
+    let redesSocialesCount = 5
+    const redesSocialesNav = document.querySelector('.redes nav');
+    if (redesSocialesNav) {
+        for (let i = 1; i <= redesSocialesCount; i++) {
+            const link = redesSocialesNav.querySelector(`li[data-nav="${i}"] a`);
+
+            if (link) {
+                const titleKey = `nav${i}`;  // Crear la clave dinámica (nav1, nav2, etc.)
+                link.setAttribute('title', texto.nav[titleKey]); // Asignar el título desde el JSON
+            }
+        }
+    }
+
     // Mandar el cambio de idioma para guardar en localStorage
     cambiarIdiomaSeleccionado(texto.idioma);
-};
-
-
-// Cuando se carga la pagina se ejecutan funciones principales para cargar idioma
-document.addEventListener("DOMContentLoaded", async () => {
-    // Cargar contenido inicial en el idioma deseado y segun pagina ejectuada
-    await cambiarIdioma(idiomaInicial);
-    if (esPaginaIndex()){
-        await tipado(idiomaInicial); 
-        await cargarIntereses(idiomaInicial);
-        await cargarSkills(idiomaInicial);
-        await cargarCV(idiomaInicial);
-        await cargarProyectos(idiomaInicial);
-        await establecerPlaceholders(idiomaInicial);
-    };
-});
-
-// Escuchar clicks para cambio de idioma e iniciar funciones segun pagina (modulo)
-if (esPaginaIndex()){
-    idiomas.addEventListener("click", (e) =>{
-        const nuevoIdioma = e.target.parentElement.dataset.language;
-        cambiarIdioma(nuevoIdioma);
-        tipado(nuevoIdioma);
-        cargarIntereses(nuevoIdioma);
-        cargarSkills(nuevoIdioma);
-        cargarCV(nuevoIdioma);
-        cargarProyectos(nuevoIdioma);
-        establecerPlaceholders(nuevoIdioma);
-    });
-};
-
-if (!esPaginaIndex()) {
-    idiomas.addEventListener("click", (e) =>{
-        const nuevoIdioma = e.target.parentElement.dataset.language;
-        cambiarIdioma(nuevoIdioma);
-        establecerPDF(nuevoIdioma);
-    });
 };
 
 
@@ -397,14 +375,18 @@ const crearContenedorStackDestacado = (stack, index)=>{
 
 const efectoHabilidades =()=>{
     let skills = document.getElementById("skills");
-    let distancia_skills = window.innerHeight - skills.getBoundingClientRect().top;
+    if (skills) {
+        let distancia_skills = window.innerHeight - skills.getBoundingClientRect().top;
 
-    if(distancia_skills >= 300){
-        let habilidades = document.getElementsByClassName("progreso");
-        for (i=0;i<habilidades.length;i++){
-            habilidades[i].classList.add("lvl");
+        if(distancia_skills >= 300){
+            let habilidades = document.getElementsByClassName("progreso");
+            if (habilidades) {
+                for (i=0;i<habilidades.length;i++){
+                    habilidades[i].classList.add("lvl");
+                };
+            }
         };
-    };
+    }
 };
 
 // if (esPaginaIndex()) {
@@ -826,15 +808,17 @@ async function establecerPDF(idioma){
 
 if (window.location.pathname.endsWith("certificados.html")){
     document.addEventListener('DOMContentLoaded', function () {
-        var botones = document.querySelectorAll('.contenedor-botones-certificados button');
+        let botones = document.querySelectorAll('.contenedor-botones-certificados button');
 
         // Función para cambiar el PDF mostrado
         function cambiarPDF(event) {
-            var boton = event.target; // El botón que fue clickeado
+            let boton = event.target; // El botón que fue clickeado
             // console.log(boton);
-            var src = boton.getAttribute('data-src'); // Obtiene el 'data-src' del botón
-            var iframe = document.getElementById('pdf-iframe'); // Selecciona el iframe
-            iframe.src = src; // Cambia el 'src' del iframe al del botón
+            let src = boton.getAttribute('data-src'); // Obtiene el 'data-src' del botón
+            let iframe = document.getElementById('pdf-iframe'); // Selecciona el iframe
+            if (iframe) {
+                iframe.src = src; // Cambia el 'src' del iframe al del botón
+            }
         }
 
         // Añade el evento 'click' a cada botón
@@ -844,3 +828,43 @@ if (window.location.pathname.endsWith("certificados.html")){
     });
 };
 
+
+// CARGADO DE PAGINA 
+
+// Cuando se carga la pagina se ejecutan funciones principales para cargar idioma
+document.addEventListener("DOMContentLoaded", async () => {
+    // Cargar contenido inicial en el idioma deseado y segun pagina ejectuada
+    await cambiarIdioma(idiomaInicial);
+    if (esPaginaIndex()){
+        await tipado(idiomaInicial); 
+        await cargarIntereses(idiomaInicial);
+        await cargarSkills(idiomaInicial);
+        await cargarCV(idiomaInicial);
+        await cargarProyectos(idiomaInicial);
+        await establecerPlaceholders(idiomaInicial);
+    };
+});
+
+// Escuchar clicks para cambio de idioma e iniciar funciones segun pagina (modulo)
+if (esPaginaIndex()){
+    idiomas.addEventListener("click", (e) =>{
+        const nuevoIdioma = e.target.parentElement.dataset.language;
+        cambiarIdioma(nuevoIdioma);
+        tipado(nuevoIdioma);
+        cargarIntereses(nuevoIdioma);
+        cargarSkills(nuevoIdioma);
+        cargarCV(nuevoIdioma);
+        cargarProyectos(nuevoIdioma);
+        establecerPlaceholders(nuevoIdioma);
+    });
+} else {
+    console.log("Sin info")
+};
+
+if (!esPaginaIndex()) {
+    idiomas.addEventListener("click", (e) =>{
+        const nuevoIdioma = e.target.parentElement.dataset.language;
+        cambiarIdioma(nuevoIdioma);
+        establecerPDF(nuevoIdioma);
+    });
+};

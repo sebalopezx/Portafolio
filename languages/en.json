@@ -1,6 +1,19 @@
 {
     "idioma":"en",
 
+    "titles": {
+        "portafolio":"Portfolio",
+        "curriculum":"Curriculum",
+        "developer":"Developer",
+        "mechanic":"Mechanic",
+        "certificates":"Certificates"
+    },
+
+    "cert_buttons": {
+        "button1": "Mechanical Technician Degree",
+        "button2": "Mechanical Engineering Degree",
+        "button3": "Programmer Analyst Degree"
+    },
 
     "menu": {
         "nav1":"Home",
@@ -9,6 +22,14 @@
         "nav4":"CV",
         "nav5":"Projects",
         "nav6":"Contact"
+    },
+
+    "nav": {
+        "nav1":"Linkedin",
+        "nav2":"Github",
+        "nav3":"Certificates",
+        "nav4":"Facebook",
+        "nav5":"Instagram"
     },
 
 
@@ -104,8 +125,8 @@
                 "name":"Programmer analyst",
                 "place":"Inacap",
                 "date":"2022-2024",
-                "description":"Studying",
-                "pdf":""
+                "description":"Graduate",
+                "pdf":"docs/certificados/certificado_titulo_analista_programador"
             },
             {
                 "name":"Mechanical and autotronics engineer",

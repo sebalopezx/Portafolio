@@ -1,6 +1,19 @@
 {
     "idioma":"es",
 
+    "titles": {
+        "portafolio":"Portafolio",
+        "curriculum":"Curriculum",
+        "developer":"Desarrollador",
+        "mechanic":"Mecánica",
+        "certificates":"Certificados"
+    },
+
+    "cert_buttons": {
+        "button1":"Título Técnico Mecánico",
+        "button2":"Título Ingenieria Mecánica",
+        "button3":"Título Analista Programador"
+    },
 
     "menu": {
         "nav1":"Inicio",
@@ -11,13 +24,21 @@
         "nav6":"Contacto"
     },
 
+    "nav": {
+        "nav1":"Linkedin",
+        "nav2":"Github",
+        "nav3":"Certificados",
+        "nav4":"Facebook",
+        "nav5":"Instagram"
+    },
+
 
     "tipado":{
         "title":["Desarrollador Junior", "Ingeniero Mecánico"]
     },
 
     "btn_cv":{
-        "btn1":"CV Informática",
+        "btn1":"CV Desarrollador",
         "btn2":"CV Mecánica"
     },
         
@@ -106,8 +127,8 @@
                 "name":"Analista Programador",
                 "place":"Inacap",
                 "date":"2022-2024",
-                "description":"Cursando",
-                "pdf":""
+                "description":"Titulado",
+                "pdf":"docs/certificados/certificado_titulo_analista_programador"
             },
             {
                 "name":"Ingeniería en mecánica automotriz y autotrónica",
