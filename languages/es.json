@@ -186,15 +186,19 @@
         ]
     },
 
+    "choose_cv": {
+        "exp":"Elegir experiencia <img src='icons/caret_right.svg' class='arrow' alt=''>"
+    },
 
     "cv_programmer":{
+        "exp":"1",
         "title":"Experiencia en Informática",
         "cv_programmer":[
             {
-                "name":"Independiente - Híbrido.",
-                "place":"Syzlab",
-                "date":"2024",
-                "description":"Desarrollo de aplicación de citas <a class='link' href='https://ddirt.com/'>Ddirt.com</a>. <br> Creación de funciones (backend y frontend). <br> Seguimiento de buenas prácticas y sintaxys.",
+                "name":"Programador Junior (FullStack)",
+                "place":"Syzlab - Híbrido",
+                "date":"2024 - <strong class='badge-text'>Actualmente</strong>",
+                "description":"• Desarrollo de aplicación de citas <a class='link' href='https://ddirt.com/'>Ddirt.com</a>. <br>• Desarrollar nuevas características y funcionalidades, tanto backend como frontend, cumpliendo con los requerimientos técnicos y operacionales. <br>• Detectar y diagnosticar errores, bugs o problemas en el código existente a través de análisis exhaustivos para asegurar correcto funcionamiento. <br>• Proponer y aplicar soluciones efectivas para corregir los detalles y errores. <br>• Aplicar principios y patrones de diseño adecuados, como PEP8, DRY, MVT, para garantizar la calidad, mantenibilidad y escalabilidad del código. <br>• Trabajar de manera colaborativa con otros miembros del equipo para alcanzar objetivos. <br>• Utilizar herramientas de gestión de proyectos, como Trello, para organizar y priorizar tareas, asegurando una comunicación clara y eficiente con el equipo sobre el estado de las actividades en curso.",
                 "tech": [
                     {"name":"Django", "image":"images/techs/django.png"},
                     {"name":"CSS", "image":"images/techs/css3.png"},
@@ -206,10 +210,10 @@
                 "href":"#proyectos"
             },
             {
-                "name":"Estudiante.",
-                "place":"API Detalle de vehículos.",
+                "name":"Estudiante",
+                "place":"API Detalle de vehículos",
                 "date":"2023",
-                "description":"Gestión de vehículos para marcas y modelos. <br> Entender uso de API Rest Full, e integración mediante endpoint a proyecto de “Gestión automotriz”.",
+                "description":"• Gestión de vehículos para marcas y modelos. <br>• Entender uso de API Rest Full, e integración mediante endpoint a proyecto de “Gestión automotriz”.",
                 "tech": [
                     {"name":"Node", "image":"images/techs/nodejs.png"},
                     {"name":"JavaScript", "image":"images/techs/javascript.png"},
@@ -220,10 +224,10 @@
                 "href":"#proyectos"
             },
             {
-                "name":"Estudiante.",
-                "place":"Gestión Automotriz.",
+                "name":"Estudiante",
+                "place":"Gestión Automotriz",
                 "date":"2023",
-                "description":"Gestión de citas de mantenimiento con diferentes interfaces y rangos (Cliente, Recepcionista, Administrador). <br> Para conocer el lenguaje, su sintaxis y estructura.",
+                "description":"• Gestión de citas de mantenimiento con diferentes interfaces y rangos (Cliente, Recepcionista, Administrador). <br>• Para conocer el lenguaje, su sintaxis y estructura.",
                 "tech": [
                     {"name":"Python", "image":"images/techs/python.png"},
                     {"name":"Django", "image":"images/techs/django.png"},
@@ -234,32 +238,33 @@
                 "href":"#proyectos"
             },
             {
-                "name":"Estudiante.",
-                "place":"Proyectos de estudio.",
+                "name":"Estudiante",
+                "place":"Proyectos de estudio",
                 "date":"2022-2023",
-                "description":"Proyectos para practicar y aprender diferentes tecnologías. Estudiando su sintaxis, estructura, patrones de diseño, lógica, etc..."
+                "description":"• Proyectos para practicar y aprender diferentes tecnologías. Estudiando su sintaxis, estructura, patrones de diseño, lógica, etc..."
             }
         ]
     },
 
     "cv_mechanic":{
+        "exp":"2",
         "title":"Experiencia en Mecánica",
         "cv_mechanic":[
             {
-                "name":"Técnico mantenimiento, y<br>Supervisor suplente.",
+                "name":"Técnico mantenimiento, y<br>Supervisor suplente",
                 "place":"CAF Chile Línea 1",
                 "date":"2019-2022",
-                "description":"Mantenimiento preventivo y correctivo de diferentes áreas, especialidad neumática. <br>Supervisor de turno, supervisar trabajos y cumplimiento de las reglas y normas de la empresa, y delegación de tareas.",
+                "description":"• Mantenimiento preventivo y correctivo de diferentes áreas, especialidad neumática. <br>• Supervisor de turno, supervisar trabajos y cumplimiento de las reglas y normas de la empresa, y delegación de tareas.",
                 "tech": [
                     {"name":"Metro", "image":"images/mecanica/metro.png"},
                     {"name":"Mantenimiento", "image":"images/mecanica/mantenimiento.png"}
                 ]
             },
             {
-                "name":"Práctica Ingeniería",
+                "name":"Práctica Ingeniería de procesos",
                 "place":"Rheem chilena SPA",
                 "date":"2 Meses",
-                "description":"Estandarización de procesos y procedimientos. <br>Inicio de 5S Kaizen, para implementación futura en taller.",
+                "description":"• Estandarización de procesos y procedimientos. <br>• Inicio de 5S Kaizen, para implementación futura en taller.",
                 "tech": [
                     {"name":"Gestion", "image":"images/mecanica/gestion.png"}
                 ]
@@ -268,9 +273,19 @@
                 "name":"Técnico en mantenimiento general",
                 "place":"Alstom Línea 4 y 4a",
                 "date":"2014-2015",
-                "description":"Mantenimiento preventivo y correctivo en diferentes áreas. <br>Gran Mantenimiento de trenes (GR) específicamente del área neumática.",
+                "description":"• Mantenimiento preventivo y correctivo en diferentes áreas. <br>• Gran Mantenimiento de trenes (GR) específicamente del área neumática.",
                 "tech": [
                     {"name":"Metro", "image":"images/mecanica/metro.png"},
+                    {"name":"Mantenimiento", "image":"images/mecanica/mantenimiento.png"}
+                ]
+            },
+            {
+                "name":"Practicante en mantenimiento general",
+                "place":"Turbus",
+                "date":"2014",
+                "description":"• Mantenimiento preventivo y correctivo en diferentes áreas. <br>• Especialidad área neumática.",
+                "tech": [
+                    {"name":"Bus", "image":"images/mecanica/bus.png"},
                     {"name":"Mantenimiento", "image":"images/mecanica/mantenimiento.png"}
                 ]
             }
@@ -381,8 +396,8 @@
                     "images/tools/htmx.png",
                     "images/techs/javascript.png"
                 ],
-                "info1":"Proyecto de empresa Syzlab, creado en Django, Websocket, Daphne, Htmx y Docker.",
-                "info2":"El proyecto es una aplicación citas.",    
+                "info1":"Proyecto de empresa Syzlab, creado en Django, CSS, Bootstrap, Websocket, Daphne, Htmx y Docker.",
+                "info2":"El proyecto es una aplicación citas para adultos.",    
                 "ref":"https://ddirt.com",
                 "ref2":"https://syzlab.com/"
             }

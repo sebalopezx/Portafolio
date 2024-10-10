@@ -185,15 +185,18 @@
         ]
     },
 
+    "choose_cv": {
+        "exp": "Choose experience <img src='icons/caret_right.svg' class='arrow' alt=''>"
+    },
 
     "cv_programmer":{
         "title":"Programming experience",
         "cv_programmer":[
             {
-                "name":"Independent - Hybrid.",
-                "place":"Syzlab",
-                "date":"2024",
-                "description":"Development of appointment application <a class='link' href='https://ddirt.com/'>Ddirt.com</a>. <br> Creation of functions (backend and frontend). <br> Following best practices and syntax.",
+                "name":"Junior programmer (FullStack)",
+                "place":"Syzlab - Hybrid",
+                "date":"2024 - <strong class='badge-text'>Actually</strong>",
+                "description":"• Development of a dating application <a class='link' href='https://ddirt.com/'>Ddirt.com</a>. <br>• Develop new features and functionalities, both backend and frontend, in line with technical and operational requirements. <br>• Identify and diagnose errors, bugs, or issues in the existing code through comprehensive analysis to ensure optimal functionality.<br>• Propose and implement effective solutions to fix issues and errors. <br>• Apply appropriate design principles and patterns, such as PEP8, DRY, MVT, to ensure code quality, maintainability, and scalability. <br>• Collaborate with other team members to achieve objectives. <br>• Use project management tools, such as Trello, to organize and prioritize tasks, ensuring clear and efficient communication with the team about the status of ongoing activities.",
                 "tech": [
                     {"name":"Django", "image":"images/techs/django.png"},
                     {"name":"CSS", "image":"images/techs/css3.png"},
@@ -205,10 +208,10 @@
                 "href":"#proyectos"
             },
             {
-                "name":"Student.",
+                "name":"Student",
                 "place":"API Vehicle details",
                 "date":"2023",
-                "description":"Vehicle management for brands and models <br> Understand the use of the Rest Full API, and integration through endpoint to the “Appointment Management” project.",
+                "description":"• Vehicle management for brands and models <br>• Understand the use of the Rest Full API, and integration through endpoint to the “Appointment Management” project.",
                 "tech": [
                     {"name":"Node", "image":"images/techs/nodejs.png"},
                     {"name":"JavaScript", "image":"images/techs/javascript.png"},
@@ -219,10 +222,10 @@
                 "href":"#proyectos"
             },
             {
-                "name":"Student.",
+                "name":"Student",
                 "place":"Appointment Management",
                 "date":"2023",
-                "description":"Management of maintenance appointments with different interfaces and ranks (Customer, Receptionist, Administrator). <br> Know the language, their syntax and structure.",
+                "description":"• Management of maintenance appointments with different interfaces and ranks (Customer, Receptionist, Administrator). <br>• Know the language, their syntax and structure.",
                 "tech": [
                     {"name":"Python", "image":"images/techs/python.png"},
                     {"name":"Django", "image":"images/techs/django.png"},
@@ -233,10 +236,10 @@
                 "href":"#proyectos"
             },
             {
-                "name":"Student.",
+                "name":"Student",
                 "place":"Study projects",
                 "date":"2022-2023",
-                "description":"Projects to practice and learn different technologies. Studying the syntax, structure, design patterns, logic, etc..."
+                "description":"• Projects to practice and learn different technologies. Studying the syntax, structure, design patterns, logic, etc..."
             }
         ]
     },
@@ -246,20 +249,20 @@
         "title":"Mechanic experience",
         "cv_mechanic":[
             {
-                "name":"Maintenance technician, and <br>Alternate Supervisor.",
+                "name":"Maintenance technician, and <br>Alternate Supervisor",
                 "place":"CAF Chile Line 1",
                 "date":"2019-2022",
-                "description":"Preventive and corrective maintenance of different areas, pneumatic specialty. <br>Supervise work and compliance with company rules and regulations, and task delegation.",
+                "description":"• Preventive and corrective maintenance of different areas, pneumatic specialty. <br>• Supervise work and compliance with company rules and regulations, and task delegation.",
                 "tech": [
                     {"name":"Subway", "image":"images/mecanica/metro.png"},
                     {"name":"Maintenance", "image":"images/mecanica/mantenimiento.png"}
                 ]
             },
             {
-                "name":"Práctica Ingeniería",
+                "name":"Process engineering internship",
                 "place":"Rheem chilean SPA",
                 "date":"2 Months",
-                "description":"Standardization of processes and procedures. <br>Start of 5S Kaizen, for future implementation.",
+                "description":"• Standardization of processes and procedures. <br>• Start of 5S Kaizen, for future implementation.",
                 "tech": [
                     {"name":"Management", "image":"images/mecanica/gestion.png"}
                 ]
@@ -268,10 +271,20 @@
                 "name":"General maintenance technician",
                 "place":"Alstom Line 4 and 4a",
                 "date":"2014-2015",
-                "description":"Preventive and corrective maintenance in different areas.<br>Great Train Maintenance (GR) specifically in the pneumatic area.",
+                "description":"• Preventive and corrective maintenance in different areas.<br>• Great Train Maintenance (GR) specifically in the pneumatic area.",
                 "tech": [
                     {"name":"Subway", "image":"images/mecanica/metro.png"},
                     {"name":"Maintenance", "image":"images/mecanica/mantenimiento.png"}
+                ]
+            },
+            {
+                "name":"General maintenance intern",
+                "place":"Turbus",
+                "date":"2014",
+                "description":"• Preventive and corrective maintenance of different areas. <br>• Pneumatic specialty.",
+                "tech": [
+                    {"name":"Bus", "image":"images/mecanica/bus.png"},
+                    {"name":"Mantenimiento", "image":"images/mecanica/mantenimiento.png"}
                 ]
             }
         ]

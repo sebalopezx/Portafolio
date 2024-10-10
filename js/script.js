@@ -422,7 +422,7 @@ const crearHabilidad =(skill)=>{
             <span><i class="${skill.icon}"></i></span>
             <div class="barra-skill">
                 <span class="nombre-habilidad">${skill.name}</span>
-                <div class="progreso " style="--progreso:${skill.lvl}%">
+                <div class="progreso" style="--progreso:${skill.lvl}%">
                     <span class="valor-skill">${skill.value}</span>
                 </div>
             </div>
@@ -506,13 +506,14 @@ const crearCV = (cv, columna, posicion) => {
         </div>`;
     return cvHTML;
 };
+
 const crearCursos =(cv, columna, posicion)=>{
     let cursoHTML = `
         <div class="${columna}">
             <h4">${cv.name}</h4>
             ${cv.image
                 ? `<span class="badges"><img src="${cv.image}" alt="${cv.description}" title="${cv.description}"></span>`
-                : 'a'
+                : ''
             }
             <span class="lugar">${cv.company}</span>
             <span class="fecha">${cv.date}</span>
@@ -541,11 +542,13 @@ const cargarCV = async(idioma)=>{
     const listaCursos = data.courses.courses;
     const listaExpProgramador = data.cv_programmer.cv_programmer;
     const listaExpMecanico = data.cv_mechanic.cv_mechanic;
+    const ExpProgramador = data.cv_programmer.exp;
+    const ExpMecanico = data.cv_mechanic.exp;
 
     let nuevoContenedorEstudios = recorrerListaCV(listaEstudios, crearCV, "item izq");
     let nuevoContenedorCursos = recorrerListaCV(listaCursos, crearCursos, "item izq");
-    let nuevoContenedorExpProgramador = recorrerListaCV(listaExpProgramador, crearCV, "item der");
-    let nuevoContenedorExpMecanico = recorrerListaCV(listaExpMecanico, crearCV, "item der");
+    let nuevoContenedorExpProgramador = recorrerListaCV(listaExpProgramador, crearCV, "item der", ExpProgramador);
+    let nuevoContenedorExpMecanico = recorrerListaCV(listaExpMecanico, crearCV, "item der", ExpMecanico);
     
 
     if (esPaginaIndex()){
@@ -559,8 +562,19 @@ const cargarCV = async(idioma)=>{
 }
 
 // Recorres cada lista sacada desde la data de los JSON
-const recorrerListaCV = (lista, crearCV, columna) => {
+const recorrerListaCV = (lista, crearCV, columna, exp=null) => {
+    let title = "";
     let nuevoContenedor = "";
+    
+    // if (exp) {
+    //     title = `
+    //         <h3 class="animacion" data-section="${exp == 1 ? 'cv_programmer' : 'cv_mechanic'}" data-value="title">
+    //         </h3>  
+    //     `;
+    //     nuevoContenedor += title;
+    // }
+    // ${lista.exp == 1 ? 'Experiencia en Informática' : 'Experiencia en Mecánica'}
+
     let posicion = 0;
     switch (columna) {
         case "item izq":
@@ -659,7 +673,7 @@ const recorrerListaProyectos = (lista, crearProyectos, proyectosConfig) => {
     }
     return nuevoContenedor;
 };
-
+  
 
 
 
@@ -829,6 +843,80 @@ if (window.location.pathname.endsWith("certificados.html")){
 };
 
 
+
+
+// DROPDOWNS
+
+async function toggleDropdown() {
+    // Mostrar u ocultar el dropdown
+    // const dropdown = document.querySelector('.dropdown').classList.toggle('show');
+    const dropdown = document.querySelector('.dropdown');
+    if (dropdown) {
+        dropdown.classList.toggle('show');
+    }
+    // Rotar la flecha
+    const arrow = document.querySelector('.arrow');
+    if (arrow) {
+        arrow.classList.toggle('rotate');
+    }
+}
+
+async function showProgrammer() {
+    // Mostrar la sección de Programador y ocultar Mecánico
+    document.getElementById('contenedor-exp-programador').style.display = 'block';
+    document.getElementById('contenedor-exp-mecanico').style.display = 'none';
+
+    // Marcar Programador como activo en el dropdown
+    document.getElementById('dropdown-programmer').classList.add('active');
+    document.getElementById('dropdown-mechanic').classList.remove('active');
+    
+    // await actualizarContenedorExp('cv_programmer');
+}
+
+async function showMechanic() {
+    // Mostrar la sección de Mecánico y ocultar Programador
+    document.getElementById('contenedor-exp-programador').style.display = 'none';
+    document.getElementById('contenedor-exp-mecanico').style.display = 'block';
+
+    // Marcar Mecánico como activo en el dropdown
+    document.getElementById('dropdown-programmer').classList.remove('active');
+    document.getElementById('dropdown-mechanic').classList.add('active');
+
+    // await actualizarContenedorExp('cv_mechanic');
+}
+
+// Cerrar el dropdown si se hace clic fuera de él
+window.onclick = function(event) {
+    if (!event.target.matches('.dropdown-title')) {
+        let dropdowns = document.getElementsByClassName("dropdown");
+        for (let i = 0; i < dropdowns.length; i++) {
+            let openDropdown = dropdowns[i];
+            if (openDropdown.classList.contains('show')) {
+                openDropdown.classList.remove('show');
+                document.querySelector('.arrow').classList.remove('rotate');
+            }
+        }
+    }
+}
+
+async function actualizarContenedorExp(data_section, idioma) {
+    const data = await cargarDatos(idioma);
+
+    // Obtener el contenido para programador y Actualizar el atributo data-section
+    const contenedorExp = document.getElementById('contenedor-exp');
+    const h3Element = contenedorExp.querySelector('h3');
+
+    h3Element.setAttribute('data-section', data_section);
+    h3Element.setAttribute('data-value', 'title');
+
+    if (data[data_section] && data[data_section].title) {
+        h3Element.textContent = data[data_section].title;
+    }
+}
+
+
+
+
 // CARGADO DE PAGINA 
 
 // Cuando se carga la pagina se ejecutan funciones principales para cargar idioma
@@ -857,6 +945,19 @@ if (esPaginaIndex()){
         cargarProyectos(nuevoIdioma);
         establecerPlaceholders(nuevoIdioma);
     });
+    let botonesShowCV = document.querySelectorAll('.dropdown-content .dropdown-item');
+    botonesShowCV.forEach(boton => {
+        boton.addEventListener('click', () => {
+            const nuevoIdioma = obtenerIdiomaSeleccionado();
+            if (boton.id == "dropdown-programmer") {
+                showProgrammer();
+                actualizarContenedorExp('cv_programmer', nuevoIdioma);
+            } else if (boton.id === 'dropdown-mechanic') {
+                showMechanic();
+                actualizarContenedorExp('cv_mechanic', nuevoIdioma);
+            }
+        })
+    })
 } else {
     console.log("Sin info")
 };

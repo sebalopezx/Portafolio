@@ -232,14 +232,55 @@
 
                 <!-- COLUMNA DERECHA -->
                 <div class="col derecha animacion">
+                    <!-- Dropdown para alternar entre las experiencias -->
+                    <div class="dropdown">
+                        <h3 class="animacion dropdown-title" onclick="toggleDropdown(this)" data-section="choose_cv" data-value="exp">
+                            Elegir Experiencia
+                            <img src="icons/caret_right.svg" class="arrow" alt="">
+                        </h3>
+                        <div class="dropdown-content">
+                            <div 
+                                class="dropdown-item active" 
+                                id="dropdown-programmer" 
+                                data-section="titles" 
+                                data-value="developer"
+                                >
+                                Programador
+                            </div>
+                            <div 
+                                class="dropdown-item" 
+                                id="dropdown-mechanic" 
+                                data-section="titles" 
+                                data-value="mechanic"
+                                >
+                                Mecánico
+                            </div>
+                        </div>
+                    </div>
 
+                    <div class="contenedor-exp" id="contenedor-exp">
+                        <h3 class="animacion" data-section="cv_programmer" data-value="title"></h3>
+                    </div>
+
+                    <!-- EXP INFORMATICA (Programador) -->
+                    <div class="contenedor-exp-programador" id="contenedor-exp-programador">
+                        <!-- Contenido de experiencia como programador -->
+                    </div>
+
+                    <!-- EXP MECANICA (Cerrado por defecto) -->
+                    <div class="contenedor-exp-mecanico" id="contenedor-exp-mecanico" style="display: none;">
+                        <!-- Contenido de experiencia como mecánico -->
+                    </div>
+
+                    
                     <!-- EXP INFORMATICA -->
-                    <h3 class="animacion" data-section="cv_programmer" data-value="title">Experiencia</h3>
-                    <div class="contenedor-exp-programador" id="contenedor-exp-programador"></div>
+                    <!-- <h3 class="animacion" data-section="cv_programmer" data-value="title">Experiencia</h3> -->
+                    <!-- <div class="contenedor-exp-programador" id="contenedor-exp-programador"></div> -->
 
                     <!-- EXP MECANICA -->
-                    <h3 class="animacion" data-section="cv_mechanic" data-value="title">Experiencia</h3>
-                    <div class="contenedor-exp-mecanico" id="contenedor-exp-mecanico"></div>
+                    <!-- <h3 class="animacion" data-section="cv_mechanic" data-value="title">Experiencia</h3> -->
+                    <!-- <div class="contenedor-exp-mecanico" id="contenedor-exp-mecanico"></div> -->
+
                     
                 </div>
 

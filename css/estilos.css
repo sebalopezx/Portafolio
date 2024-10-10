@@ -132,11 +132,15 @@ button:hover i{
     border: 1px solid var(--color-terciario);
 }
 
+/* BADGES */
 .badges {
     cursor: pointer; 
     position: absolute; 
     right: 10px; 
     bottom: 10px;
+}
+.badge-text {
+    color: var(--color-primario);
 }
 .badges img {
     width: 95px; 
@@ -154,6 +158,64 @@ button:hover i{
     .badges img:hover {
         transform: scale(2);
     }
+}
+
+
+/* DROPDOWN */
+
+.dropdown-title {
+    cursor: pointer;
+    /* display: flex; */
+    align-items: center;
+    font-size: 28px;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: var(--color-background);
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 5;
+    width: fit-content;
+    text-align: left;
+    border: 2px solid var(--color-menu);
+    border-radius: 1rem;
+    overflow: hidden;
+    margin-left: 50%;
+    margin-top: -25px;
+}
+
+.dropdown-item {
+    padding: 1rem;
+    cursor: pointer;
+}
+
+.dropdown-item:hover {
+    transition: .5s;
+    background-color: var(--color-terciario);
+    color: var(--color-menu);
+}
+
+/* Flecha que gira */
+.arrow {
+    width: 1rem;
+    margin-left: 1rem;
+    transform: rotate(-90deg);
+    transition: transform 0.3s ease;
+}
+
+.arrow.rotate {
+    transform: rotate(90deg);
+}
+
+/* Sección activa */
+.dropdown-item.active {
+    font-weight: bold;
+}
+
+/* Mostrar el dropdown */
+.dropdown.show .dropdown-content {
+    display: block;
 }
 
 
@@ -279,7 +341,8 @@ button:hover i{
     text-shadow: 0 0 10px var(--color-terciario);
 }
 /* Clase .active con creación por JS para fijar color y scroll*/
-.contenedor-header header nav ul li a.active{
+.contenedor-header header nav ul li a.active,
+#curriculum .contenedor-seccion .fila .col .dropdown .dropdown-item.active {
     color: var(--color-primario);
     text-shadow: 0 0 10px var(--color-primario);
 }
@@ -974,12 +1037,21 @@ button:hover i{
 }
 
 
-.curriculum .fila .item{
-    padding: 25px;
-    margin-bottom: 30px;
+.curriculum .fila .item {
+    padding: 20px;
+    margin-bottom: 25px;
     background-color: var(--color-menu);
     position: relative;
+    cursor: help;
 }
+
+.curriculum .fila .item:hover .conector1,
+.curriculum .fila .item:hover .conector2,
+.curriculum .fila .item:hover .conector1 .circulo1,
+.curriculum .fila .item:hover .conector2 .circulo2 {
+    background-color: var(--color-secundario);
+}
+
 .curriculum .fila .item .lugar .project-href {
     text-decoration: none !important;
 }
@@ -1023,45 +1095,41 @@ button:hover i{
     border-left: 2px solid white;
     margin-left: 20px;
 }
-.curriculum .fila .item .conector1{
+
+.curriculum .fila .item .conector1,
+.curriculum .fila .item .conector2 {
     height: 2px;
     background-color: var(--color-terciario);
     width: 47px;
     position: absolute;
     top: 50%;
+    z-index: 5;
+    transition: .7s;
+}
+.curriculum .fila .item .conector1 {
     right: -47px;
-    z-index: 5;
 }
-.curriculum .fila .item .conector1 .circulo1{
-    display: block;
-    height: 10px;
-    width: 10px;
-    border-radius: 50%;
-    background-color: var(--color-terciario);
-    float: right;
-    position: relative;
-    bottom: 4px;  
-}
-.curriculum .fila .item .conector2{
-    height: 2px;
-    background-color: var(--color-terciario);
-    width: 47px;
-    position: absolute;
-    top: 50%;
+.curriculum .fila .item .conector2 {
     left: -47px;
-    z-index: 5;
-}
-.curriculum .fila .item .conector2 .circulo2{
-    display: block;
-    height: 10px;
-    width: 10px;
-    border-radius: 50%;
-    background-color: var(--color-terciario);
-    float: left;
-    position: relative;
-    bottom: 4px;  
 }
 
+.curriculum .fila .item .conector1 .circulo1, 
+.curriculum .fila .item .conector2 .circulo2 {
+    display: block;
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+    background-color: var(--color-terciario);
+    position: relative;
+    bottom: 4px;
+    transition: .7s;
+}
+.curriculum .fila .item .conector1 .circulo1 {
+    float: right;
+}
+.curriculum .fila .item .conector2 .circulo2 {
+    float: left;
+}
 
 
 /* PROYECTOS   portafolio */
@@ -1631,6 +1699,7 @@ footer h3.animado{
     }
     .acercade,.skills .contenedor-seccion{
         height: auto;
+        font-size: .9rem;
     }
     .acercade .fila{
         display: block;
@@ -1653,14 +1722,38 @@ footer h3.animado{
         justify-content: space-between;
     } */
 
+    .curriculum .fila .item {
+        font-size: .9rem;
+    }
     .curriculum .fila{
         display: block;
     }
     .curriculum .fila .col{
-        width: 90%;
+        width: 100%;
+        padding: 0;
     }
     .curriculum .fila .derecha{
-        margin-left: 20px;
+        margin-left: 0px;
+    }
+    .curriculum .fila .item .conector1, 
+    .curriculum .fila .item .conector2 {
+        width: 27px;
+    }
+    .curriculum .fila .item .conector1 {
+        right: -27px;
+    } 
+    .curriculum .fila .item .conector2 {
+        left: -27px;
+    }
+    .curriculum .fila .item .conector1 .circulo1 {
+        display: block;
+        height: 10px;
+        width: 10px;
+        border-radius: 50%;
+        background-color: var(--color-terciario);
+        float: right;
+        position: relative;
+        bottom: 4px;  
     }
 
     .proyectos .galeria{
