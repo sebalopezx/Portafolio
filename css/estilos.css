@@ -1000,6 +1000,9 @@ button:hover i{
     font-size: 28px;
     margin-bottom: 25px;
 }
+.curriculum .fila .col .contenedor-exp h3{
+    font-size: 20px;
+}
 .curriculum .fila .izquierda{
     border-right: 2px solid var(--color-terciario);
 }
@@ -1140,6 +1143,9 @@ button:hover i{
 }
 
 /* Proyectos animados*/
+.proyectos h3 {
+    font-size: 20px;
+}
 .proyectos h2,
 .proyectos .contenedor-seccion .subtitulo-proyectos{
     opacity: 0;

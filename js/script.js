@@ -792,10 +792,10 @@ async function establecerPlaceholders(idioma) {
 
 async function establecerPDF(idioma){
     const data = await cargarDatos(idioma);
-    if (window.location.pathname.endsWith("cv.html")){
+    if (window.location.pathname.endsWith("cv_developer.html")){
         if(data && data.cv_pagina){
             const pdf_data = data.cv_pagina;
-            document.getElementById('pdf').src = pdf_data.pdf;
+            document.getElementById('pdf').src = pdf_data.pdf_developer;
         };
     };
     if (window.location.pathname.endsWith("cv_mechanic.html")){
@@ -806,8 +806,17 @@ async function establecerPDF(idioma){
     };
 };
 
+if (window.location.pathname.endsWith("cv_developer.html")){
+    console.log("developer html")
+    idiomas.addEventListener("click", (e) =>{
+        const nuevoIdioma = e.target.parentElement.dataset.language;
+        cambiarIdioma(nuevoIdioma);
+        establecerPDF(nuevoIdioma);
+    });
+}
 
 if (window.location.pathname.endsWith("certificados.html")){
+    console.log("certificados html")
     document.addEventListener('DOMContentLoaded', function () {
         let botones = document.querySelectorAll('.contenedor-botones-certificados button');
 
@@ -949,10 +958,13 @@ if (esPaginaIndex()){
     console.log("Sin info")
 };
 
-if (!esPaginaIndex()) {
-    idiomas.addEventListener("click", (e) =>{
-        const nuevoIdioma = e.target.parentElement.dataset.language;
-        cambiarIdioma(nuevoIdioma);
-        establecerPDF(nuevoIdioma);
-    });
-};
+// if (!esPaginaIndex()) {
+//     console.log("no es index")
+//     idiomas.addEventListener("click", (e) =>{
+//         const nuevoIdioma = e.target.parentElement.dataset.language;
+//         console.log(nuevoIdioma);
+//         cambiarIdioma(nuevoIdioma);
+//         establecerPDF(nuevoIdioma);
+//     });
+// };
+

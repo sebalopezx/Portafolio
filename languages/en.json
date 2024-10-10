@@ -424,6 +424,7 @@
     "cv_pagina":{
         "title":"Seba Currículum",
         "nav":"Back to Portfolio",
-        "pdf":"docs/cv/SebastianLopezCV_ENG.pdf"
+        "pdf_developer":"docs/cv/SebastianLopezCV_ENG.pdf",
+        "pdf_mechanic":"docs/cv/SebastianLopezCV_Mecanico.pdf"
     }
 }
