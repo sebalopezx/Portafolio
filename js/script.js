@@ -542,13 +542,11 @@ const cargarCV = async(idioma)=>{
     const listaCursos = data.courses.courses;
     const listaExpProgramador = data.cv_programmer.cv_programmer;
     const listaExpMecanico = data.cv_mechanic.cv_mechanic;
-    const ExpProgramador = data.cv_programmer.exp;
-    const ExpMecanico = data.cv_mechanic.exp;
 
     let nuevoContenedorEstudios = recorrerListaCV(listaEstudios, crearCV, "item izq");
     let nuevoContenedorCursos = recorrerListaCV(listaCursos, crearCursos, "item izq");
-    let nuevoContenedorExpProgramador = recorrerListaCV(listaExpProgramador, crearCV, "item der", ExpProgramador);
-    let nuevoContenedorExpMecanico = recorrerListaCV(listaExpMecanico, crearCV, "item der", ExpMecanico);
+    let nuevoContenedorExpProgramador = recorrerListaCV(listaExpProgramador, crearCV, "item der");
+    let nuevoContenedorExpMecanico = recorrerListaCV(listaExpMecanico, crearCV, "item der");
     
 
     if (esPaginaIndex()){
@@ -562,19 +560,8 @@ const cargarCV = async(idioma)=>{
 }
 
 // Recorres cada lista sacada desde la data de los JSON
-const recorrerListaCV = (lista, crearCV, columna, exp=null) => {
-    let title = "";
+const recorrerListaCV = (lista, crearCV, columna) => {
     let nuevoContenedor = "";
-    
-    // if (exp) {
-    //     title = `
-    //         <h3 class="animacion" data-section="${exp == 1 ? 'cv_programmer' : 'cv_mechanic'}" data-value="title">
-    //         </h3>  
-    //     `;
-    //     nuevoContenedor += title;
-    // }
-    // ${lista.exp == 1 ? 'Experiencia en Informática' : 'Experiencia en Mecánica'}
-
     let posicion = 0;
     switch (columna) {
         case "item izq":

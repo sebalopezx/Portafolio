@@ -191,7 +191,6 @@
     },
 
     "cv_programmer":{
-        "exp":"1",
         "title":"Experiencia en Informática",
         "cv_programmer":[
             {
@@ -247,7 +246,6 @@
     },
 
     "cv_mechanic":{
-        "exp":"2",
         "title":"Experiencia en Mecánica",
         "cv_mechanic":[
             {
