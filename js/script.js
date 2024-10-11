@@ -257,7 +257,7 @@ const aplicarIntersectionObserver = (selector) => {
 
     const observador = new IntersectionObserver(cargarAnimacion, {
         root: null,
-        rootMargin: "50px 200px",
+        rootMargin: "50px 350px",
         // threshold: 0.3
         threshold: 0.25
     }, { passive: true });

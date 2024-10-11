@@ -1,6 +1,8 @@
+
 document.addEventListener('DOMContentLoaded', () => {
-    const botonArriba = document.querySelector('.ir_arriba');
-    const seccionInicio = document.getElementById('inicio');
+
+    let seccionInicio = document.getElementById('inicio');
+    let botonArriba = document.querySelector('.ir_arriba');
 
     // Intersection Observer para detectar cuando la sección de inicio está visible
     const observerInicio = new IntersectionObserver((entries) => {
