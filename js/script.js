@@ -101,15 +101,16 @@ let menuVisible = false;
 
 // Funcion que oculta o muestra menu
 function menuMostrarOcultar(){
+    let menu =  document.getElementById("nav");
+    let icono = document.getElementById("icono-menu");
     if(menuVisible){
-        document.getElementById("nav").classList = "";
-        document.getElementById("icono-menu").style.color = "#f5f5f5";
-        menuVisible = false;
+        menu.classList = "";
+        icono.style.color = "#f5f5f5";
     }else{
-        document.getElementById("nav").classList = "responsive";
-        document.getElementById("icono-menu").style.color = "#2bff00";
-        menuVisible = true;
+        menu.classList = "responsive";
+        icono.style.color = "#2bff00";
     };
+    menuVisible = !menuVisible;
 };
 
 // Cambia icono al mostrar menu
@@ -120,10 +121,22 @@ function cambiarClase(){
 
 // Obtener el elemento del menú responsive y agregar el evento click
 const menuResponsive = document.getElementById('click-responsive');
-menuResponsive.addEventListener('click', () => {
+menuResponsive.addEventListener('click', (event) => {
+    // event.stopPropagation();
     menuMostrarOcultar();
     cambiarClase();
 });
+// Evento global para cerrar el menú si se hace clic fuera de él
+// document.addEventListener('click', (event) => {
+//     event.preventDefault();
+//     const nav = document.getElementById("nav");
+
+//     // Si el menú está abierto y se hace clic fuera del nav, se cierra
+//     if (menuVisible && !nav.contains(event.target)) {
+//         menuMostrarOcultar();
+//         cambiarClase();
+//     }
+// });
 
 // Obtener todos los enlaces del menú y agregar el evento click a cada uno
 const menuLinks = document.querySelectorAll('#nav ul li a');
@@ -609,7 +622,7 @@ const crearLenguajes = (proyecto) => {
     }
     return stackHTML;
 };
-const crearBoton =()=>{
+const crearBoton = () => {
     const section = "projects";
     const btnValue = "btn";
 
@@ -664,99 +677,99 @@ const recorrerListaProyectos = (lista, crearProyectos, proyectosConfig) => {
 
 
 
-// MODAL DE PROYECTOS
+// // MODAL DE PROYECTOS
 
-// HTML para creación de modales
-const crearModal = (proyecto, proyectosConfig) =>{
-    let modalHTML = `    
-        <h3 class="modal-titulo">${proyecto.title}</h3>
-        <div class="contenedor-modal-img">
-            <img src="${proyecto.image2}" alt="${proyecto.title}" title="${proyecto.title}" class="modal-img">
-        </div>
-        <p class="modal-parrafo">${proyecto.info1}</p>
-        <hr>
-        <p class="modal-parrafo">${proyecto.info2}</p>
-        <div class="modal-botones">
-            <a href="${proyecto.ref}" target="_blank">
-                    <button class="modal-ver">
-                    <span class="texto-boton">${proyectosConfig.btn_web}</span>
-                    <i class="fa-solid fa-file-export"></i>
+// // HTML para creación de modales
+// const crearModal = (proyecto, proyectosConfig) =>{
+//     let modalHTML = `    
+//         <h3 class="modal-titulo">${proyecto.title}</h3>
+//         <div class="contenedor-modal-img">
+//             <img src="${proyecto.image2}" alt="${proyecto.title}" title="${proyecto.title}" class="modal-img">
+//         </div>
+//         <p class="modal-parrafo">${proyecto.info1}</p>
+//         <hr>
+//         <p class="modal-parrafo">${proyecto.info2}</p>
+//         <div class="modal-botones">
+//             <a href="${proyecto.ref}" target="_blank">
+//                     <button class="modal-ver">
+//                     <span class="texto-boton">${proyectosConfig.btn_web}</span>
+//                     <i class="fa-solid fa-file-export"></i>
 
-                    <span class="overlay"></span>
-                </button>
-            </a>
-            <button class="btn modal-close">
-                <span class="texto-boton">${proyectosConfig.btn_close}</span>
-                <i class="fa-solid fa-x"></i>
-                <span class="overlay"></span>
-            </button>
-            <a href="${proyecto.ref2}" target="_blank">
-                    ${proyecto.show_github 
-                    ?   
-                        `<button class="modal-git">
-                        <span class="texto-boton">${proyectosConfig.btn_github}</span>
-                        <i class="fa-brands fa-github"></i>`
-                    :   
-                        `<button class="modal-company">
-                        <span class="texto-boton">${proyectosConfig.btn_link_company}</span>
-                        <i class="fa-solid fa-briefcase"></i>`
-                    }
-                    <span class="overlay"></span>
-                </button>
-            </a>
-        </div>`;
-    return modalHTML;
-};
+//                     <span class="overlay"></span>
+//                 </button>
+//             </a>
+//             <button class="btn modal-close">
+//                 <span class="texto-boton">${proyectosConfig.btn_close}</span>
+//                 <i class="fa-solid fa-x"></i>
+//                 <span class="overlay"></span>
+//             </button>
+//             <a href="${proyecto.ref2}" target="_blank">
+//                     ${proyecto.show_github 
+//                     ?   
+//                         `<button class="modal-git">
+//                         <span class="texto-boton">${proyectosConfig.btn_github}</span>
+//                         <i class="fa-brands fa-github"></i>`
+//                     :   
+//                         `<button class="modal-company">
+//                         <span class="texto-boton">${proyectosConfig.btn_link_company}</span>
+//                         <i class="fa-solid fa-briefcase"></i>`
+//                     }
+//                     <span class="overlay"></span>
+//                 </button>
+//             </a>
+//         </div>`;
+//     return modalHTML;
+// };
 
 
 // FUNCION DE APERTURA DE MODALES
 
-document.addEventListener("DOMContentLoaded", function() {
-    // const openModal = document.querySelectorAll('.ver-detalle');
-    const modal = document.querySelector('.modal');
-    const contenedorModal = document.querySelector('.modal-contenedor');
+// document.addEventListener("DOMContentLoaded", function() {
+//     // const openModal = document.querySelectorAll('.ver-detalle');
+//     const modal = document.querySelector('.modal');
+//     const contenedorModal = document.querySelector('.modal-contenedor');
 
-    document.body.addEventListener('click', async (e)=>{
-        if (e.target.classList.contains('ver-detalle')){
+//     document.body.addEventListener('click', async (e) => {
+//         if (e.target.classList.contains('ver-detalle')){
             
-            e.preventDefault();
+//             e.preventDefault();
             
-            let proyectoDiv = e.target.closest('.proyecto');
-            let proyectoId = proyectoDiv.id;
-            if (!proyectoDiv) {
-                console.error('No se encontró el elemento .proyecto más cercano');
-                return;
-            }
+//             let proyectoDiv = e.target.closest('.proyecto');
+//             let proyectoId = proyectoDiv.id;
+//             if (!proyectoDiv) {
+//                 console.error('No se encontró el elemento .proyecto más cercano');
+//                 return;
+//             }
 
-            const idiomaActual = obtenerIdiomaSeleccionado();
-            const data = await cargarDatos(idiomaActual);
-            const listaProyectos = data.projects.study_projects;
-            const listaProyectosProfesionales = data.projects.professional_projects;
-            const proyectosConfig = data.projects.projectsConfig;
+//             const idiomaActual = obtenerIdiomaSeleccionado();
+//             const data = await cargarDatos(idiomaActual);
+//             const listaProyectos = data.projects.study_projects;
+//             const listaProyectosProfesionales = data.projects.professional_projects;
+//             const proyectosConfig = data.projects.projectsConfig;
 
-            const todosLosProyectos = listaProyectos.concat(listaProyectosProfesionales);
-            // console.log('Todos los proyectos:', todosLosProyectos);
+//             const todosLosProyectos = listaProyectos.concat(listaProyectosProfesionales);
+//             // console.log('Todos los proyectos:', todosLosProyectos);
 
-            const proyecto = todosLosProyectos.find(p => p.id === proyectoId);
-            // console.log('Proyecto encontrado:', proyecto);
+//             const proyecto = todosLosProyectos.find(p => p.id === proyectoId);
+//             // console.log('Proyecto encontrado:', proyecto);
 
-            if (proyecto) {
-                // Crear y Mostrar el modal con click
-                contenedorModal.innerHTML = crearModal(proyecto, proyectosConfig);
-                modal.classList.add('mostrar-detalle');
+//             if (proyecto) {
+//                 // Crear y Mostrar el modal con click
+//                 contenedorModal.innerHTML = crearModal(proyecto, proyectosConfig);
+//                 modal.classList.add('mostrar-detalle');
 
-                // // Para Cerrar el modal
-                const closeModal = document.querySelector('.modal-close');
-                closeModal.addEventListener('click', (e) => {
-                    e.preventDefault();
-                    modal.classList.remove('mostrar-detalle');
-                });
-            } else {
-                console.error(`Proyecto con ID ${proyectoId} no encontrado`);
-            }
-        }
-    });
-});
+//                 // // Para Cerrar el modal
+//                 const closeModal = document.querySelector('.modal-close');
+//                 closeModal.addEventListener('click', (e) => {
+//                     e.preventDefault();
+//                     modal.classList.remove('mostrar-detalle');
+//                 });
+//             } else {
+//                 console.error(`Proyecto con ID ${proyectoId} no encontrado`);
+//             }
+//         }
+//     });
+// });
 
 
 

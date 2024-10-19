@@ -349,7 +349,7 @@ button:hover i{
 }
 
 .menu-responsive{
-    width: 35px;
+    width: 35px !important;
     background-color: var(--color-terciario);
     color: var(--color-secundario);
     padding: 5px 10px;
@@ -649,13 +649,12 @@ button:hover i{
     font-weight: bold;
 }
 .acercade .contenedor-informacion p{
-    text-align: justify;
+    /* text-align: justify; */
     margin-bottom: 15px;
 }
 .acercade .contenedor-informacion{
     opacity: 0.1;
     transform: scale(0%);
-    text-align: justify;
 }
 .acercade .contenedor-informacion.animado{
     opacity: 1;
@@ -1315,7 +1314,7 @@ button:hover i{
     text-align: justify;
 }
 
-.proyectos .modal.mostrar-detalle{
+.proyectos .modal.mostrar-modal {
     opacity: 1;
     pointer-events: unset;
     transition: opacity .6s;
@@ -1691,10 +1690,10 @@ footer h3.animado{
     header nav.responsive{
         display: block;
         position: absolute;
-        right: 0;
+        right: 5px;
         top: 62px;
         background-color: var(--color-menu);
-        width: 150px;
+        width: 170px;
         border: 2px solid var(--color-secundario);
         border-radius: 20px 0 20px 0;
         overflow: hidden;

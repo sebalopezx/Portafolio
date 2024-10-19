@@ -113,8 +113,8 @@
             {"name":"Responsibility", "icon":"fa-regular fa-clock", "value":"Skill", "lvl":"100"},
             {"name":"Methodical", "icon":"fa-sharp fa-solid fa-list-check", "value":"Skill", "lvl":"100"},
             {"name":"Work team", "icon":"fa-solid fa-people-group", "value":"Skill", "lvl":"100"},
-            {"name":"English reading", "icon":"fa-solid fa-language", "value":"B-1", "lvl":"45"},
-            {"name":"English speaking", "icon":"fa-solid fa-microphone", "value":"A-2", "lvl":"25"}
+            {"name":"English reading", "icon":"fa-solid fa-language", "value":"B1", "lvl":"45"},
+            {"name":"English speaking", "icon":"fa-solid fa-microphone", "value":"A2", "lvl":"25"}
         ]
     },
 

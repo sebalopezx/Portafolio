@@ -114,8 +114,8 @@
             {"name":"Responsable", "icon":"fa-regular fa-clock", "value":"Skill", "lvl":"100"},
             {"name":"Ordenado", "icon":"fa-sharp fa-solid fa-list-check", "value":"Skill", "lvl":"100"},
             {"name":"Trabajo en equipo", "icon":"fa-solid fa-people-group", "value":"Skill", "lvl":"100"},
-            {"name":"Inglés escrito", "icon":"fa-solid fa-language", "value":"B-1", "lvl":"45"},
-            {"name":"Inglés hablado", "icon":"fa-solid fa-microphone", "value":"A-2", "lvl":"25"}
+            {"name":"Inglés escrito", "icon":"fa-solid fa-language", "value":"B1", "lvl":"45"},
+            {"name":"Inglés hablado", "icon":"fa-solid fa-microphone", "value":"A2", "lvl":"25"}
         ]
     },
 
@@ -206,7 +206,7 @@
                     {"name":"HTMX", "image":"images/tools/htmx.png"},
                     {"name":"Docker", "image":"images/tools/docker.png"}
                 ],
-                "href":"#proyectos"
+                "href":"proyecto_profesional_1"
             },
             {
                 "name":"Estudiante",
@@ -220,7 +220,7 @@
                     {"name":"Bootstrap5", "image":"images/techs/bootstrap.png"},
                     {"name":"MongoDB", "image":"images/techs/mongodb.png"}
                 ],
-                "href":"#proyectos"
+                "href":"proyecto_4"
             },
             {
                 "name":"Estudiante",
@@ -234,7 +234,7 @@
                     {"name":"Bootstrap5", "image":"images/techs/bootstrap.png"},
                     {"name":"PostgreSQL", "image":"images/techs/postgre.png"}
                 ],
-                "href":"#proyectos"
+                "href":"proyecto_3"
             },
             {
                 "name":"Estudiante",
