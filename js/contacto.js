@@ -1,4 +1,29 @@
 
+// CONTACTO 
+
+// Función para establecer los valores de los placeholders en el formulario de contacto
+async function establecerPlaceholders(idioma) {
+    // const idiomaActual = obtenerIdiomaSeleccionado();
+    const data = await cargarDatos(idioma);
+    if (esPaginaIndex()){
+        if (data && data.contact) {
+            const placeholders = data.contact;
+            const nombreInput = document.getElementById('nombre');
+            const emailInput = document.getElementById('email');
+            const asuntoInput = document.getElementById('asunto');
+            const mensajeInput = document.getElementById('mensaje');
+
+            if (nombreInput || emailInput || asuntoInput || mensajeInput) {
+                nombreInput.placeholder = placeholders.name;
+                emailInput.placeholder = placeholders.email;
+                asuntoInput.placeholder = placeholders.subject;
+                mensajeInput.placeholder = placeholders.message;
+            }
+        };
+    };
+};
+
+
 const btnContacto = document.getElementById('btnContacto');
 
 // Se obtiene el valor de idioma y data.json desde funciones de script.js
