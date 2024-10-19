@@ -103,7 +103,7 @@ const crearModal = (proyecto, proyectosConfig) => {
             <img src="${proyecto.image2}" alt="${proyecto.title}" title="${proyecto.title}" class="modal-img">
         </div>
         <p class="modal-parrafo">${proyecto.info1}</p>
-        <hr>
+        <hr class="separador">
         <p class="modal-parrafo">${proyecto.info2}</p>
         <div class="modal-botones">
             <a href="${proyecto.ref}" target="_blank">

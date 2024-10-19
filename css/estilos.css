@@ -103,7 +103,9 @@ h2,h3{
 .link:hover,.link-white:hover{
     color: var(--color-primario);
 }
-
+.separador {
+    border: 1px solid var(--color-terciario);
+}
 /* BOTONES */
 button{
     cursor: pointer;
