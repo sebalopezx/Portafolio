@@ -128,11 +128,12 @@ menuResponsive.addEventListener('click', (event) => {
 });
 // Evento global para cerrar el menú si se hace clic fuera de él
 document.addEventListener('click', (event) => {
-    event.preventDefault();
+    // event.preventDefault();
     const nav = document.getElementById("nav");
 
     // Si el menú está abierto y se hace clic fuera del nav, se cierra
-    if (menuVisible && !nav.contains(event.target)) {
+    if (menuVisible && !nav.contains(event.target) && event.target !== menuResponsive) {
+        event.preventDefault();
         menuMostrarOcultar();
         cambiarClase();
     }
