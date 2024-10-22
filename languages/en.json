@@ -10,9 +10,9 @@
     },
 
     "cert_buttons": {
-        "button1": "Mechanical Technician Degree",
-        "button2": "Mechanical Engineering Degree",
-        "button3": "Programmer Analyst Degree"
+        "button1": "Programmer Analyst Degree",
+        "button2": "Mechanical Technician Degree",
+        "button3": "Mechanical Engineering Degree"
     },
 
     "menu": {
@@ -424,7 +424,7 @@
     "cv_pagina":{
         "title":"Seba Currículum",
         "nav":"Back to Portfolio",
-        "pdf_developer":"docs/cv/SebastianLopezCV_ENG.pdf",
-        "pdf_mechanic":"docs/cv/SebastianLopezCV_Mecanico.pdf"
+        "pdf_developer":"docs/cv/cv_sebastian_lopez_informatica_eng.pdf",
+        "pdf_mechanic":"docs/cv/cv_sebastian_lopez_mecanica_esp.pdf"
     }
 }

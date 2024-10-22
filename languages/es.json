@@ -10,9 +10,9 @@
     },
 
     "cert_buttons": {
-        "button1":"Título Técnico Mecánico",
-        "button2":"Título Ingenieria Mecánica",
-        "button3":"Título Analista Programador"
+        "button1":"Título Analista Programador",
+        "button2":"Título Técnico Mecánico",
+        "button3":"Título Ingenieria Mecánica"
     },
 
     "menu": {
@@ -424,8 +424,8 @@
     "cv_pagina":{
         "title":"Seba Currículum",
         "nav":"Volver a Portafolio",
-        "pdf_developer":"docs/cv/SebastianLopezCV.pdf",
-        "pdf_mechanic":"docs/cv/SebastianLopezCV_Mecanico.pdf"
+        "pdf_developer":"docs/cv/cv_sebastian_lopez_informatica_esp.pdf",
+        "pdf_mechanic":"docs/cv/cv_sebastian_lopez_mecanica_esp.pdf"
     }
 
 }

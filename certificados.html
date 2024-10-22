@@ -62,32 +62,33 @@
     <div class="contenedor-botones-certificados">
 
         <button 
+            class="btn-certificado active" 
+            data-src="docs/certificados/certificado_titulo_analista_programador.pdf"
+            data-section="cert_buttons" 
+            data-value="button1">
+            <!-- Título Analista Programador -->
+        </button>
+        <button 
             class="btn-certificado" 
             data-src="docs/certificados/certificado_titulo_tecnico.pdf"
             data-section="cert_buttons" 
-            data-value="button1">
+            data-value="button2">
             <!-- Título Técnico -->
         </button>
         <button 
             class="btn-certificado" 
             data-src="docs/certificados/certificado_titulo_ingenieriamecanica.pdf"
             data-section="cert_buttons" 
-            data-value="button2">
+            data-value="button3">
             <!-- Título Ingenieria Mecánica -->
         </button>
-        <button 
-            class="btn-certificado" 
-            data-src="docs/certificados/certificado_titulo_analista_programador.pdf"
-            data-section="cert_buttons" 
-            data-value="button3">
-            <!-- Título Analista Programador -->
-        </button>
+
 
     </div>
     
     <div class="contenedor-cv">
 
-        <iframe src="docs/certificados/certificado_titulo_tecnico.pdf" 
+        <iframe src="docs/certificados/certificado_titulo_analista_programador.pdf" 
         class="pdfview" id="pdf-iframe" frameborder="0" title="pdf"></iframe>
 
     </div>
@@ -120,6 +121,8 @@
 
     <!-- JavaScript -->
     <script src="js/script.js"></script>
+    <script src="js/certificados.js"></script>
+    <script src="js/cargar_pagina.js"></script>
  
     <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.8.162/pdf.min.js" integrity="sha512-9Wd08apcJEwm8g3lBTg1UW/njdN0iuuOVWKpyinK3uA7ISAE5PmEZ4y8bZYTXVOE3tlt7aFlCBBLmLt5cUxe2Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script> -->
     <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.10.377/pdf.worker.min.js"></script> -->

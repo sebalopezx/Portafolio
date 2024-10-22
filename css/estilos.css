@@ -409,9 +409,21 @@ button:hover i{
     margin-top: 70px;   
 }
 .contenedor-botones-certificados .btn-certificado {
-    width: 300px;
+    width: 260px;
     transition: .5s !important;
+
 }
+.contenedor-botones-certificados .btn-certificado:hover {
+    color: var(--color-menu);
+ 
+
+}
+.contenedor-botones-certificados .btn-certificado.active {
+    background-color: var(--color-primario);
+    box-shadow: var(--shadow-btn);
+    color: var(--color-menu);
+}
+
 .contenedor-botones-certificados .btn-certificado:disabled {
     opacity: 0.3;
     cursor: wait;

@@ -30,7 +30,7 @@ document.addEventListener("DOMContentLoaded", function () {
         const listaProyectos = data.projects.study_projects.concat(data.projects.professional_projects);
 
         const proyecto = listaProyectos.find(p => p.id === proyectoId);
-        console.log("proyecto PERO DESDE LOS PROYECTOS NMORMALES : ",proyecto)
+        // console.log("proyecto PERO DESDE LOS PROYECTOS NMORMALES : ",proyecto)
 
         if (proyecto) {
             contenedorModal.innerHTML = crearModal(proyecto, data.projects.projectsConfig);
