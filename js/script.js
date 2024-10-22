@@ -122,21 +122,21 @@ function cambiarClase(){
 // Obtener el elemento del menú responsive y agregar el evento click
 const menuResponsive = document.getElementById('click-responsive');
 menuResponsive.addEventListener('click', (event) => {
-    // event.stopPropagation();
+    event.stopPropagation();
     menuMostrarOcultar();
     cambiarClase();
 });
 // Evento global para cerrar el menú si se hace clic fuera de él
-// document.addEventListener('click', (event) => {
-//     event.preventDefault();
-//     const nav = document.getElementById("nav");
+document.addEventListener('click', (event) => {
+    event.preventDefault();
+    const nav = document.getElementById("nav");
 
-//     // Si el menú está abierto y se hace clic fuera del nav, se cierra
-//     if (menuVisible && !nav.contains(event.target)) {
-//         menuMostrarOcultar();
-//         cambiarClase();
-//     }
-// });
+    // Si el menú está abierto y se hace clic fuera del nav, se cierra
+    if (menuVisible && !nav.contains(event.target)) {
+        menuMostrarOcultar();
+        cambiarClase();
+    }
+});
 
 // Obtener todos los enlaces del menú y agregar el evento click a cada uno
 const menuLinks = document.querySelectorAll('#nav ul li a');
