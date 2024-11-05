@@ -62,8 +62,7 @@
             {"name":"CSS3", "image":"images/techs/css3.png"},
             {"name":"JavaScript", "image":"images/techs/javascript.png"},
             {"name":"Bootstrap5", "image":"images/techs/bootstrap.png"},
-            {"name":"HTMX", "image":"images/tools/htmx.png"},
-            {"name":"MySQL", "image":"images/techs/mysql.png"}
+            {"name":"HTMX", "image":"images/tools/htmx.png"}
         ],
         "title_info5":"Disponibilidad:",
         "info5":"NOT IMMEDIATE!.",
@@ -81,19 +80,17 @@
 
 
     "skills":{
-        "title":"Technical Skills",
+        "title":"Technical",
         "values": ["Basic","Mid","Expert","Senior"],
         "skill":[
             {"name":"Python", "image":"images/techs/python.png", "value":"Mid", "lvl":"45"},
             {"name":"Django", "image":"images/techs/django.png", "value":"Basic", "lvl":"45"},
             {"name":"Node", "image":"images/techs/nodejs.png", "value":"Basic", "lvl":"25"},
-            {"name":"Java", "image":"images/techs/java.png", "value":"Beginner", "lvl":"12"},
             {"name":"HTML5", "image":"images/techs/html5.png", "value":"Mid", "lvl":"45"},
             {"name":"CSS3", "image":"images/techs/css3.png", "value":"Mid", "lvl":"45"},
             {"name":"JavaScript", "image":"images/techs/javascript.png", "value":"Mid", "lvl":"45"},
             {"name":"Bootstrap5", "image":"images/techs/bootstrap.png", "value":"Mid", "lvl":"45"},
             {"name":"React", "image":"images/techs/react.png", "value":"Basic", "lvl":"25"},
-            {"name":"Angular", "image":"images/techs/angular.png", "value":"Beginner", "lvl":"12"},
             {"name":"MySQL", "image":"images/techs/mysql.png", "value":"Basic", "lvl":"25"},
             {"name":"PostgreSQL", "image":"images/techs/postgre.png", "value":"Basic", "lvl":"25"},
             {"name":"MongoDB", "image":"images/techs/mongodb.png", "value":"Basic", "lvl":"25"}
@@ -106,9 +103,10 @@
             {"name":"JSON", "image":"images/tools/json.png", "value":"Mid", "lvl":"45"},
             {"name":"HTMX", "image":"images/tools/htmx.png", "value":"Mid", "lvl":"45"},
             {"name":"Docker", "image":"images/tools/docker.png", "value":"Basic", "lvl":"25"},
+            {"name":"Websocket", "image":"images/tools/websocket.png", "value":"Basic", "lvl":"25"},
             {"name":"Amazon Web Services", "image":"images/tools/aws.png", "value":"Beginner", "lvl":"12"}
         ],
-        "title3":"Professional Skills",
+        "title3":"Professional",
         "ability":[
             {"name":"Responsibility", "icon":"fa-regular fa-clock", "value":"Skill", "lvl":"100"},
             {"name":"Methodical", "icon":"fa-sharp fa-solid fa-list-check", "value":"Skill", "lvl":"100"},
@@ -203,7 +201,9 @@
                     {"name":"JavaScript", "image":"images/techs/javascript.png"},
                     {"name":"Bootstrap5", "image":"images/techs/bootstrap.png"},
                     {"name":"HTMX", "image":"images/tools/htmx.png"},
-                    {"name":"Docker", "image":"images/tools/docker.png"}
+                    {"name":"Docker", "image":"images/tools/docker.png"},
+                    {"name":"Websocket", "image":"images/tools/websocket.png"}
+
                 ],
                 "href":"proyecto_profesional_1"
             },

@@ -132,7 +132,7 @@ document.addEventListener('click', (event) => {
     const nav = document.getElementById("nav");
 
     // Si el menú está abierto y se hace clic fuera del nav, se cierra
-    if (menuVisible && !nav.contains(event.target) && event.target !== menuResponsive) {
+    if (menuVisible && !nav.contains(event.target)) {
         event.preventDefault();
         menuMostrarOcultar();
         cambiarClase();
