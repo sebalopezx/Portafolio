@@ -1044,6 +1044,7 @@ button:hover i{
     transform: translate(0px);
     transition: opacity 1.5s ease, transform 1.5s ease;
 }
+
 .curriculum .fila .izquierda,.derecha{
     opacity: 0;
     transform: translate(-150px);
@@ -1106,10 +1107,12 @@ button:hover i{
     color: var(--color-primario);
 }
 .curriculum .fila .izq{
+    border-radius: 20px;
     border-right: 2px solid white;
     margin-right: 20px;
 }
 .curriculum .fila .der{
+    border-radius: 20px;
     border-left: 2px solid white;
     margin-left: 20px;
 }
