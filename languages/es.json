@@ -195,7 +195,7 @@
                 "name":"Programador Junior (FullStack)",
                 "place":"Syzlab - Híbrido",
                 "date":"2024 - <strong class='badge-text'>Actualmente</strong>",
-                "description":"• Desarrollo de aplicación de citas para adultos <a class='link' href='https://ddirt.com/'>Ddirt.com</a>. <br>• Desarrollar nuevas características y funcionalidades, tanto backend como frontend, cumpliendo con los requerimientos técnicos y operacionales. <br>• Detectar y diagnosticar errores, bugs o problemas en el código existente a través de análisis exhaustivos para asegurar correcto funcionamiento. <br>• Proponer y aplicar soluciones efectivas para corregir los detalles y errores. <br>• Aplicar principios y patrones de diseño adecuados, como PEP8, DRY, MVT, para garantizar la calidad, mantenibilidad y escalabilidad del código. <br>• Trabajar de manera colaborativa con otros miembros del equipo para alcanzar objetivos. <br>• Utilizar herramientas de gestión de proyectos, como Trello, para organizar y priorizar tareas, asegurando una comunicación clara y eficiente con el equipo sobre el estado de las actividades en curso.",
+                "description":"• Desarrollo de aplicación de citas para adultos <a class='link' href='https://ddirt.com/'>Ddirt.com</a>. ⛔🔞<br>• Desarrollar nuevas características y funcionalidades, tanto backend como frontend, cumpliendo con los requerimientos técnicos y operacionales. <br>• Detectar y diagnosticar errores, bugs o problemas en el código existente a través de análisis exhaustivos para asegurar correcto funcionamiento. <br>• Proponer y aplicar soluciones efectivas para corregir los detalles y errores. <br>• Aplicar principios y patrones de diseño adecuados, como PEP8, DRY, MVT, para garantizar la calidad, mantenibilidad y escalabilidad del código. <br>• Trabajar de manera colaborativa con otros miembros del equipo para alcanzar objetivos. <br>• Utilizar herramientas de gestión de proyectos, como Trello, para organizar y priorizar tareas, asegurando una comunicación clara y eficiente con el equipo sobre el estado de las actividades en curso.",
                 "tech": [
                     {"name":"Django", "image":"images/techs/django.png"},
                     {"name":"CSS", "image":"images/techs/css3.png"},
@@ -395,7 +395,7 @@
                     "images/techs/javascript.png"
                 ],
                 "info1":"Proyecto de empresa Syzlab, creado en Django, CSS, Bootstrap, Websocket, Daphne, Htmx y Docker.",
-                "info2":"El proyecto es una aplicación citas para adultos.",    
+                "info2":"El proyecto es una aplicación citas para adultos. ⛔🔞",    
                 "ref":"https://ddirt.com",
                 "ref2":"https://syzlab.com/"
             }

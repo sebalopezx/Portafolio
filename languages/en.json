@@ -194,7 +194,7 @@
                 "name":"Junior programmer (FullStack)",
                 "place":"Syzlab - Hybrid",
                 "date":"2024 - <strong class='badge-text'>Actually</strong>",
-                "description":"• Development of an adult dating application <a class='link' href='https://ddirt.com/'>Ddirt.com</a>. <br>• Develop new features and functionalities, both backend and frontend, in line with technical and operational requirements. <br>• Identify and diagnose errors, bugs, or issues in the existing code through comprehensive analysis to ensure optimal functionality.<br>• Propose and implement effective solutions to fix issues and errors. <br>• Apply appropriate design principles and patterns, such as PEP8, DRY, MVT, to ensure code quality, maintainability, and scalability. <br>• Collaborate with other team members to achieve objectives. <br>• Use project management tools, such as Trello, to organize and prioritize tasks, ensuring clear and efficient communication with the team about the status of ongoing activities.",
+                "description":"• Development of an adult dating application <a class='link' href='https://ddirt.com/'>Ddirt.com</a>. ⛔🔞<br>• Develop new features and functionalities, both backend and frontend, in line with technical and operational requirements. <br>• Identify and diagnose errors, bugs, or issues in the existing code through comprehensive analysis to ensure optimal functionality.<br>• Propose and implement effective solutions to fix issues and errors. <br>• Apply appropriate design principles and patterns, such as PEP8, DRY, MVT, to ensure code quality, maintainability, and scalability. <br>• Collaborate with other team members to achieve objectives. <br>• Use project management tools, such as Trello, to organize and prioritize tasks, ensuring clear and efficient communication with the team about the status of ongoing activities.",
                 "tech": [
                     {"name":"Django", "image":"images/techs/django.png"},
                     {"name":"CSS", "image":"images/techs/css3.png"},
@@ -395,7 +395,7 @@
                     "images/techs/javascript.png"
                 ],
                 "info1":"Company project Syzlab, created using Django, Websocket, Daphne, Htmx, and Docker.",
-                "info2":"The project is an appointment application.",    
+                "info2":"The project is an appointment application. ⛔🔞",    
                 "ref":"https://ddirt.com",
                 "ref2":"https://syzlab.com/"
             }

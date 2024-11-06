@@ -105,6 +105,7 @@ h2,h3{
 }
 .separador {
     border: 1px solid var(--color-terciario);
+    width: 100%;
 }
 /* BOTONES */
 button{
