@@ -1106,14 +1106,18 @@ button:hover i{
 .curriculum .fila .item a:hover{
     color: var(--color-primario);
 }
-.curriculum .fila .izq{
+
+.curriculum .fila .izq,
+.curriculum .fila .der {
     border-radius: 20px;
-    border-right: 2px solid white;
+    border-right: 2px solid var(--color-secundario);
+    border-left: 2px solid var(--color-secundario);
+    box-shadow: var(--color-terciario) 0 0 10px 0;
+}
+.curriculum .fila .izq{
     margin-right: 20px;
 }
 .curriculum .fila .der{
-    border-radius: 20px;
-    border-left: 2px solid white;
     margin-left: 20px;
 }
 
@@ -1199,10 +1203,11 @@ button:hover i{
     width: 340px;
     height: fit-content;
     margin: 10px;
-    border: 10px double var(--color-terciario);
+    border: 6px double var(--color-terciario);
     border-radius: 10px;
     height: 260px;
     cursor: pointer;
+    box-shadow: var(--color-terciario) 0 0 8px 1px;
     /* max-width: 100px; */
 }
 .proyectos .galeria .proyecto .nombre-proyecto{
@@ -1214,6 +1219,7 @@ button:hover i{
     width: 100%;
     display: block;
     height: 220px;
+    border-radius: 5px 5px 0 0;
 }
 
 
