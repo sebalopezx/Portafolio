@@ -46,7 +46,8 @@ document.addEventListener("DOMContentLoaded", function () {
         let cvDiv = e.target.closest('.project-href');
         let href = cvDiv?.href; 
         let proyectoID = href.split('/').pop();
-
+        
+        console.log(href)
         if (!href) {
             console.error('No se encontró el href relacionado.');
             return;
@@ -55,22 +56,30 @@ document.addEventListener("DOMContentLoaded", function () {
         const idiomaActual = obtenerIdiomaSeleccionado();
         const data = await cargarDatos(idiomaActual);
 
-        let proyecto = {};
-        const listaProyectos = data.projects
-
-        if (proyectoID.includes('profesional')) {
-            proyecto = listaProyectos.professional_projects.find(p => p.id === proyectoID);
+        if (href.endsWith('.html')) {
+            const datasetPDF = cvDiv.dataset.certificados;
+            console.log(datasetPDF)
+            
+            window.location.href = `certificados.html?pdf=${encodeURIComponent(datasetPDF)}`;
+  
         } else {
-            proyecto = listaProyectos.study_projects.find(p => p.id === proyectoID);
-        }
-        console.log(proyecto)
+            let proyecto = {};
+            const listaProyectos = data.projects;
 
-        if (proyecto) {
-            contenedorModal.innerHTML = crearModal(proyecto, listaProyectos.projectsConfig);
-            modal.classList.add('mostrar-modal');
-            cerrarModal();
-        } else {
-            console.error(`Proyecto relacionado no encontrada para href: ${proyectoID}`);
+            if (proyectoID.includes('profesional')) {
+                proyecto = listaProyectos.professional_projects.find(p => p.id === proyectoID);
+            } else {
+                proyecto = listaProyectos.study_projects.find(p => p.id === proyectoID);
+            }
+            console.log(proyecto)
+
+            if (proyecto) {
+                contenedorModal.innerHTML = crearModal(proyecto, listaProyectos.projectsConfig);
+                modal.classList.add('mostrar-modal');
+                cerrarModal();
+            } else {
+                console.error(`Proyecto relacionado no encontrada para href: ${proyectoID}`);
+            }
         }
     }
 

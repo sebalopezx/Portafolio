@@ -126,21 +126,21 @@
                 "place":"Inacap",
                 "date":"2022-2024",
                 "description":"Titulado",
-                "pdf":"docs/certificados/certificado_titulo_analista_programador"
+                "pdf":"docs/certificados/certificado_titulo_analista_programador.pdf"
             },
             {
                 "name":"Ingeniería en mecánica automotriz y autotrónica",
                 "place":"Duoc UC",
                 "date":"2016-2019",
                 "description":"Titulado",
-                "pdf":"docs/certificados/certificado_titulo_ingenieriamecanica"
+                "pdf":"docs/certificados/certificado_titulo_ingenieriamecanica.pdf"
             },
             {
                 "name":"Técnico en mecánica automotriz y autotrónica",
                 "place":"Duoc UC",
                 "date":"2011-2013",
                 "description":"Titulado",
-                "pdf":"docs/certificados/certificado_titulo_tecnico"
+                "pdf":"docs/certificados/certificado_titulo_tecnico.pdf"
             }          
         ]
     },

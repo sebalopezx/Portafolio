@@ -511,7 +511,7 @@ const crearCV = (cv, columna, posicion) => {
             }
             <p>
                 ${cv.pdf
-                ? `<a class="project-href link" href="certificados.html">${cv.description} ${flecha_redireccion}</a>`
+                ? `<a class="project-href link" href="certificados.html" data-certificados="${cv.pdf}">${cv.description} ${flecha_redireccion}</a>`
                 : `${cv.description}`}
             </p>
             <div class="conector${posicion}">
