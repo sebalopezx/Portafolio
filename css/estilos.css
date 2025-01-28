@@ -1646,14 +1646,14 @@ footer .ir_arriba_secundario {
 
 
 /* FOOTER */
-footer .redes nav ul{
+footer .redes-footer nav ul{
     display: flex;
     list-style: none;
     margin-top: 10px;
     max-height: 90px;
     justify-content: center;
 }
-footer .redes nav ul li a{
+footer .redes-footer nav ul li a{
     color: var(--color-terciario);
     display: inline-block;
     border: 1px solid var(--color-terciario);
@@ -1666,7 +1666,7 @@ footer .redes nav ul li a{
     font-size: 20px;
     transition: .8s;
 }
-footer .redes nav ul li a:hover{
+footer .redes-footer nav ul li a:hover{
     background-color: var(--color-primario);
     color: var(--color-menu);
     border: transparent;
@@ -1674,11 +1674,11 @@ footer .redes nav ul li a:hover{
     transform: scale(1.2);  
 }
 
-footer .redes nav ul li {
+footer .redes-footer nav ul li {
     opacity: 0.01;
     transform: translateX(-300px);   
 }
-footer .redes nav ul li.animado {
+footer .redes-footer nav ul li.animado {
     opacity: 1;
     transform: translateX(0);
     transition: opacity 1.5s ease, transform 1.5s ease;

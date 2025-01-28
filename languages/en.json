@@ -84,7 +84,7 @@
         "values": ["Basic","Mid","Expert","Senior"],
         "skill":[
             {"name":"Python", "image":"images/techs/python.png", "value":"Mid", "lvl":"45"},
-            {"name":"Django", "image":"images/techs/django.png", "value":"Basic", "lvl":"45"},
+            {"name":"Django", "image":"images/techs/django.png", "value":"Mid", "lvl":"45"},
             {"name":"Node", "image":"images/techs/nodejs.png", "value":"Basic", "lvl":"25"},
             {"name":"HTML5", "image":"images/techs/html5.png", "value":"Mid", "lvl":"45"},
             {"name":"CSS3", "image":"images/techs/css3.png", "value":"Mid", "lvl":"45"},

@@ -75,24 +75,35 @@ const cambiarIdioma = async (lenguaje) =>{
     };
 
     // Actualizar los titulos de redes sociales
-    let redesSocialesCount = 5
     const redesSocialesNav = document.querySelector('.redes nav');
     if (redesSocialesNav) {
-        for (let i = 1; i <= redesSocialesCount; i++) {
-            const link = redesSocialesNav.querySelector(`li[data-nav="${i}"] a`);
+        redesSocialesTexto(redesSocialesNav, texto);
+        cambiarIdiomaSeleccionado(texto.idioma);
+    }
 
-            if (link) {
-                const titleKey = `nav${i}`;  // Crear la clave dinámica (nav1, nav2, etc.)
-                link.setAttribute('title', texto.nav[titleKey]); // Asignar el título desde el JSON
-            }
-        }
+    const redesSocialesNavFooter = document.querySelector('.redes-footer nav');
+    if (redesSocialesNavFooter) {
+        redesSocialesTexto(redesSocialesNavFooter, texto);
+        cambiarIdiomaSeleccionado(texto.idioma);
     }
 
     // Mandar el cambio de idioma para guardar en localStorage
-    cambiarIdiomaSeleccionado(texto.idioma);
+    // cambiarIdiomaSeleccionado(texto.idioma);
 };
 
 
+function redesSocialesTexto(redSocial, texto) {
+    let redesSocialesCount = 5
+    
+    for (let i = 1; i <= redesSocialesCount; i++) {
+        const link = redSocial.querySelector(`li[data-nav="${i}"] a`);
+
+        if (link) {
+            const titleKey = `nav${i}`;  // Crear la clave dinámica (nav1, nav2, etc.)
+            link.setAttribute('title', texto.nav[titleKey]); // Asignar el título desde el JSON
+        }
+    }
+}
 
 // MENU RESPONSIVE
 
@@ -271,7 +282,7 @@ const aplicarIntersectionObserver = (selector) => {
 
     const observador = new IntersectionObserver(cargarAnimacion, {
         root: null,
-        rootMargin: "50px 350px",
+        rootMargin: "50px 400px",
         // threshold: 0.3
         threshold: 0.25
     }, { passive: true });
