@@ -467,7 +467,8 @@ button:hover i{
 /* INICIO */
 
 .inicio{
-    background: linear-gradient(to top, rgb(24, 24, 24, .7), rgb(37, 50, 55, .5)),url(../images/template/fondo_auto_1920x1080.jpg); 
+    /* background: linear-gradient(to top, rgb(24, 24, 24, .7), rgb(37, 50, 55, .5)),url(../images/template/fondo_auto_1920x1080.jpg);  */
+    background: linear-gradient(to top, rgb(24, 24, 24, .7), rgb(37, 50, 55, .5)),url(../images/template/fondo_ferrari.png); 
     background-size: 100% 100%;
     /* background-size: cover; */
 
