@@ -468,7 +468,7 @@ button:hover i{
 
 .inicio{
     /* background: linear-gradient(to top, rgb(24, 24, 24, .7), rgb(37, 50, 55, .5)),url(../images/template/fondo_auto_1920x1080.jpg);  */
-    background: linear-gradient(to top, rgb(24, 24, 24, .7), rgb(37, 50, 55, .5)),url(../images/template/fondo_ferrari.png); 
+    background: linear-gradient(to top, rgb(24, 24, 24, .7), rgb(37, 50, 55, .5)),url(../images/template/ferrari_interior.jpg); 
     background-size: 100% 100%;
     /* background-size: cover; */
 
@@ -506,7 +506,7 @@ button:hover i{
     margin-top: 40px;
     box-shadow: 0 0 50px 1px var(--color-secundario);
     /* border: 3px solid whitesmoke; */
-    
+    height: 300px;
     display: block;
     width: 200px;
     margin: auto;
@@ -1698,21 +1698,22 @@ footer h3.animado{
 
 /*  RESPONSIVE  */
 @media screen and (max-width:980px) {
-    .inicio{
+    .inicio {
         background: linear-gradient(to top, rgb(24, 24, 24, .7), rgb(37, 50, 55, .5)),url(../images//template/velocimetro.jpg); 
+        /* background: linear-gradient(to top, rgb(24, 24, 24, .7), rgb(37, 50, 55, .5)),url(../images//template/logo_ferrari.jpg);  */
         background-size: 100% 100%;
     }
     .contenedor-header header .logo a{
         font-size: 1.5rem;
     }
-    header nav{
+    header nav {
         display: none;
     }    
-    .menu-responsive{
+    .menu-responsive {
         display: block;
         background-color: var(--color-terciario);
     }
-    header nav.responsive{
+    header nav.responsive {
         display: block;
         position: absolute;
         right: 5px;
@@ -1724,14 +1725,14 @@ footer h3.animado{
         overflow: hidden;
     }
 
-    header nav.responsive ul{
+    header nav.responsive ul {
         display: block !important;
     }
-    header nav.responsive ul li{
+    header nav.responsive ul li {
         border-bottom: 1px solid var(--color-secundario);
         padding: 10px 0;
     }
-    header nav.responsive ul li{
+    header nav.responsive ul li {
         opacity: 0;
         transform: translateX(-50px);
     }
@@ -1741,16 +1742,17 @@ footer h3.animado{
         transition: opacity 1.5s ease, transform 1.5s ease ;
     }
 
-    .inicio .banner{
+    .inicio .banner {
         margin-top: 30px;
         transform: translateX(-150px);
     }
  
-    .inicio .banner button{
+    .inicio .banner button {
         margin: 0px auto;
     }
-    .inicio .banner img{
-        width: 180px;
+    .inicio .banner img {
+        width: 160px;
+        height: 210px;
     }
 }
 @media screen and (max-width:768px) {
