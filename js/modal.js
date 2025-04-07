@@ -116,7 +116,12 @@ const crearModal = (proyecto, proyectosConfig) => {
         <p class="modal-parrafo">${proyecto.info2}</p>
         <div class="modal-botones">
             <a href="${proyecto.ref}" target="_blank">
-                    <button class="modal-ver">
+                    <button class="modal-ver ${proyecto.private
+                        ? `private-content`
+                        : ``
+                    }"
+                    data-private-question="${proyectosConfig.private_question}"
+                    >
                     <span class="texto-boton">${proyectosConfig.btn_web}</span>
                     <i class="fa-solid fa-file-export"></i>
 
@@ -145,3 +150,14 @@ const crearModal = (proyecto, proyectosConfig) => {
         </div>`;
     return modalHTML;
 };
+
+
+document.addEventListener('click', function (event) {
+    const target = event.target.closest('.private-content');
+    if (target) {
+        const private_question = target.getAttribute('data-private-question');
+        if (!confirm(private_question)) {
+            event.preventDefault();
+        }
+    }
+});

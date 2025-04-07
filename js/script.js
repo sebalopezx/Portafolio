@@ -348,7 +348,8 @@ const cargarDatos = async (idioma) => {
 
 // CREACIÓN DE CONTENDOR DE INTERESES 'acerca de'
 
-const listaIconos = ["fa-gamepad","fa-bicycle","fa-headphones","fa-desktop","fa-car","fa-book"]
+const listaIconos = ["fa-gamepad","fa-bicycle","fa-headphones","fa-desktop","fa-car","fa-book", "fa-user-ninja"]
+
 
 const cargarIntereses = async (idioma) => {
     const contenedorIntereses = document.getElementById("contenedor-intereses");
