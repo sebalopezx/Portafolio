@@ -12,9 +12,10 @@
     <!-- <meta http-equiv="refresh" content="0;url=/Portafolio/index.html"> -->
     <title data-section="titles" data-value="portafolio">Portafolio</title>
     <!-- LOGO -->
-    <link rel="icon" type="image/png" href="icons/seba_logo.JPG">
+    <link rel="icon" type="image/png" href="images/svg/seba_logo.svg">
     <!-- CSS -->
     <link rel="stylesheet" href="css/estilos.css">
+    <link rel="stylesheet" href="css/toggle_mode.css">
     <!-- ICONOS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" 
     integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" 
@@ -29,19 +30,29 @@
         <header>
             <div class="logo animacion">
                 <a class="logo-href" href="#">
-                    <img class="logo-img" src="images/template/seba_logo.JPG" width="30px" alt="">
+                    <img class="logo-img" src="images/svg/seba_logo.svg" width="30px" alt="">
                     eba
                 </a>
             </div>
+
             <!-- CAMBIO DE IDIOMA -->
-            <div id="idiomas" class="idiomas animacion">
+            <!-- <div id="idiomas" class="idiomas animacion">
                 <div class="idioma_item" data-language="es">
                     <img src="icons/chile_64px.png" alt="Chile" title="Español">
                 </div>
                 <div class="idioma_item" data-language="en">
                     <img src="icons/estados-unidos_64px.png" alt="Estados Unidos" title="Inglés">
                 </div>
-            </div>
+            </div> -->
+            
+            <!-- SWITCH BACKGROUND MODE -->
+            <!-- <div id="toggle-bg-mode" class="animacion">
+                <label id="toggle-bg" for="switch-bg">
+                    <input id="switch-bg" class="switch-bg-input" type="checkbox" />
+                        <img class="icon icon-moon animacion" src="images/svg/luna.svg" width="40px" alt="Luna" />
+                        <img class="icon icon-sun animacion" src="images/svg/sol.svg" width="40px" alt="Sol" />
+                </label>
+            </div> -->
             
             <!-- MENU DE NAVEGACION -->
             <nav id="nav" class="">
@@ -52,6 +63,25 @@
                     <li data-nav="4"><a href="#curriculum"  id="click-curriculum" data-section="menu" data-value="nav4">CV</a></li>
                     <li data-nav="5"><a href="#proyectos"  id="click-proyectos" data-section="menu" data-value="nav5">Proyectos</a></li>
                     <li data-nav="6"><a href="#contacto"  id="click-contacto" data-section="menu" data-value="nav6">Contacto</a></li>
+
+                    <!-- CAMBIO DE IDIOMA -->
+                    <li data-nav="7" id="idiomas" class="nav-li idiomas animacion">
+                        <div class="idioma_item" data-language="es">
+                            <img src="icons/chile_64px.png" alt="Chile" title="Español">
+                        </div>
+                        <div class="idioma_item" data-language="en">
+                            <img src="icons/estados-unidos_64px.png" alt="Estados Unidos" title="Inglés">
+                        </div>
+                    </li>
+                    
+                    <!-- SWITCH BACKGROUND MODE -->
+                    <li data-nav="8" id="toggle-bg-mode" class="animacion">
+                        <label id="toggle-bg" for="switch-bg">
+                            <input id="switch-bg" class="switch-bg-input" type="checkbox" />
+                                <img class="icon icon-moon animacion" src="images/svg/luna.svg" width="35px" alt="Luna" />
+                                <img class="icon icon-sun animacion" src="images/svg/sol.svg" width="35px" alt="Sol" />
+                        </label>
+                    </li>
                 </ul>
             </nav>
             <div class="menu-responsive animacion" id="click-responsive">
@@ -257,7 +287,7 @@
                     <div class="dropdown">
                         <h3 class="animacion dropdown-title" onclick="toggleDropdown(this)" data-section="choose_cv" data-value="exp">
                             Elegir Experiencia
-                            <img src="icons/caret_right.svg" class="arrow" alt="">
+                            <img src="images/svg/caret_right.svg" class="arrow" alt="">
                         </h3>
                         <div class="dropdown-content">
                             <div 
@@ -503,6 +533,7 @@
     <!-- Animacion de typed -->
     <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
     <!-- JavaScript -->
+    <script src="js/theme.js"></script>
     <script src="js/script.js"></script>
     <script src="js/dropdown.js"></script>
     <script src="js/modal.js"></script>

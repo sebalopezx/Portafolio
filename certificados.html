@@ -11,9 +11,10 @@
 
     <title data-section="titles" data-value="certificates">Certificados</title>
     <!-- LOGO -->
-    <link rel="icon" type="image/png" href="icons/seba_logo.JPG"/>
+    <link rel="icon" type="image/png" href="images/svg/seba_logo.svg"/>
     <!-- CSS -->
     <link rel="stylesheet" href="css/estilos.css">
+    <link rel="stylesheet" href="css/toggle_mode.css">
     <!-- ICONOS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" 
     integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" 
@@ -28,26 +29,36 @@
         <header>
             <div class="logo animacion">
                 <a class="logo-href" href="#">
-                    <img class="logo-img" src="images/template/seba_logo.JPG" width="30px" alt="">
+                    <img class="logo-img" src="images/svg/seba_logo.svg" width="30px" alt="">
                     eba <span style="font-size: 1rem;" data-section="titles" data-value="certificates">Certificados</span>
                 </a>
             </div>
-
-            <!-- CAMBIO DE IDIOMA -->
-            <div id="idiomas" class="idiomas animacion">
-                <div class="idioma_item" data-language="es"> 
-                    <img src="icons/chile_64px.png" alt="Chile">
-                </div>
-                <div class="idioma_item" data-language="en">
-                    <img src="icons/estados-unidos_64px.png" alt="Estados Unidos">
-                </div> 
-            </div> 
 
             <nav id="nav" class="">
                 <ul>
                     <li data-nav="1">
                         <a href="./index.html" id="click-cv" data-section="cv_pagina" data-value="nav"></a>
                     </li>
+    
+                    <!-- CAMBIO DE IDIOMA -->
+                    <li data-nav="7" id="idiomas" class="nav-li idiomas animacion">
+                        <div class="idioma_item" data-language="es">
+                            <img src="icons/chile_64px.png" alt="Chile" title="Español">
+                        </div>
+                        <div class="idioma_item" data-language="en">
+                            <img src="icons/estados-unidos_64px.png" alt="Estados Unidos" title="Inglés">
+                        </div>
+                    </li>
+                    
+                    <!-- SWITCH BACKGROUND MODE -->
+                    <li data-nav="8" id="toggle-bg-mode" class="animacion">
+                        <label id="toggle-bg" for="switch-bg">
+                            <input id="switch-bg" class="switch-bg-input" type="checkbox" />
+                                <img class="icon icon-moon animacion" src="images/svg/luna.svg" width="35px" alt="Luna" />
+                                <img class="icon icon-sun animacion" src="images/svg/sol.svg" width="35px" alt="Sol" />
+                        </label>
+                    </li>
+
                 </ul>
             </nav>
            
@@ -140,6 +151,7 @@
     <!-- <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script> -->
 
     <!-- JavaScript -->
+    <script src="js/theme.js"></script>
     <script src="js/script.js"></script>
     <script src="js/certificados.js"></script>
     <script src="js/cargar_pagina.js"></script>

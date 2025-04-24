@@ -22,7 +22,7 @@ function cambiarIdiomaSeleccionado(idioma) {
     // Aquí podrías realizar las acciones necesarias para refrescar la página o cargar el contenido en el nuevo idioma  
 };
 
-cambiarIdiomaSeleccionado('es');
+// cambiarIdiomaSeleccionado('es');
 const idiomaInicial = obtenerIdiomaSeleccionado();
 
 
@@ -276,6 +276,7 @@ const cargarAnimacion = (entradas, observador) => {
         };
     }, { passive: true });   
 };
+
 // Parámetros para el intersecter
 const aplicarIntersectionObserver = (selector) => {
     const elementos = document.querySelectorAll(selector);

@@ -1,0 +1,89 @@
+body.light-mode {
+    --color-primario: #20c200;
+    --color-secundario: #181818;
+    --color-secundario-titles: #f5f5f5;
+    --color-terciario: #38996d;
+    --color-terciario-opacity: rgba(10, 102, 13, 0.6);
+    --color-titles: #181818;
+    --color-links: #38996d;
+    --color-logo: #181818;
+    --color-menu: #d4d4d4;
+    --color-background: #94c48b;
+    --color-close: #ff5252;
+    --color-git: #2f80ed;
+    --color-company: #ffcc00;
+
+    /* ESTANDARIZACION DE SHADOWS */
+    --shadow-btn:   
+        0 0 5px var(--color-primario),
+        0 0 25px var(--color-primario),
+        0 0 100px var(--color-primario),
+        0 0 200px var(--color-primario);
+    --shadow-btn-close:
+        0 0 5px var(--color-close),
+        0 0 25px var(--color-close),
+        0 0 100px var(--color-close),
+        0 0 200px var(--color-close);
+    --shadow-btn-git:
+        0 0 5px var(--color-git),
+        0 0 25px var(--color-git),
+        0 0 100px var(--color-git),
+        0 0 200px var(--color-git); 
+    --shadow-btn-company:
+        0 0 5px var(--color-company),
+        0 0 25px var(--color-company),
+        0 0 100px var(--color-company),
+        0 0 200px var(--color-company); 
+}
+
+
+#toggle-bg-mode {
+    justify-content: center;
+    align-items: center;
+}
+
+#toggle-bg {
+    background: transparent;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    cursor: pointer;
+    line-height: 1;
+    transition: .5s;
+}
+
+#toggle-bg:hover {
+    transform: scale(1.1);
+}
+
+#toggle-bg .switch-bg-input {
+    display: none;
+}
+
+#toggle-bg .icon {
+    grid-column: 1 / 1;
+    grid-row: 1 / 1;
+    transition: transform 1.5s, opacity 2.5s ease;
+    opacity: .1;
+    transform: scale(0);
+    margin-left: 20px;
+}
+
+#toggle-bg .icon.active {
+    opacity: 1;
+    transform: scale(1) rotate(360deg);
+  }
+
+
+/* ---------- LÓGICA DEL TOGGLE (FUNCIONAL) ---------- */
+
+#switch-bg:checked ~ .icon-sun.animado {
+    opacity: 1;
+    transform: scale(1) rotate(360deg);
+}
+  
+#switch-bg:not(:checked) ~ .icon-moon.animado {
+    opacity: 1;
+    transform: scale(1) rotate(360deg);
+}
+  

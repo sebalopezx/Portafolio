@@ -1,0 +1,18 @@
+<?xml version="1.0" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 20010904//EN"
+ "http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd">
+<svg version="1.0" xmlns="http://www.w3.org/2000/svg"
+     width="132.000000pt" height="170.000000pt" viewBox="0 0 132.000000 170.000000"
+     preserveAspectRatio="xMidYMid meet">
+
+  <!-- Grupo para la S principal en color verde fluorescente -->
+  <g transform="translate(0.000000,170.000000) scale(0.100000,-0.100000)"
+     fill="#2bff00" stroke="none">
+    <path d="M1200 1350 l0 -230 -95 0 -95 0 0 135 0 135 -127 0 c-215 0 -340 -47 -470 -176 -73
+    -72 -124 -157 -139 -231 l-6 -33 466 0 466 0 0 -98 c0 -114 -22 -215 -69 -311
+    -65 -134 -184 -257 -322 -333 -135 -75 -297 -101 -589 -96 l-155 3 -3 238 -2
+    237 95 0 95 0 0 -141 0 -141 153 4 c134 3 161 7 226 30 171 62 301 190 353
+    346 10 30 18 57 18 59 0 1 -211 3 -470 3 l-470 0 0 80 c0 122 24 221 81 338
+    96 195 272 335 494 392 58 15 113 18 318 19 l247 1 0 -230z"/>
+  </g>
+</svg>

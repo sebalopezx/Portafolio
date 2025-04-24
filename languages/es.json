@@ -186,7 +186,7 @@
     },
 
     "choose_cv": {
-        "exp":"Elegir experiencia <img src='icons/caret_right.svg' class='arrow' alt=''>"
+        "exp":"Elegir experiencia <img src='images/svg/caret_right.svg' class='arrow' alt=''>"
     },
 
     "cv_programmer":{

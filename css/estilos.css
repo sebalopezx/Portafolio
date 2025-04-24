@@ -1,10 +1,15 @@
 /* @import url('https://fonts.googleapis.com/css2?family=Righteous&family=Work+Sans:wght@100;300;400;600;800&display=swap'); */
-:root{
+body.dark-mode {
     /* ESTANDARIZACION DE COLORES */
     --color-primario: #2bff00;
     --color-secundario: #f5f5f5;
+    --color-secundario-titles: #f5f5f5;
     --color-terciario: #38996d;  
-    --color-terciario-opacity: rgb(56, 153, 109, .6);  
+    --color-terciario-opacity: rgb(56, 153, 109, .6);
+    --color-titles: #2bff00;
+    --color-links: #2bff00;
+    --color-logo: #2bff00;
+    /* --color-titles-btn: #181818; */
     --color-menu: #181818;
     --color-background: #253237;
     --color-close: #ff0000;
@@ -75,10 +80,11 @@ h1,h2,h3,h6{
     margin-top: 10px;
 }
 h1{
+    color: var(--color-secundario-titles);
     text-shadow: 0 0 18px var(--color-terciario); 
 }
 h2{
-    color: var(--color-primario);
+    color: var(--color-titles);
     font-size: 48px;
     text-shadow: 2px 2px 20px var(--color-terciario);
     padding: 20px 0;
@@ -120,7 +126,7 @@ button{
     margin: 20px auto;
     padding: 10px 15px;
     font-size: 15px;
-    color: var(--color-secundario);
+    color: var(--color-secundario-titles);
 }
 button:hover{
     background-color: var(--color-primario);
@@ -197,7 +203,7 @@ button:hover i{
 .dropdown-item:hover {
     transition: .5s;
     background-color: var(--color-terciario);
-    color: var(--color-menu);
+    color: var(--color-secundario-titles);
 }
 
 /* Flecha que gira */
@@ -225,15 +231,17 @@ button:hover i{
 
 /* SLIDER cambio de idioma*/
 .idiomas{
-    width: 75px;
+    width: 30px;
+    height: 30px;
     display: flex;
     align-items: center;
+    align-content: center;
     justify-content: space-between;
-    gap: 10px;
+    gap: 8px;
     opacity: .1;
     transition: 1.5s ease;
     transform: scale(0);
-    margin-right: 15px;
+    margin-left: 30px;
 }
 .idiomas.animado{
     opacity: 1;
@@ -251,11 +259,11 @@ button:hover i{
 .idiomas .idioma_item.active{
     opacity: 1;
     transform: scale(1.1);
-    box-shadow: 0 0 10px 3px var(--color-primario);
+    /* box-shadow: 0 0 10px 3px var(--color-primario); */
     scrollbar-gutter: stable;
 }
 .idiomas .idioma_item img{
-    width: 35px;
+    width: 30px;
     display: block;
     cursor: pointer;
 }
@@ -288,6 +296,7 @@ button:hover i{
     display: flex;
     justify-content: space-between;
     align-items: center;
+    align-content: center;
     padding: 15px 20px;
 }
 .contenedor-header header .logo{
@@ -296,6 +305,7 @@ button:hover i{
 }
 .contenedor-header header .logo .logo-href {
     vertical-align: middle;
+    color: var(--color-logo);
 }
 .contenedor-header header .logo .logo-href .logo-img {
     margin-right: -11px;
@@ -314,10 +324,16 @@ button:hover i{
 .contenedor-header header ul{
     display: flex;
     list-style: none;
-    width: 535px;
+    min-width: 100%;
 }
-.contenedor-header header nav ul li {
+
+.contenedor-header header nav ul {
+    align-items: center;
+}
+.contenedor-header header nav ul li{
     width: auto;
+    /* margin: 0 15px; */
+    /* padding: 30px; */
     /* scrollbar-gutter: stable; */
 }
 .contenedor-header header nav ul li a{
@@ -329,6 +345,11 @@ button:hover i{
     transition: 0.5s;
     text-decoration: none;
 }
+.contenedor-header header nav ul li.nav-li {
+    /* margin: 0 15px; */
+    padding: 25px 0;
+}
+
 
 .contenedor-header header nav ul li {
     opacity: 0.01;
@@ -347,7 +368,7 @@ button:hover i{
 /* Clase .active con creación por JS para fijar color y scroll*/
 .contenedor-header header nav ul li a.active,
 #curriculum .contenedor-seccion .fila .col .dropdown .dropdown-item.active {
-    color: var(--color-primario);
+    color: var(--color-links);
     text-shadow: 0 0 10px var(--color-primario);
 }
 
@@ -443,7 +464,7 @@ button:hover i{
         border-radius: 5px;
     }
     #contenedor-cv header nav.responsive{
-        width: 180px;  
+        width: 190px;  
         height: fit-content;   
     } 
     #contenedor-cv header nav ul li a{
@@ -1725,14 +1746,19 @@ footer h3.animado{
         overflow: hidden;
     }
 
+    .idiomas,
+    #toggle-bg .icon {
+        margin-left: 0 !important;
+        /* align-items: start; */
+        /* justify-items: start; */
+    }
+
     header nav.responsive ul {
         display: block !important;
     }
     header nav.responsive ul li {
         border-bottom: 1px solid var(--color-secundario);
         padding: 10px 0;
-    }
-    header nav.responsive ul li {
         opacity: 0;
         transform: translateX(-50px);
     }
@@ -1765,6 +1791,7 @@ footer h3.animado{
     .inicio .banner h6 span{
         font-size: 1.1rem;
     }
+
     .acercade,.skills .contenedor-seccion{
         height: auto;
         font-size: .9rem;
