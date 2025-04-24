@@ -609,11 +609,18 @@ const recorrerListaCV = (lista, crearCV, columna) => {
 // Creacion de trabajos
 
 const crearProyectos = (proyecto, indexProyectos, proyectosConfig) => {
+    let projectImportant = '';
     let proyectoHTML = `
         <div class="proyecto animacion" data-nav="${indexProyectos}" id="${proyecto.id}">
             <img src="${proyecto.image1}" alt="${proyecto.title}" title="${proyecto.title}">           
             <div class="nombre-proyecto">
                 <span>${proyecto.title}</span>
+                ${proyecto.important
+                    ?  `<div class="important">
+                            <img class="fire" src="images/svg/fire.gif" alt="fire">
+                        </div>`
+                    : ''   
+                }
             </div>
             <div class="overlay">
                 <h3>${proyecto.title}</h3>
