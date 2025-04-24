@@ -58,6 +58,8 @@ body.dark-mode {
 }
 html{
     scroll-behavior: smooth;
+    scrollbar-width: auto; /* fallback */
+    scrollbar-color: auto; /* fallback */
 }
 
 
@@ -113,6 +115,7 @@ h2,h3{
     border: 1px solid var(--color-terciario);
     width: 100%;
 }
+
 /* BOTONES */
 button{
     cursor: pointer;
@@ -176,6 +179,29 @@ button:hover i{
     }
 }
 
+
+/* SCROLL BAR */
+::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+  }
+  
+  /* Fondo del track */
+  ::-webkit-scrollbar-track {
+    background: var(--color-menu); /* color de fondo */
+  }
+  
+  /* Scroll draggable */
+  ::-webkit-scrollbar-thumb {
+    background: var(--color-terciario); /* color del "thumb" */
+    border-radius: 5px;
+  }
+  
+  /* Hover sobre el scroll */
+  ::-webkit-scrollbar-thumb:hover {
+    cursor: pointer;
+    background: var(--color-primario); /* color al pasar el mouse */
+  }
 
 /* DROPDOWN */
 
