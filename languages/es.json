@@ -310,6 +310,7 @@
         "study_projects":[
             {
                 "id":"proyecto_1",
+                "order": 3,
                 "show_github": true,
                 "private": false,
                 "title":"APP Inglés",
@@ -328,6 +329,7 @@
             },
             {
                 "id":"proyecto_2",
+                "order": 4,
                 "show_github": true,
                 "private": false,
                 "title": "Carrito de Compras",
@@ -347,6 +349,7 @@
             },
             {
                 "id":"proyecto_3",
+                "order": 1,
                 "show_github": true,
                 "private": false,
                 "title": "Gestión Automotriz",
@@ -366,6 +369,7 @@
             },
             {
                 "id":"proyecto_4",
+                "order": 2,
                 "show_github": true,
                 "private": false,
                 "title": "API Detalles Vehículos",
@@ -388,6 +392,7 @@
         "professional_projects": [
             {
                 "id":"proyecto_profesional_1",
+                "order": 1,
                 "show_github": false,
                 "private": true,
                 "title":"DDirt",

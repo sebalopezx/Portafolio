@@ -1260,8 +1260,10 @@ button:hover i{
     font-size: 18px;
     letter-spacing: 3px;
     opacity: 0;
+    color: var(--color-secundario-titles);
 }
 .proyectos .galeria .proyecto .overlay h3{
+    color: var(--color-secundario-titles);
     margin-bottom: 20px;
     transition: 1s;
     opacity: 1;
@@ -1718,7 +1720,7 @@ footer h3.animado{
 
 
 /*  RESPONSIVE  */
-@media screen and (max-width:980px) {
+@media screen and (max-width:1020px) {
     .inicio {
         background: linear-gradient(to top, rgb(24, 24, 24, .7), rgb(37, 50, 55, .5)),url(../images//template/velocimetro.jpg); 
         /* background: linear-gradient(to top, rgb(24, 24, 24, .7), rgb(37, 50, 55, .5)),url(../images//template/logo_ferrari.jpg);  */
@@ -1746,11 +1748,15 @@ footer h3.animado{
         overflow: hidden;
     }
 
-    .idiomas,
-    #toggle-bg .icon {
-        margin-left: 0 !important;
-        /* align-items: start; */
-        /* justify-items: start; */
+    header nav.responsive .idiomas,
+    header nav.responsive #toggle-bg .icon {
+        /* margin-left: 0 !important; */
+        margin: 0 auto;
+    }
+
+    header nav.responsive #idiomas {
+        /* margin: 0 28px; */
+        padding: 25px 30px;
     }
 
     header nav.responsive ul {

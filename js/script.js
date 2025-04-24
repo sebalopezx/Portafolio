@@ -664,6 +664,9 @@ const cargarProyectos = async(idioma) => {
     const listaProyectos = data.projects.study_projects;
     const listaProyectosProfesionales = data.projects.professional_projects;
 
+    listaProyectos.sort((a, b) => a.order - b.order);
+    listaProyectosProfesionales.sort((a, b) => a.order - b.order);
+
     let nuevoContenedorProyectos = recorrerListaProyectos(listaProyectos, crearProyectos, proyectosConfig);
     let nuevoContenedorProyectosProfesionales = recorrerListaProyectos(listaProyectosProfesionales, crearProyectos, proyectosConfig);
 
