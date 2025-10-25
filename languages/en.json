@@ -71,7 +71,7 @@
         "interests":[
             {"name":"Games", "icon":"fa-solid fa-gamepad"},
             {"name":"Sports", "icon":"fa-solid fa-bicycle"},
-            {"name":"Kung Fu 🟡", "icon":"fa-solid fa-user-ninja"},
+            {"name":"Kung Fu 🟠", "icon":"fa-solid fa-user-ninja"},
             {"name":"Music", "icon":"fa-solid fa-headphones"},
             {"name":"Technology", "icon":"fa-solid fa-desktop"},
             {"name":"Cars", "icon":"fa-solid fa-car"},
@@ -105,7 +105,9 @@
             {"name":"HTMX", "image":"images/tools/htmx.png", "value":"Mid", "lvl":"45"},
             {"name":"Docker", "image":"images/tools/docker.png", "value":"Basic", "lvl":"25"},
             {"name":"Websocket", "image":"images/tools/websocket.png", "value":"Basic", "lvl":"25"},
-            {"name":"Amazon Web Services", "image":"images/tools/aws.png", "value":"Beginner", "lvl":"12"}
+            {"name":"Amazon Web Services", "image":"images/tools/aws.png", "value":"Beginner", "lvl":"12"},
+            {"name":"Nginx", "image":"images/tools/nginx.png", "value":"Basic", "lvl":"25"}
+
         ],
         "title3":"Professional",
         "ability":[
@@ -192,7 +194,7 @@
         "title":"Programming experience",
         "cv_programmer":[
             {
-                "name":"Junior programmer (FullStack)",
+                "name":"Junior programmer (Backend)",
                 "place":"Syzlab - Hybrid",
                 "date":"2024 - <strong class='badge-text'>Actually</strong>",
                 "description":"• Development of an adult dating application.🔞<br>• Develop new features and functionalities, both backend and frontend, in line with technical and operational requirements. <br>• Identify and diagnose errors, bugs, or issues in the existing code through comprehensive analysis to ensure optimal functionality.<br>• Propose and implement effective solutions to fix issues and errors. <br>• Apply appropriate design principles and patterns, such as PEP8, DRY, MVT, to ensure code quality, maintainability, and scalability. <br>• Collaborate with other team members to achieve objectives. <br>• Use project management tools, such as Trello, to organize and prioritize tasks, ensuring clear and efficient communication with the team about the status of ongoing activities.",
@@ -203,7 +205,8 @@
                     {"name":"Bootstrap5", "image":"images/techs/bootstrap.png"},
                     {"name":"HTMX", "image":"images/tools/htmx.png"},
                     {"name":"Docker", "image":"images/tools/docker.png"},
-                    {"name":"Websocket", "image":"images/tools/websocket.png"}
+                    {"name":"Websocket", "image":"images/tools/websocket.png"},
+                    {"name":"Nginx", "image":"images/tools/nginx.png"}
 
                 ],
                 "href":"proyecto_profesional_1"

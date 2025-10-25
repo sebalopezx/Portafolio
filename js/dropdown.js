@@ -1,18 +1,19 @@
 
 // DROPDOWNS
 
-async function toggleDropdown() {
+async function toggleDropdown(element) {
     // Mostrar u ocultar el dropdown
-    // const dropdown = document.querySelector('.dropdown').classList.toggle('show');
-    const dropdown = document.querySelector('.dropdown');
-    if (dropdown) {
-        dropdown.classList.toggle('show');
-    }
+    // const dropdown = element.closest(".dropdown");
+    // if (!dropdown) return;
+
+    element.classList.toggle('show');
+    // const dropdown = document.querySelector('.dropdown');
+    // if (dropdown) {
+        // dropdown.classList.toggle('show');
+    // }
     // Rotar la flecha
-    const arrow = document.querySelector('.arrow');
-    if (arrow) {
-        arrow.classList.toggle('rotate');
-    }
+    const arrow = element.querySelector('.arrow');
+    if (arrow) arrow.classList.toggle('rotate');
 }
 
 async function showProgrammer() {

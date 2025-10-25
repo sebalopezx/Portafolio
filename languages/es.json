@@ -72,7 +72,7 @@
         "interests":[
             {"name":"Juegos", "icon":"fa-solid fa-gamepad"},
             {"name":"Deporte", "icon":"fa-solid fa-bicycle"},
-            {"name":"Kung Fu 🟡", "icon":"fa-solid fa-user-ninja"},
+            {"name":"Kung Fu 🟠", "icon":"fa-solid fa-user-ninja"},
             {"name":"Música", "icon":"fa-solid fa-headphones"},
             {"name":"Tecnología", "icon":"fa-solid fa-desktop"},
             {"name":"Autos", "icon":"fa-solid fa-car"},
@@ -106,7 +106,8 @@
             {"name":"HTMX", "image":"images/tools/htmx.png", "value":"Medio", "lvl":"45"},
             {"name":"Docker", "image":"images/tools/docker.png", "value":"Básico", "lvl":"25"},
             {"name":"Websocket", "image":"images/tools/websocket.png", "value":"Básico", "lvl":"25"},
-            {"name":"Amazon Web Services", "image":"images/tools/aws.png", "value":"Inicial", "lvl":"10"}
+            {"name":"Amazon Web Services", "image":"images/tools/aws.png", "value":"Inicial", "lvl":"10"},
+            {"name":"Nginx", "image":"images/tools/nginx.png", "value":"Básico", "lvl":"25"}
         ],
         "title3":"Profesionales",
         "ability":[
@@ -193,7 +194,7 @@
         "title":"Experiencia en Informática",
         "cv_programmer":[
             {
-                "name":"Programador Junior (FullStack)",
+                "name":"Programador Junior (Backend)",
                 "place":"Syzlab - Híbrido",
                 "date":"2024 - <strong class='badge-text'>Actualmente</strong>",
                 "description":"• Desarrollo de aplicación de citas para adultos.🔞<br>• Desarrollar nuevas características y funcionalidades, tanto backend como frontend, cumpliendo con los requerimientos técnicos y operacionales. <br>• Detectar y diagnosticar errores, bugs o problemas en el código existente a través de análisis exhaustivos para asegurar correcto funcionamiento. <br>• Proponer y aplicar soluciones efectivas para corregir los detalles y errores. <br>• Aplicar principios y patrones de diseño adecuados, como PEP8, DRY, MVT, para garantizar la calidad, mantenibilidad y escalabilidad del código. <br>• Trabajar de manera colaborativa con otros miembros del equipo para alcanzar objetivos. <br>• Utilizar herramientas de gestión de proyectos, como Trello, para organizar y priorizar tareas, asegurando una comunicación clara y eficiente con el equipo sobre el estado de las actividades en curso.",
@@ -204,7 +205,8 @@
                     {"name":"Bootstrap5", "image":"images/techs/bootstrap.png"},
                     {"name":"HTMX", "image":"images/tools/htmx.png"},
                     {"name":"Docker", "image":"images/tools/docker.png"},
-                    {"name":"Websocket", "image":"images/tools/websocket.png"}
+                    {"name":"Websocket", "image":"images/tools/websocket.png"},
+                    {"name":"Nginx", "image":"images/tools/nginx.png"}
 
                 ],
                 "href":"proyecto_profesional_1"
