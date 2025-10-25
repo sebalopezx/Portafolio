@@ -1,6 +1,11 @@
 {
     "idioma":"es",
 
+    "language": {
+        "es": "Español",
+        "en": "Inglés"
+    },
+
     "titles": {
         "portafolio":"Portafolio",
         "curriculum":"Curriculum",

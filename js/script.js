@@ -74,6 +74,10 @@ const cambiarIdioma = async (lenguaje) =>{
         textoACambiar.innerHTML = texto[seccion][valor];
     };
 
+    // Actualizar titulos de seleccion de idioma
+    const languageSelector = document.querySelectorAll('.idioma_item');
+    if (languageSelector) languageSelectorText(languageSelector, texto);
+
     // Actualizar los titulos de redes sociales
     const redesSocialesNav = document.querySelector('.redes nav');
     if (redesSocialesNav) {
@@ -92,6 +96,14 @@ const cambiarIdioma = async (lenguaje) =>{
 };
 
 
+function languageSelectorText(languageSelector, texto) {
+    languageSelector.forEach(btn => {
+        const langCode = btn.dataset.language; 
+        btn.setAttribute('data-popover', texto.language[langCode]);
+        document.querySelectorAll(".popover").forEach(p => p.remove());
+    })
+}
+
 function redesSocialesTexto(redSocial, texto) {
     let redesSocialesCount = 5
     
@@ -100,7 +112,7 @@ function redesSocialesTexto(redSocial, texto) {
 
         if (link) {
             const titleKey = `nav${i}`;  // Crear la clave dinámica (nav1, nav2, etc.)
-            link.setAttribute('title', texto.nav[titleKey]); // Asignar el título desde el JSON
+            link.setAttribute('data-popover', texto.nav[titleKey]); // Asignar el título desde el JSON
         }
     }
 }
@@ -392,7 +404,7 @@ const crearContenedorInteres = (valor)=>{
 // HTML para contenedores de stack destacado
 const crearContenedorStackDestacado = (stack, index)=>{
     let stackHTML = `
-        <img class="animacion stack-img" src="${stack.image}" alt="${stack.name}" title="${stack.name}">`;
+        <img class="animacion stack-img popover-btn" src="${stack.image}" alt="${stack.name}" data-popover="${stack.name}" data-pos="top">`;
     return stackHTML;
 };
 
@@ -507,7 +519,7 @@ const crearCV = (cv, columna, posicion) => {
         let lista_tech = cv.tech
         // console.log(lista_tech);
         for (const t of lista_tech) {
-            tech += ` <img class="img-project-tech" src="${t.image}" alt="${t.name}" title="${t.name}"/> `
+            tech += ` <img class="img-project-tech popover-btn" src="${t.image}" alt="${t.name}" data-popover="${t.name}" data-pos="top"/> `
         }
         return tech;
     }
