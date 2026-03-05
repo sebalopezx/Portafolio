@@ -537,7 +537,7 @@ const crearCV = (cv, columna, posicion) => {
             <p>
                 ${cv.pdf
                 ? `<a class="project-href link" href="certificados.html" data-certificados="${cv.pdf}">${cv.description} ${flecha_redireccion}</a>`
-                : `${cv.description}`}
+                : `${renderDescripcion(cv.description)}`}
             </p>
             <div class="conector${posicion}">
                 <div class="circulo${posicion}"></div>
@@ -545,6 +545,13 @@ const crearCV = (cv, columna, posicion) => {
         </div>`;
     return cvHTML;
 };
+
+const renderDescripcion = (descripcion) => {
+    if (Array.isArray(descripcion)) {
+        return descripcion.map(d => `• ${d}`).join("<br>");
+    }
+    return descripcion || "";
+}
 
 const crearCursos =(cv, columna, posicion)=>{
     let cursoHTML = `

@@ -202,7 +202,13 @@
                 "name":"Programador Junior (Backend)",
                 "place":"Syzlab - Híbrido",
                 "date":"2024 - <strong class='badge-text'>Actualmente</strong>",
-                "description":"• Desarrollo de aplicación de citas para adultos.🔞<br>• Desarrollar nuevas características y funcionalidades, tanto backend como frontend, cumpliendo con los requerimientos técnicos y operacionales. <br>• Detectar y diagnosticar errores, bugs o problemas en el código existente a través de análisis exhaustivos para asegurar correcto funcionamiento. <br>• Proponer y aplicar soluciones efectivas para corregir los detalles y errores. <br>• Aplicar principios y patrones de diseño adecuados, como PEP8, DRY, MVT, para garantizar la calidad, mantenibilidad y escalabilidad del código. <br>• Trabajar de manera colaborativa con otros miembros del equipo para alcanzar objetivos. <br>• Utilizar herramientas de gestión de proyectos, como Trello, para organizar y priorizar tareas, asegurando una comunicación clara y eficiente con el equipo sobre el estado de las actividades en curso.",
+                "description": [
+                    "Desarrollo de nuevas funcionalidades backend y frontend conforme a requerimientos técnicos y de negocio.",
+                    "Diagnóstico y resolución de errores en código existente mediante análisis y depuración.",
+                    "Participación en revisiones de código y desarrollo siguiendo principios de código limpio y buenas prácticas (PEP8, DRY, MVT).",
+                    "Colaboración con el equipo de desarrollo para el cumplimiento de objetivos del proyecto.",
+                    "Gestión y seguimiento de tareas utilizando herramientas de planificación como Trello."
+                ],
                 "tech": [
                     {"name":"Django", "image":"images/techs/django.png"},
                     {"name":"CSS", "image":"images/techs/css3.png"},
@@ -220,7 +226,10 @@
                 "name":"Estudiante",
                 "place":"API Detalle de vehículos",
                 "date":"2023",
-                "description":"• Gestión de vehículos para marcas y modelos. <br>• Entender uso de API Rest Full, e integración mediante endpoint a proyecto de “Gestión automotriz”.",
+                "description": [
+                    "Gestión de vehículos para marcas y modelos.",
+                    "Entender uso de API Rest Full, e integración mediante endpoint a proyecto de “Gestión automotriz”."
+                ],
                 "tech": [
                     {"name":"Node", "image":"images/techs/nodejs.png"},
                     {"name":"JavaScript", "image":"images/techs/javascript.png"},
@@ -234,7 +243,10 @@
                 "name":"Estudiante",
                 "place":"Gestión Automotriz",
                 "date":"2023",
-                "description":"• Gestión de citas de mantenimiento con diferentes interfaces y rangos (Cliente, Recepcionista, Administrador). <br>• Para conocer el lenguaje, su sintaxis y estructura.",
+                "description": [
+                    "Gestión de citas de mantenimiento con diferentes interfaces y rangos (Cliente, Recepcionista, Administrador).",
+                    "Para conocer el lenguaje, su sintaxis y estructura."
+                ],
                 "tech": [
                     {"name":"Python", "image":"images/techs/python.png"},
                     {"name":"Django", "image":"images/techs/django.png"},
@@ -248,7 +260,9 @@
                 "name":"Estudiante",
                 "place":"Proyectos de estudio",
                 "date":"2022-2023",
-                "description":"• Proyectos para practicar y aprender diferentes tecnologías. Estudiando su sintaxis, estructura, patrones de diseño, lógica, etc..."
+                "description": [
+                    "Proyectos para practicar y aprender diferentes tecnologías. Estudiando su sintaxis, estructura, patrones de diseño, lógica, etc..."
+                ]
             }
         ]
     },
@@ -260,7 +274,10 @@
                 "name":"Técnico mantenimiento, y<br>Supervisor suplente",
                 "place":"CAF Chile Línea 1",
                 "date":"2019-2022",
-                "description":"• Mantenimiento preventivo y correctivo de diferentes áreas, especialidad neumática. <br>• Supervisor de turno, supervisar trabajos y cumplimiento de las reglas y normas de la empresa, y delegación de tareas.",
+                "description": [
+                    "Mantenimiento preventivo y correctivo de diferentes áreas, especialidad neumática.",
+                    "Supervisor de turno, supervisar trabajos y cumplimiento de las reglas y normas de la empresa, y delegación de tareas."
+                ],
                 "tech": [
                     {"name":"Metro", "image":"images/mecanica/metro.png"},
                     {"name":"Mantenimiento", "image":"images/mecanica/mantenimiento.png"}
@@ -270,7 +287,10 @@
                 "name":"Práctica Ingeniería de procesos",
                 "place":"Rheem chilena SPA",
                 "date":"2 Meses",
-                "description":"• Estandarización de procesos y procedimientos. <br>• Inicio de 5S Kaizen, para implementación futura en taller.",
+                "description": [
+                    "Estandarización de procesos y procedimientos.",
+                    "Inicio de 5S Kaizen, para implementación futura en taller."
+                ],
                 "tech": [
                     {"name":"Gestion", "image":"images/mecanica/gestion.png"}
                 ]
@@ -279,7 +299,10 @@
                 "name":"Técnico en mantenimiento general",
                 "place":"Alstom Línea 4 y 4a",
                 "date":"2014-2015",
-                "description":"• Mantenimiento preventivo y correctivo en diferentes áreas. <br>• Gran Mantenimiento de trenes (GR) específicamente del área neumática.",
+                "description": [
+                    "Mantenimiento preventivo y correctivo en diferentes áreas.",
+                    "Gran Mantenimiento de trenes (GR) específicamente del área neumática."
+                ],
                 "tech": [
                     {"name":"Metro", "image":"images/mecanica/metro.png"},
                     {"name":"Mantenimiento", "image":"images/mecanica/mantenimiento.png"}
@@ -289,7 +312,10 @@
                 "name":"Practicante en mantenimiento general",
                 "place":"Turbus",
                 "date":"2014",
-                "description":"• Mantenimiento preventivo y correctivo en diferentes áreas. <br>• Especialidad área neumática.",
+                "description": [
+                    "Mantenimiento preventivo y correctivo en diferentes áreas.",
+                    "Especialidad área neumática."
+                ],
                 "tech": [
                     {"name":"Bus", "image":"images/mecanica/bus.png"},
                     {"name":"Mantenimiento", "image":"images/mecanica/mantenimiento.png"}
