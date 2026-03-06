@@ -876,9 +876,14 @@ button:hover i{
 .skills .fila{
     display: flex;
 }
-.skills .fila .col{
+.skills .fila-superior .col {
     width: 100%;
-    /* padding: 0 20px; */
+}
+.skills .fila-inferior{
+    justify-content: center;
+}
+.skills .fila-inferior .col {
+    width: 50%;
 }
 
 /* Animacion skills */
