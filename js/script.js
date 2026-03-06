@@ -334,8 +334,8 @@ function tipado(idioma) {
         
                 instanciaTipado = new Typed(elementoTitulo, {
                     strings: titulos,
-                    typeSpeed: 100,
-                    backSpeed: 30,
+                    typeSpeed: 50,
+                    backSpeed: 20,
                     backDelay: 1500,
                     loop: true
                 });

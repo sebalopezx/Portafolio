@@ -1,4 +1,7 @@
 // Detectar elementos .popover-btn agregados dinámicamente
+
+const TIEMPO_EN_ESPERA = 500
+
 const observer = new MutationObserver(() => {
   document.querySelectorAll(".popover-btn").forEach(btn => {
     if (btn.dataset.popoverInit) return; // evitar duplicar listeners
@@ -33,7 +36,7 @@ const observer = new MutationObserver(() => {
 
         popover.style.top = `${pos}px`;
         popover.style.left = `${left}px`;
-      }, 2000);
+      }, TIEMPO_EN_ESPERA);
     });
 
     btn.addEventListener("mouseleave", () => {
