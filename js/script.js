@@ -448,12 +448,13 @@ const crearSkill =(skill)=>{
             <div class="barra-skill">
                 <span class="nombre-skill">${skill.name}</span>
                 <div class="progreso " style="--progreso:${skill.lvl}%">
-                    <span class="valor-skill">${skill.value}</span>
+                    <span class="valor-skill">⭐</span>
                 </div>
             </div>
         </div>`;
     return skillHTML;
 };
+// <span class="valor-skill">${skill.value}</span>
 
 const crearHabilidad =(skill)=>{
     let skillHTML = `

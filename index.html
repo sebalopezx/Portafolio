@@ -16,6 +16,7 @@
     <!-- CSS -->
     <link rel="stylesheet" href="css/estilos.css">
     <link rel="stylesheet" href="css/toggle_mode.css">
+    <link rel="stylesheet" href="css/face.css">
     <!-- ICONOS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" 
     integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" 
@@ -33,6 +34,13 @@
                     <img class="logo-img" src="images/svg/seba_logo.svg" width="30px" alt="">
                     eba
                 </a>
+                <!-- <div class="face">
+                    <div class="eyes">
+                        <div class="eye"><div class="pupil"></div></div>
+                        <div class="eye"><div class="pupil"></div></div>
+                    </div>
+                    <div class="mouth"></div>
+                </div> -->
             </div>
 
             <!-- CAMBIO DE IDIOMA -->
@@ -59,9 +67,9 @@
                 <ul>
                     <li data-nav="1"><a href="#inicio" id="click-inicio" data-section="menu" data-value="nav1">Inicio</a></li>
                     <li data-nav="2"><a href="#acercade"  id="click-acercade" data-section="menu" data-value="nav2">Acerca De</a></li>
-                    <li data-nav="3"><a href="#skills"  id="click-skills" data-section="menu" data-value="nav3">Skills</a></li>
+                    <li data-nav="3"><a href="#proyectos"  id="click-proyectos" data-section="menu" data-value="nav5">Proyectos</a></li>
                     <li data-nav="4"><a href="#curriculum"  id="click-curriculum" data-section="menu" data-value="nav4">CV</a></li>
-                    <li data-nav="5"><a href="#proyectos"  id="click-proyectos" data-section="menu" data-value="nav5">Proyectos</a></li>
+                    <li data-nav="5"><a href="#skills"  id="click-skills" data-section="menu" data-value="nav3">Skills</a></li>
                     <li data-nav="6"><a href="#contacto"  id="click-contacto" data-section="menu" data-value="nav6">Contacto</a></li>
 
                     <!-- CAMBIO DE IDIOMA -->
@@ -214,132 +222,7 @@
         </div>
     </section>
 
-    <!-- SKILLS -->
-    <section id="skills" class="skills">
-        <div class="contenedor-seccion">
-            <h2 class="animacion">Skills</h2>
-            <div class="fila">
-
-                <!-- Skills tecnicas -->
-                <div class="col izquierda animacion">
-                    <h3 class="animacion" data-section="skills" data-value="title">Skills técnicas</h3>
-                    <!-- NIVELES SKILL = {Basico:25%, Mid:50%, Avanzado:75%, Senior:100%}-->
-                    <div class="contenedor-conocimiento" id="contenedor-conocimiento">
-
-                        <div class="skill">
-                            <div class="contenedor-skill">
-                                <!-- <div class="skills-img">
-                                    <img src="images/python.png" alt="python">
-                                </div> -->
-                            </div>
-                            <div class="barra-skill">
-                                <!-- <div class="progreso " style="--progreso:100%">
-                                    <span>Básico</span>
-                                </div> -->
-                            </div>
-                        </div>
-
-                    </div>
-
-                </div>
-
-                <!-- Skills profesionales -->
-                <div class="col izquierda animacion">
-                    <h3 class="animacion" data-section="skills" data-value="title2">Skills Profesionales</h3>
-  
-                    <div class="contenedor-conocimiento" id="contenedor-herramientas">
-
-                    </div>
-
-                    <h3 class="animacion" data-section="skills" data-value="title3">Skills Profesionales</h3>
-   
-                    <div class="contenedor-conocimiento" id="contenedor-habilidades">
-
-                    </div>
-
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- CURRICULUM -->
-    <section id="curriculum" class="curriculum">
-        <div class="contenedor-seccion">
-            <h2 class="animacion">Curriculum</h2>
-            <div class="fila">
-
-                <!-- COLUMNA IZQUIERDA -->
-                <div class="col izquierda animacion">
-                    
-                    <!-- EDUCACIÓN -->
-                    <h3 class="animacion" data-section="education" data-value="title">Educación</h3>
-                    <div class="contenedor-estudios" id="contenedor-estudios"></div>
-
-                    <!-- CURSOS -->
-                    <h3 class="animacion" data-section="courses" data-value="title">Cursos</h3>
-                    <div class="contenedor-cursos" id="contenedor-cursos"></div>
-
-                </div>
-
-                <!-- COLUMNA DERECHA -->
-                <div class="col derecha animacion">
-                    <!-- Dropdown para alternar entre las experiencias -->
-                    <div class="dropdown" onclick="toggleDropdown(this)">
-                        <h3 class="animacion dropdown-title" data-section="choose_cv" data-value="exp">
-                            Elegir Experiencia
-                            <img src="images/svg/caret_right.svg" class="arrow" alt="">
-                        </h3>
-                        <div class="dropdown-content">
-                            <div 
-                                class="dropdown-item active" 
-                                id="dropdown-programmer" 
-                                data-section="titles" 
-                                data-value="developer"
-                                >
-                                Programador
-                            </div>
-                            <div 
-                                class="dropdown-item" 
-                                id="dropdown-mechanic" 
-                                data-section="titles" 
-                                data-value="mechanic"
-                                >
-                                Mecánico
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="contenedor-exp" id="contenedor-exp">
-                        <h3 class="animacion" data-section="cv_programmer" data-value="title"></h3>
-                    </div>
-
-                    <!-- EXP INFORMATICA (Programador) -->
-                    <div class="contenedor-exp-programador" id="contenedor-exp-programador">
-                        <!-- Contenido de experiencia como programador -->
-                    </div>
-
-                    <!-- EXP MECANICA (Cerrado por defecto) -->
-                    <div class="contenedor-exp-mecanico" id="contenedor-exp-mecanico" style="display: none;">
-                        <!-- Contenido de experiencia como mecánico -->
-                    </div>
-
-                    
-                    <!-- EXP INFORMATICA -->
-                    <!-- <h3 class="animacion" data-section="cv_programmer" data-value="title">Experiencia</h3> -->
-                    <!-- <div class="contenedor-exp-programador" id="contenedor-exp-programador"></div> -->
-
-                    <!-- EXP MECANICA -->
-                    <!-- <h3 class="animacion" data-section="cv_mechanic" data-value="title">Experiencia</h3> -->
-                    <!-- <div class="contenedor-exp-mecanico" id="contenedor-exp-mecanico"></div> -->
-
-                    
-                </div>
-
-            </div>
-        </div>
-    </section>
- 
-    <!-- PROYECTOS -->
+        <!-- PROYECTOS -->
     <section id="proyectos" class="proyectos">
         <div class="contenedor-seccion">
             <h2 class="animacion" data-section="projects" data-value="title">Proyectos</h2>
@@ -435,6 +318,137 @@
                 </div>
             </div>
 
+        </div>
+    </section>
+
+
+    <!-- CURRICULUM -->
+    <section id="curriculum" class="curriculum">
+        <div class="contenedor-seccion">
+            <h2 class="animacion">Curriculum</h2>
+            <div class="fila">
+
+                <!-- COLUMNA IZQUIERDA -->
+                <div class="col izquierda animacion">
+                    
+                    <!-- EDUCACIÓN -->
+                    <h3 class="animacion" data-section="education" data-value="title">Educación</h3>
+                    <div class="contenedor-estudios" id="contenedor-estudios"></div>
+
+                    <!-- CURSOS -->
+                    <h3 class="animacion" data-section="courses" data-value="title">Cursos</h3>
+                    <div class="contenedor-cursos" id="contenedor-cursos"></div>
+
+                </div>
+
+                <!-- COLUMNA DERECHA -->
+                <div class="col derecha animacion">
+                    <!-- Dropdown para alternar entre las experiencias -->
+                    <div class="dropdown" onclick="toggleDropdown(this)">
+                        <h3 class="animacion dropdown-title" data-section="choose_cv" data-value="exp">
+                            Elegir Experiencia
+                            <img src="images/svg/caret_right.svg" class="arrow" alt="">
+                        </h3>
+                        <div class="dropdown-content">
+                            <div 
+                                class="dropdown-item active" 
+                                id="dropdown-programmer" 
+                                data-section="titles" 
+                                data-value="developer"
+                                >
+                                Programador
+                            </div>
+                            <div 
+                                class="dropdown-item" 
+                                id="dropdown-mechanic" 
+                                data-section="titles" 
+                                data-value="mechanic"
+                                >
+                                Mecánico
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="contenedor-exp" id="contenedor-exp">
+                        <h3 class="animacion" data-section="cv_programmer" data-value="title"></h3>
+                    </div>
+
+                    <!-- EXP INFORMATICA (Programador) -->
+                    <div class="contenedor-exp-programador" id="contenedor-exp-programador">
+                        <!-- Contenido de experiencia como programador -->
+                    </div>
+
+                    <!-- EXP MECANICA (Cerrado por defecto) -->
+                    <div class="contenedor-exp-mecanico" id="contenedor-exp-mecanico" style="display: none;">
+                        <!-- Contenido de experiencia como mecánico -->
+                    </div>
+
+                    
+                    <!-- EXP INFORMATICA -->
+                    <!-- <h3 class="animacion" data-section="cv_programmer" data-value="title">Experiencia</h3> -->
+                    <!-- <div class="contenedor-exp-programador" id="contenedor-exp-programador"></div> -->
+
+                    <!-- EXP MECANICA -->
+                    <!-- <h3 class="animacion" data-section="cv_mechanic" data-value="title">Experiencia</h3> -->
+                    <!-- <div class="contenedor-exp-mecanico" id="contenedor-exp-mecanico"></div> -->
+
+                    
+                </div>
+
+            </div>
+        </div>
+    </section>
+ 
+    <!-- SKILLS -->
+    <section id="skills" class="skills">
+        <div class="contenedor-seccion">
+            <h2 class="animacion">Skills</h2>
+            <div class="fila fila-superior">
+
+                <!-- Skills tecnicas -->
+                <div class="col izquierda animacion">
+                    <h3 class="animacion" data-section="skills" data-value="title">Skills técnicas</h3>
+                    <!-- NIVELES SKILL = {Basico:25%, Mid:50%, Avanzado:75%, Senior:100%}-->
+                    <div class="contenedor-conocimiento" id="contenedor-conocimiento">
+
+                        <!-- <div class="skill"> -->
+                            <!-- <div class="contenedor-skill"> -->
+                                <!-- <div class="skills-img">
+                                    <img src="images/python.png" alt="python">
+                                </div> -->
+                            <!-- </div> -->
+                            <!-- <div class="barra-skill"> -->
+                                <!-- <div class="progreso " style="--progreso:100%">
+                                    <span>Básico</span>
+                                </div> -->
+                            <!-- </div> -->
+                        <!-- </div> -->
+
+                    </div>
+
+                </div>
+
+                <!-- Skills herramientas -->
+                <div class="col izquierda animacion">
+                    <h3 class="animacion" data-section="skills" data-value="title2">Skills Profesionales</h3>
+  
+                    <div class="contenedor-conocimiento" id="contenedor-herramientas">
+
+                    </div>
+                </div>
+            </div>
+            
+            <div class="fila fila-inferior">
+                <!-- Skills profesionales -->
+                <div class="col izquierda animacion">
+                    <h3 class="animacion" data-section="skills" data-value="title3">Skills Profesionales</h3>
+   
+                    <div class="contenedor-conocimiento" id="contenedor-habilidades">
+
+                    </div>
+
+                </div>
+            </div>
         </div>
     </section>
 
@@ -539,6 +553,7 @@
     <script src="js/modal.js"></script>
     <script src="js/popovers.js"></script>
     <script src="js/ir_arriba.js"></script>
+    <script src="js/face.js"></script>
 
     <!-- EMAILJS para Contacto -->
     <script type="text/javascript"

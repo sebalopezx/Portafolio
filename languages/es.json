@@ -77,7 +77,7 @@
         "interests":[
             {"name":"Juegos", "icon":"fa-solid fa-gamepad"},
             {"name":"Deporte", "icon":"fa-solid fa-bicycle"},
-            {"name":"Kung Fu 🟠", "icon":"fa-solid fa-user-ninja"},
+            {"name":"Kung Fu 🟢", "icon":"fa-solid fa-user-ninja"},
             {"name":"Música", "icon":"fa-solid fa-headphones"},
             {"name":"Tecnología", "icon":"fa-solid fa-desktop"},
             {"name":"Autos", "icon":"fa-solid fa-car"},
@@ -90,13 +90,13 @@
         "title":"Técnicas",
         "values": ["Básico","Medio","Experto","Senior"],
         "skill":[
-            {"name":"Python", "image":"images/techs/python.png", "value":"Medio", "lvl":"45"},
-            {"name":"Django", "image":"images/techs/django.png", "value":"Medio", "lvl":"45"},
+            {"name":"Python", "image":"images/techs/python.png", "value":"Medio", "lvl":"50"},
+            {"name":"Django", "image":"images/techs/django.png", "value":"Medio", "lvl":"50"},
             {"name":"Node", "image":"images/techs/nodejs.png", "value":"Básico", "lvl":"25"},
-            {"name":"HTML5", "image":"images/techs/html5.png", "value":"Medio", "lvl":"45"},
-            {"name":"CSS3", "image":"images/techs/css3.png", "value":"Medio", "lvl":"45"},
-            {"name":"JavaScript", "image":"images/techs/javascript.png", "value":"Medio", "lvl":"45"},
-            {"name":"Bootstrap5", "image":"images/techs/bootstrap.png", "value":"Medio", "lvl":"45"},
+            {"name":"HTML5", "image":"images/techs/html5.png", "value":"Medio", "lvl":"75"},
+            {"name":"CSS3", "image":"images/techs/css3.png", "value":"Medio", "lvl":"75"},
+            {"name":"JavaScript", "image":"images/techs/javascript.png", "value":"Medio", "lvl":"50"},
+            {"name":"Bootstrap5", "image":"images/techs/bootstrap.png", "value":"Medio", "lvl":"50"},
             {"name":"React", "image":"images/techs/react.png", "value":"Básico", "lvl":"25"},
             {"name":"MySQL", "image":"images/techs/mysql.png", "value":"Básico", "lvl":"25"},
             {"name":"Postgre", "image":"images/techs/postgre.png", "value":"Básico", "lvl":"25"},
@@ -104,23 +104,25 @@
         ],
         "title2":"Herramientas",
         "tools":[
-            {"name":"Excel", "image":"images/tools/excel.png", "value":"Medio", "lvl":"45"},
-            {"name":"Git", "image":"images/tools/git.png", "value":"Medio", "lvl":"45"},
-            {"name":"Github", "image":"images/tools/github.png", "value":"Medio", "lvl":"45"},
-            {"name":"JSON", "image":"images/tools/json.png", "value":"Medio", "lvl":"45"},
-            {"name":"HTMX", "image":"images/tools/htmx.png", "value":"Medio", "lvl":"45"},
+            {"name":"Excel", "image":"images/tools/excel.png", "value":"Medio", "lvl":"50"},
+            {"name":"Git", "image":"images/tools/git.png", "value":"Medio", "lvl":"50"},
+            {"name":"Github", "image":"images/tools/github.png", "value":"Medio", "lvl":"50"},
+            {"name":"JSON", "image":"images/tools/json.png", "value":"Medio", "lvl":"50"},
+            {"name":"HTMX", "image":"images/tools/htmx.png", "value":"Medio", "lvl":"50"},
             {"name":"Docker", "image":"images/tools/docker.png", "value":"Básico", "lvl":"25"},
             {"name":"Websocket", "image":"images/tools/websocket.png", "value":"Básico", "lvl":"25"},
-            {"name":"Amazon Web Services", "image":"images/tools/aws.png", "value":"Inicial", "lvl":"10"},
-            {"name":"Nginx", "image":"images/tools/nginx.png", "value":"Básico", "lvl":"25"}
+            {"name":"Amazon Web Services", "image":"images/tools/aws.png", "value":"Inicial", "lvl":"5"},
+            {"name":"Nginx", "image":"images/tools/nginx.png", "value":"Básico", "lvl":"25"},
+            {"name":"Redis", "image":"images/tools/redis-logo.png", "value":"Básico", "lvl":"25"},
+            {"name":"Celery", "image":"images/tools/celery-logo.png", "value":"Básico", "lvl":"25"}
         ],
         "title3":"Profesionales",
         "ability":[
-            {"name":"Responsable", "icon":"fa-regular fa-clock", "value":"Skill", "lvl":"100"},
-            {"name":"Ordenado", "icon":"fa-sharp fa-solid fa-list-check", "value":"Skill", "lvl":"100"},
-            {"name":"Trabajo en equipo", "icon":"fa-solid fa-people-group", "value":"Skill", "lvl":"100"},
-            {"name":"Inglés escrito", "icon":"fa-solid fa-language", "value":"B1", "lvl":"45"},
-            {"name":"Inglés hablado", "icon":"fa-solid fa-microphone", "value":"A2", "lvl":"25"}
+            {"name":"Responsable", "icon":"fa-regular fa-clock", "value":"⭐", "lvl":"100"},
+            {"name":"Ordenado", "icon":"fa-sharp fa-solid fa-list-check", "value":"⭐", "lvl":"100"},
+            {"name":"Trabajo en equipo", "icon":"fa-solid fa-people-group", "value":"⭐", "lvl":"100"},
+            {"name":"Inglés escrito", "icon":"fa-solid fa-language", "value":"⭐B1", "lvl":"50"},
+            {"name":"Inglés hablado", "icon":"fa-solid fa-microphone", "value":"⭐A2", "lvl":"25"}
         ]
     },
 

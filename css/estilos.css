@@ -363,6 +363,8 @@ button:hover i{
 .contenedor-header header .logo{
     opacity: 0;
     transition: 1.5s;
+    display: flex;
+    gap: 10px;
 }
 .contenedor-header header .logo .logo-href {
     vertical-align: middle;

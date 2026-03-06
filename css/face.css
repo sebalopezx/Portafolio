@@ -1,0 +1,53 @@
+.face{
+    width:50px;
+    height:50px;
+    background:#FFD93D;
+    border-radius:50%;
+    position:relative;
+}
+
+.eyes{
+    display:flex;
+    justify-content:space-around;
+    position:absolute;
+    top:12px;
+    width:100%;
+}
+
+.eye{
+    width:15px;
+    height:15px;
+    background:white;
+    border-radius:50%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.pupil{
+    width:10px;
+    height:10px;
+    background:black;
+    border-radius:50%;
+}
+
+.mouth{
+    width:35px;
+    height:16px;
+    border-bottom:6px solid black;
+    border-radius:0 0 50px 50px;
+    position:absolute;
+    bottom:8px;
+    left:50%;
+    transform:translateX(-50%);
+    transition: all 0.2s ease;
+}
+
+/* cualquier hover en la página */
+body.hovering .mouth{
+    width:12px;
+    height:12px;
+    border:3px solid black;
+    border-radius:50%;
+    border-bottom:2px solid black;
+}
