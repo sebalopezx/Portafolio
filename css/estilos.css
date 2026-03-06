@@ -56,10 +56,17 @@ body.dark-mode {
     margin: 0;
     padding: 0;
 }
+body {
+    margin: 0;
+    width:100%;
+    overflow-x:hidden;
+}
 html{
     scroll-behavior: smooth;
     scrollbar-width: auto; /* fallback */
     scrollbar-color: auto; /* fallback */
+    width:100%;
+    overflow-x:hidden;
 }
 
 
@@ -70,8 +77,22 @@ html{
     max-width: 1100px;
     margin: auto;
 }
-.acercade,.skills .contenedor-seccion{
+.acercade,
+.skills,
+.proyectos,
+.curriculum,
+.contacto{
     min-height: 100vh;
+    color: var(--color-secundario);
+}
+.acercade,
+.skills,
+.proyectos,
+.curriculum{
+    padding: 50px 20px 5px;
+}
+.contacto{
+    padding: 50px 0px 20px;
 }
 
 /* TITULOS */
@@ -150,6 +171,14 @@ button:hover i{
     z-index: 99999;
     width: 50px !important;
     height: 50px !important;
+}
+
+.fire-small {
+    z-index: 99999;
+    width: 27px !important;
+    height: 30px !important;
+    padding: 0;
+    margin: 0;
 }
 
 .badges {
@@ -553,8 +582,11 @@ button:hover i{
 .inicio{
     /* background: linear-gradient(to top, rgb(24, 24, 24, .7), rgb(37, 50, 55, .5)),url(../images/template/fondo_auto_1920x1080.jpg);  */
     background: linear-gradient(to top, rgb(24, 24, 24, .7), rgb(37, 50, 55, .5)),url(../images/template/ferrari_interior.jpg); 
-    background-size: 100% 100%;
+    /* background-size: 100% 100%; */
     /* background-size: cover; */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 
     height: 100vh;
     color: var(--color-secundario);
@@ -725,8 +757,6 @@ button:hover i{
 
 .acercade{
     background: linear-gradient(to top, var(--color-background), var(--color-menu));
-    color: var(--color-secundario);
-    padding: 50px 20px 0px;
 }
 .acercade .contenedor-seccion h2{
     opacity: 0.1;
@@ -863,8 +893,6 @@ button:hover i{
 
 .skills{
     background: linear-gradient(to top, var(--color-menu), var(--color-background));
-    color: var(--color-secundario);
-    padding: 50px 20px 0px;
 }
 .skills h2{
     opacity: 0;
@@ -954,7 +982,7 @@ button:hover i{
     align-self: flex-end; */
 }
 
-.skills .skill img,
+.skills .skill .skill-img,
 .skills .skill i{
     width: 50px;
     height: 50px;
@@ -964,7 +992,7 @@ button:hover i{
     cursor: pointer;
     transition: .5s;
 }
-.skills .skill img{
+.skills .skill .skill-img{
     background-color: var(--color-menu);
     /* border: 1px solid var(--color-terciario); */
     margin-bottom: 1px;
@@ -1002,7 +1030,7 @@ button:hover i{
         transform: translateY(0); /* Opcional: restablece cualquier desplazamiento vertical al final */
     }
 }
-.skills .skill img:hover{
+.skills .skill .skill-img:hover{
     background-color: var(--color-secundario);
     box-shadow: var(--shadow-btn);
 }
@@ -1090,8 +1118,6 @@ button:hover i{
 
 .curriculum{
     background: linear-gradient(to top, var(--color-background), var(--color-menu));
-    color: var(--color-secundario);
-    padding: 50px 20px 0px;
 }
 .curriculum .fila{
     display: flex;
@@ -1250,8 +1276,6 @@ button:hover i{
 /* PROYECTOS   portafolio */
 .proyectos{
     background: linear-gradient(to top, var(--color-menu), var(--color-background));
-    color: var(--color-secundario);
-    padding: 50px 20px 0px;
 }
 
 /* Proyectos animados*/
@@ -1527,8 +1551,6 @@ button:hover i{
 
 .contacto{
     background: linear-gradient(to top, var(--color-background), var(--color-menu));
-    color: var(--color-secundario);
-    padding: 50px 0;
 }
 .contacto .fila{
     display: flex;
@@ -1798,7 +1820,10 @@ footer h3.animado{
     .inicio {
         background: linear-gradient(to top, rgb(24, 24, 24, .7), rgb(37, 50, 55, .5)),url(../images//template/velocimetro.jpg); 
         /* background: linear-gradient(to top, rgb(24, 24, 24, .7), rgb(37, 50, 55, .5)),url(../images//template/logo_ferrari.jpg);  */
-        background-size: 100% 100%;
+        /* background-size: 100% 100%; */
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
     }
     .contenedor-header header .logo a{
         font-size: 1.5rem;

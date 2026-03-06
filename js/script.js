@@ -442,7 +442,7 @@ const crearSkill =(skill)=>{
         <div class="skill">
             <div class="contenedor-skill">
                 <div class="skills-img">
-                    <img src="${skill.image}" alt="${skill.name}">
+                    <img class="skill-img" src="${skill.image}" alt="${skill.name}">
                 </div>
             </div>
             <div class="barra-skill">
@@ -455,6 +455,7 @@ const crearSkill =(skill)=>{
     return skillHTML;
 };
 // <span class="valor-skill">${skill.value}</span>
+{/* <img class="fire-small" src="images/svg/fire.gif" alt="fire"></img> */}
 
 const crearHabilidad =(skill)=>{
     let skillHTML = `
