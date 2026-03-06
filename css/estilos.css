@@ -71,7 +71,7 @@ html{
     margin: auto;
 }
 .acercade,.skills .contenedor-seccion{
-    height: 100vh;
+    min-height: 100vh;
 }
 
 /* TITULOS */
@@ -724,7 +724,7 @@ button:hover i{
 .acercade{
     background: linear-gradient(to top, var(--color-background), var(--color-menu));
     color: var(--color-secundario);
-    padding: 50px 20px;
+    padding: 50px 20px 0px;
 }
 .acercade .contenedor-seccion h2{
     opacity: 0.1;
@@ -862,7 +862,7 @@ button:hover i{
 .skills{
     background: linear-gradient(to top, var(--color-menu), var(--color-background));
     color: var(--color-secundario);
-    padding: 50px 20px;
+    padding: 50px 20px 0px;
 }
 .skills h2{
     opacity: 0;
@@ -1089,7 +1089,7 @@ button:hover i{
 .curriculum{
     background: linear-gradient(to top, var(--color-background), var(--color-menu));
     color: var(--color-secundario);
-    padding: 50px 20px;
+    padding: 50px 20px 0px;
 }
 .curriculum .fila{
     display: flex;
@@ -1249,7 +1249,7 @@ button:hover i{
 .proyectos{
     background: linear-gradient(to top, var(--color-menu), var(--color-background));
     color: var(--color-secundario);
-    padding: 50px 20px;
+    padding: 50px 20px 0px;
 }
 
 /* Proyectos animados*/
