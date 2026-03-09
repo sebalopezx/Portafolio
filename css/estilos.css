@@ -56,11 +56,11 @@ body.dark-mode {
     margin: 0;
     padding: 0;
 }
-body {
+/* body {
     margin: 0;
     width:100%;
     overflow-x:hidden;
-}
+} */
 html{
     scroll-behavior: smooth;
     scrollbar-width: auto; /* fallback */
@@ -89,7 +89,7 @@ html{
 .skills,
 .proyectos,
 .curriculum{
-    padding: 50px 20px 5px;
+    padding: 50px 20px;
 }
 .contacto{
     padding: 50px 0px 20px;

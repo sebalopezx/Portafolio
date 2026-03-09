@@ -272,7 +272,6 @@ menuLinks.forEach(link => {
 
 
 // Scroll para sliders de animaciones de contenedores
-
 const animacion = document.querySelectorAll(".animacion");
 const animacionNav = document.querySelectorAll("nav ul li");
 
