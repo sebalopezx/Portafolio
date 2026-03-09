@@ -219,27 +219,13 @@
                     {"name":"HTMX", "image":"images/tools/htmx.png"},
                     {"name":"Docker", "image":"images/tools/docker.png"},
                     {"name":"Websocket", "image":"images/tools/websocket.png"},
-                    {"name":"Nginx", "image":"images/tools/nginx.png"}
+                    {"name":"Nginx", "image":"images/tools/nginx.png"},
+                    {"name":"Redis", "image":"images/tools/redis-logo.png"},
+                    {"name":"Celery", "image":"images/tools/celery-logo.png"},
+                    {"name":"AWS", "image":"images/tools/aws.png"}
 
                 ],
                 "href":"proyecto_profesional_1"
-            },
-            {
-                "name":"Student",
-                "place":"API Vehicle details",
-                "date":"2023",
-                "description": [
-                    "Vehicle management for brands and models.",
-                    "Understand the use of the Rest Full API, and integration through endpoint to the “Appointment Management” project."
-                ],
-                "tech": [
-                    {"name":"Node", "image":"images/techs/nodejs.png"},
-                    {"name":"JavaScript", "image":"images/techs/javascript.png"},
-                    {"name":"React", "image":"images/techs/react.png"},
-                    {"name":"Bootstrap5", "image":"images/techs/bootstrap.png"},
-                    {"name":"MongoDB", "image":"images/techs/mongodb.png"}
-                ],
-                "href":"proyecto_4"
             },
             {
                 "name":"Student",
@@ -257,6 +243,23 @@
                     {"name":"PostgreSQL", "image":"images/techs/postgre.png"}
                 ],
                 "href":"proyecto_3"
+            },
+            {
+                "name":"Student",
+                "place":"API Vehicle details",
+                "date":"2023",
+                "description": [
+                    "Vehicle management for brands and models.",
+                    "Understand the use of the Rest Full API, and integration through endpoint to the “Appointment Management” project."
+                ],
+                "tech": [
+                    {"name":"Node", "image":"images/techs/nodejs.png"},
+                    {"name":"JavaScript", "image":"images/techs/javascript.png"},
+                    {"name":"React", "image":"images/techs/react.png"},
+                    {"name":"Bootstrap5", "image":"images/techs/bootstrap.png"},
+                    {"name":"MongoDB", "image":"images/techs/mongodb.png"}
+                ],
+                "href":"proyecto_4"
             },
             {
                 "name":"Student",

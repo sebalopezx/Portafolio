@@ -219,27 +219,14 @@
                     {"name":"HTMX", "image":"images/tools/htmx.png"},
                     {"name":"Docker", "image":"images/tools/docker.png"},
                     {"name":"Websocket", "image":"images/tools/websocket.png"},
-                    {"name":"Nginx", "image":"images/tools/nginx.png"}
+                    {"name":"Nginx", "image":"images/tools/nginx.png"},
+                    {"name":"Redis", "image":"images/tools/redis-logo.png"},
+                    {"name":"Celery", "image":"images/tools/celery-logo.png"},
+                    {"name":"AWS", "image":"images/tools/aws.png"}
+
 
                 ],
                 "href":"proyecto_profesional_1"
-            },
-            {
-                "name":"Estudiante",
-                "place":"API Detalle de vehículos",
-                "date":"2023",
-                "description": [
-                    "Gestión de vehículos para marcas y modelos.",
-                    "Entender uso de API Rest Full, e integración mediante endpoint a proyecto de “Gestión automotriz”."
-                ],
-                "tech": [
-                    {"name":"Node", "image":"images/techs/nodejs.png"},
-                    {"name":"JavaScript", "image":"images/techs/javascript.png"},
-                    {"name":"React", "image":"images/techs/react.png"},
-                    {"name":"Bootstrap5", "image":"images/techs/bootstrap.png"},
-                    {"name":"MongoDB", "image":"images/techs/mongodb.png"}
-                ],
-                "href":"proyecto_4"
             },
             {
                 "name":"Estudiante",
@@ -258,6 +245,24 @@
                 ],
                 "href":"proyecto_3"
             },
+            {
+                "name":"Estudiante",
+                "place":"API Detalle de vehículos",
+                "date":"2023",
+                "description": [
+                    "Gestión de vehículos para marcas y modelos.",
+                    "Entender uso de API Rest Full, e integración mediante endpoint a proyecto de “Gestión automotriz”."
+                ],
+                "tech": [
+                    {"name":"Node", "image":"images/techs/nodejs.png"},
+                    {"name":"JavaScript", "image":"images/techs/javascript.png"},
+                    {"name":"React", "image":"images/techs/react.png"},
+                    {"name":"Bootstrap5", "image":"images/techs/bootstrap.png"},
+                    {"name":"MongoDB", "image":"images/techs/mongodb.png"}
+                ],
+                "href":"proyecto_4"
+            },
+            
             {
                 "name":"Estudiante",
                 "place":"Proyectos de estudio",

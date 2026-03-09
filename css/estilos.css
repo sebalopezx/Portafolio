@@ -137,6 +137,51 @@ h2,h3{
     width: 100%;
 }
 
+#wLinkedIn a {
+    display: inline-block;
+    color: #000 !important;
+    background: #fdfdfd; 
+    background: -webkit-linear-gradient(#fdfdfd, #eee);
+    background: -moz-linear-gradient(#fdfdfd, #eee);
+    background: -o-linear-gradient(#fdfdfd, #eee);
+    background: linear-gradient(#fdfdfd, #eee);
+    text-decoration: none;
+    font-size: 12px !important;
+    font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+    line-height: inherit;
+    font-weight: bold;
+    border: 1px solid #bbb;
+    border-radius: 3px;
+}
+
+#wLinkedIn a span i{
+    color: var(--color-secundario) !important;
+}
+
+#wLinkedIn a:hover {
+    opacity: 0.8;
+}
+
+#icon-bg {
+    display: inline-block;
+    background: #007bb6; 
+    background: -webkit-linear-gradient(#81bedb, #007bb6);
+    background: -moz-linear-gradient(#81bedb, #007bb6);
+    background: -o-linear-gradient(#81bedb, #007bb6);
+    background: linear-gradient(#81bedb, #007bb6);
+    color: #fff;
+    padding: 0px 5px 3px;
+    border-radius: 3px;
+    border: 1px solid #3f7eb7;
+    font-size: 16px;
+    margin: -1px;
+}
+
+#icon-label-bg {
+    display: inline-block;
+    padding: 3px 5px 3px 5px;
+}
+
 /* BOTONES */
 button{
     cursor: pointer;
@@ -1589,8 +1634,12 @@ button:hover i{
     background-color: var(--color-menu);
     padding: 20px;
     max-width: 350px;
+    border-radius: 10%;
     left: 50%;
     transform: translate(-50%,-50%);
+}
+.contacto textarea {
+    resize: none;
 }
 .contacto .col .info ul{
     list-style: none;

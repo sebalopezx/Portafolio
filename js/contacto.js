@@ -23,6 +23,10 @@ async function establecerPlaceholders(idioma) {
     };
 };
 
+function copyEmail(){
+    navigator.clipboard.writeText("se.lopezn@gmail.com");
+    // alert("Email copied!");
+}
 
 // const btnContacto = document.getElementById('btnContacto');
 
@@ -47,7 +51,8 @@ if (esPaginaIndex()) {
                 const title_error = result.title_error;
                 const text_error = result.text_error;
 
-                const serviceID = 'default_service';
+                // const serviceID = 'default_service';
+                const serviceID = 'service_mlaoad9';
                 const templateID = 'template_9pe89eh';
 
                 // Se inicia la API de EMAILJS pasando las variables
