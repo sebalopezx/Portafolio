@@ -76,12 +76,13 @@
         "title2":"Intereses",
         "interests":[
             {"name":"Juegos", "icon":"fa-solid fa-gamepad"},
-            {"name":"Deporte", "icon":"fa-solid fa-bicycle"},
-            {"name":"Kung Fu 🟢", "icon":"fa-solid fa-user-ninja"},
+            {"name":"Ciclismo", "icon":"fa-solid fa-bicycle"},
+            {"name":"Kung Fu 🟣", "icon":"fa-solid fa-user-ninja"},
             {"name":"Música", "icon":"fa-solid fa-headphones"},
             {"name":"Tecnología", "icon":"fa-solid fa-desktop"},
             {"name":"Autos", "icon":"fa-solid fa-car"},
-            {"name":"Aprender", "icon":"fa-solid fa-book"}
+            {"name":"Aprender", "icon":"fa-solid fa-book"},
+            {"name":"Series/Anime", "icon":"fas fa-video"}
         ]
     },
 
@@ -91,15 +92,15 @@
         "values": ["Básico","Medio","Experto","Senior"],
         "skill":[
             {"name":"Python", "image":"images/techs/python.png", "value":"Medio", "lvl":"50"},
-            {"name":"Django", "image":"images/techs/django.png", "value":"Medio", "lvl":"50"},
+            {"name":"Django", "image":"images/techs/django.png", "value":"Medio", "lvl":"75"},
             {"name":"Node", "image":"images/techs/nodejs.png", "value":"Básico", "lvl":"25"},
             {"name":"HTML5", "image":"images/techs/html5.png", "value":"Medio", "lvl":"75"},
             {"name":"CSS3", "image":"images/techs/css3.png", "value":"Medio", "lvl":"75"},
             {"name":"JavaScript", "image":"images/techs/javascript.png", "value":"Medio", "lvl":"50"},
-            {"name":"Bootstrap5", "image":"images/techs/bootstrap.png", "value":"Medio", "lvl":"50"},
+            {"name":"Bootstrap5", "image":"images/techs/bootstrap.png", "value":"Medio", "lvl":"75"},
             {"name":"React", "image":"images/techs/react.png", "value":"Básico", "lvl":"25"},
+            {"name":"Postgre", "image":"images/techs/postgre.png", "value":"Básico", "lvl":"50"},
             {"name":"MySQL", "image":"images/techs/mysql.png", "value":"Básico", "lvl":"25"},
-            {"name":"Postgre", "image":"images/techs/postgre.png", "value":"Básico", "lvl":"25"},
             {"name":"MongoDB", "image":"images/techs/mongodb.png", "value":"Básico", "lvl":"25"}
         ],
         "title2":"Herramientas",
@@ -107,11 +108,11 @@
             {"name":"Excel", "image":"images/tools/excel.png", "value":"Medio", "lvl":"50"},
             {"name":"Git", "image":"images/tools/git.png", "value":"Medio", "lvl":"50"},
             {"name":"Github", "image":"images/tools/github.png", "value":"Medio", "lvl":"50"},
-            {"name":"JSON", "image":"images/tools/json.png", "value":"Medio", "lvl":"50"},
-            {"name":"HTMX", "image":"images/tools/htmx.png", "value":"Medio", "lvl":"50"},
-            {"name":"Docker", "image":"images/tools/docker.png", "value":"Básico", "lvl":"25"},
+            {"name":"DigitalOcean", "image":"images/tools/digitalocean.png", "value":"Medio", "lvl":"50"},
+            {"name":"HTMX", "image":"images/tools/htmx.png", "value":"Medio", "lvl":"75"},
+            {"name":"Docker", "image":"images/tools/docker.png", "value":"Básico", "lvl":"50"},
             {"name":"Websocket", "image":"images/tools/websocket.png", "value":"Básico", "lvl":"25"},
-            {"name":"Amazon Web Services", "image":"images/tools/aws.png", "value":"Inicial", "lvl":"5"},
+            {"name":"Amazon Web Services", "image":"images/tools/aws.png", "value":"Inicial", "lvl":"25"},
             {"name":"Nginx", "image":"images/tools/nginx.png", "value":"Básico", "lvl":"25"},
             {"name":"Redis", "image":"images/tools/redis-logo.png", "value":"Básico", "lvl":"25"},
             {"name":"Celery", "image":"images/tools/celery-logo.png", "value":"Básico", "lvl":"25"}
@@ -222,9 +223,8 @@
                     {"name":"Nginx", "image":"images/tools/nginx.png"},
                     {"name":"Redis", "image":"images/tools/redis-logo.png"},
                     {"name":"Celery", "image":"images/tools/celery-logo.png"},
-                    {"name":"AWS", "image":"images/tools/aws.png"}
-
-
+                    {"name":"AWS", "image":"images/tools/aws.png"},
+                    {"name":"DigitalOcean", "image":"images/tools/digitalocean.png"}
                 ],
                 "href":"proyecto_profesional_1"
             },
