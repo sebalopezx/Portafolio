@@ -1539,7 +1539,24 @@ button:hover i{
     margin: 0;
 }
 @media screen and (max-width: 768px) {
-    .proyectos .modal .modal-contenedor .modal-botones{
+    .proyectos .modal .modal-contenedor .modal-botones:not(.modal-botones-versiones){
+        flex-wrap: nowrap;
+        gap: 4px;
+    }
+
+    .proyectos .modal .modal-contenedor .modal-botones:not(.modal-botones-versiones) .modal-botones-grupo{
+        flex: 0 0 auto;
+        gap: 4px;
+    }
+
+    .proyectos .modal .modal-contenedor .modal-botones:not(.modal-botones-versiones) .modal-ver,
+    .proyectos .modal .modal-contenedor .modal-botones:not(.modal-botones-versiones) .modal-close,
+    .proyectos .modal .modal-contenedor .modal-botones:not(.modal-botones-versiones) .modal-git,
+    .proyectos .modal .modal-contenedor .modal-botones:not(.modal-botones-versiones) .modal-company{
+        width: clamp(72px, 24vw, 100px);
+    }
+
+    .proyectos .modal .modal-contenedor .modal-botones-versiones{
         display: grid;
         grid-template-columns: 1fr;
         row-gap: 10px;
@@ -1547,7 +1564,7 @@ button:hover i{
         align-items: center;
     }
 
-    .proyectos .modal .modal-contenedor .modal-botones-grupo{
+    .proyectos .modal .modal-contenedor .modal-botones-versiones .modal-botones-grupo{
         gap: 8px;
         width: 100%;
         align-items: center;

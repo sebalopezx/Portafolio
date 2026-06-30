@@ -222,6 +222,10 @@ const crearBotonesRepositorio = (proyecto, proyectosConfig) => {
 
 const crearModal = (proyecto, proyectosConfig) => {
     const versionVisible = obtenerVersionVisibleModal(proyecto);
+    const tieneVariasVersiones = Array.isArray(proyecto.versions) && proyecto.versions.length > 1;
+    const claseBotones = tieneVariasVersiones
+        ? 'modal-botones modal-botones-versiones'
+        : 'modal-botones';
 
     let modalHTML = `    
         <h3 class="modal-titulo">${versionVisible.title}</h3>
@@ -229,7 +233,7 @@ const crearModal = (proyecto, proyectosConfig) => {
             <img src="${versionVisible.image2}" alt="${versionVisible.title}" title="${versionVisible.title}" class="modal-img">
         </div>
         ${crearParrafosInfo(proyecto, versionVisible)}
-        <div class="modal-botones">
+        <div class="${claseBotones}">
             <div class="modal-botones-grupo">
                 ${crearBotonesWeb(proyecto, proyectosConfig)}
             </div>
