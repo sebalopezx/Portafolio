@@ -167,7 +167,7 @@ const crearBotonesWeb = (proyecto, proyectosConfig) => {
                 : proyectosConfig.btn_web;
 
             return `
-                <a href="${linkVersion}" target="_blank">
+                <a class="modal-link-boton" href="${linkVersion}" target="_blank">
                     <button class="modal-ver ${version.private ? `private-content` : ``}"
                         data-private-question="${proyectosConfig.private_question}"
                     >
@@ -208,7 +208,7 @@ const crearBotonesRepositorio = (proyecto, proyectosConfig) => {
             const iconoBoton = showGithub ? 'fa-brands fa-github' : 'fa-solid fa-briefcase';
 
             return `
-                <a href="${linkVersion}" target="_blank">
+                <a class="modal-link-boton" href="${linkVersion}" target="_blank">
                     <button class="${claseBoton}">
                         <span class="texto-boton">${textoBoton}</span>
                         <i class="${iconoBoton}"></i>
@@ -230,13 +230,17 @@ const crearModal = (proyecto, proyectosConfig) => {
         </div>
         ${crearParrafosInfo(proyecto, versionVisible)}
         <div class="modal-botones">
-            ${crearBotonesWeb(proyecto, proyectosConfig)}
+            <div class="modal-botones-grupo">
+                ${crearBotonesWeb(proyecto, proyectosConfig)}
+            </div>
             <button class="btn modal-close">
                 <span class="texto-boton">${proyectosConfig.btn_close}</span>
                 <i class="fa-solid fa-x"></i>
                 <span class="overlay"></span>
             </button>
-            ${crearBotonesRepositorio(proyecto, proyectosConfig)}
+            <div class="modal-botones-grupo">
+                ${crearBotonesRepositorio(proyecto, proyectosConfig)}
+            </div>
         </div>`;
     return modalHTML;
 };

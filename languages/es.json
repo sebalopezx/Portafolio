@@ -356,7 +356,7 @@
                 "info3":"Versión 2: Proyecto mejorado, con nuevas características y una interfaz actualizada y moderna.",
                 "versions": [
                     {
-                        "label": "v1",
+                        "label": "V1",
                         "principal": false,
                         "show_github": true,
                         "private": false,
@@ -374,7 +374,7 @@
                         "ref_github":"https://github.com/sebalopezx/app-ingles"
                     },
                     {
-                        "label": "v2",
+                        "label": "V2",
                         "principal": true,
                         "show_github": true,
                         "private": false,
@@ -404,7 +404,7 @@
                 "info2":"Se ha desarrollado una aplicación funcional de un carrito de compras utilizando el LocalStorage. Además, se ha fortalecido la comprensión de conceptos clave en el desarrollo web y la importancia de una interfaz interactiva y amigable para el usuario.",    
                 "versions": [
                     {
-                        "label": "v1",
+                        "label": "V1",
                         "principal": true,
                         "show_github": true,
                         "private": false,
@@ -431,7 +431,7 @@
                 "info2":"Se ha desarrollado una aplicación funcional de gestión de citas automotrices. Con diferentes intefaces de (Cliente, Recepcionista y Administrador) en las que se puede gestionar los vehículos y las citas de mantenimiento.",    
                 "versions": [
                     {
-                        "label": "v1",
+                        "label": "V1",
                         "principal": true,
                         "show_github": true,
                         "private": false,
@@ -458,7 +458,7 @@
                 "info2":"Es una api simple para guardar información de marcas y modelos con su años respectivos.",    
                 "versions": [
                     {
-                        "label": "v1",
+                        "label": "V1",
                         "principal": true,
                         "show_github": true,
                         "private": false,
@@ -488,7 +488,7 @@
                 "info2":"El proyecto es una aplicación citas para adultos. ⛔🔞",    
                 "versions": [
                     {
-                        "label": "v1",
+                        "label": "V1",
                         "principal": true,
                         "show_github": false,
                         "private": true,

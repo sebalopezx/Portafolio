@@ -354,7 +354,7 @@
                 "info3":"Version 2: Improved project, with new features and an updated, modern interface.",
                 "versions": [
                     {
-                        "label": "v1",
+                        "label": "V1",
                         "principal": false,
                         "show_github": true,
                         "private": false,
@@ -371,7 +371,7 @@
                         "ref_github":"https://github.com/sebalopezx/app-ingles"
                     },
                     {
-                        "label": "v2",
+                        "label": "V2",
                         "principal": true,
                         "show_github": true,
                         "private": false,
@@ -400,7 +400,7 @@
                 "info2":"A functional shopping cart application has been developed using LocalStorage. In addition, the understanding of key concepts in web development and the importance of an interactive and user-friendly interface have been strengthened.",    
                 "versions": [
                     {
-                        "label": "v1",
+                        "label": "V1",
                         "principal": true,
                         "show_github": true,
                         "private": false,
@@ -426,7 +426,7 @@
                 "info2":"A functional automotive appointment management application has been developed. With different interfaces (Customer, Receptionist and Administrator) where you can manage vehicles and maintenance appointments.",    
                 "versions": [
                     {
-                        "label": "v1",
+                        "label": "V1",
                         "principal": true,
                         "show_github": true,
                         "private": false,
@@ -452,7 +452,7 @@
                 "info2":"It's a simple API to save information about car details with brands, models and years. ",    
                 "versions": [
                     {
-                        "label": "v1",
+                        "label": "V1",
                         "principal": true,
                         "show_github": true,
                         "private": false,
@@ -481,7 +481,7 @@
                 "info2":"The project is an appointment application. ⛔🔞",    
                 "versions": [
                     {
-                        "label": "v1",
+                        "label": "V1",
                         "principal": true,
                         "show_github": false,
                         "private": true,
