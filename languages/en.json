@@ -396,8 +396,8 @@
             {
                 "id":"proyecto_2",
                 "order": 4,
-                "info1":"Institute project, developed as part of the Front-End course using HTML, CSS and JS with LocalStorage.",
-                "info2":"A functional shopping cart application has been developed using LocalStorage. In addition, the understanding of key concepts in web development and the importance of an interactive and user-friendly interface have been strengthened.",    
+                "info1":"Description: A functional shopping cart application has been developed using LocalStorage. In addition, the understanding of key concepts in web development and the importance of an interactive and user-friendly interface have been strengthened.",    
+                "info2":"Version: Institute project, developed as part of the Front-End course using HTML, CSS and JS with LocalStorage.",
                 "versions": [
                     {
                         "label": "V1",
@@ -422,8 +422,8 @@
             {
                 "id":"proyecto_3",
                 "order": 1,
-                "info1":"Institute project, developed as part of the Back-End course using HTML, CSS, Django and PostreSQL upload to Render.",
-                "info2":"A functional automotive appointment management application has been developed. With different interfaces (Customer, Receptionist and Administrator) where you can manage vehicles and maintenance appointments.",    
+                "info1":"Description: A functional automotive appointment management application has been developed. With different interfaces (Customer, Receptionist and Administrator) where you can manage vehicles and maintenance appointments.",    
+                "info2":"Version: Institute project, developed as part of the Back-End course using HTML, CSS, Django and PostreSQL upload to Render.",
                 "versions": [
                     {
                         "label": "V1",
@@ -448,8 +448,8 @@
             {
                 "id":"proyecto_4",
                 "order": 2,
-                "info1":"Personal project developed to understand the syntax of the MERN stack (Mongo, Express, React with Bootstrap, and Node).",
-                "info2":"It's a simple API to save information about car details with brands, models and years. ",    
+                "info1":"Description:It's a simple API to save information about car details with brands, models and years. ",    
+                "info2":"Version: Personal project developed to understand the syntax of the MERN stack (Mongo, Express, React with Bootstrap, and Node).",
                 "versions": [
                     {
                         "label": "V1",
@@ -477,8 +477,8 @@
             {
                 "id":"proyecto_profesional_1",
                 "order": 1,
-                "info1":"Company project Syzlab, created using Django, Websocket, Daphne, Htmx, and Docker.",
-                "info2":"The project is an appointment application. ⛔🔞",    
+                "info1":"Description: The project is an appointment application for adults with explicit content. ⛔🔞",    
+                "info2":"Technologies: Company project Syzlab, created using Django, Websocket, Daphne, Htmx, and Docker.",
                 "versions": [
                     {
                         "label": "V1",
