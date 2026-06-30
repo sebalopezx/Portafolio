@@ -105,48 +105,138 @@ document.addEventListener("DOMContentLoaded", function () {
 // MODAL DE PROYECTOS
 
 // HTML para creación de modales
-const crearModal = (proyecto, proyectosConfig) => {
-    let modalHTML = `    
-        <h3 class="modal-titulo">${proyecto.title}</h3>
-        <div class="contenedor-modal-img">
-            <img src="${proyecto.image2}" alt="${proyecto.title}" title="${proyecto.title}" class="modal-img">
-        </div>
-        <p class="modal-parrafo">${proyecto.info1}</p>
-        <hr class="separador">
-        <p class="modal-parrafo">${proyecto.info2}</p>
-        <div class="modal-botones">
-            <a href="${proyecto.ref}" target="_blank">
-                    <button class="modal-ver ${proyecto.private
-                        ? `private-content`
-                        : ``
-                    }"
-                    data-private-question="${proyectosConfig.private_question}"
-                    >
-                    <span class="texto-boton">${proyectosConfig.btn_web}</span>
-                    <i class="fa-solid fa-file-export"></i>
+const obtenerVersionVisibleModal = (proyecto) => {
+    if (Array.isArray(proyecto.versions) && proyecto.versions.length > 0) {
+        return proyecto.versions.find(version => version.principal) || proyecto.versions[proyecto.versions.length - 1];
+    }
 
-                    <span class="overlay"></span>
-                </button>
-            </a>
+    return proyecto;
+};
+
+const obtenerLinkWeb = (version, proyecto) => {
+    return version.ref_web || version.ref1 || version.ref || version.url || proyecto.ref_web || proyecto.ref1 || proyecto.ref || proyecto.url;
+};
+
+const obtenerLinkRepositorio = (version, proyecto) => {
+    return version.ref_github || version.ref2 || proyecto.ref_github || proyecto.ref2;
+};
+
+const crearParrafosInfo = (proyecto, versionVisible) => {
+    const infosProyecto = Object.keys(proyecto)
+        .filter(key => /^info\d+$/.test(key) && proyecto[key])
+        .sort((a, b) => Number(a.replace('info', '')) - Number(b.replace('info', '')))
+        .map(key => proyecto[key]);
+    const infos = infosProyecto.length > 0
+        ? infosProyecto
+        : [versionVisible.info1, versionVisible.info2].filter(Boolean);
+
+    return infos
+        .map((info, index) => `
+            ${index > 0 ? '<hr class="separador">' : ''}
+            <p class="modal-parrafo">${renderInfoModal(info)}</p>
+        `)
+        .join('');
+};
+
+const renderInfoModal = (info) => {
+    const partesInfo = info.split(':');
+
+    if (partesInfo.length < 2) {
+        return info;
+    }
+
+    const titulo = partesInfo.shift();
+    const descripcion = partesInfo.join(':').trim();
+    return `<span class="modal-info-titulo">${titulo}:</span> ${descripcion}`;
+};
+
+const crearBotonesWeb = (proyecto, proyectosConfig) => {
+    const tieneListaVersiones = Array.isArray(proyecto.versions) && proyecto.versions.length > 0;
+    const versionVisible = obtenerVersionVisibleModal(proyecto);
+    const versiones = tieneListaVersiones
+        ? proyecto.versions
+        : [{ label: proyectosConfig.btn_web, ref: proyecto.ref, private: proyecto.private || versionVisible.private }];
+    const tieneVariasVersiones = versiones.length > 1;
+
+    return versiones
+        .filter(version => obtenerLinkWeb(version, proyecto))
+        .map(version => {
+            const linkVersion = obtenerLinkWeb(version, proyecto);
+            const textoBoton = tieneVariasVersiones && version.label
+                ? `${proyectosConfig.btn_web} ${version.label}`
+                : proyectosConfig.btn_web;
+
+            return `
+                <a href="${linkVersion}" target="_blank">
+                    <button class="modal-ver ${version.private ? `private-content` : ``}"
+                        data-private-question="${proyectosConfig.private_question}"
+                    >
+                        <span class="texto-boton">${textoBoton}</span>
+                        <i class="fa-solid fa-file-export"></i>
+                        <span class="overlay"></span>
+                    </button>
+                </a>
+            `;
+        })
+        .join('');
+};
+
+const crearBotonesRepositorio = (proyecto, proyectosConfig) => {
+    const tieneListaVersiones = Array.isArray(proyecto.versions) && proyecto.versions.length > 0;
+    const versionVisible = obtenerVersionVisibleModal(proyecto);
+    const versiones = tieneListaVersiones
+        ? proyecto.versions
+        : [{
+            label: proyectosConfig.btn_github,
+            ref2: proyecto.ref2,
+            show_github: proyecto.show_github || versionVisible.show_github
+        }];
+    const tieneVariasVersiones = versiones.length > 1;
+
+    return versiones
+        .filter(version => obtenerLinkRepositorio(version, proyecto))
+        .map(version => {
+            const linkVersion = obtenerLinkRepositorio(version, proyecto);
+            const showGithub = version.show_github || proyecto.show_github;
+            const textoBase = showGithub
+                ? proyectosConfig.btn_github
+                : proyectosConfig.btn_link_company;
+            const textoBoton = tieneVariasVersiones && version.label
+                ? `${textoBase} ${version.label}`
+                : textoBase;
+            const claseBoton = showGithub ? 'modal-git' : 'modal-company';
+            const iconoBoton = showGithub ? 'fa-brands fa-github' : 'fa-solid fa-briefcase';
+
+            return `
+                <a href="${linkVersion}" target="_blank">
+                    <button class="${claseBoton}">
+                        <span class="texto-boton">${textoBoton}</span>
+                        <i class="${iconoBoton}"></i>
+                        <span class="overlay"></span>
+                    </button>
+                </a>
+            `;
+        })
+        .join('');
+};
+
+const crearModal = (proyecto, proyectosConfig) => {
+    const versionVisible = obtenerVersionVisibleModal(proyecto);
+
+    let modalHTML = `    
+        <h3 class="modal-titulo">${versionVisible.title}</h3>
+        <div class="contenedor-modal-img">
+            <img src="${versionVisible.image2}" alt="${versionVisible.title}" title="${versionVisible.title}" class="modal-img">
+        </div>
+        ${crearParrafosInfo(proyecto, versionVisible)}
+        <div class="modal-botones">
+            ${crearBotonesWeb(proyecto, proyectosConfig)}
             <button class="btn modal-close">
                 <span class="texto-boton">${proyectosConfig.btn_close}</span>
                 <i class="fa-solid fa-x"></i>
                 <span class="overlay"></span>
             </button>
-            <a href="${proyecto.ref2}" target="_blank">
-                    ${proyecto.show_github 
-                    ?   
-                        `<button class="modal-git">
-                        <span class="texto-boton">${proyectosConfig.btn_github}</span>
-                        <i class="fa-brands fa-github"></i>`
-                    :   
-                        `<button class="modal-company">
-                        <span class="texto-boton">${proyectosConfig.btn_link_company}</span>
-                        <i class="fa-solid fa-briefcase"></i>`
-                    }
-                    <span class="overlay"></span>
-                </button>
-            </a>
+            ${crearBotonesRepositorio(proyecto, proyectosConfig)}
         </div>`;
     return modalHTML;
 };

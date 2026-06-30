@@ -628,14 +628,22 @@ const recorrerListaCV = (lista, crearCV, columna) => {
 
 // Creacion de trabajos
 
+const obtenerVersionVisibleProyecto = (proyecto) => {
+    if (Array.isArray(proyecto.versions) && proyecto.versions.length > 0) {
+        return proyecto.versions.find(version => version.principal) || proyecto.versions[proyecto.versions.length - 1];
+    }
+
+    return proyecto;
+};
+
 const crearProyectos = (proyecto, indexProyectos, proyectosConfig) => {
-    let projectImportant = '';
+    const versionVisible = obtenerVersionVisibleProyecto(proyecto);
     let proyectoHTML = `
         <div class="proyecto animacion" data-nav="${indexProyectos}" id="${proyecto.id}">
-            <img src="${proyecto.image1}" alt="${proyecto.title}" title="${proyecto.title}">           
+            <img src="${versionVisible.image1}" alt="${versionVisible.title}" title="${versionVisible.title}">           
             <div class="nombre-proyecto">
-                <span>${proyecto.title}</span>
-                ${proyecto.important
+                <span>${versionVisible.title}</span>
+                ${versionVisible.important
                     ?  `<div class="important">
                             <img class="fire" src="images/svg/fire.gif" alt="fire">
                         </div>`
@@ -643,11 +651,11 @@ const crearProyectos = (proyecto, indexProyectos, proyectosConfig) => {
                 }
             </div>
             <div class="overlay">
-                <h3>${proyecto.title}</h3>
+                <h3>${versionVisible.title}</h3>
                 <div class="contenedor-img-projects">
-                    ${crearLenguajes(proyecto)}
+                    ${crearLenguajes(versionVisible)}
                 </div>
-                <p>${proyecto.type}</p>
+                <p>${versionVisible.type}</p>
                 <button class="ver-detalle">${proyectosConfig.btn_detail}</button>
             </div>
         </div>`;

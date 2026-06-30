@@ -1504,6 +1504,10 @@ button:hover i{
     font-size: .9rem;
     text-align: justify;
 }
+.proyectos .modal .modal-contenedor .modal-info-titulo{
+    color: var(--color-terciario);
+    font-weight: 800;
+}
 
 .proyectos .modal.mostrar-modal {
     opacity: 1;
@@ -1514,6 +1518,8 @@ button:hover i{
 }
 .proyectos .modal .modal-contenedor .modal-botones{
     display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
     justify-content: center;
     align-items: center;
     text-align: center;
@@ -1524,7 +1530,6 @@ button:hover i{
 .proyectos .modal .modal-contenedor .modal-ver,.modal-close,.modal-git,.modal-company{
     width: 100px;
     height: 40px;
-    margin: 5px;
     padding: 0;
     transition: .5s;
 }

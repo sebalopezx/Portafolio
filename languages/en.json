@@ -349,81 +349,127 @@
             {
                 "id":"proyecto_1",
                 "order": 3,
-                "show_github": true,
-                "private": false,
-                "title":"APP Inglés",
-                "type":"Own project",
-                "image1":"images/projects/proyecto1_fondo.PNG",
-                "image2":"images/projects/proyecto1_modal.png",
-                "languages":[
-                    "images/techs/html5.png",
-                    "images/techs/css3.png",
-                    "images/techs/javascript.png"
-                ],
-                "info1":"Own project, created with html, css and javascript to learn and practice the basic functionalities of these languages, and reinforce English.",
-                "info2":"The project is a web application created using different technologies. Its main objective is to provide a tool to improve and practice knowledge of English, focusing on learning verbs in different conjugations.",    
-                "ref":"https://sebalopezx.github.io/app-ingles/",
-                "ref2":"https://github.com/sebalopezx/app-ingles"
+                "info1":"Description: App to learn and memorize English past tense verbs (infinitive, simple past, participle, and translation).",
+                "info2":"Version 1: Own project, created with HTML, CSS, and JavaScript to learn and practice the basic features of these languages, and reinforce English.",
+                "info3":"Version 2: Improved project, with new features and an updated, modern interface.",
+                "versions": [
+                    {
+                        "label": "v1",
+                        "principal": false,
+                        "show_github": true,
+                        "private": false,
+                        "title":"APP Inglés",
+                        "type":"Own project",
+                        "image1":"images/projects/proyecto1_fondo.PNG",
+                        "image2":"images/projects/proyecto1_modal.png",
+                        "languages":[
+                            "images/techs/html5.png",
+                            "images/techs/css3.png",
+                            "images/techs/javascript.png"
+                        ],
+                        "ref_web":"https://sebalopezx.github.io/app-ingles/",
+                        "ref_github":"https://github.com/sebalopezx/app-ingles"
+                    },
+                    {
+                        "label": "v2",
+                        "principal": true,
+                        "show_github": true,
+                        "private": false,
+                        "title":"SpanGlish",
+                        "type":"Own project",
+                        "image1":"images/projects/proyecto1_fondo_v2.PNG",
+                        "image2":"images/projects/proyecto1_modal_v2.PNG",
+                        "languages":[
+                            "images/techs/vuejs.png",
+                            "images/techs/html5.png",
+                            "images/techs/css3.png",
+                            "images/techs/javascript.png",
+                            "images/techs/localstorage.png",
+                            "images/tools/json.png",
+                            "images/tools/claudecode.png"
+                        ],
+                        "ref_web":"https://sebalopezx.github.io/app-ingles-v2/",
+                        "ref_github":"https://github.com/sebalopezx/app-ingles-v2"
+                    }
+                ]
             },
             {
                 "id":"proyecto_2",
                 "order": 4,
-                "show_github": true,
-                "private": false,
-                "title": "Shopping Cart",
-                "type":"Institute project",
-                "image1":"images/projects/proyecto2_fondo.PNG",
-                "image2":"images/projects/proyecto2_modal.png",
-                "languages":[
-                    "images/techs/html5.png",
-                    "images/techs/bootstrap.png",
-                    "images/techs/javascript.png",
-                    "images/techs/localstorage.png"
-                ],
                 "info1":"Institute project, developed as part of the Front-End course using HTML, CSS and JS with LocalStorage.",
                 "info2":"A functional shopping cart application has been developed using LocalStorage. In addition, the understanding of key concepts in web development and the importance of an interactive and user-friendly interface have been strengthened.",    
-                "ref":"https://sebalopezx.github.io/carrito_compras/",
-                "ref2":"https://github.com/sebalopezx/carrito_compras"
+                "versions": [
+                    {
+                        "label": "v1",
+                        "principal": true,
+                        "show_github": true,
+                        "private": false,
+                        "title": "Shopping Cart",
+                        "type":"Institute project",
+                        "image1":"images/projects/proyecto2_fondo.PNG",
+                        "image2":"images/projects/proyecto2_modal.png",
+                        "languages":[
+                            "images/techs/html5.png",
+                            "images/techs/bootstrap.png",
+                            "images/techs/javascript.png",
+                            "images/techs/localstorage.png"
+                        ],
+                        "ref_web":"https://sebalopezx.github.io/carrito_compras/",
+                        "ref_github":"https://github.com/sebalopezx/carrito_compras"
+                    }
+                ]
             },
             {
                 "id":"proyecto_3",
                 "order": 1,
-                "show_github": true,
-                "private": false,
-                "title": "Appointment management",
-                "type":"Institute project",
-                "image1":"images/projects/proyecto3_fondo.PNG",
-                "image2":"images/projects/proyecto3_modal.PNG",
-                "languages":[
-                    "images/techs/django.png",
-                    "images/techs/html5.png",
-                    "images/techs/bootstrap.png",
-                    "images/techs/postgre.png"
-                ],
                 "info1":"Institute project, developed as part of the Back-End course using HTML, CSS, Django and PostreSQL upload to Render.",
                 "info2":"A functional automotive appointment management application has been developed. With different interfaces (Customer, Receptionist and Administrator) where you can manage vehicles and maintenance appointments.",    
-                "ref":"https://gestion-automotriz.onrender.com/",
-                "ref2":"https://github.com/sebalopezx/Gestion_Automotriz"
+                "versions": [
+                    {
+                        "label": "v1",
+                        "principal": true,
+                        "show_github": true,
+                        "private": false,
+                        "title": "Appointment management",
+                        "type":"Institute project",
+                        "image1":"images/projects/proyecto3_fondo.PNG",
+                        "image2":"images/projects/proyecto3_modal.PNG",
+                        "languages":[
+                            "images/techs/django.png",
+                            "images/techs/html5.png",
+                            "images/techs/bootstrap.png",
+                            "images/techs/postgre.png"
+                        ],
+                        "ref_web":"https://gestion-automotriz.onrender.com/",
+                        "ref_github":"https://github.com/sebalopezx/Gestion_Automotriz"
+                    }
+                ]
             },
             {
                 "id":"proyecto_4",
                 "order": 2,
-                "show_github": true,
-                "private": false,
-                "title": "API Vehicle Details",
-                "type":"Own project",
-                "image1":"images/projects/proyecto4_fondo.png",
-                "image2":"images/projects/proyecto4_modal.png",
-                "languages":[
-                    "images/techs/nodejs.png",
-                    "images/techs/react.png",
-                    "images/techs/bootstrap.png",
-                    "images/techs/mongodb.png"
-                ],
                 "info1":"Personal project developed to understand the syntax of the MERN stack (Mongo, Express, React with Bootstrap, and Node).",
                 "info2":"It's a simple API to save information about car details with brands, models and years. ",    
-                "ref":"https://apicardetails-production.up.railway.app/",
-                "ref2":"https://github.com/sebalopezx/api_CarDetails"
+                "versions": [
+                    {
+                        "label": "v1",
+                        "principal": true,
+                        "show_github": true,
+                        "private": false,
+                        "title": "API Vehicle Details",
+                        "type":"Own project",
+                        "image1":"images/projects/proyecto4_fondo.png",
+                        "image2":"images/projects/proyecto4_modal.png",
+                        "languages":[
+                            "images/techs/nodejs.png",
+                            "images/techs/react.png",
+                            "images/techs/bootstrap.png",
+                            "images/techs/mongodb.png"
+                        ],
+                        "ref_web":"https://apicardetails-production.up.railway.app/",
+                        "ref_github":"https://github.com/sebalopezx/api_CarDetails"
+                    }
+                ]
             }
         ],
 
@@ -431,23 +477,29 @@
             {
                 "id":"proyecto_profesional_1",
                 "order": 1,
-                "show_github": false,
-                "private": true,
-                "title":"DDirt",
-                "type":"Company project Syzlab",
-                "image1":"images/projects/professional/proyectoprofesional1_fondo.PNG",
-                "image2":"images/projects/professional/proyectoprofesional1_fondo.PNG",
-                "languages":[
-                    "images/techs/django.png",
-                    "images/techs/css3.png",
-                    "images/techs/bootstrap.png",
-                    "images/tools/htmx.png",
-                    "images/techs/javascript.png"
-                ],
                 "info1":"Company project Syzlab, created using Django, Websocket, Daphne, Htmx, and Docker.",
                 "info2":"The project is an appointment application. ⛔🔞",    
-                "ref":"https://ddirt.com",
-                "ref2":"https://syzlab.com/"
+                "versions": [
+                    {
+                        "label": "v1",
+                        "principal": true,
+                        "show_github": false,
+                        "private": true,
+                        "title":"DDirt",
+                        "type":"Company project Syzlab",
+                        "image1":"images/projects/professional/proyectoprofesional1_fondo.PNG",
+                        "image2":"images/projects/professional/proyectoprofesional1_fondo.PNG",
+                        "languages":[
+                            "images/techs/django.png",
+                            "images/techs/css3.png",
+                            "images/techs/bootstrap.png",
+                            "images/tools/htmx.png",
+                            "images/techs/javascript.png"
+                        ],
+                        "ref_web":"https://ddirt.com",
+                        "ref_github":"https://syzlab.com/"
+                    }
+                ]
             }
         ]
     },

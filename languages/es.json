@@ -351,85 +351,132 @@
             {
                 "id":"proyecto_1",
                 "order": 3,
-                "show_github": true,
-                "private": false,
-                "important": false,
-                "title":"APP Inglés",
-                "type":"Proyecto propio",
-                "image1":"images/projects/proyecto1_fondo.PNG",
-                "image2":"images/projects/proyecto1_modal.png",
-                "languages":[
-                    "images/techs/html5.png",
-                    "images/techs/css3.png",
-                    "images/techs/javascript.png"
-                ],
-                "info1":"Proyecto propio, creado con html, css y javascript para aprender y practicar las funcionalidades básicas de estos lenguajes, y reforzar el inglés.",
-                "info2":"El proyecto es una aplicación web creada utilizando diferentes tecnologías. Su objetivo principal es proporcionar una herramienta para mejorar y practicar el conocimiento del inglés, enfocándose en el aprendizaje de verbos en diferentes conjugaciones.",    
-                "ref":"https://sebalopezx.github.io/app-ingles/",
-                "ref2":"https://github.com/sebalopezx/app-ingles"
+                "info1":"Descripción: App para aprender y memorizar los verbos en pasado del inglés (infinitivo, pasado simple, participio y traducción)",    
+                "info2":"Versión 1: Proyecto propio, creado con html, css y javascript para aprender y practicar las funcionalidades básicas de estos lenguajes, y reforzar el inglés.",
+                "info3":"Versión 2: Proyecto mejorado, con nuevas características y una interfaz actualizada y moderna.",
+                "versions": [
+                    {
+                        "label": "v1",
+                        "principal": false,
+                        "show_github": true,
+                        "private": false,
+                        "important": false,
+                        "title":"APP Inglés",
+                        "type":"Proyecto propio",
+                        "image1":"images/projects/proyecto1_fondo.PNG",
+                        "image2":"images/projects/proyecto1_modal.png",
+                        "languages":[
+                            "images/techs/html5.png",
+                            "images/techs/css3.png",
+                            "images/techs/javascript.png"
+                        ],
+                        "ref_web":"https://sebalopezx.github.io/app-ingles/",
+                        "ref_github":"https://github.com/sebalopezx/app-ingles"
+                    },
+                    {
+                        "label": "v2",
+                        "principal": true,
+                        "show_github": true,
+                        "private": false,
+                        "important": false,
+                        "title":"SpanGlish",
+                        "type":"Proyecto propio",
+                        "image1":"images/projects/proyecto1_fondo_v2.PNG",
+                        "image2":"images/projects/proyecto1_modal_v2.PNG",
+                        "languages":[
+                            "images/techs/vuejs.png",
+                            "images/techs/html5.png",
+                            "images/techs/css3.png",
+                            "images/techs/javascript.png",
+                            "images/techs/localstorage.png",
+                            "images/tools/json.png",
+                            "images/tools/claudecode.png"
+                        ],
+                        "ref_web":"https://sebalopezx.github.io/app-ingles-v2/",
+                        "ref_github":"https://github.com/sebalopezx/app-ingles-v2" 
+                    }
+                ]
             },
             {
                 "id":"proyecto_2",
                 "order": 4,
-                "show_github": true,
-                "private": false,
-                "important": false,
-                "title": "Carrito de Compras",
-                "type":"Proyecto de instituto",
-                "image1":"images/projects/proyecto2_fondo.PNG",
-                "image2":"images/projects/proyecto2_modal.png",
-                "languages":[
-                    "images/techs/html5.png",
-                    "images/techs/bootstrap.png",
-                    "images/techs/javascript.png",
-                    "images/techs/localstorage.png"
-                ],
                 "info1":"Proyecto de instituto, desarrollada como parte del curso de Front-End con uso de HTML, CSS y JS con LocalStorage.",
                 "info2":"Se ha desarrollado una aplicación funcional de un carrito de compras utilizando el LocalStorage. Además, se ha fortalecido la comprensión de conceptos clave en el desarrollo web y la importancia de una interfaz interactiva y amigable para el usuario.",    
-                "ref":"https://sebalopezx.github.io/carrito_compras/",
-                "ref2":"https://github.com/sebalopezx/carrito_compras"
+                "versions": [
+                    {
+                        "label": "v1",
+                        "principal": true,
+                        "show_github": true,
+                        "private": false,
+                        "important": false,
+                        "title": "Carrito de Compras",
+                        "type":"Proyecto de instituto",
+                        "image1":"images/projects/proyecto2_fondo.PNG",
+                        "image2":"images/projects/proyecto2_modal.png",
+                        "languages":[
+                            "images/techs/html5.png",
+                            "images/techs/bootstrap.png",
+                            "images/techs/javascript.png",
+                            "images/techs/localstorage.png"
+                        ],
+                        "ref_web":"https://sebalopezx.github.io/carrito_compras/",
+                        "ref_github":"https://github.com/sebalopezx/carrito_compras"
+                    }
+                ]
             },
             {
                 "id":"proyecto_3",
                 "order": 1,
-                "show_github": true,
-                "private": false,
-                "important": true,
-                "title": "Gestión Automotriz",
-                "type":"Proyecto de instituto",
-                "image1":"images/projects/proyecto3_fondo.PNG",
-                "image2":"images/projects/proyecto3_modal.PNG",
-                "languages":[
-                    "images/techs/django.png",
-                    "images/techs/html5.png",
-                    "images/techs/bootstrap.png",
-                    "images/techs/postgre.png"
-                ],
                 "info1":"Proyecto de instituto, desarrollada como parte del curso de Back-End con uso de HTML, CSS, Django y PostgreSQL subido en Render.",
                 "info2":"Se ha desarrollado una aplicación funcional de gestión de citas automotrices. Con diferentes intefaces de (Cliente, Recepcionista y Administrador) en las que se puede gestionar los vehículos y las citas de mantenimiento.",    
-                "ref":"https://gestion-automotriz.onrender.com/",
-                "ref2":"https://github.com/sebalopezx/Gestion_Automotriz"
+                "versions": [
+                    {
+                        "label": "v1",
+                        "principal": true,
+                        "show_github": true,
+                        "private": false,
+                        "important": true,
+                        "title": "Gestión Automotriz",
+                        "type":"Proyecto de instituto",
+                        "image1":"images/projects/proyecto3_fondo.PNG",
+                        "image2":"images/projects/proyecto3_modal.PNG",
+                        "languages":[
+                            "images/techs/django.png",
+                            "images/techs/html5.png",
+                            "images/techs/bootstrap.png",
+                            "images/techs/postgre.png"
+                        ],
+                        "ref_web":"https://gestion-automotriz.onrender.com/",
+                        "ref_github":"https://github.com/sebalopezx/Gestion_Automotriz"
+                    }
+                ]
             },
             {
                 "id":"proyecto_4",
                 "order": 2,
-                "show_github": true,
-                "private": false,
-                "important": true,
-                "title": "API Detalles Vehículos",
-                "type":"Proyecto propio",
-                "image1":"images/projects/proyecto4_fondo.png",
-                "image2":"images/projects/proyecto4_modal.png",
-                "languages":[
-                    "images/techs/nodejs.png",
-                    "images/techs/react.png",
-                    "images/techs/bootstrap.png",
-                    "images/techs/mongodb.png"
-                ],
                 "info1":"Proyecto propio desarrollada con el fin de entender sintaxis del stack MERN (Mongo, Express, React con Bootstrap y Node).",
                 "info2":"Es una api simple para guardar información de marcas y modelos con su años respectivos.",    
-                "ref":"https://apicardetails-production.up.railway.app/",
-                "ref2":"https://github.com/sebalopezx/api_CarDetails"
+                "versions": [
+                    {
+                        "label": "v1",
+                        "principal": true,
+                        "show_github": true,
+                        "private": false,
+                        "important": true,
+                        "title": "API Detalles Vehículos",
+                        "type":"Proyecto propio",
+                        "image1":"images/projects/proyecto4_fondo.png",
+                        "image2":"images/projects/proyecto4_modal.png",
+                        "languages":[
+                            "images/techs/nodejs.png",
+                            "images/techs/react.png",
+                            "images/techs/bootstrap.png",
+                            "images/techs/mongodb.png"
+                        ],
+                        "ref_web":"https://apicardetails-production.up.railway.app/",
+                        "ref_github":"https://github.com/sebalopezx/api_CarDetails"
+                    }
+                ]
             }
         ],
 
@@ -437,24 +484,30 @@
             {
                 "id":"proyecto_profesional_1",
                 "order": 1,
-                "show_github": false,
-                "private": true,
-                "important": false,
-                "title":"DDirt",
-                "type":"Proyecto de empresa Syzlab",
-                "image1":"images/projects/professional/proyectoprofesional1_fondo.PNG",
-                "image2":"images/projects/professional/proyectoprofesional1_fondo.PNG",
-                "languages":[
-                    "images/techs/django.png",
-                    "images/techs/css3.png",
-                    "images/techs/bootstrap.png",
-                    "images/tools/htmx.png",
-                    "images/techs/javascript.png"
-                ],
                 "info1":"Proyecto de empresa Syzlab, creado en Django, CSS, Bootstrap, Websocket, Daphne, Htmx y Docker.",
                 "info2":"El proyecto es una aplicación citas para adultos. ⛔🔞",    
-                "ref":"https://ddirt.com",
-                "ref2":"https://syzlab.com/"
+                "versions": [
+                    {
+                        "label": "v1",
+                        "principal": true,
+                        "show_github": false,
+                        "private": true,
+                        "important": false,
+                        "title":"DDirt",
+                        "type":"Proyecto de empresa Syzlab",
+                        "image1":"images/projects/professional/proyectoprofesional1_fondo.PNG",
+                        "image2":"images/projects/professional/proyectoprofesional1_fondo.PNG",
+                        "languages":[
+                            "images/techs/django.png",
+                            "images/techs/css3.png",
+                            "images/techs/bootstrap.png",
+                            "images/tools/htmx.png",
+                            "images/techs/javascript.png"
+                        ],
+                        "ref_web":"https://ddirt.com",
+                        "ref_github":"https://syzlab.com/"
+                    }
+                ]
             }
         ]
     },
